@@ -1,11 +1,19 @@
 <template>
   <div>
-    <header>
-      <h1>Marc Fairbrother</h1>
-    </header>
+    <site-header />
     <nuxt />
   </div>
 </template>
+
+<script>
+import SiteHeader from "~/components/SiteHeader.vue";
+
+export default {
+  components: {
+    SiteHeader
+  }
+};
+</script>
 
 <style lang="scss">
 body {
