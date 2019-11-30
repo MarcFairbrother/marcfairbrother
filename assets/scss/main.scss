@@ -1,9 +1,10 @@
 body {
+  font-family: 'Catamaran', sans-serif;
   background: #ececec;
   @include breakpoint($tablet-width) {
     background: #6f6f6f;
   }
   @include breakpoint($desktop-width) {
-    background: #1b1b1b;
+    background: url('/img/hole.jpg');
   }
 }
