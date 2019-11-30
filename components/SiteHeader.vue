@@ -1,8 +1,11 @@
 <template>
   <header>
-    <h1>
-      <nuxt-link to="/">Marc Fairbrother</nuxt-link>
-    </h1>
+    <div>
+      <h1>
+        <nuxt-link to="/">Marc Fairbrother</nuxt-link>
+      </h1>
+      <logo />
+    </div>
     <nav>
       <ul>
         <li>
@@ -21,3 +24,13 @@
     </nav>
   </header>
 </template>
+
+<script>
+import Logo from "~/components/svg/Logo.vue";
+
+export default {
+  components: {
+    Logo
+  }
+};
+</script>
