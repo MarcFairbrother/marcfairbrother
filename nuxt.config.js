@@ -56,7 +56,11 @@ export default {
    ** Style Resources configuration
    */
   styleResources: {
-    scss: ['assets/scss/_variables.scss', 'assets/scss/_breakpoints.scss']
+    scss: [
+      'assets/scss/_variables.scss',
+      'assets/scss/_breakpoints.scss',
+      'assets/scss/_mixins.scss'
+    ]
   },
   /*
    ** Build configuration
