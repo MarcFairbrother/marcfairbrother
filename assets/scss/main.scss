@@ -1,3 +1,5 @@
+@import 'resets';
+
 body {
   font-family: 'Catamaran', sans-serif;
   background: #ececec;
@@ -7,4 +9,8 @@ body {
   @include breakpoint($desktop-width) {
     background: url('/img/hole.jpg');
   }
+}
+
+a {
+  text-decoration: none;
 }
