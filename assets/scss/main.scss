@@ -1,5 +1,16 @@
 @import 'resets';
 
+:root {
+  --clr-1: rgb(250, 193, 70);
+  --clr-2: rgb(62, 142, 148);
+  --clr-3: rgb(75, 34, 90);
+  --clr-4: rgb(194, 59, 59);
+  --clr-5: rgb(32, 32, 37);
+  --hlf-margin: 20px;
+  --fll-margin: 40px;
+  --qtr-margin: 10px;
+}
+
 body {
   font-family: 'Catamaran', sans-serif;
   background: #ececec;

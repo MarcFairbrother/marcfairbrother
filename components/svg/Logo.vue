@@ -20,7 +20,7 @@
 <style lang="scss" scoped>
 .logo {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: var(--hlf-margin);
   width: 100%;
   &__illustration {
     width: 100%;

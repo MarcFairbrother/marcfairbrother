@@ -18,12 +18,9 @@ export default {
 <style lang="scss">
 body {
   h1 {
-    color: $red;
     @include breakpoint($tablet-width) {
-      color: $blue;
     }
     @include breakpoint($desktop-width) {
-      color: $yellow;
     }
   }
 }
