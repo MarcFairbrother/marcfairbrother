@@ -12,7 +12,8 @@
 }
 
 body {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
   background: #ececec;
   @include breakpoint($tablet-width) {
     background: #6f6f6f;
@@ -20,6 +21,14 @@ body {
   @include breakpoint($desktop-width) {
     background: url('/img/hole.jpg');
   }
+}
+
+h1,
+h2,
+h3,
+nav {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
 }
 
 a {
