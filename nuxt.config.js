@@ -19,7 +19,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Catamaran:700&display=swap'
+          'https://fonts.googleapis.com/css?family=Catamaran:700|Merriweather+Sans:400,400i,700&display=swap'
       }
     ]
   },
