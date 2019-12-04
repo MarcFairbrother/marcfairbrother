@@ -131,6 +131,10 @@ export default {
               margin-right: var(--hlf-margin);
               width: 30px;
             }
+            @include breakpoint($large-width) {
+              height: 35px;
+              width: 35px;
+            }
           }
           &--shooter::before {
             background-image: var(--shooter);
