@@ -26,30 +26,30 @@
     </section>
     <nav class="mainheader__sitenav">
       <ul class="mainheader__sitenav__list">
-        <li class="mainheader__sitenav__readme">
+        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--readme">
           <nuxt-link to="/readme">Read.me</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__resume">
+        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--resume">
           <nuxt-link to="/resume">Git Log --cv</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__bookmarks">
+        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--bookmarks">
           <nuxt-link to="/bookmarks">BookMarc'd</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__photography">
+        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--photography">
           <nuxt-link to="/photography">Photography</nuxt-link>
         </li>
       </ul>
     </nav>
     <section class="mainheader__social">
       <ul class="mainheader__social__list">
-        <li>
-          <a href="#">LinkedIn</a>
+        <li class="mainheader__social__list__item mainheader__social__list__item--linkedin">
+          <a href="#" title="Marc's LinkedIn Profile">LinkedIn</a>
         </li>
-        <li>
-          <a href="#">GitHub</a>
+        <li class="mainheader__social__list__item mainheader__social__list__item--github">
+          <a href="#" title="Marc's GitHub Profile">GitHub</a>
         </li>
-        <li>
-          <a href="#">Twitter</a>
+        <li class="mainheader__social__list__item mainheader__social__list__item--instagram">
+          <a href="#" title="Marc's Instagram">Instagram</a>
         </li>
       </ul>
     </section>
@@ -70,7 +70,11 @@ export default {
 .mainheader {
   display: grid;
   grid-template-columns: 1fr;
-  width: 100vw;
+  @include breakpoint($desktop-width) {
+    grid-template-columns: 45vw 1fr;
+    grid-template-rows: auto auto;
+    height: 100vh;
+  }
   &__identity {
     align-items: center;
     background: var(--clr-1);
@@ -80,6 +84,10 @@ export default {
     grid-row: 1;
     padding-top: 15vh;
     width: 100%;
+    @include breakpoint($desktop-width) {
+      grid-column: 1;
+      grid-row: 1;
+    }
     &__logo {
       display: flex;
       flex-direction: column;
@@ -106,16 +114,108 @@ export default {
             width: 25px;
           }
           &--shooter::before {
-            @include shooter;
+            content: var(--shooter);
           }
           &--cowboy::before {
-            @include cowboy;
+            content: var(--cowboy);
           }
           &--explorer::before {
-            @include explorer;
+            content: var(--explorer);
           }
           &:last-of-type {
             grid-column: 1/3;
+          }
+        }
+      }
+    }
+  }
+  &__sitenav {
+    @include breakpoint($desktop-width) {
+      grid-column: 2;
+      grid-row: 1/3;
+    }
+    &__list {
+      @include breakpoint($desktop-width) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 100%;
+      }
+      &__item {
+        padding: var(--hlf-margin) var(--fll-margin);
+        @include breakpoint($desktop-width) {
+          display: flex;
+          justify-content: center;
+        }
+        & > a {
+          align-items: center;
+          display: flex;
+          @include breakpoint($desktop-width) {
+            align-items: center;
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
+          }
+          &::before {
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            content: "";
+            height: 50px;
+            margin-right: var(--hlf-margin);
+            width: 50px;
+            @include breakpoint($desktop-width) {
+              margin-right: 0;
+              margin-bottom: var(--hlf-margin);
+              transform: rotate(180deg);
+            }
+          }
+        }
+        &--readme {
+          background: var(--clr-2);
+          & > a {
+            &:any-link {
+              color: var(--clr-3);
+            }
+            &::before {
+              background-image: var(--readme);
+              border: solid 2px var(--clr-3);
+            }
+          }
+        }
+        &--resume {
+          background: var(--clr-3);
+          & > a {
+            &:any-link {
+              color: var(--clr-4);
+            }
+            &::before {
+              background-image: var(--resume);
+              border: solid 2px var(--clr-4);
+            }
+          }
+        }
+        &--bookmarks {
+          background: var(--clr-4);
+          & > a {
+            &:any-link {
+              color: var(--clr-5);
+            }
+            &::before {
+              background-image: var(--bookmarks);
+              border: solid 2px var(--clr-5);
+            }
+          }
+        }
+        &--photography {
+          background: var(--clr-5);
+          & > a {
+            &:any-link {
+              color: var(--clr-1);
+            }
+            &::before {
+              background-image: var(--photography);
+              border: solid 2px var(--clr-1);
+            }
           }
         }
       }
@@ -125,18 +225,34 @@ export default {
     background: var(--clr-1);
     grid-row: 2;
     padding-bottom: var(--fll-margin);
+    @include breakpoint($desktop-width) {
+      grid-column: 1;
+      grid-row: 2;
+    }
     &__list {
       display: flex;
       justify-content: center;
-      & li {
-        border: solid 5px var(--clr-2);
+      &__item {
+        border: solid 2px var(--clr-2);
         border-radius: 50%;
         margin: 0 var(--hlf-margin);
         & > a {
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+          background-position: center;
           display: block;
           font-size: 0;
-          height: 40px;
-          width: 40px;
+          height: 42px;
+          width: 42px;
+        }
+        &--linkedin > a {
+          background-image: var(--linkedin);
+        }
+        &--github > a {
+          background-image: var(--github);
+        }
+        &--instagram > a {
+          background-image: var(--instagram);
         }
       }
     }
