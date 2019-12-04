@@ -9,18 +9,25 @@
   --hlf-margin: 20px;
   --fll-margin: 40px;
   --qtr-margin: 10px;
+  --rnd-border: solid 2px;
+  @include breakpoint($tablet-width) {
+    --rnd-border: solid 4px;
+  }
+}
+
+html {
+  font-size: 10px;
+  @include breakpoint($tablet-width) {
+    font-size: 15px;
+  }
+  @include breakpoint($large-width) {
+    font-size: 20px;
+  }
 }
 
 body {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 400;
-  background: #ececec;
-  @include breakpoint($tablet-width) {
-    background: #6f6f6f;
-  }
-  @include breakpoint($desktop-width) {
-    background: url('/img/hole.jpg');
-  }
 }
 
 h1,

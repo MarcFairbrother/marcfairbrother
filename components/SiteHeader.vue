@@ -72,8 +72,8 @@ export default {
   grid-template-columns: 1fr;
   @include breakpoint($desktop-width) {
     grid-template-columns: 45vw 1fr;
-    grid-template-rows: auto auto;
-    height: 100vh;
+    grid-template-rows: 1fr max-content;
+    height: calc(100vh - 40px);
   }
   &__identity {
     align-items: center;
@@ -82,11 +82,13 @@ export default {
     display: flex;
     flex-direction: column;
     grid-row: 1;
-    padding-top: 15vh;
+    height: 75vh;
+    justify-content: center;
     width: 100%;
     @include breakpoint($desktop-width) {
       grid-column: 1;
       grid-row: 1;
+      height: 100%;
     }
     &__logo {
       display: flex;
@@ -96,34 +98,53 @@ export default {
     }
     & a {
       color: var(--clr-2);
+      & h1 {
+        font-size: 2rem;
+      }
     }
     &__tagline {
-      padding-bottom: 15vh;
       &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: max-content;
         grid-gap: var(--hlf-margin);
+        @include breakpoint($tablet-width) {
+          grid-template-columns: 1fr 1fr;
+        }
         &__item {
           align-items: center;
           display: flex;
-          justify-content: center;
+          font-size: 1.5rem;
+          @include breakpoint($tablet-width) {
+            justify-content: center;
+          }
           &::before {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: "";
             display: flex;
             height: 25px;
             margin-right: var(--qtr-margin);
             width: 25px;
+            @include breakpoint($tablet-width) {
+              height: 30px;
+              margin-right: var(--hlf-margin);
+              width: 30px;
+            }
           }
           &--shooter::before {
-            content: var(--shooter);
+            background-image: var(--shooter);
           }
           &--cowboy::before {
-            content: var(--cowboy);
+            background-image: var(--cowboy);
           }
           &--explorer::before {
-            content: var(--explorer);
+            background-image: var(--explorer);
           }
           &:last-of-type {
-            grid-column: 1/3;
+            @include breakpoint($tablet-width) {
+              grid-column: 1/3;
+            }
           }
         }
       }
@@ -141,10 +162,13 @@ export default {
         height: 100%;
       }
       &__item {
+        font-size: 1.5rem;
         padding: var(--hlf-margin) var(--fll-margin);
         @include breakpoint($desktop-width) {
           display: flex;
+          font-size: 4.5rem;
           justify-content: center;
+          padding: var(--hlf-margin) var(--fll-margin) var(--fll-margin);
         }
         & > a {
           align-items: center;
@@ -165,7 +189,7 @@ export default {
             width: 50px;
             @include breakpoint($desktop-width) {
               margin-right: 0;
-              margin-bottom: var(--hlf-margin);
+              margin-bottom: var(--fll-margin);
               transform: rotate(180deg);
             }
           }
@@ -178,7 +202,7 @@ export default {
             }
             &::before {
               background-image: var(--readme);
-              border: solid 2px var(--clr-3);
+              border: var(--rnd-border) var(--clr-3);
             }
           }
         }
@@ -190,7 +214,7 @@ export default {
             }
             &::before {
               background-image: var(--resume);
-              border: solid 2px var(--clr-4);
+              border: var(--rnd-border) var(--clr-4);
             }
           }
         }
@@ -202,7 +226,7 @@ export default {
             }
             &::before {
               background-image: var(--bookmarks);
-              border: solid 2px var(--clr-5);
+              border: var(--rnd-border) var(--clr-5);
             }
           }
         }
@@ -214,7 +238,7 @@ export default {
             }
             &::before {
               background-image: var(--photography);
-              border: solid 2px var(--clr-1);
+              border: var(--rnd-border) var(--clr-1);
             }
           }
         }
@@ -233,17 +257,24 @@ export default {
       display: flex;
       justify-content: center;
       &__item {
-        border: solid 2px var(--clr-2);
+        border: var(--rnd-border) var(--clr-2);
         border-radius: 50%;
-        margin: 0 var(--hlf-margin);
+        margin: 0 var(--qtr-margin);
+        @include breakpoint($tablet-width) {
+          margin: 0 var(--hlf-margin);
+        }
         & > a {
           background-size: 20px 20px;
           background-repeat: no-repeat;
           background-position: center;
           display: block;
           font-size: 0;
-          height: 42px;
-          width: 42px;
+          height: 46px;
+          width: 46px;
+          @include breakpoint($tablet-width) {
+            height: 42px;
+            width: 42px;
+          }
         }
         &--linkedin > a {
           background-image: var(--linkedin);
