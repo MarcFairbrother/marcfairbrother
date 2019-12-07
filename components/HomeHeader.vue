@@ -3,7 +3,9 @@
     <section class="mainheader__identity">
       <div class="mainheader__identity__logo">
         <nuxt-link to="/">
-          <logo />
+          <div class="mainheader__identity__logo__picto">
+            <logo />
+          </div>
           <h1>Marc&nbsp;Fairbrother</h1>
         </nuxt-link>
       </div>
@@ -92,11 +94,16 @@ export default {
       flex-direction: column;
       margin-bottom: var(--fll-margin);
       width: min-content;
-    }
-    & a {
-      color: var(--clr-2);
-      & h1 {
-        font-size: 2rem;
+      &__picto {
+        display: inline-block;
+        margin-bottom: var(--hlf-margin);
+        width: 100%;
+      }
+      & a {
+        color: var(--clr-2);
+        & h1 {
+          font-size: 2rem;
+        }
       }
     }
     &__tagline {
