@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <transition>
       <home-header v-show="$nuxt.$route.path === '/'" />
     </transition>
@@ -26,12 +26,10 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  h1 {
-    @include breakpoint($tablet-width) {
-    }
-    @include breakpoint($desktop-width) {
-    }
+.container {
+  @include breakpoint($desktop-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
   }
 }
 </style>

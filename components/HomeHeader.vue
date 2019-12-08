@@ -70,6 +70,8 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   @include breakpoint($desktop-width) {
+    grid-column: 1/3;
+    grid-row: 1;
     grid-template-columns: 45vw 1fr;
     grid-template-rows: 1fr max-content;
     height: calc(100vh - 40px);

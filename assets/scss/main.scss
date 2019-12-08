@@ -6,6 +6,8 @@
   --clr-3: rgb(75, 34, 90);
   --clr-4: rgb(194, 59, 59);
   --clr-5: rgb(32, 32, 37);
+  --dark: rgb(15, 15, 15);
+  --light: rgb(238, 238, 238);
   --hlf-margin: 20px;
   --fll-margin: 40px;
   --qtr-margin: 10px;
@@ -26,6 +28,7 @@ html {
 }
 
 body {
+  background: var(--light);
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 400;
 }
@@ -40,4 +43,8 @@ nav {
 
 a {
   text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
 }
