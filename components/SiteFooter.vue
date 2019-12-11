@@ -1,26 +1,49 @@
 <template>
-  <footer :class="[$nuxt.$route.path === '/' ? 'footer--home' : 'footer--other']"></footer>
+  <footer>
+    <p>
+      <nuxt-link to="/credits">Crédits</nuxt-link>
+    </p>
+    <p>
+      MarcFairbrother
+      <span class="flip">&copy;</span>
+      2019
+    </p>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
 footer {
+  align-items: center;
   background: var(--dark);
   color: var(--light);
-  height: 40px;
+  display: flex;
+  font-size: 0.8rem;
+  height: auto;
+  justify-content: space-between;
   margin: 0;
-  padding-bottom: 120px;
-  width: 100%;
+  padding: var(--hlf-margin) var(--hlf-margin);
   @include breakpoint($desktop-width) {
-    grid-column: 1/3;
-    grid-row: 2;
-    padding-bottom: 0;
-    &.footer--other {
-      bottom: 0;
-      grid-column: 1;
-      grid-row: 1;
-      position: sticky;
-      top: calc(100vh - 40px);
+    bottom: 0;
+    font-size: 0.6rem;
+    grid-column: 1;
+    grid-row: 1;
+    height: 40px;
+    padding: 0 var(--hlf-margin);
+    position: sticky;
+    top: calc(100vh - 40px);
+  }
+  & p {
+    padding-bottom: 70px;
+    @include breakpoint($desktop-width) {
+      padding-bottom: 0;
     }
   }
+  & a {
+    color: var(--light);
+  }
+}
+.flip {
+  display: inline-block;
+  transform: rotateZ(180deg);
 }
 </style>

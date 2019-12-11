@@ -4,7 +4,7 @@
     <article class="readme__content">
       <section class="readme__content__section readme__content__section--bio">
         <h3>En bref</h3>
-        <p>Né outre-Manche (nul n'est parfait) je suis arrivé en France à l'age de 10 ans. Après des études de cinéma et un passage dans le commerce (à la Fnac puis en librairie indé), je me suis formé aux métiers du web, secteur dans lequel je travaille depuis 6 ans.</p>
+        <p>Né outre-Manche (nul n'est parfait) j'ai débarqué dans l'hexagone à l'age de 10 ans. Après des études de cinéma et un passage dans le commerce (à la Fnac puis en librairie indé), je me suis formé aux métiers du web, secteur dans lequel je travaille depuis 2014.</p>
         <p>L'accessibilité et la performance sont parmi les questions actuelles du web qui me tiennent particulièrement à coeur, l'utilisateur devant tenir une place centrale dans l'élaboration de toute application afin d'en assurer la réussite.</p>
       </section>
       <section class="readme__content__section readme__content__section--interests">
