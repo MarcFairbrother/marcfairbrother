@@ -59,6 +59,7 @@ export default {
   left: 0;
   position: fixed;
   right: 0;
+  z-index: 5;
   @include breakpoint($desktop-width) {
     background: var(--dark);
     bottom: auto;
@@ -71,6 +72,17 @@ export default {
     right: auto;
     top: 0;
     position: sticky;
+    &.siteHeaderTransition-enter-active {
+      transition: transform 0.25s ease-in-out;
+      transition-delay: 0.5s;
+    }
+    &.siteHeaderTransition-leave-active {
+      transition: transform 0.25s ease-in-out;
+    }
+    &.siteHeaderTransition-enter,
+    &.siteHeaderTransition-leave-to {
+      transform: translateX(-100%);
+    }
   }
   &__identity {
     align-items: center;
