@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <transition name="homeHeaderTransition">
-      <home-header v-show="$nuxt.$route.path === '/'" />
-    </transition>
-    <transition name="siteHeaderTransition">
-      <site-header v-show="$nuxt.$route.path !== '/'" />
+    <transition name="header">
+      <home-header v-if="$nuxt.$route.path === '/'" />
+      <site-header v-else />
     </transition>
     <nuxt />
-    <home-footer v-if="$nuxt.$route.path === '/'" />
-    <site-footer v-else />
+    <transition name="footer">
+      <home-footer v-if="$nuxt.$route.path === '/'" />
+      <site-footer v-else />
+    </transition>
   </div>
 </template>
 
@@ -36,9 +36,8 @@ export default {
   }
 }
 @include breakpoint($desktop-width) {
-  .homeHeaderTransition-enter-active,
-  .homeHeaderTransition-leave-active,
-  .siteHeaderTransition-enter-active {
+  .header-enter-active,
+  .header-leave-active {
     transition-delay: 0.675s;
   }
 }

@@ -18,6 +18,7 @@
 }
 
 html {
+  overflow: hidden;
   font-size: 10px;
   @include breakpoint($tablet-width) {
     font-size: 15px;

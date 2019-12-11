@@ -72,15 +72,15 @@ export default {
     right: auto;
     top: 0;
     position: sticky;
-    &.siteHeaderTransition-enter-active {
+    &.header-enter-active {
       transition: transform 0.25s ease-in-out;
       transition-delay: 0.5s;
     }
-    &.siteHeaderTransition-leave-active {
+    &.header-leave-active {
       transition: transform 0.25s ease-in-out;
     }
-    &.siteHeaderTransition-enter,
-    &.siteHeaderTransition-leave-to {
+    &.header-enter,
+    &.header-leave-to {
       transform: translateX(-100%);
     }
   }

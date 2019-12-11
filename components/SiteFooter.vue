@@ -31,6 +31,17 @@ footer {
     padding: 0 var(--hlf-margin);
     position: sticky;
     top: calc(100vh - 40px);
+    &.footer-enter-active {
+      transition: transform 0.25s ease-in-out;
+      transition-delay: 0.5s;
+    }
+    &.footer-leave-active {
+      transition: transform 0.25s ease-in-out;
+    }
+    &.footer-enter,
+    &.footer-leave-to {
+      transform: translateX(-100%);
+    }
   }
   & p {
     padding-bottom: 70px;

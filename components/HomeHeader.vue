@@ -90,16 +90,16 @@ export default {
       grid-column: 1;
       grid-row: 1;
       height: 100%;
-      .homeHeaderTransition-enter-active & {
+      .header-enter-active & {
         transition: transform 0.25s ease-in-out;
         transition-delay: 0.25s;
       }
-      .homeHeaderTransition-leave-active & {
+      .header-leave-active & {
         transition: transform 0.25s ease-in-out;
         transition-delay: 0.5s;
       }
-      .homeHeaderTransition-enter &,
-      .homeHeaderTransition-leave-to & {
+      .header-enter &,
+      .header-leave-to & {
         transform: translateX(-100%);
       }
     }
@@ -191,8 +191,8 @@ export default {
           font-size: 4.5rem;
           justify-content: center;
           padding: var(--hlf-margin) var(--fll-margin) var(--fll-margin);
-          .homeHeaderTransition-enter-active &,
-          .homeHeaderTransition-leave-active & {
+          .header-enter-active &,
+          .header-leave-active & {
             transition: transform 0.25s ease-in-out;
             &:nth-child(2) {
               transition-delay: 0.125s;
@@ -204,8 +204,8 @@ export default {
               transition-delay: 0.375s;
             }
           }
-          .homeHeaderTransition-enter &,
-          .homeHeaderTransition-leave-to & {
+          .header-enter &,
+          .header-leave-to & {
             transform: translateY(-100%);
           }
         }
@@ -291,16 +291,16 @@ export default {
     @include breakpoint($desktop-width) {
       grid-column: 1;
       grid-row: 2;
-      .homeHeaderTransition-enter-active & {
+      .header-enter-active & {
         transition: transform 0.25s ease-in-out;
         transition-delay: 0.25s;
       }
-      .homeHeaderTransition-leave-active & {
+      .header-leave-active & {
         transition: transform 0.25s ease-in-out;
         transition-delay: 0.5s;
       }
-      .homeHeaderTransition-enter &,
-      .homeHeaderTransition-leave-to & {
+      .header-enter &,
+      .header-leave-to & {
         transform: translateX(-100%);
       }
     }
