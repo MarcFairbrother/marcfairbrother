@@ -60,6 +60,19 @@ export default {
   position: fixed;
   right: 0;
   z-index: 5;
+  @include mobile {
+    &.header-enter-active {
+      transition: transform 0.25s ease-in-out;
+      transition-delay: 0.25s;
+    }
+    &.header-leave-active {
+      transition: transform 0.25s ease-in-out;
+    }
+    &.header-enter,
+    &.header-leave-to {
+      transform: translateY(100%);
+    }
+  }
   @include breakpoint($desktop-width) {
     background: var(--dark);
     bottom: auto;

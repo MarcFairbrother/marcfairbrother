@@ -69,6 +69,19 @@ export default {
 .mainheader {
   display: grid;
   grid-template-columns: 1fr;
+  @include mobile {
+    &.header-enter-active {
+      transition: transform 0.25s ease-out;
+      transition-delay: 0.25s;
+    }
+    &.header-leave-active {
+      transition: transform 0.25s ease-in;
+    }
+    &.header-enter,
+    &.header-leave-to {
+      transform: translateX(-100%);
+    }
+  }
   @include breakpoint($desktop-width) {
     grid-column: 1/3;
     grid-row: 1;

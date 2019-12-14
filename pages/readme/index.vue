@@ -33,6 +33,14 @@
   @include breakpoint($large-width) {
     padding: var(--fll-margin) 0;
   }
+  @include mobile {
+    &.main-enter-active > h2 {
+      transition: transform 0.25s ease-in-out;
+    }
+    &.main-enter > h2 {
+      transform: translateX(100%);
+    }
+  }
   & h2 {
     background: var(--clr-2);
     color: var(--light);
