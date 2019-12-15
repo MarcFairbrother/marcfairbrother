@@ -1,6 +1,6 @@
 <template>
   <main class="readme">
-    <h2>/Read.me</h2>
+    <h2>/read.me</h2>
     <article class="readme__content">
       <section class="readme__content__section readme__content__section--bio">
         <h3>En bref</h3>
@@ -131,7 +131,7 @@
       }
       & p {
         font-size: 1.5rem;
-        line-height: 1.25;
+        line-height: 1.45;
         margin: 0 var(--qtr-margin) var(--hlf-margin);
         @include breakpoint($desktop-width) {
           font-size: 1.1rem;
