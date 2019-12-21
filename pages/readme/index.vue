@@ -53,6 +53,7 @@
     }
     @include breakpoint($large-width) {
       font-size: 2rem;
+      line-height: calc(2 * var(--fll-margin));
       margin: 0 var(--fll-margin) var(--fll-margin);
     }
   }

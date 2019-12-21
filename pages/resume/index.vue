@@ -1,6 +1,16 @@
 <template>
   <main class="resume">
-    <h2>$ git log--cv</h2>
+    <header>
+      <h2>$ git log--cv</h2>
+      <nav>
+        <ul class="resume__menu">
+          <li class="resume__menu__item">Profil</li>
+          <li class="resume__menu__item">Expérience</li>
+          <li class="resume__menu__item">Formations</li>
+          <li class="resume__menu__item">Loisirs</li>
+        </ul>
+      </nav>
+    </header>
     <article class="resume__content">
       <section class="resume__content__section resume__content__section--overview">
         <h3>Profil</h3>
@@ -71,7 +81,11 @@
         <ul class="resume__content__section__list resume__content__section__list--work">
           <li>
             <h4>Depuis 2014&nbsp;: Responsable technique chez Moving Scope</h4>
-            <p>Gestion des projets Festival Scope, Festival Scope Pro (B2B) et ArteKino Festival (en partenariat avec Arte Cinéma), services de VOD disposant d'applications web et mobile et visant un public international.</p>
+            <p>
+              Gestion des projets Festival Scope, Festival Scope Pro (B2B) et ArteKino Festival (en partenariat avec Arte Cinéma), trois
+              <strong>services de VOD</strong> disposant d'applications
+              <strong>web et mobile</strong> et visant un public international.
+            </p>
             <p>Organisation du travail de prestataires techniques et coordination des équipes internes mobilisées sur chaque projet.</p>
             <p>Supervision de la refonte graphique et technique de Festival Scope Pro.</p>
             <p>Suivi de Festival Scope et ArteKino Festival depuis leur conception jusqu'à leur lancement.</p>
@@ -126,47 +140,161 @@
         <ul class="resume__content__section__list resume__content__section__list--hobbies">
           <li>
             <h4>10 Films</h4>
-            <ul>
-              <li>Le Goût du saké</li>
-              <li>La Poursuite infernale</li>
-              <li>Possession</li>
-              <li>Les Seigneurs</li>
-              <li>Le Jour se lève</li>
-              <li>Prince des ténèbres</li>
-              <li>Le Colonel Blimp</li>
-              <li>Eros + Massacre</li>
-              <li>L'Esprit de la ruche</li>
-              <li>Apportez moi la tête d'Alfredo Garcia</li>
+            <ul class="resume__content__section__list resume__content__section__list--sublist">
+              <li>
+                <p>
+                  <em>Le Goût du saké</em> (Yasujirō Ozu, 1962)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>La Poursuite infernale</em> (John Ford, 1946)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Possession</em> (Andrzej Żuławski, 1981)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Les Seigneurs</em> (Philip Kaufman, 1979)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Le Jour se lève</em> (Marcel Carné, 1939)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Prince des ténèbres</em> (John Carpenter, 1987)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Le Colonel Blimp</em> (Michael Powell &amp; Emeric Pressburger, 1953)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Eros + Massacre</em> (Kiju Yoshida, 1969)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>L'Esprit de la ruche</em> (Víctor Erice, 1977)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Apportez moi la tête d'Alfredo Garcia</em> (Sam Peckinpah, 1974)
+                </p>
+              </li>
             </ul>
           </li>
           <li>
             <h4>10 Livres</h4>
-            <ul>
-              <li>La Chance d'Omensetter</li>
-              <li>L'Homme soleil</li>
-              <li>Le Loup des steppes</li>
-              <li>Moby Dick</li>
-              <li>Méridien de sang</li>
-              <li>L'Education sentimentale</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+            <ul class="resume__content__section__list resume__content__section__list--sublist">
+              <li>
+                <p>
+                  <em>La Chance d'Omensetter</em> (William H. Gass, 1966)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>L'Homme soleil</em> (John Gardner, 1972)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Le Loup des steppes</em> (Hermann Hesse, 1927)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Moby Dick</em> (Herman Melville, 1851)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Méridien de sang</em> (Cormac McCarthy, 1985)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>L'Education sentimentale</em> (Gustave Flaubert, 1869)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Neuromancien</em> (William Gibson, 1984)
+                </p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
             </ul>
           </li>
           <li>
             <h4>10 Albums</h4>
-            <ul>
-              <li>F#A#∞ (Godspeed You! Black Emperor)</li>
-              <li>Basket of Light (Pentangle)</li>
-              <li>Black Sabbath (Black Sabbath)</li>
-              <li>Giant Steps (John Coltrane)</li>
-              <li>Live at the Old Quarter (Townes Van Zandt)</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+            <ul class="resume__content__section__list resume__content__section__list--sublist">
+              <li>
+                <p>
+                  <em>F#A#∞</em> (Godspeed You! Black Emperor, 1997)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Basket of Light</em> (Pentangle, 1969)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Black Sabbath</em> (Black Sabbath, 1970)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Giant Steps</em> (John Coltrane, 1960)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Live at the Old Quarter, Houston, Texas</em> (Townes Van Zandt, 1977)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>New Skin for the Old Ceremony</em> (Leonard Cohen, 1974)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Ecophony Rinne</em> (Geinoh Yamashirogumi, 1986)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>White Chalk</em> (PJ Harvey, 2007)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>Odessey and Oracle</em> (The Zombies, 1968)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>666.667 Club</em> (Noir Désir, 1996)
+                </p>
+              </li>
             </ul>
           </li>
         </ul>
@@ -177,24 +305,70 @@
 
 <style lang="scss" scoped>
 .resume {
-  & h2 {
-    background: var(--clr-3);
-    color: var(--light);
-    font-size: 2.5rem;
-    margin-bottom: var(--hlf-margin);
-    padding: var(--hlf-margin);
+  @include breakpoint($desktop-width) {
+    border-left: solid var(--hlf-margin) var(--clr-3);
+    border-right: solid var(--hlf-margin) var(--clr-3);
+  }
+  & header {
+    @include mobile {
+      margin-bottom: var(--hlf-margin);
+    }
     @include breakpoint($desktop-width) {
-      grid-column: 1/4;
-      margin: 0 var(--hlf-margin) var(--hlf-margin);
+      background: var(--light);
+      border-top: solid var(--hlf-margin) var(--clr-3);
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      padding: var(--hlf-margin);
+      position: sticky;
+      top: 0;
     }
     @include breakpoint($large-width) {
-      font-size: 2rem;
-      margin: 0 var(--fll-margin) var(--fll-margin);
+      padding: var(--fll-margin);
+    }
+    & h2 {
+      background: var(--clr-3);
+      color: var(--light);
+      font-size: 2.5rem;
+      padding: var(--hlf-margin);
+      @include breakpoint($large-width) {
+        line-height: calc(2 * var(--fll-margin));
+        font-size: 2rem;
+      }
+    }
+    & nav {
+      background: var(--clr-3);
+      color: var(--light);
+      @include mobile {
+        display: none;
+      }
+      & ul {
+        @include breakpoint($desktop-width) {
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: flex-end;
+          & li {
+            margin-right: var(--hlf-margin);
+            @include breakpoint($large-width) {
+              margin-left: var(--hlf-margin);
+            }
+          }
+        }
+      }
     }
   }
   &__content {
     &__section {
       padding: 0 var(--qtr-margin);
+      @include breakpoint($desktop-width) {
+        padding: 0 var(--hlf-margin);
+      }
+      @include breakpoint($large-width) {
+        align-items: center;
+        display: flex;
+        min-height: calc(100vh - (4.5 * var(--fll-margin)));
+        padding: 0 var(--fll-margin);
+      }
       & h3 {
         align-items: center;
         background: var(--clr-3);
@@ -203,16 +377,123 @@
         font-size: 2rem;
         margin-bottom: var(--hlf-margin);
         padding: var(--hlf-margin) var(--qtr-margin);
+        @include breakpoint($desktop-width) {
+          display: none;
+        }
       }
       & h4 {
         color: var(--clr-3);
         font-size: 2rem;
         margin: 0 var(--qtr-margin) var(--hlf-margin);
+        @include breakpoint($desktop-width) {
+          font-size: 1.5rem;
+          margin: 0 0 var(--hlf-margin);
+        }
+        @include breakpoint($large-width) {
+          font-size: 1.25rem;
+        }
       }
       & p {
         font-size: 1.5rem;
         line-height: 1.45;
         margin: 0 var(--qtr-margin) var(--hlf-margin);
+        @include breakpoint($desktop-width) {
+          font-size: 1.1rem;
+          margin: 0 0 var(--hlf-margin);
+        }
+        @include breakpoint($large-width) {
+          font-size: 0.85rem;
+        }
+      }
+      &--overview {
+        & ul {
+          @include breakpoint($desktop-width) {
+            border-bottom: solid 2px var(--clr-3);
+            margin-bottom: var(--fll-margin);
+            padding-bottom: var(--hlf-margin);
+          }
+          @include breakpoint($large-width) {
+            border-bottom: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: var(--fll-margin);
+            grid-row-gap: var(--hlf-margin);
+          }
+        }
+      }
+      &--work {
+        & ul {
+          @include breakpoint($desktop-width) {
+            border-bottom: solid 2px var(--clr-3);
+            margin-bottom: var(--fll-margin);
+            padding-bottom: var(--hlf-margin);
+          }
+          @include breakpoint($large-width) {
+            border-bottom: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: var(--fll-margin);
+            grid-row-gap: var(--hlf-margin);
+            & li {
+              &:first-of-type {
+                grid-column: 1;
+                grid-row: 1/3;
+              }
+            }
+          }
+        }
+      }
+      &--studies {
+        & ul {
+          @include breakpoint($desktop-width) {
+            border-bottom: solid 2px var(--clr-3);
+            margin-bottom: var(--fll-margin);
+            padding-bottom: var(--hlf-margin);
+          }
+          @include breakpoint($large-width) {
+            border-bottom: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr max-content;
+            grid-row-gap: var(--hlf-margin);
+            width: 100%;
+            & li {
+              &:nth-child(1) {
+                grid-column: 1/5;
+                grid-row: 1;
+              }
+              &:nth-child(2) {
+                grid-column: 2/5;
+                grid-row: 2;
+              }
+              &:nth-child(3) {
+                grid-column: 3/5;
+                grid-row: 3;
+              }
+              &:nth-child(4) {
+                grid-column: 4/5;
+                grid-row: 4;
+              }
+            }
+          }
+        }
+      }
+      &--hobbies {
+        & > ul {
+          @include breakpoint($desktop-width) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: var(--fll-margin);
+            width: 100%;
+            & p {
+              margin-bottom: var(--qtr-margin);
+            }
+          }
+        }
+      }
+      @include breakpoint($desktop-width) {
+        &:last-of-type {
+          border-bottom: solid var(--hlf-margin) var(--clr-3);
+        }
       }
     }
   }
