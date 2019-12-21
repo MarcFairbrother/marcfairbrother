@@ -52,7 +52,7 @@
             <h4>Les petits plus</h4>
             <p>
               Né en angleterre, mais ayant vécu plus de 25 années en France, je suis
-              <strong>parfaitement bilingue</strong> et je maîtrise l'anglais et le français à l'écrit et à l'oral.
+              <strong>parfaitement bilingue</strong>, maîtrisant l'anglais et le français à l'écrit comme à l'oral.
             </p>
             <p>
               Curieux de nature, et grâce notamment à mon passé en librairie, je possède une
@@ -71,15 +71,32 @@
         <ul class="resume__content__section__list resume__content__section__list--work">
           <li>
             <h4>Depuis 2014&nbsp;: Responsable technique chez Moving Scope</h4>
-            <p></p>
+            <p>Gestion des projets Festival Scope, Festival Scope Pro (B2B) et ArteKino Festival (en partenariat avec Arte Cinéma), services de VOD disposant d'applications web et mobile et visant un public international.</p>
+            <p>Organisation du travail de prestataires techniques et coordination des équipes internes mobilisées sur chaque projet.</p>
+            <p>Supervision de la refonte graphique et technique de Festival Scope Pro.</p>
+            <p>Suivi de Festival Scope et ArteKino Festival depuis leur conception jusqu'à leur lancement.</p>
+            <p>
+              Maquettage et intégration de newsletters
+              <em>responsives</em> et compatibles avec les principaux clients e-mail pour les différents services.
+            </p>
+            <p>
+              Intégration et corrections de bugs
+              <em>front-end</em> pour pallier au manque de ressources techniques.
+            </p>
+            <p>
+              Migration d'un important catalogue vidéo vers un workflow fournissant les protocoles (HLS et MPEG-DASH) et DRM (PlayReady, FairPlay et Widevine) nécessaires à une compatibilité
+              <em>cross-platform</em>.
+            </p>
           </li>
           <li>
             <h4>2010-2012&nbsp;: Libraire et webmaster à la librairie indépendente Village Voice</h4>
-            <p></p>
+            <p>Reprise du site statique existant de la librairie et migration vers une nouvelle solution technique. Réflexion autour des solutions d’e-commerce pour produits physiques et numériques.</p>
+            <p>Réalisation d’affiches et communication en ligne pour promouvoir les événements tenus à la librairie. Exploitation des archives vidéo des rencontres (numérisation et montage sur Premiere Pro, mise en ligne sur Youtube).</p>
+            <p>Tâches habituelles du libraire (accueil et conseil de la clientèle, gestion de la caisse, de la boutique et du stock, politique d’assortiment, merchandising).</p>
           </li>
           <li>
             <h4>2007-2009&nbsp;: Conseiller de vente au rayon vidéo de la Fnac St-Lazare</h4>
-            <p></p>
+            <p>Chargé de gérer des rayons, des catalogues et le stock, de conseiller la clientèle ainsi que d’organiser le travail d’une équipe de renforts pour la période de Noël.</p>
           </li>
         </ul>
       </section>
@@ -87,15 +104,15 @@
         <h3>Formations</h3>
         <ul class="resume__content__section__list resume__content__section__list--studies">
           <li>
-            <h4>License professionnelle Création et développement nuémriques en ligne</h4>
+            <h4>License professionnelle Création et Développement Numériques en Ligne</h4>
             <p>Université Paris 8 (2013-2014)</p>
           </li>
           <li>
-            <h4>DUT Métiers du livre</h4>
+            <h4>DUT Métiers du livre (librairie)</h4>
             <p>Université Paris X - Nanterre (2009-2010)</p>
           </li>
           <li>
-            <h4>License Arts du spectacle mention cinéma</h4>
+            <h4>License Arts du spectacle (cinéma)</h4>
             <p>Université Paris X - Nanterre (2004-2007)</p>
           </li>
           <li>
