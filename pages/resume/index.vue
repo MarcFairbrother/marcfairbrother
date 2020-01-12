@@ -377,8 +377,48 @@
         font-size: 2rem;
         margin-bottom: var(--hlf-margin);
         padding: var(--hlf-margin) var(--qtr-margin);
+        &::before {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 16px 16px;
+          border: var(--rnd-border) var(--light);
+          border-radius: 50%;
+          content: "";
+          display: block;
+          height: 34px;
+          margin-right: var(--qtr-margin);
+          width: 34px;
+        }
         @include breakpoint($desktop-width) {
           display: none;
+        }
+      }
+      &--overview {
+        & h3 {
+          &::before {
+            background-image: var(--bio);
+          }
+        }
+      }
+      &--work {
+        & h3 {
+          &::before {
+            background-image: var(--work);
+          }
+        }
+      }
+      &--studies {
+        & h3 {
+          &::before {
+            background-image: var(--studies);
+          }
+        }
+      }
+      &--hobbies {
+        & h3 {
+          &::before {
+            background-image: var(--hobbies);
+          }
         }
       }
       & h4 {
