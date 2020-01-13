@@ -61,16 +61,9 @@ export default {
   right: 0;
   z-index: 5;
   @include mobile {
-    &.header-enter-active {
-      transition: transform 0.25s ease-in-out;
-      transition-delay: 0.25s;
-    }
+    &.header-enter-active,
     &.header-leave-active {
-      transition: transform 0.25s ease-in-out;
-    }
-    &.header-enter,
-    &.header-leave-to {
-      transform: translateY(100%);
+      transition-delay: 0.85s;
     }
   }
   @include breakpoint($desktop-width) {
@@ -105,6 +98,20 @@ export default {
     grid-column: 1;
     justify-content: flex-end;
     padding: var(--qtr-margin);
+    @include mobile {
+      .header-enter-active & {
+        transition: transform 0.15s cubic-bezier(0.9, 0.01, 0.67, 1.01);
+        transition-delay: 0.7s;
+      }
+      .header-leave-active & {
+        transition: transform 0.15s ease-in;
+        transition-delay: 0.7s;
+      }
+      .header-enter &,
+      .header-leave-to & {
+        transform: translateY(100%);
+      }
+    }
     @include breakpoint($desktop-width) {
       border-radius: 5px;
       margin-bottom: var(--hlf-margin);
@@ -153,6 +160,42 @@ export default {
         font-size: 0.8rem;
         justify-content: flex-end;
         padding: var(--qtr-margin);
+        @include mobile {
+          .header-enter-active & {
+            transition: transform 0.15s cubic-bezier(0.9, 0.01, 0.67, 1.01);
+            &:nth-child(1) {
+              transition-delay: 0.575s;
+            }
+            &:nth-child(2) {
+              transition-delay: 0.45s;
+            }
+            &:nth-child(3) {
+              transition-delay: 0.325s;
+            }
+            &:nth-child(4) {
+              transition-delay: 0.2s;
+            }
+          }
+          .header-leave-active & {
+            transition: transform 0.15s ease-in;
+            &:nth-child(1) {
+              transition-delay: 0.575s;
+            }
+            &:nth-child(2) {
+              transition-delay: 0.45s;
+            }
+            &:nth-child(3) {
+              transition-delay: 0.325s;
+            }
+            &:nth-child(4) {
+              transition-delay: 0.2s;
+            }
+          }
+          .header-enter &,
+          .header-leave-to & {
+            transform: translateY(100%);
+          }
+        }
         @include breakpoint($desktop-width) {
           align-items: flex-start;
           border-radius: 5px;

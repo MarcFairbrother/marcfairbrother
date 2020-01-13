@@ -72,7 +72,7 @@ export default {
   @include mobile {
     &.header-enter-active {
       transition: transform 0.25s ease-out;
-      transition-delay: 0.25s;
+      transition-delay: 0.825s;
     }
     &.header-leave-active {
       transition: transform 0.25s ease-in;
