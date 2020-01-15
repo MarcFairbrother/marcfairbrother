@@ -55,7 +55,7 @@
             </p>
             <p>
               Je suis capable de créer des
-              <strong>maquettes graphiques et fonctionnelles</strong> en suivant une direction artistique. Je cherche à réutiliser autant que possible des éléments pour améliorer la cohérence d'ensemble. Je sais également créer des logos et de pictogrammes en SVG.
+              <strong>maquettes graphiques et fonctionnelles</strong> en suivant une direction artistique. Je cherche à réutiliser autant que possible des éléments pour améliorer la cohérence d'ensemble. Je sais également créer des logos et des pictogrammes en SVG.
             </p>
           </li>
           <li>

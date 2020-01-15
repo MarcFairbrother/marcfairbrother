@@ -103,24 +103,26 @@ export default {
       grid-column: 1;
       grid-row: 1;
       height: 100%;
-      .header-enter-active & {
-        transition: transform 0.25s ease-in-out;
-        transition-delay: 0.25s;
-      }
-      .header-leave-active & {
-        transition: transform 0.25s ease-in-out;
-        transition-delay: 0.5s;
-      }
-      .header-enter &,
-      .header-leave-to & {
-        transform: translateX(-100%);
-      }
     }
     &__logo {
       display: flex;
       flex-direction: column;
       margin-bottom: var(--fll-margin);
       width: min-content;
+      @include breakpoint($desktop-width) {
+        .header-enter-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.25s;
+        }
+        .header-leave-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.5s;
+        }
+        .header-enter &,
+        .header-leave-to & {
+          transform: translateX(-200%);
+        }
+      }
       &__picto {
         display: inline-block;
         margin-bottom: var(--hlf-margin);
@@ -134,6 +136,20 @@ export default {
       }
     }
     &__tagline {
+      @include breakpoint($desktop-width) {
+        .header-enter-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.25s;
+        }
+        .header-leave-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.5s;
+        }
+        .header-enter &,
+        .header-leave-to & {
+          transform: translateX(-200%);
+        }
+      }
       &__list {
         display: grid;
         grid-template-columns: max-content;
@@ -206,20 +222,30 @@ export default {
           padding: var(--hlf-margin) var(--fll-margin) var(--fll-margin);
           .header-enter-active &,
           .header-leave-active & {
-            transition: transform 0.25s ease-in-out;
-            &:nth-child(2) {
-              transition-delay: 0.125s;
+            &:nth-of-type(1) {
+              & > a {
+                transition: transform 0.25s ease-in-out;
+                transition-delay: 0s;
+              }
             }
-            &:nth-child(3) {
-              transition-delay: 0.25s;
+            &:nth-of-type(2) {
+              & > a {
+                transition: transform 0.25s ease-in-out;
+                transition-delay: 0.125s;
+              }
             }
-            &:nth-child(4) {
-              transition-delay: 0.375s;
+            &:nth-of-type(3) {
+              & > a {
+                transition: transform 0.25s ease-in-out;
+                transition-delay: 0.25s;
+              }
             }
-          }
-          .header-enter &,
-          .header-leave-to & {
-            transform: translateY(-100%);
+            &:nth-of-type(4) {
+              & > a {
+                transition: transform 0.25s ease-in-out;
+                transition-delay: 0.375s;
+              }
+            }
           }
         }
         & > a {
@@ -229,6 +255,10 @@ export default {
             align-items: center;
             transform: rotate(180deg);
             writing-mode: vertical-rl;
+            .header-enter &,
+            .header-leave-to & {
+              transform: translateY(-110%) rotate(180deg);
+            }
           }
           &::before {
             background-size: 20px 20px;
@@ -301,25 +331,25 @@ export default {
     background: var(--clr-1);
     grid-row: 2;
     padding-bottom: var(--fll-margin);
-    @include breakpoint($desktop-width) {
-      grid-column: 1;
-      grid-row: 2;
-      .header-enter-active & {
-        transition: transform 0.25s ease-in-out;
-        transition-delay: 0.25s;
-      }
-      .header-leave-active & {
-        transition: transform 0.25s ease-in-out;
-        transition-delay: 0.5s;
-      }
-      .header-enter &,
-      .header-leave-to & {
-        transform: translateX(-100%);
-      }
-    }
     &__list {
       display: flex;
       justify-content: center;
+      @include breakpoint($desktop-width) {
+        grid-column: 1;
+        grid-row: 2;
+        .header-enter-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.25s;
+        }
+        .header-leave-active & {
+          transition: transform 0.25s ease-in-out;
+          transition-delay: 0.5s;
+        }
+        .header-enter &,
+        .header-leave-to & {
+          transform: translateX(-200%);
+        }
+      }
       &__item {
         border: var(--rnd-border) var(--clr-2);
         border-radius: 50%;

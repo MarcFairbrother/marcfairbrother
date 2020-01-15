@@ -28,16 +28,10 @@ footer {
     grid-row: 2;
     padding-bottom: 0;
     &.footer-enter-active {
-      transition: transform 0.25s ease-in-out;
       transition-delay: 0.25s;
     }
     &.footer-leave-active {
-      transition: transform 0.25s ease-in-out;
-      transition-delay: 0.25s;
-    }
-    &.footer-enter,
-    &.footer-leave-to {
-      transform: translateX(100%);
+      transition-delay: 0.65s;
     }
   }
   & a {
