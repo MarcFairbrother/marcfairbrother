@@ -50,3 +50,16 @@ main {
   background: var(--light);
   min-height: 100vh;
 }
+
+.page-enter-active {
+  transition: opacity 0.25s;
+}
+
+.page-leave-active {
+  transition: opacity 0s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
