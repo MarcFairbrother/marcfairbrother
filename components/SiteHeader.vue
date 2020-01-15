@@ -80,7 +80,6 @@ export default {
     position: sticky;
     &.header-enter-active {
       transition: transform 0.25s ease-in-out;
-      transition-delay: 0.5s;
     }
     &.header-leave-active {
       transition: transform 0.25s ease-in-out;

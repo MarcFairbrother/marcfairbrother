@@ -31,7 +31,15 @@ footer {
       transition-delay: 0.25s;
     }
     &.footer-leave-active {
+      transition: all 0s;
       transition-delay: 0.65s;
+    }
+    &.footer-leave-to {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
     }
   }
   & a {
