@@ -38,7 +38,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ['@nuxtjs/dotenv'],
   /*
    ** Nuxt.js modules
    */
@@ -71,5 +71,8 @@ export default {
      */
     extractCSS: true,
     extend(config, ctx) {}
+  },
+  dotenv: {
+    TEST_VARIABLE: process.env.TEST_VARIABLE
   }
 };
