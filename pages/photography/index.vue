@@ -4,6 +4,7 @@
     <p>{{ test }}</p>
     <p>{{ test2 }}</p>
     <img :src="cloudinarySrc" alt />
+    <p>{{ cloudinaryTst }}</p>
   </main>
 </template>
 
@@ -11,7 +12,8 @@
 import cloudinary from "cloudinary-core";
 
 const cloudinaryCore = new cloudinary.Cloudinary({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  secure: true
 });
 
 export default {
@@ -24,6 +26,12 @@ export default {
   computed: {
     cloudinarySrc() {
       return cloudinaryCore.url("sample");
+    },
+    cloudinaryTst() {
+      return cloudinaryCore.url("marc", {
+        format: "json",
+        type: "list"
+      });
     }
   }
 };
