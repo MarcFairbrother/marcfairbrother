@@ -34,7 +34,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/cloudinary-vue'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -73,6 +73,7 @@ export default {
     extend(config, ctx) {}
   },
   dotenv: {
-    TEST_VARIABLE: process.env.TEST_VARIABLE
+    TEST_VARIABLE: process.env.TEST_VARIABLE,
+    CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME
   }
 };
