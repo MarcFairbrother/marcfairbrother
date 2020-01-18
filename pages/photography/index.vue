@@ -25,7 +25,9 @@ export default {
   },
   computed: {
     cloudinarySrc() {
-      return cloudinaryCore.url("sample");
+      return cloudinaryCore.url(
+        "marcfairbrother/23_portrait_guggenheim_avo6cf"
+      );
     },
     cloudinaryTst() {
       return cloudinaryCore.url("marc", {
