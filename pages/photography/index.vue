@@ -46,7 +46,7 @@ export default {
       photos: [],
       carouselIsVisible: false,
       currentImgPublic: "",
-      currentImgId: ""
+      currentImgId: 0
     };
   },
   methods: {
@@ -55,26 +55,24 @@ export default {
     },
     showCarousel: function(e) {
       this.carouselIsVisible = !this.carouselIsVisible;
-      this.currentImgId = e.target.getAttribute("data-target");
+      this.currentImgId = Number(e.target.getAttribute("data-target"));
       this.currentImgPublic = this.photos[this.currentImgId].public_id;
     },
     showPrevious: function() {
       if (this.currentImgId > 0) {
         this.currentImgId = this.currentImgId - 1;
-        this.currentImgPublic = this.photos[this.currentImgId].public_id;
       } else {
         this.currentImgId = this.photos.length - 1;
-        this.currentImgPublic = this.photos[this.currentImgId].public_id;
       }
+      this.currentImgPublic = this.photos[this.currentImgId].public_id;
     },
     showNext: function() {
       if (this.currentImgId < this.photos.length - 1) {
         this.currentImgId = this.currentImgId + 1;
-        this.currentImgPublic = this.photos[this.currentImgId].public_id;
       } else {
         this.currentImgId = 0;
-        this.currentImgPublic = this.photos[this.currentImgId].public_id;
       }
+      this.currentImgPublic = this.photos[this.currentImgId].public_id;
     }
   },
   mounted() {
