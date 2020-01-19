@@ -1,7 +1,7 @@
 <template>
   <main class="bookmarked">
     <header class="bookmarked__header">
-      <h2>:bookmarked</h2>
+      <h2>~bookmarc'd</h2>
     </header>
     <article class="bookmarked__content">
       <ul class="bookmarked__content__list">
