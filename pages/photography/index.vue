@@ -21,9 +21,48 @@
       <transition name="carousel">
         <img :src="cloudinarySrc(currentImgPublic)" alt class="photography__carousel__image" />
       </transition>
-      <p @click="showPrevious()" class="photography__carousel__previous">Previous</p>
-      <p @click="showNext()" class="photography__carousel__next">Next</p>
-      <p @click="carouselIsVisible = !carouselIsVisible" class="photography__carousel__close">Close</p>
+      <div @click="showPrevious()" class="photography__carousel__previous">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 13.229166 13.229167"
+        >
+          <path
+            d="M7.0514144.43683L.87366556 6.61457l6.17774884 6.17776"
+            fill="none"
+            stroke="#eee"
+            stroke-width="1.23554981"
+          />
+        </svg>
+      </div>
+      <div @click="showNext()" class="photography__carousel__next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 13.229166 13.229167"
+        >
+          <path
+            d="M6.1777623.43683l6.1777487 6.17774-6.1777487 6.17776"
+            fill="none"
+            stroke="#eee"
+            stroke-width="1.23554981"
+          />
+        </svg>
+      </div>
+      <div @click="carouselIsVisible = !carouselIsVisible" class="photography__carousel__close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 13.229166 13.229167"
+        >
+          <g fill="none" stroke="#eee" stroke-width="1.23555005">
+            <path d="M.43683292 12.79233L12.792334.43683M.43683292.43683L12.792334 12.79233" />
+          </g>
+        </svg>
+      </div>
     </article>
   </main>
 </template>
@@ -187,6 +226,9 @@ export default {
         grid-row: 2;
       }
     }
+    & svg {
+      height: var(--hlf-margin);
+    }
     &__close {
       grid-column: 2/3;
       grid-row: 2;
@@ -208,6 +250,9 @@ export default {
         align-self: center;
         grid-column: 1;
         grid-row: 2;
+        & svg {
+          height: var(--fll-margin);
+        }
       }
       &:hover {
         cursor: pointer;
@@ -222,6 +267,9 @@ export default {
         align-self: center;
         grid-column: 3;
         grid-row: 2;
+        & svg {
+          height: var(--fll-margin);
+        }
       }
       &:hover {
         cursor: pointer;
