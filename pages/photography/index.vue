@@ -154,22 +154,31 @@ export default {
   }
   &__carousel {
     background: var(--dark);
-    bottom: 0;
     color: var(--light);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    height: 100vh;
     left: 0;
+    padding: var(--hlf-margin);
     position: absolute;
     right: 0;
     top: 0;
     z-index: 10;
     &__image {
+      background: #fff;
       grid-column: 1/4;
       grid-row: 1;
+      max-height: 85vh;
+      justify-self: center;
+      padding: var(--qtr-margin);
+      width: auto;
     }
     &__close {
       grid-column: 2/3;
       grid-row: 2;
+      justify-self: center;
+      padding: var(--hlf-margin) 0;
       &:hover {
         cursor: pointer;
       }
@@ -177,6 +186,7 @@ export default {
     &__previous {
       grid-column: 1/2;
       grid-row: 2;
+      padding: var(--hlf-margin) 0;
       &:hover {
         cursor: pointer;
       }
@@ -184,6 +194,8 @@ export default {
     &__next {
       grid-column: 3/4;
       grid-row: 2;
+      justify-self: end;
+      padding: var(--hlf-margin) 0;
       &:hover {
         cursor: pointer;
       }
