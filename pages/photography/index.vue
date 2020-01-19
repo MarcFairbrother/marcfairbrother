@@ -18,7 +18,9 @@
       <p v-else>Could not load photos</p>
     </article>
     <article v-show="carouselIsVisible && currentImgPublic" class="photography__carousel">
-      <img :src="cloudinarySrc(currentImgPublic)" alt class="photography__carousel__image" />
+      <transition name="carousel">
+        <img :src="cloudinarySrc(currentImgPublic)" alt class="photography__carousel__image" />
+      </transition>
       <p @click="showPrevious()" class="photography__carousel__previous">Previous</p>
       <p @click="showNext()" class="photography__carousel__next">Next</p>
       <p @click="carouselIsVisible = !carouselIsVisible" class="photography__carousel__close">Close</p>
@@ -157,28 +159,43 @@ export default {
     color: var(--light);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content;
+    grid-template-rows: 75vh 25vh;
     height: 100vh;
     left: 0;
     padding: var(--hlf-margin);
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 10;
+    @include breakpoint($desktop-width) {
+      grid-template-columns: max-content 1fr max-content;
+      grid-template-rows: var(--hlf-margin) 1fr;
+      padding: 0 var(--hlf-margin) var(--hlf-margin);
+    }
     &__image {
+      align-self: center;
       background: #fff;
       grid-column: 1/4;
       grid-row: 1;
-      max-height: 85vh;
+      max-height: 100%;
       justify-self: center;
       padding: var(--qtr-margin);
       width: auto;
+      @include breakpoint($desktop-width) {
+        padding: var(--hlf-margin);
+        grid-column: 2;
+        grid-row: 2;
+      }
     }
     &__close {
       grid-column: 2/3;
       grid-row: 2;
       justify-self: center;
       padding: var(--hlf-margin) 0;
+      @include breakpoint($desktop-width) {
+        grid-column: 3;
+        grid-row: 1;
+      }
       &:hover {
         cursor: pointer;
       }
@@ -187,6 +204,11 @@ export default {
       grid-column: 1/2;
       grid-row: 2;
       padding: var(--hlf-margin) 0;
+      @include breakpoint($desktop-width) {
+        align-self: center;
+        grid-column: 1;
+        grid-row: 2;
+      }
       &:hover {
         cursor: pointer;
       }
@@ -196,10 +218,24 @@ export default {
       grid-row: 2;
       justify-self: end;
       padding: var(--hlf-margin) 0;
+      @include breakpoint($desktop-width) {
+        align-self: center;
+        grid-column: 3;
+        grid-row: 2;
+      }
       &:hover {
         cursor: pointer;
       }
     }
   }
+}
+.carousel-enter-active,
+.carousel-leave-active {
+  transition: opacity 0.5s;
+  transition-delay: 0.25s;
+}
+.carousel-enter,
+.carousel-leave-to {
+  opacity: 0;
 }
 </style>
