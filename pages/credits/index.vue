@@ -15,7 +15,7 @@
         <a
           href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
           target="_blank"
-        >Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license</a>
+        >CC BY-NC-ND 4.0 International license</a>
       </p>
       <p>
         🏠
@@ -28,7 +28,7 @@
       <p>
         🧙
         Hosted and deployed with
-        <a href="https://www.netlify.com/">Netlify</a> wizardry
+        <a href="https://www.netlify.com/" target="_blank">Netlify</a> wizardry
       </p>
       <section class="credits__content__legal">
         <p>Netlify, Inc.</p>
@@ -37,7 +37,7 @@
           <a href="mailto:privacy@netlify.com">privacy@netlify.com</a>
         </p>
         <p>
-          <a href="www.netlify.com" target="_blank">www.netlify.com</a>
+          <a href="https://www.netlify.com/" target="_blank">www.netlify.com</a>
         </p>
         <p>+1 844-899-7312</p>
         <p>Add Creative Commons License</p>
