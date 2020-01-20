@@ -71,15 +71,15 @@ export default {
   grid-template-columns: 1fr;
   @include mobile {
     &.header-enter-active {
-      transition: transform 0.25s ease-out;
-      transition-delay: 0.825s;
+      transition: opacity 0.8s ease-in-out;
+      transition-delay: 0.15s;
     }
     &.header-leave-active {
-      transition: transform 0.25s ease-in;
+      transition: opacity 0.35s ease-in-out;
     }
     &.header-enter,
     &.header-leave-to {
-      transform: translateX(-100%);
+      opacity: 0;
     }
   }
   @include breakpoint($desktop-width) {
