@@ -1,7 +1,5 @@
 <template>
-  <main>
-    <h2>Home</h2>
-  </main>
+  <main></main>
 </template>
 
 <style lang="scss" scoped>
