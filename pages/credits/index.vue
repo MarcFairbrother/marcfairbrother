@@ -40,7 +40,6 @@
           <a href="https://www.netlify.com/" target="_blank">www.netlify.com</a>
         </p>
         <p>+1 844-899-7312</p>
-        <p>Add Creative Commons License</p>
       </section>
     </article>
   </main>
