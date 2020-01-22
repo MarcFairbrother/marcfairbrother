@@ -162,12 +162,23 @@ export default {
       photoCarousel.style.setProperty("--starting", "");
       this.carouselIsVisible = !this.carouselIsVisible;
       this.currentImgId = "";
+    },
+    checkKey: function(e) {
+      e = e || window.event;
+      if (e.keyCode == "37" && this.carouselIsVisible === true) {
+        this.showPrevious();
+      } else if (e.keyCode == "39" && this.carouselIsVisible === true) {
+        this.showNext();
+      }
     }
   },
   mounted() {
     axios.get(photosRequest).then(response => {
       this.photos = response.data.resources;
     });
+
+    // listen for keydown event
+    document.onkeydown = this.checkKey;
   }
 };
 </script>
