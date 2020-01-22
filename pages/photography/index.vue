@@ -185,10 +185,10 @@ export default {
     }
   },
   mounted() {
+    // fetch images from cloudinary api
     axios.get(photosRequest).then(response => {
       this.photos = response.data.resources;
     });
-
     // listen for keydown event
     document.onkeydown = this.checkKey;
   }
