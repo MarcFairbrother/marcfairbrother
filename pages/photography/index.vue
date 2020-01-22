@@ -4,15 +4,22 @@
       <h2>[ ◎°] photography</h2>
     </header>
     <article class="photography__content">
-      <ul v-if="photos.length > 0" class="photography__content__list">
+      <ul v-if="photosInfo.length > 0" class="photography__content__list">
         <li
-          v-for="(photo, i) in photos"
+          v-for="(photo, i) in photosInfo"
           v-bind:data-target="i"
           :key="photo.public_id"
           @click="showCarousel($event)"
           class="photography__content__list__item"
         >
-          <img :src="cloudinarySrc(photo.public_id)" v-bind:data-target="i" alt />
+          <img
+            :srcset="photo.locationSmall + ' 250w, ' + photo.locationMedium + ' 500w'"
+            sizes="(max-width: 720px) 250px,
+            500px"
+            :src="photo.locationSrc"
+            v-bind:data-target="i"
+            :alt="'thumbnail for ' + photo.context.custom.alt"
+          />
         </li>
       </ul>
       <p v-else>Could not load photos</p>
@@ -21,11 +28,13 @@
       <article v-show="carouselIsVisible && currentImgPublic" class="photography__carousel">
         <transition-group name="carousel">
           <img
-            v-for="(photo, i) in photos"
+            v-for="(photo, i) in photosInfo"
             :key="photo.public_id"
-            :src="cloudinarySrc(photo.public_id)"
+            :srcset="photo.locationMedium + ' 500w, ' + photo.locationNormal + ' 720w, ' + photo.locationSrc + ' 1028w'"
+            sizes="(max-width: 720px) 500px, (min-width: 1028px) 1028px, 720px"
+            :src="photo.locationSrc"
             v-show="currentImgId === i"
-            alt
+            :alt="photo.context.custom.alt"
             class="photography__carousel__image"
           />
         </transition-group>
@@ -99,14 +108,31 @@ export default {
       currentImgId: ""
     };
   },
+  computed: {
+    photosInfo() {
+      return this.photos.map(photo => {
+        let photoUrl = this.cloudinarySrc(photo.public_id);
+        return {
+          ...photo,
+          locationSrc: photoUrl,
+          locationSmall: this.cloudinaryTransform(photoUrl, 250),
+          locationMedium: this.cloudinaryTransform(photoUrl, 500),
+          locationNormal: this.cloudinaryTransform(photoUrl, 1000)
+        };
+      });
+    }
+  },
   methods: {
     cloudinarySrc: function(publicId) {
       return cloudinaryCore.url(publicId);
     },
+    cloudinaryTransform: function(str, width) {
+      return str.replace(`upload/v1/`, `upload/c_scale,w_${width}/v1/`);
+    },
     showCarousel: function(e) {
       this.carouselIsVisible = !this.carouselIsVisible;
       this.currentImgId = Number(e.target.getAttribute("data-target"));
-      this.currentImgPublic = this.photos[this.currentImgId].public_id;
+      this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     showPrevious: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
@@ -115,20 +141,20 @@ export default {
       if (this.currentImgId > 0) {
         this.currentImgId = this.currentImgId - 1;
       } else {
-        this.currentImgId = this.photos.length - 1;
+        this.currentImgId = this.photosInfo.length - 1;
       }
-      this.currentImgPublic = this.photos[this.currentImgId].public_id;
+      this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     showNext: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
       photoCarousel.style.setProperty("--leaving", "translateX(-100%)");
       photoCarousel.style.setProperty("--starting", "translateX(100%)");
-      if (this.currentImgId < this.photos.length - 1) {
+      if (this.currentImgId < this.photosInfo.length - 1) {
         this.currentImgId = this.currentImgId + 1;
       } else {
         this.currentImgId = 0;
       }
-      this.currentImgPublic = this.photos[this.currentImgId].public_id;
+      this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     closeCarousel: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
@@ -266,6 +292,7 @@ export default {
     }
     & svg {
       height: var(--hlf-margin);
+      width: var(--hlf-margin);
     }
     &__close {
       grid-column: 2/3;
@@ -273,8 +300,10 @@ export default {
       justify-self: center;
       padding: var(--hlf-margin) 0;
       @include breakpoint($desktop-width) {
+        align-self: start;
         grid-column: 3;
-        grid-row: 1;
+        justify-self: end;
+        padding: 0;
       }
       &:hover {
         cursor: pointer;
@@ -290,6 +319,7 @@ export default {
         grid-row: 2;
         & svg {
           height: var(--fll-margin);
+          width: var(--fll-margin);
         }
       }
       &:hover {
@@ -307,6 +337,7 @@ export default {
         grid-row: 2;
         & svg {
           height: var(--fll-margin);
+          width: var(--fll-margin);
         }
       }
       &:hover {
