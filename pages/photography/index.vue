@@ -8,7 +8,7 @@
         <li
           v-for="(photo, i) in photos"
           v-bind:data-target="i"
-          :key="i"
+          :key="photo.public_id"
           @click="showCarousel($event)"
           class="photography__content__list__item"
         >
@@ -17,53 +17,62 @@
       </ul>
       <p v-else>Could not load photos</p>
     </article>
-    <article v-show="carouselIsVisible && currentImgPublic" class="photography__carousel">
-      <transition name="carousel">
-        <img :src="cloudinarySrc(currentImgPublic)" alt class="photography__carousel__image" />
-      </transition>
-      <div @click="showPrevious()" class="photography__carousel__previous">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          viewBox="0 0 13.229166 13.229167"
-        >
-          <path
-            d="M7.0514144.43683L.87366556 6.61457l6.17774884 6.17776"
-            fill="none"
-            stroke="#eee"
-            stroke-width="1.23554981"
+    <transition name="show-carousel">
+      <article v-show="carouselIsVisible && currentImgPublic" class="photography__carousel">
+        <transition-group name="carousel">
+          <img
+            v-for="(photo, i) in photos"
+            :key="photo.public_id"
+            :src="cloudinarySrc(photo.public_id)"
+            v-show="currentImgId === i"
+            alt
+            class="photography__carousel__image"
           />
-        </svg>
-      </div>
-      <div @click="showNext()" class="photography__carousel__next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          viewBox="0 0 13.229166 13.229167"
-        >
-          <path
-            d="M6.1777623.43683l6.1777487 6.17774-6.1777487 6.17776"
-            fill="none"
-            stroke="#eee"
-            stroke-width="1.23554981"
-          />
-        </svg>
-      </div>
-      <div @click="carouselIsVisible = !carouselIsVisible" class="photography__carousel__close">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          viewBox="0 0 13.229166 13.229167"
-        >
-          <g fill="none" stroke="#eee" stroke-width="1.23555005">
-            <path d="M.43683292 12.79233L12.792334.43683M.43683292.43683L12.792334 12.79233" />
-          </g>
-        </svg>
-      </div>
-    </article>
+        </transition-group>
+        <div @click="showPrevious()" class="photography__carousel__previous">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 13.229166 13.229167"
+          >
+            <path
+              d="M7.0514144.43683L.87366556 6.61457l6.17774884 6.17776"
+              fill="none"
+              stroke="#eee"
+              stroke-width="1.23554981"
+            />
+          </svg>
+        </div>
+        <div @click="showNext()" class="photography__carousel__next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 13.229166 13.229167"
+          >
+            <path
+              d="M6.1777623.43683l6.1777487 6.17774-6.1777487 6.17776"
+              fill="none"
+              stroke="#eee"
+              stroke-width="1.23554981"
+            />
+          </svg>
+        </div>
+        <div @click="closeCarousel()" class="photography__carousel__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 13.229166 13.229167"
+          >
+            <g fill="none" stroke="#eee" stroke-width="1.23555005">
+              <path d="M.43683292 12.79233L12.792334.43683M.43683292.43683L12.792334 12.79233" />
+            </g>
+          </svg>
+        </div>
+      </article>
+    </transition>
   </main>
 </template>
 
@@ -87,7 +96,7 @@ export default {
       photos: [],
       carouselIsVisible: false,
       currentImgPublic: "",
-      currentImgId: 0
+      currentImgId: ""
     };
   },
   methods: {
@@ -100,6 +109,9 @@ export default {
       this.currentImgPublic = this.photos[this.currentImgId].public_id;
     },
     showPrevious: function() {
+      const photoCarousel = document.querySelector(".photography__carousel");
+      photoCarousel.style.setProperty("--leaving", "translateX(100%)");
+      photoCarousel.style.setProperty("--starting", "translateX(-100%)");
       if (this.currentImgId > 0) {
         this.currentImgId = this.currentImgId - 1;
       } else {
@@ -108,12 +120,22 @@ export default {
       this.currentImgPublic = this.photos[this.currentImgId].public_id;
     },
     showNext: function() {
+      const photoCarousel = document.querySelector(".photography__carousel");
+      photoCarousel.style.setProperty("--leaving", "translateX(-100%)");
+      photoCarousel.style.setProperty("--starting", "translateX(100%)");
       if (this.currentImgId < this.photos.length - 1) {
         this.currentImgId = this.currentImgId + 1;
       } else {
         this.currentImgId = 0;
       }
       this.currentImgPublic = this.photos[this.currentImgId].public_id;
+    },
+    closeCarousel: function() {
+      const photoCarousel = document.querySelector(".photography__carousel");
+      photoCarousel.style.setProperty("--leaving", "");
+      photoCarousel.style.setProperty("--starting", "");
+      this.carouselIsVisible = !this.carouselIsVisible;
+      this.currentImgId = "";
     }
   },
   mounted() {
@@ -194,6 +216,8 @@ export default {
     }
   }
   &__carousel {
+    --leaving: translateY(-100%);
+    --starting: translateY(-100%);
     background: var(--dark);
     color: var(--light);
     display: grid;
@@ -207,23 +231,37 @@ export default {
     top: 0;
     z-index: 10;
     @include breakpoint($desktop-width) {
+      --leaving: translateY(100%);
+      --starting: translateY(100%);
       grid-template-columns: max-content 1fr max-content;
-      grid-template-rows: var(--hlf-margin) 1fr;
+      grid-template-rows: var(--hlf-margin) calc(100vh - var(--fll-margin));
       padding: 0 var(--hlf-margin) var(--hlf-margin);
+    }
+    & > span {
+      align-self: stretch;
+      display: grid;
+      grid-column: 1/4;
+      grid-row: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      height: 100%;
+      width: 100%;
+      @include breakpoint($desktop-width) {
+        grid-column: 2;
+        grid-row: 2;
+      }
     }
     &__image {
       align-self: center;
       background: #fff;
-      grid-column: 1/4;
+      grid-column: 1;
       grid-row: 1;
-      max-height: 100%;
       justify-self: center;
+      max-height: 100%;
       padding: var(--qtr-margin);
       width: auto;
       @include breakpoint($desktop-width) {
         padding: var(--hlf-margin);
-        grid-column: 2;
-        grid-row: 2;
       }
     }
     & svg {
@@ -277,13 +315,28 @@ export default {
     }
   }
 }
+// fade carousel into view
+.show-carousel-enter-active,
+.carousel-leave-active {
+  transition: opacity 0.25s;
+}
+.show-carousel-enter,
+.show-carousel-leave-to {
+  opacity: 0;
+}
+// animate transition between photos
 .carousel-enter-active,
 .carousel-leave-active {
-  transition: opacity 0.5s;
-  transition-delay: 0.25s;
+  transition: transform 0.5s, opacity 0.45s;
 }
-.carousel-enter,
+.carousel-enter {
+  opacity: 0.25;
+  transform: var(--starting) scale(0.8);
+  z-index: -5;
+}
 .carousel-leave-to {
   opacity: 0;
+  transform: var(--leaving) scale(0.8);
+  z-index: -5;
 }
 </style>
