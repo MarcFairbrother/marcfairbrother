@@ -65,6 +65,15 @@ export default {
         },
         {
           id: 2,
+          title: "SVGOMG",
+          url: "https://jakearchibald.github.io/svgomg/",
+          src: "Jake Archibald (GitHub)",
+          keywords: ["webdev", "design", "tools"],
+          description: "Outil d'optimisation de fichiers SVG",
+          lang: "anglais"
+        },
+        {
+          id: 3,
           title: "Syntax",
           url: "https://syntax.fm/",
           description:
@@ -73,7 +82,7 @@ export default {
           lang: "anglais"
         },
         {
-          id: 3,
+          id: 4,
           title: "Front End Happy Hour",
           url: "https://frontendhappyhour.com/",
           description:
@@ -82,7 +91,7 @@ export default {
           lang: "anglais"
         },
         {
-          id: 4,
+          id: 5,
           title: "From URL to Interactive",
           url: "https://alistapart.com/article/from-url-to-interactive/",
           src: "A List Apart",
@@ -92,12 +101,11 @@ export default {
           lang: "anglais"
         },
         {
-          id: 5,
+          id: 6,
           title: "uiGradients",
           url: "https://uigradients.com/",
           keywords: ["webdev", "design", "tools"],
-          description:
-            "Un podcast animé par Chris Coyer (CSS-Tricks, Code Pen) et Dave Ruppert (Paravel) axé sur le développement front-end avec de nombreux invités.",
+          description: "Collection et outil de création de dégradés CSS.",
           lang: "anglais"
         }
       ]
