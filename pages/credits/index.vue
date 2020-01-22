@@ -4,6 +4,7 @@
       <h2>&#9733;crédits</h2>
     </header>
     <article class="credits__content">
+      <p>🙏 For their guidance, encouragements, friendship, or just for being inspiring human beings, many thanks to Wes Bos, CapyCec, Chris Coyier, Richard Déloge, Sarah Drasner, the Lutz bros, Dave Ruppert, Scott Tolinski &amp; the SixRoz Gang!</p>
       <p>👷 Designed and developed by Marc Fairbrother</p>
       <p>
         ❤️
@@ -27,8 +28,11 @@
       </p>
       <p>
         🧙
-        Hosted and deployed with
-        <a href="https://www.netlify.com/" target="_blank">Netlify</a> wizardry
+        Hosted and deployed with awesome
+        <a
+          href="https://www.netlify.com/"
+          target="_blank"
+        >Netlify</a> wizardry
       </p>
       <section class="credits__content__legal">
         <p>Netlify, Inc.</p>
