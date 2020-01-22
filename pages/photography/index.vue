@@ -116,7 +116,7 @@ export default {
           ...photo,
           locationSrc: photoUrl,
           locationSmall: this.cloudinaryTransform(photoUrl, 250),
-          locationMedium: this.cloudinaryTransform(photoUrl, 500),
+          locationMedium: this.cloudinaryTransform(photoUrl, 700),
           locationNormal: this.cloudinaryTransform(photoUrl, 1000)
         };
       });
