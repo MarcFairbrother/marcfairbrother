@@ -1,7 +1,7 @@
 <template>
   <main class="bookmarked">
     <header class="bookmarked__header">
-      <h2>~bookmarc'd</h2>
+      <h2>BookMarc'd</h2>
     </header>
     <article class="bookmarked__content">
       <ul class="bookmarked__content__list">
@@ -131,6 +131,10 @@ export default {
       font-size: 2.5rem;
       margin-bottom: var(--hlf-margin);
       padding: var(--hlf-margin);
+      text-transform: lowercase;
+      &::before {
+        content: "~ ";
+      }
       @include breakpoint($desktop-width) {
         margin: 0 var(--hlf-margin);
       }

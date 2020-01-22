@@ -1,7 +1,7 @@
 <template>
   <main class="photography">
     <header class="photography__header">
-      <h2>[ ◎°] photography</h2>
+      <h2>Photography</h2>
     </header>
     <article class="photography__content">
       <ul v-if="photosInfo.length > 0" class="photography__content__list">
@@ -220,6 +220,10 @@ export default {
       font-size: 2.5rem;
       margin-bottom: var(--hlf-margin);
       padding: var(--hlf-margin);
+      text-transform: lowercase;
+      &::before {
+        content: "[ ◎°] ";
+      }
       @include breakpoint($desktop-width) {
         margin: 0 var(--hlf-margin);
       }

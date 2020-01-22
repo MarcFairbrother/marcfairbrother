@@ -1,7 +1,7 @@
 <template>
   <main class="resume">
     <header>
-      <h2>$ git log--cv</h2>
+      <h2>Git Log --cv</h2>
       <nav>
         <ul class="resume__menu">
           <li class="resume__menu__item">Profil</li>
@@ -347,6 +347,10 @@ export default {
       color: var(--light);
       font-size: 2.5rem;
       padding: var(--hlf-margin);
+      text-transform: lowercase;
+      &::before {
+        content: "$ ";
+      }
       @include breakpoint($large-width) {
         line-height: calc(2 * var(--fll-margin));
         font-size: 2rem;

@@ -1,7 +1,7 @@
 <template>
   <main class="credits">
     <header class="credits__header">
-      <h2>&#9733;crédits</h2>
+      <h2>Crédits</h2>
     </header>
     <article class="credits__content">
       <p>🙏 For their guidance, encouragements, friendship, or just for being inspiring human beings, many thanks to Wes Bos, CapyCec, Chris Coyier, Richard Déloge, Sarah Drasner, the Lutz bros, Dave Ruppert, Scott Tolinski &amp; the SixRoz Gang!</p>
@@ -92,6 +92,10 @@ export default {
       font-size: 2.5rem;
       margin-bottom: var(--hlf-margin);
       padding: var(--hlf-margin);
+      text-transform: lowercase;
+      &::before {
+        content: "\2605";
+      }
       @include breakpoint($desktop-width) {
         margin: 0 var(--hlf-margin);
       }

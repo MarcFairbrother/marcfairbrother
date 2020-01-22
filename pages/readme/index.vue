@@ -1,6 +1,6 @@
 <template>
   <main class="readme">
-    <h2>/read.me</h2>
+    <h2>Read.me</h2>
     <article class="readme__content">
       <section class="readme__content__section readme__content__section--bio">
         <h3>En bref</h3>
@@ -64,6 +64,10 @@ export default {
     font-size: 2.5rem;
     margin-bottom: var(--hlf-margin);
     padding: var(--hlf-margin);
+    text-transform: lowercase;
+    &::before {
+      content: "/";
+    }
     @include breakpoint($desktop-width) {
       grid-column: 1/4;
       margin: 0 var(--hlf-margin) var(--hlf-margin);
