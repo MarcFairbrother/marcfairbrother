@@ -38,6 +38,19 @@
 
 <script>
 export default {
+  head() {
+    return {
+      titleTemplate: "%s | BookMarc'd",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Une liste de ressources autour de la culture et de l'actualité du web"
+        }
+      ]
+    };
+  },
   data() {
     return {
       bookmarks: [

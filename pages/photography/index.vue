@@ -100,6 +100,18 @@ const photosRequest = cloudinaryCore.url("marc", {
 });
 
 export default {
+  head() {
+    return {
+      titleTemplate: "%s | Photography",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Une galerie de mes photos"
+        }
+      ]
+    };
+  },
   data() {
     return {
       photos: [],

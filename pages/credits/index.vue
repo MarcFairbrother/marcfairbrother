@@ -49,6 +49,23 @@
   </main>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      titleTemplate: "%s | Crédits",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Remerciements et mentions légales"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .credits {
   min-height: 100vh;

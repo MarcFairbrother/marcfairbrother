@@ -4,14 +4,19 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Marc Fairbrother',
+    titleTemplate: '%s | Portefolio et CV en ligne',
+    htmlAttrs: {
+      lang: 'fr'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          "Après plusieurs années passées dans le commerce, je travaille dans le web depuis 2014 en tant que responsable technique sur des projets VOD. J'ai un grand intérêt pour la culture, notamment le cinéma, la littérature et la photographie."
       }
     ],
     link: [

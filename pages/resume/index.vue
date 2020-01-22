@@ -303,6 +303,23 @@
   </main>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      titleTemplate: "%s | Git Log --cv",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Mon CV en ligne"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .resume {
   @include breakpoint($desktop-width) {

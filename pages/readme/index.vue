@@ -21,6 +21,23 @@
   </main>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      titleTemplate: "%s | Read.me",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Je me présente en quelques mots"
+        }
+      ]
+    };
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .readme {
   @include breakpoint($desktop-width) {
