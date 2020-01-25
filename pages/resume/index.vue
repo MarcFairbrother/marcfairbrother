@@ -1,18 +1,21 @@
 <template>
   <main class="resume">
-    <header>
+    <header class="resume__header">
       <h2>Git Log --cv</h2>
       <nav>
         <ul class="resume__menu">
-          <li class="resume__menu__item">Profil</li>
-          <li class="resume__menu__item">Expérience</li>
-          <li class="resume__menu__item">Formations</li>
-          <li class="resume__menu__item">Loisirs</li>
+          <li class="resume__menu__item" data-target="overview">Profil</li>
+          <li class="resume__menu__item" data-target="work">Expérience</li>
+          <li class="resume__menu__item" data-target="studies">Formations</li>
+          <li class="resume__menu__item" data-target="hobbies">Loisirs</li>
         </ul>
       </nav>
     </header>
     <article class="resume__content">
-      <section class="resume__content__section resume__content__section--overview">
+      <section
+        class="resume__content__section resume__content__section--overview"
+        data-target="overview"
+      >
         <h3>Profil</h3>
         <ul class="resume__content__section__list resume__content__section__list--overview">
           <li>
@@ -76,7 +79,7 @@
           </li>
         </ul>
       </section>
-      <section class="resume__content__section resume__content__section--work">
+      <section class="resume__content__section resume__content__section--work" data-target="work">
         <h3>Expérience professionnelle</h3>
         <ul class="resume__content__section__list resume__content__section__list--work">
           <li>
@@ -114,28 +117,46 @@
           </li>
         </ul>
       </section>
-      <section class="resume__content__section resume__content__section--studies">
+      <section
+        class="resume__content__section resume__content__section--studies"
+        data-target="studies"
+      >
         <h3>Formations</h3>
         <ul class="resume__content__section__list resume__content__section__list--studies">
           <li>
-            <h4>License professionnelle Création et Développement Numériques en Ligne</h4>
-            <p>Université Paris 8 (2013-2014)</p>
+            <h4>License professionnelle&nbsp;: Création et Développement Numériques en Ligne</h4>
+            <p>
+              <strong>Université Paris 8</strong>
+              <br />2013-2014
+            </p>
           </li>
           <li>
-            <h4>DUT Métiers du livre (librairie)</h4>
-            <p>Université Paris X - Nanterre (2009-2010)</p>
+            <h4>DUT&nbsp;: Métiers du livre</h4>
+            <p>
+              <strong>Université Paris X - Nanterre</strong>
+              <br />2009-2010
+            </p>
           </li>
           <li>
-            <h4>License Arts du spectacle (cinéma)</h4>
-            <p>Université Paris X - Nanterre (2004-2007)</p>
+            <h4>License&nbsp;: Arts du spectacle</h4>
+            <p>
+              <strong>Université Paris X - Nanterre</strong>
+              <br />2004-2007
+            </p>
           </li>
           <li>
-            <h4>Baccalauréat ES option internationale</h4>
-            <p>Lycée d'État de Sèvres (2003)</p>
+            <h4>Baccalauréat ES&nbsp;: Option internationale</h4>
+            <p>
+              <strong>Lycée d'État de Sèvres</strong>
+              <br />2003
+            </p>
           </li>
         </ul>
       </section>
-      <section class="resume__content__section resume__content__section--hobbies">
+      <section
+        class="resume__content__section resume__content__section--hobbies"
+        data-target="hobbies"
+      >
         <h3>Loisirs</h3>
         <ul class="resume__content__section__list resume__content__section__list--hobbies">
           <li>
@@ -318,14 +339,36 @@ export default {
     };
   },
   mounted() {
-    // create intersection observer
+    const resumeNav = document.querySelector(".resume__menu");
     const sections = document.querySelectorAll(".resume__content__section");
+    let currentActiveSection;
     let isObserving;
+    // create intersection observer
+    const options = {
+      root: null,
+      rootMargin: "-1px",
+      threshold: 0.01
+    };
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(entry.target, entry.intersectionRatio);
+        if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
+          // scrollIntoView currently not supported on Chrome:
+          // entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
+          const y = entry.target.getBoundingClientRect().top + window.scrollY;
+          window.scroll({
+            top: y,
+            behavior: "smooth"
+          });
+          currentActiveSection = entry.target.dataset.target;
+          resumeNav.querySelectorAll("li").forEach(el => {
+            el.classList.remove("resume__menu__item--active");
+          });
+          resumeNav
+            .querySelector(`[data-target='${currentActiveSection}']`)
+            .classList.add("resume__menu__item--active");
+        }
       });
-    });
+    }, options);
     // start intersection observer
     function startObserver() {
       sections.forEach(section => {
@@ -373,7 +416,11 @@ export default {
     border-left: solid var(--hlf-margin) var(--clr-3);
     border-right: solid var(--hlf-margin) var(--clr-3);
   }
-  & header {
+  @include breakpoint($large-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &__header {
     @include mobile {
       margin-bottom: var(--hlf-margin);
     }
@@ -387,6 +434,9 @@ export default {
       top: 0;
     }
     @include breakpoint($large-width) {
+      align-self: start;
+      grid-column: 1;
+      grid-row: 1;
       padding: var(--fll-margin);
     }
     & h2 {
@@ -409,16 +459,38 @@ export default {
       @include mobile {
         display: none;
       }
-      & ul {
+      & .resume__menu {
         @include breakpoint($desktop-width) {
           align-items: center;
           display: flex;
           height: 100%;
           justify-content: flex-end;
-          & li {
+          &__item {
             margin-right: var(--hlf-margin);
+            position: relative;
             @include breakpoint($large-width) {
               margin-left: var(--hlf-margin);
+              &:last-of-type {
+                margin-right: var(--fll-margin);
+              }
+              &::before {
+                background-color: var(--light);
+                bottom: -20px;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 6px;
+                left: calc(50% - 3px);
+                opacity: 0;
+                position: absolute;
+                transition: opacity 0.25s ease-in-out;
+                width: 6px;
+              }
+              &--active {
+                &::before {
+                  opacity: 1;
+                }
+              }
             }
           }
         }
@@ -426,6 +498,10 @@ export default {
     }
   }
   &__content {
+    @include breakpoint($large-width) {
+      grid-column: 1;
+      grid-row: 1;
+    }
     &__section {
       padding: 0 var(--qtr-margin);
       @include breakpoint($desktop-width) {
@@ -434,8 +510,8 @@ export default {
       @include breakpoint($large-width) {
         align-items: center;
         display: flex;
-        min-height: calc(100vh - (4.5 * var(--fll-margin)));
-        padding: 0 var(--fll-margin);
+        min-height: 100vh;
+        padding: calc(var(--fll-margin) * 6.5) var(--fll-margin) 0;
       }
       & h3 {
         align-items: center;
@@ -552,7 +628,17 @@ export default {
         }
       }
       &--studies {
+        @include breakpoint($large-width) {
+          display: flex;
+          justify-content: center;
+        }
         & ul {
+          & li {
+            margin-bottom: var(--hlf-margin);
+            & h4 {
+              margin-bottom: var(--qtr-margin);
+            }
+          }
           @include breakpoint($desktop-width) {
             border-bottom: solid 2px var(--clr-3);
             margin-bottom: var(--fll-margin);
@@ -560,27 +646,8 @@ export default {
           }
           @include breakpoint($large-width) {
             border-bottom: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr max-content;
-            grid-row-gap: var(--hlf-margin);
-            width: 100%;
             & li {
-              &:nth-child(1) {
-                grid-column: 1/5;
-                grid-row: 1;
-              }
-              &:nth-child(2) {
-                grid-column: 2/5;
-                grid-row: 2;
-              }
-              &:nth-child(3) {
-                grid-column: 3/5;
-                grid-row: 3;
-              }
-              &:nth-child(4) {
-                grid-column: 4/5;
-                grid-row: 4;
-              }
+              margin-bottom: var(--fll-margin);
             }
           }
         }
