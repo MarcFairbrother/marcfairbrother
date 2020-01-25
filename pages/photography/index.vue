@@ -13,7 +13,9 @@
           class="photography__content__list__item"
         >
           <img
-            :srcset="photo.locationSmall + ' 250w, ' + photo.locationMedium + ' 500w'"
+            :srcset="
+              photo.locationSmall + ' 250w, ' + photo.locationMedium + ' 500w'
+            "
             sizes="(max-width: 720px) 250px,
             500px"
             :src="photo.locationSrc"
@@ -25,12 +27,22 @@
       <p v-else>Could not load photos</p>
     </article>
     <transition name="show-carousel">
-      <article v-show="carouselIsVisible && currentImgPublic" class="photography__carousel">
+      <article
+        v-show="carouselIsVisible && currentImgPublic"
+        class="photography__carousel"
+      >
         <transition-group name="carousel">
           <img
             v-for="(photo, i) in photosInfo"
             :key="photo.public_id"
-            :srcset="photo.locationMedium + ' 500w, ' + photo.locationNormal + ' 720w, ' + photo.locationSrc + ' 1028w'"
+            :srcset="
+              photo.locationMedium +
+                ' 500w, ' +
+                photo.locationNormal +
+                ' 720w, ' +
+                photo.locationSrc +
+                ' 1028w'
+            "
             sizes="(max-width: 720px) 500px, (min-width: 1028px) 1028px, 720px"
             :src="photo.locationSrc"
             v-show="currentImgId === i"
@@ -76,7 +88,9 @@
             viewBox="0 0 13.229166 13.229167"
           >
             <g fill="none" stroke="#eee" stroke-width="1.23555005">
-              <path d="M.43683292 12.79233L12.792334.43683M.43683292.43683L12.792334 12.79233" />
+              <path
+                d="M.43683292 12.79233L12.792334.43683M.43683292.43683L12.792334 12.79233"
+              />
             </g>
           </svg>
         </div>
@@ -197,6 +211,9 @@ export default {
 
 <style lang="scss" scoped>
 .photography {
+  &.loading {
+    overflow: hidden;
+  }
   @include breakpoint($desktop-width) {
     border: solid var(--hlf-margin) var(--clr-5);
     border-top: none;
