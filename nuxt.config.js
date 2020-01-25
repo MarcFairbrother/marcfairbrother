@@ -39,7 +39,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/cloudinary-vue'],
+  plugins: ['~/plugins/cloudinary-vue', '~/plugins/functions'],
   /*
    ** Nuxt.js dev-modules
    */

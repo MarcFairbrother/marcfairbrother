@@ -17,19 +17,27 @@
         data-target="overview"
       >
         <h3>Profil</h3>
-        <ul class="resume__content__section__list resume__content__section__list--overview">
+        <ul
+          class="resume__content__section__list resume__content__section__list--overview"
+        >
           <li>
             <h4>Gestion de projet</h4>
             <p>
               Je sais
-              <strong>organiser le travail d'équipes pluridisciplinaires</strong>, composées d'ergonomes, de graphistes, de développeurs web et mobile, de chargés de communication et des administrateurs d'un service.
+              <strong>organiser le travail d'équipes pluridisciplinaires</strong
+              >, composées d'ergonomes, de graphistes, de développeurs web et
+              mobile, de chargés de communication et des administrateurs d'un
+              service.
             </p>
             <p>
-              Capable d'anlyser rapidement une situation et d'en cerner les principales difficultés, mon
-              <strong>sens des priorités et de l'initiative</strong> me permet de faire avancer un projet dans la bonne direction.
+              Capable d'anlayser rapidement une situation et d'en cerner les
+              principales difficultés, mon
+              <strong>sens des priorités et de l'initiative</strong> me permet
+              de faire avancer un projet dans la bonne direction.
             </p>
             <p>
-              Je suis capable de prendre en compte de nombreux paramètres variables et donc d'avoir une
+              Je suis capable de prendre en compte de nombreux paramètres
+              variables et donc d'avoir une
               <strong>vision d'ensemble sur des applications complexes</strong>.
             </p>
           </li>
@@ -37,83 +45,145 @@
             <h4>Développement web</h4>
             <p>
               J'ai une
-              <strong>excellente compréhension de l'environnement web</strong>, qui me passionne de par ses nombreuses possibilités, et une longue
-              <strong>expérience des infrastructures de streaming</strong> vidéo.
+              <strong>excellente compréhension de l'environnement web</strong>,
+              qui me passionne de par ses nombreuses possibilités, et une longue
+              <strong>expérience des infrastructures de streaming</strong>
+              vidéo.
             </p>
             <p>
               Mes
-              <strong>connaissances avancées en HTML et CSS</strong>, acquises sur des projets personnels, m'ont permis de participer à l'intégration de maquettes et d'apporter des corrections sur des applications professionnelles ainsi qu'à créer des gabarits e-mails
-              <em>responsives</em>.
+              <strong>connaissances avancées en HTML et CSS</strong>, acquises
+              sur des projets personnels, m'ont permis de participer à
+              l'intégration de maquettes et d'apporter des corrections sur des
+              applications professionnelles ainsi qu'à créer des gabarits
+              e-mails responsives.
             </p>
             <p>
               Je possède des
-              <strong>bases solides en Javascript</strong> et je m'intéresse de près à l'évolution du langage et de ses outils, ainsi qu'au framework Vue.js et à son écosystème.
+              <strong>bases solides en JavaScript</strong> et je m'intéresse de
+              près à l'évolution du langage et de ses outils, ainsi qu'au
+              framework Vue.js et à son écosystème.
             </p>
           </li>
           <li>
             <h4>Design et direction artistique</h4>
             <p>
-              Je pense qu'une application et ses interfaces doivent être conçues en pensant, en premier lieu, à leur utilisateur final. La
-              <strong>simplicité d'utilisation, de conception et de maintenance du code</strong> sont les garants de sa réussite.
+              Je pense qu'une application et ses interfaces doivent être conçues
+              en pensant, en premier lieu, à leur utilisateur final. La
+              <strong
+                >simplicité d'utilisation, de conception et de maintenance du
+                code</strong
+              >
+              sont les garants de sa réussite.
             </p>
             <p>
               Je suis capable de créer des
-              <strong>maquettes graphiques et fonctionnelles</strong> en suivant une direction artistique. Je cherche à réutiliser autant que possible des éléments pour améliorer la cohérence d'ensemble. Je sais également créer des logos et des pictogrammes en SVG.
+              <strong>maquettes graphiques et fonctionnelles</strong> en suivant
+              une direction artistique. Je cherche à réutiliser autant que
+              possible des éléments pour améliorer la cohérence d'ensemble. Je
+              sais également créer des logos et des pictogrammes en SVG.
             </p>
           </li>
           <li>
             <h4>Les petits plus</h4>
             <p>
-              Né en angleterre, mais ayant vécu plus de 25 années en France, je suis
-              <strong>parfaitement bilingue</strong>, maîtrisant l'anglais et le français à l'écrit comme à l'oral.
+              Né en angleterre, mais ayant vécu plus de 25 années en France, je
+              suis
+              <strong>parfaitement bilingue</strong>, maîtrisant l'anglais et le
+              français à l'écrit comme à l'oral.
             </p>
             <p>
-              Curieux de nature, et grâce notamment à mon passé en librairie, je possède une
-              <strong>excellente culture générale</strong> et je reste profondément motivé par la
-              <strong>soif d'apprendre</strong>.
+              Curieux de nature, et grâce notamment à mon passé en librairie, je
+              possède une
+              <strong>excellente culture générale</strong> et je reste
+              profondément motivé par la <strong>soif d'apprendre</strong>.
             </p>
             <p>
-              Ayant travaillé dans le commerce, j'ai l'habitude des relations avec les clients et le
+              Ayant travaillé dans le commerce, j'ai l'habitude des relations
+              avec les clients et le
               <strong>sens du service</strong>.
             </p>
           </li>
         </ul>
       </section>
-      <section class="resume__content__section resume__content__section--work" data-target="work">
+      <section
+        class="resume__content__section resume__content__section--work"
+        data-target="work"
+      >
         <h3>Expérience professionnelle</h3>
-        <ul class="resume__content__section__list resume__content__section__list--work">
+        <ul
+          class="resume__content__section__list resume__content__section__list--work"
+        >
           <li>
             <h4>Depuis 2014&nbsp;: Responsable technique chez Moving Scope</h4>
             <p>
-              Gestion des projets Festival Scope, Festival Scope Pro (B2B) et ArteKino Festival (en partenariat avec Arte Cinéma), trois
+              Gestion des projets Festival Scope, Festival Scope Pro (B2B) et
+              ArteKino Festival (en partenariat avec Arte Cinéma), trois
               <strong>services de VOD</strong> disposant d'applications
               <strong>web et mobile</strong> et visant un public international.
             </p>
-            <p>Organisation du travail de prestataires techniques et coordination des équipes internes mobilisées sur chaque projet.</p>
-            <p>Supervision de la refonte graphique et technique de Festival Scope Pro.</p>
-            <p>Suivi de Festival Scope et ArteKino Festival depuis leur conception jusqu'à leur lancement.</p>
             <p>
-              Maquettage et intégration de newsletters
-              <em>responsives</em> et compatibles avec les principaux clients e-mail pour les différents services.
+              Organisation du travail de prestataires techniques et coordination
+              des équipes internes mobilisées sur chaque projet.
             </p>
             <p>
-              Intégration et corrections de bugs
-              <em>front-end</em> pour pallier au manque de ressources techniques.
+              Supervision de la refonte graphique et technique de Festival Scope
+              Pro.
             </p>
             <p>
-              Migration d'un important catalogue vidéo vers un workflow fournissant les protocoles (HLS et MPEG-DASH) et DRM (PlayReady, FairPlay et Widevine) nécessaires à une compatibilité
+              Suivi de Festival Scope et ArteKino Festival depuis leur
+              conception jusqu'à leur lancement.
+            </p>
+            <p>
+              <strong
+                >Conception et intégration de newsletters responsives</strong
+              >
+              et compatibles avec les principaux clients e-mail pour les
+              différents services.
+            </p>
+            <p>
+              <strong>Intégration et corrections de bugs front-end</strong> pour
+              pallier au manque de ressources techniques.
+            </p>
+            <p>
+              Migration d'un important catalogue vidéo vers un workflow
+              fournissant les protocoles (HLS et MPEG-DASH) et DRM (PlayReady,
+              FairPlay et Widevine) nécessaires à une compatibilité
               <em>cross-platform</em>.
             </p>
           </li>
           <li>
-            <h4>2010-2012&nbsp;: Libraire et webmaster à la librairie indépendente Village Voice</h4>
-            <p>Reprise du site statique existant de la librairie et migration vers une nouvelle solution technique. Réflexion autour des solutions d’e-commerce pour produits physiques et numériques.</p>
-            <p>Réalisation d’affiches et communication en ligne pour promouvoir les événements tenus à la librairie. Exploitation des archives vidéo des rencontres (numérisation et montage sur Premiere Pro, mise en ligne sur Youtube).</p>
-            <p>Tâches habituelles du libraire (accueil et conseil de la clientèle, gestion de la caisse, de la boutique et du stock, politique d’assortiment, merchandising).</p>
+            <h4>
+              2010-2012&nbsp;: Libraire et webmaster à la librairie indépendente
+              Village Voice
+            </h4>
+            <p>
+              Reprise du site statique existant de la librairie et migration
+              vers une nouvelle solution technique. Réflexion autour des
+              solutions d’e-commerce pour produits physiques et numériques.
+            </p>
+            <p>
+              Réalisation d’affiches et communication en ligne pour promouvoir
+              les événements tenus à la librairie. Exploitation des archives
+              vidéo des rencontres (numérisation et montage sur Premiere Pro,
+              mise en ligne sur Youtube).
+            </p>
+            <p>
+              Tâches habituelles du libraire (accueil et conseil de la
+              clientèle, gestion de la caisse, de la boutique et du stock,
+              politique d’assortiment, merchandising).
+            </p>
           </li>
           <li>
-            <h4>2007-2009&nbsp;: Conseiller de vente au rayon vidéo de la Fnac St-Lazare</h4>
-            <p>Chargé de gérer des rayons, des catalogues et le stock, de conseiller la clientèle ainsi que d’organiser le travail d’une équipe de renforts pour la période de Noël.</p>
+            <h4>
+              2007-2009&nbsp;: Conseiller de vente au rayon vidéo de la Fnac
+              St-Lazare
+            </h4>
+            <p>
+              Chargé de gérer des rayons, des catalogues et le stock, de
+              conseiller la clientèle ainsi que d’organiser le travail d’une
+              équipe de renforts pour la période de Noël.
+            </p>
           </li>
         </ul>
       </section>
@@ -122,9 +192,14 @@
         data-target="studies"
       >
         <h3>Formations</h3>
-        <ul class="resume__content__section__list resume__content__section__list--studies">
+        <ul
+          class="resume__content__section__list resume__content__section__list--studies"
+        >
           <li>
-            <h4>License professionnelle&nbsp;: Création et Développement Numériques en Ligne</h4>
+            <h4>
+              License professionnelle&nbsp;: Création et Développement
+              Numériques en Ligne
+            </h4>
             <p>
               <strong>Université Paris 8</strong>
               <br />2013-2014
@@ -158,89 +233,71 @@
         data-target="hobbies"
       >
         <h3>Loisirs</h3>
-        <ul class="resume__content__section__list resume__content__section__list--hobbies">
+        <ul
+          class="resume__content__section__list resume__content__section__list--hobbies"
+        >
           <li>
             <h4>10 Films</h4>
-            <ul class="resume__content__section__list resume__content__section__list--sublist">
+            <ul
+              class="resume__content__section__list resume__content__section__list--sublist"
+            >
               <li>
-                <p>
-                  <em>Le Goût du saké</em> (Yasujirō Ozu, 1962)
-                </p>
+                <p><em>Le Goût du saké</em> (Yasujirō Ozu, 1962)</p>
+              </li>
+              <li>
+                <p><em>La Poursuite infernale</em> (John Ford, 1946)</p>
+              </li>
+              <li>
+                <p><em>Possession</em> (Andrzej Żuławski, 1981)</p>
+              </li>
+              <li>
+                <p><em>Les Seigneurs</em> (Philip Kaufman, 1979)</p>
+              </li>
+              <li>
+                <p><em>Le Jour se lève</em> (Marcel Carné, 1939)</p>
+              </li>
+              <li>
+                <p><em>Prince des ténèbres</em> (John Carpenter, 1987)</p>
               </li>
               <li>
                 <p>
-                  <em>La Poursuite infernale</em> (John Ford, 1946)
+                  <em>Le Colonel Blimp</em> (Michael Powell &amp; Emeric
+                  Pressburger, 1953)
                 </p>
               </li>
               <li>
-                <p>
-                  <em>Possession</em> (Andrzej Żuławski, 1981)
-                </p>
+                <p><em>Eros + Massacre</em> (Kiju Yoshida, 1969)</p>
+              </li>
+              <li>
+                <p><em>L'Esprit de la ruche</em> (Víctor Erice, 1977)</p>
               </li>
               <li>
                 <p>
-                  <em>Les Seigneurs</em> (Philip Kaufman, 1979)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Le Jour se lève</em> (Marcel Carné, 1939)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Prince des ténèbres</em> (John Carpenter, 1987)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Le Colonel Blimp</em> (Michael Powell &amp; Emeric Pressburger, 1953)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Eros + Massacre</em> (Kiju Yoshida, 1969)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>L'Esprit de la ruche</em> (Víctor Erice, 1977)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Apportez moi la tête d'Alfredo Garcia</em> (Sam Peckinpah, 1974)
+                  <em>Apportez moi la tête d'Alfredo Garcia</em> (Sam Peckinpah,
+                  1974)
                 </p>
               </li>
             </ul>
           </li>
           <li>
             <h4>10 Livres</h4>
-            <ul class="resume__content__section__list resume__content__section__list--sublist">
+            <ul
+              class="resume__content__section__list resume__content__section__list--sublist"
+            >
               <li>
-                <p>
-                  <em>La Chance d'Omensetter</em> (William H. Gass, 1966)
-                </p>
+                <p><em>La Chance d'Omensetter</em> (William H. Gass, 1966)</p>
               </li>
               <li>
-                <p>
-                  <em>L'Homme soleil</em> (John Gardner, 1972)
-                </p>
+                <p><em>L'Homme soleil</em> (John Gardner, 1972)</p>
               </li>
               <li>
-                <p>
-                  <em>Le Loup des steppes</em> (Hermann Hesse, 1927)
-                </p>
+                <p><em>Le Loup des steppes</em> (Hermann Hesse, 1927)</p>
               </li>
               <li>
-                <p>
-                  <em>Moby Dick</em> (Herman Melville, 1851)
-                </p>
+                <p><em>Moby Dick</em> (Herman Melville, 1851)</p>
               </li>
               <li>
-                <p>
-                  <em>Méridien de sang</em> (Cormac McCarthy, 1985)
-                </p>
+                <p><em>Méridien de sang</em> (Cormac McCarthy, 1985)</p>
               </li>
               <li>
                 <p>
@@ -248,9 +305,7 @@
                 </p>
               </li>
               <li>
-                <p>
-                  <em>Neuromancien</em> (William Gibson, 1984)
-                </p>
+                <p><em>Neuromancien</em> (William Gibson, 1984)</p>
               </li>
               <li>
                 <p></p>
@@ -265,30 +320,25 @@
           </li>
           <li>
             <h4>10 Albums</h4>
-            <ul class="resume__content__section__list resume__content__section__list--sublist">
+            <ul
+              class="resume__content__section__list resume__content__section__list--sublist"
+            >
               <li>
-                <p>
-                  <em>F#A#∞</em> (Godspeed You! Black Emperor, 1997)
-                </p>
+                <p><em>F#A#∞</em> (Godspeed You! Black Emperor, 1997)</p>
+              </li>
+              <li>
+                <p><em>Basket of Light</em> (Pentangle, 1969)</p>
+              </li>
+              <li>
+                <p><em>Black Sabbath</em> (Black Sabbath, 1970)</p>
+              </li>
+              <li>
+                <p><em>Giant Steps</em> (John Coltrane, 1960)</p>
               </li>
               <li>
                 <p>
-                  <em>Basket of Light</em> (Pentangle, 1969)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Black Sabbath</em> (Black Sabbath, 1970)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Giant Steps</em> (John Coltrane, 1960)
-                </p>
-              </li>
-              <li>
-                <p>
-                  <em>Live at the Old Quarter, Houston, Texas</em> (Townes Van Zandt, 1977)
+                  <em>Live at the Old Quarter, Houston, Texas</em> (Townes Van
+                  Zandt, 1977)
                 </p>
               </li>
               <li>
@@ -297,24 +347,16 @@
                 </p>
               </li>
               <li>
-                <p>
-                  <em>Ecophony Rinne</em> (Geinoh Yamashirogumi, 1986)
-                </p>
+                <p><em>Ecophony Rinne</em> (Geinoh Yamashirogumi, 1986)</p>
               </li>
               <li>
-                <p>
-                  <em>White Chalk</em> (PJ Harvey, 2007)
-                </p>
+                <p><em>White Chalk</em> (PJ Harvey, 2007)</p>
               </li>
               <li>
-                <p>
-                  <em>Odessey and Oracle</em> (The Zombies, 1968)
-                </p>
+                <p><em>Odessey and Oracle</em> (The Zombies, 1968)</p>
               </li>
               <li>
-                <p>
-                  <em>666.667 Club</em> (Noir Désir, 1996)
-                </p>
+                <p><em>666.667 Club</em> (Noir Désir, 1996)</p>
               </li>
             </ul>
           </li>
@@ -349,20 +391,22 @@ export default {
       rootMargin: "-1px",
       threshold: 0.01
     };
+    // handle intersection events
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
+        // when new target enters the viewport
         if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
+          // scroll element to top of the viewport
           // scrollIntoView currently not supported on Chrome:
           // entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
-          const y = entry.target.getBoundingClientRect().top + window.scrollY;
-          window.scroll({
-            top: y,
-            behavior: "smooth"
-          });
+          this.scrollIt(entry.target, 300, "easeOutQuad");
+          // find the current active section
           currentActiveSection = entry.target.dataset.target;
+          // remove active classe from all nav items
           resumeNav.querySelectorAll("li").forEach(el => {
             el.classList.remove("resume__menu__item--active");
           });
+          // set nav item for current active section to active
           resumeNav
             .querySelector(`[data-target='${currentActiveSection}']`)
             .classList.add("resume__menu__item--active");
