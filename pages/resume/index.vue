@@ -399,7 +399,7 @@ export default {
           // scroll element to top of the viewport
           // scrollIntoView currently not supported on Chrome:
           // entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
-          this.scrollIt(entry.target, 300, "easeOutQuad");
+          this.scrollIt(entry.target, 350, "easeOutCubic");
           // find the current active section
           currentActiveSection = entry.target.dataset.target;
           // remove active classe from all nav items
