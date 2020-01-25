@@ -316,6 +316,53 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    // create intersection observer
+    const sections = document.querySelectorAll(".resume__content__section");
+    let isObserving;
+    let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        console.log(entry.target, entry.intersectionRatio);
+      });
+    });
+    // start intersection observer
+    function startObserver() {
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    }
+    // kill intersection observer
+    function killObserver() {
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
+    }
+    // run observer if on large screen
+    if (window.innerWidth >= 1400) {
+      startObserver();
+      isObserving = true;
+    } else if (window.innerWidth < 1400) {
+      isObserving = false;
+    }
+    // run or remove observer depending on screen width
+    window.onresize = function() {
+      if (window.innerWidth >= 1400 && isObserving === false) {
+        // observer is not set and should be started
+        startObserver();
+        isObserving = true;
+      } else if (window.innerWidth >= 1400 && isObserving === true) {
+        // observer is set and should continue to run
+        return;
+      } else if (window.innerWidth < 1400 && isObserving === true) {
+        // observer should be unset
+        killObserver();
+        isObserving = false;
+      } else {
+        // observer should stay unset
+        return;
+      }
+    };
   }
 };
 </script>
