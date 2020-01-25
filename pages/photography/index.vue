@@ -121,7 +121,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Une galerie de mes photos"
+          content: "Une sélection de mes photos les plus réussies"
         }
       ]
     };
@@ -141,6 +141,8 @@ export default {
         return {
           ...photo,
           locationSrc: photoUrl,
+          // cloudinary api transform options not working as expected on url method
+          // transform requests built on the fly instead
           locationSmall: this.cloudinaryTransform(photoUrl, 250),
           locationMedium: this.cloudinaryTransform(photoUrl, 700),
           locationNormal: this.cloudinaryTransform(photoUrl, 1000)
@@ -150,43 +152,60 @@ export default {
   },
   methods: {
     cloudinarySrc: function(publicId) {
+      // returns url for source image from cloudinary
       return cloudinaryCore.url(publicId);
     },
     cloudinaryTransform: function(str, width) {
+      // injects transformation request into url
       return str.replace(`upload/v1/`, `upload/c_scale,w_${width}/v1/`);
     },
     showCarousel: function(e) {
+      // set carousel to visible
       this.carouselIsVisible = !this.carouselIsVisible;
+      // get clicked image to display on opening carousel
       this.currentImgId = Number(e.target.getAttribute("data-target"));
       this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     showPrevious: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
+      // current image should exit right, new image should enter left
       photoCarousel.style.setProperty("--leaving", "translateX(100%)");
       photoCarousel.style.setProperty("--starting", "translateX(-100%)");
+      // check if current image is first in the list
       if (this.currentImgId > 0) {
+        // if current is not the first image go to the previous image
         this.currentImgId = this.currentImgId - 1;
       } else {
+        // if current is the first image go to the last image
         this.currentImgId = this.photosInfo.length - 1;
       }
+      // display new current image
       this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     showNext: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
+      // current image should exit left, new image should enter right
       photoCarousel.style.setProperty("--leaving", "translateX(-100%)");
       photoCarousel.style.setProperty("--starting", "translateX(100%)");
+      // check if current image is last in the list
       if (this.currentImgId < this.photosInfo.length - 1) {
+        // if current is not the last image go to the next image
         this.currentImgId = this.currentImgId + 1;
       } else {
+        // if current is the last image go to the first image
         this.currentImgId = 0;
       }
+      // display new current image
       this.currentImgPublic = this.photosInfo[this.currentImgId].public_id;
     },
     closeCarousel: function() {
       const photoCarousel = document.querySelector(".photography__carousel");
+      // unset inline style properties to fall back on original css
       photoCarousel.style.setProperty("--leaving", "");
       photoCarousel.style.setProperty("--starting", "");
+      // set carousel to hidden
       this.carouselIsVisible = !this.carouselIsVisible;
+      // reset current image
       this.currentImgId = "";
     },
     checkKey: function(e) {
@@ -195,6 +214,8 @@ export default {
         this.showPrevious();
       } else if (e.keyCode == "39" && this.carouselIsVisible === true) {
         this.showNext();
+      } else if (e.keyCode == "27" && this.carouselIsVisible === true) {
+        this.closeCarousel();
       }
     }
   },
