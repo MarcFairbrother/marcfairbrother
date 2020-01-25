@@ -42,13 +42,25 @@
     <section class="mainheader__social">
       <ul class="mainheader__social__list">
         <li class="mainheader__social__list__item mainheader__social__list__item--linkedin">
-          <a href="#" title="Marc's LinkedIn Profile">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/marc-fairbrother-33a833147/"
+            target="_blank"
+            title="Marc's LinkedIn Profile"
+          >LinkedIn</a>
         </li>
         <li class="mainheader__social__list__item mainheader__social__list__item--github">
-          <a href="#" title="Marc's GitHub Profile">GitHub</a>
+          <a
+            href="https://github.com/MarcFairbrother"
+            target="_blank"
+            title="Marc's GitHub Profile"
+          >GitHub</a>
         </li>
         <li class="mainheader__social__list__item mainheader__social__list__item--instagram">
-          <a href="#" title="Marc's Instagram">Instagram</a>
+          <a
+            href="https://www.instagram.com/marc__fairbrother/"
+            target="_blank"
+            title="Marc's Instagram"
+          >Instagram</a>
         </li>
       </ul>
     </section>
