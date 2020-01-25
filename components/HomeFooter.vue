@@ -1,13 +1,9 @@
 <template>
   <footer>
-    <p>
+    <p class="flip">
       <nuxt-link to="/credits">Crédits</nuxt-link>
     </p>
-    <p>
-      MarcFairbrother
-      <span class="flip">&copy;</span>
-      2019
-    </p>
+    <p>MarcFairbrother<span class="flip">&copy;</span>2019</p>
   </footer>
 </template>
 
@@ -45,9 +41,11 @@ footer {
   & a {
     color: var(--light);
   }
-}
-.flip {
-  display: inline-block;
-  transform: rotateZ(180deg);
+  & p {
+    & span.flip {
+      display: inline-block;
+      transform: rotateZ(180deg);
+    }
+  }
 }
 </style>
