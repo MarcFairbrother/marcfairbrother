@@ -392,8 +392,11 @@ export default {
 }
 // fade carousel into view
 .show-carousel-enter-active,
-.carousel-leave-active {
+.show-carousel-leave-active {
   transition: opacity 0.25s;
+}
+.show-carousel-leave-active {
+  transition-delay: 0.4s;
 }
 .show-carousel-enter,
 .show-carousel-leave-to {
