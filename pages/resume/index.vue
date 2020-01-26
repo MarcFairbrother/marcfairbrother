@@ -397,14 +397,18 @@ export default {
   methods: {
     navScroll: function(e) {
       if (window.innerWidth >= 1400) {
+        // identify target from click event
         const content = document.querySelector(".resume__content");
         const targetSection = content.querySelector(
           `[data-target="${e.target.parentNode.dataset.target}"]`
         );
         // kill intersection observer
-        this.updateNav(e.target.parentNode.dataset.target);
         this.killObserver(this.sections, this.observer);
+        // update active nav item
+        this.updateNav(e.target.parentNode.dataset.target);
+        // scroll to new active section
         this.scrollIt(targetSection, 350, "easeOutCubic", () => {
+          // run observer once scroll animation is finished
           setTimeout(() => {
             this.startObserver(this.sections, this.observer);
           }, 350);
