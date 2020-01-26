@@ -4,10 +4,18 @@
       <h2>Git Log --cv</h2>
       <nav>
         <ul class="resume__menu">
-          <li class="resume__menu__item" data-target="overview">Profil</li>
-          <li class="resume__menu__item" data-target="work">Expérience</li>
-          <li class="resume__menu__item" data-target="studies">Formations</li>
-          <li class="resume__menu__item" data-target="hobbies">Loisirs</li>
+          <li class="resume__menu__item" data-target="overview">
+            <button @click="navScroll($event)">Profil</button>
+          </li>
+          <li class="resume__menu__item" data-target="work">
+            <button @click="navScroll($event)">Expérience</button>
+          </li>
+          <li class="resume__menu__item" data-target="studies">
+            <button @click="navScroll($event)">Formations</button>
+          </li>
+          <li class="resume__menu__item" data-target="hobbies">
+            <button @click="navScroll($event)">Loisirs</button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -380,10 +388,56 @@ export default {
       ]
     };
   },
+  data() {
+    return {
+      observer: {},
+      sections: []
+    };
+  },
+  methods: {
+    navScroll: function(e) {
+      if (window.innerWidth >= 1400) {
+        const content = document.querySelector(".resume__content");
+        const targetSection = content.querySelector(
+          `[data-target="${e.target.parentNode.dataset.target}"]`
+        );
+        // kill intersection observer
+        this.updateNav(e.target.parentNode.dataset.target);
+        this.killObserver(this.sections, this.observer);
+        this.scrollIt(targetSection, 350, "easeOutCubic", () => {
+          setTimeout(() => {
+            this.startObserver(this.sections, this.observer);
+          }, 350);
+        });
+      }
+    },
+    updateNav: function(newActive) {
+      const resumeNav = document.querySelector(".resume__menu");
+      let currentActiveSection;
+      // find the current active section
+      currentActiveSection = newActive;
+      // remove active classe from all nav items
+      resumeNav.querySelectorAll("li").forEach(el => {
+        el.classList.remove("resume__menu__item--active");
+      });
+      // set nav item for current active section to active
+      resumeNav
+        .querySelector(`[data-target='${currentActiveSection}']`)
+        .classList.add("resume__menu__item--active");
+    },
+    startObserver: function(sections, observer) {
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    },
+    killObserver: function(sections, observer) {
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
+    }
+  },
   mounted() {
-    const resumeNav = document.querySelector(".resume__menu");
-    const sections = document.querySelectorAll(".resume__content__section");
-    let currentActiveSection;
+    this.sections = document.querySelectorAll(".resume__content__section");
     let isObserving;
     // create intersection observer
     const options = {
@@ -392,7 +446,7 @@ export default {
       threshold: 0.01
     };
     // handle intersection events
-    let observer = new IntersectionObserver(entries => {
+    this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         // when new target enters the viewport
         if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
@@ -400,50 +454,29 @@ export default {
           // scrollIntoView currently not supported on Chrome:
           // entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
           this.scrollIt(entry.target, 350, "easeOutCubic");
-          // find the current active section
-          currentActiveSection = entry.target.dataset.target;
-          // remove active classe from all nav items
-          resumeNav.querySelectorAll("li").forEach(el => {
-            el.classList.remove("resume__menu__item--active");
-          });
-          // set nav item for current active section to active
-          resumeNav
-            .querySelector(`[data-target='${currentActiveSection}']`)
-            .classList.add("resume__menu__item--active");
+          this.updateNav(entry.target.dataset.target);
         }
       });
     }, options);
-    // start intersection observer
-    function startObserver() {
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    }
-    // kill intersection observer
-    function killObserver() {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
-    }
     // run observer if on large screen
     if (window.innerWidth >= 1400) {
-      startObserver();
+      this.startObserver(this.sections, this.observer);
       isObserving = true;
     } else if (window.innerWidth < 1400) {
       isObserving = false;
     }
     // run or remove observer depending on screen width
-    window.onresize = function() {
+    window.onresize = () => {
       if (window.innerWidth >= 1400 && isObserving === false) {
         // observer is not set and should be started
-        startObserver();
+        this.startObserver(this.sections, this.observer);
         isObserving = true;
       } else if (window.innerWidth >= 1400 && isObserving === true) {
         // observer is set and should continue to run
         return;
       } else if (window.innerWidth < 1400 && isObserving === true) {
         // observer should be unset
-        killObserver();
+        this.killObserver(this.sections, this.observer);
         isObserving = false;
       } else {
         // observer should stay unset

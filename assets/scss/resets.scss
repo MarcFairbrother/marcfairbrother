@@ -63,6 +63,19 @@ select {
   font: inherit;
 }
 
+/* Hide button display */
+
+button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+  -webkit-appearance: none;
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
