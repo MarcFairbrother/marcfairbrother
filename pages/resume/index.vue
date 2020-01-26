@@ -76,8 +76,10 @@
           <li>
             <h4>Design et direction artistique</h4>
             <p>
-              Je pense qu'une application et ses interfaces doivent être conçues
-              en pensant, en premier lieu, à leur utilisateur final. La
+              Une application doit être conçue en pensant, en premier lieu, à
+              l'utilisateur final. Le design se doit de répondre, sur les plans
+              technique, ergonomique et esthétique, à quelle sera l'expéricence
+              de l'utilisateur. La
               <strong
                 >simplicité d'utilisation, de conception et de maintenance du
                 code</strong
@@ -85,11 +87,10 @@
               sont les garants de sa réussite.
             </p>
             <p>
-              Je suis capable de créer des
-              <strong>maquettes graphiques et fonctionnelles</strong> en suivant
-              une direction artistique. Je cherche à réutiliser autant que
-              possible des éléments pour améliorer la cohérence d'ensemble. Je
-              sais également créer des logos et des pictogrammes en SVG.
+              C'est en suivant ces principes que je travaille sur des
+              <strong>maquettes graphiques ou fonctionnelles</strong>, des
+              wireframes, des prototypes ou une direction artistique. J'adhère à
+              une approche par composante qui garantit une cohérence d'ensemble.
             </p>
           </li>
           <li>
@@ -203,7 +204,9 @@
         <ul
           class="resume__content__section__list resume__content__section__list--studies"
         >
-          <li>
+          <li
+            class="resume__content__section__list__item resume__content__section__list__item--internet"
+          >
             <h4>
               License professionnelle&nbsp;: Création et Développement
               Numériques en Ligne
@@ -213,21 +216,27 @@
               <br />2013-2014
             </p>
           </li>
-          <li>
+          <li
+            class="resume__content__section__list__item resume__content__section__list__item--book"
+          >
             <h4>DUT&nbsp;: Métiers du livre</h4>
             <p>
               <strong>Université Paris X - Nanterre</strong>
               <br />2009-2010
             </p>
           </li>
-          <li>
+          <li
+            class="resume__content__section__list__item resume__content__section__list__item--film"
+          >
             <h4>License&nbsp;: Arts du spectacle</h4>
             <p>
               <strong>Université Paris X - Nanterre</strong>
               <br />2004-2007
             </p>
           </li>
-          <li>
+          <li
+            class="resume__content__section__list__item resume__content__section__list__item--general"
+          >
             <h4>Baccalauréat ES&nbsp;: Option internationale</h4>
             <p>
               <strong>Lycée d'État de Sèvres</strong>
@@ -728,7 +737,38 @@ export default {
           @include breakpoint($large-width) {
             border-bottom: none;
             & li {
+              display: grid;
+              grid-column-gap: var(--hlf-margin);
+              grid-template-columns: auto 1fr;
               margin-bottom: var(--fll-margin);
+              & h4 {
+                margin-top: var(--qtr-margin);
+              }
+              &::before {
+                background-color: var(--clr-3);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: var(--fll-margin);
+                border-radius: 0 20px 0 20px;
+                content: "";
+                float: left;
+                grid-column: 1;
+                grid-row: 1/3;
+                height: 100%;
+                width: calc(var(--fll-margin) * 2);
+              }
+              &.resume__content__section__list__item--internet::before {
+                background-image: var(--internet);
+              }
+              &.resume__content__section__list__item--book::before {
+                background-image: var(--book);
+              }
+              &.resume__content__section__list__item--film::before {
+                background-image: var(--film);
+              }
+              &.resume__content__section__list__item--general::before {
+                background-image: var(--studies);
+              }
             }
           }
         }
