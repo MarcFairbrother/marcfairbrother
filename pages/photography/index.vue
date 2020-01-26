@@ -7,21 +7,21 @@
       <ul v-if="photosInfo.length > 0" class="photography__content__list">
         <li
           v-for="(photo, i) in photosInfo"
-          v-bind:data-target="i"
           :key="photo.public_id"
-          @click="showCarousel($event)"
           class="photography__content__list__item"
         >
-          <img
-            :srcset="
-              photo.locationSmall + ' 250w, ' + photo.locationMedium + ' 500w'
-            "
-            sizes="(max-width: 720px) 250px,
-            500px"
-            :src="photo.locationSrc"
-            v-bind:data-target="i"
-            :alt="'thumbnail for ' + photo.context.custom.alt"
-          />
+          <button v-bind:data-target="i" @click="showCarousel($event)">
+            <img
+              :srcset="
+                photo.locationSmall + ' 250w, ' + photo.locationMedium + ' 500w'
+              "
+              sizes="(max-width: 720px) 250px,
+          500px"
+              :src="photo.locationSrc"
+              v-bind:data-target="i"
+              :alt="'thumbnail for ' + photo.context.custom.alt"
+            />
+          </button>
         </li>
       </ul>
       <p v-else>Could not load photos</p>
@@ -50,7 +50,7 @@
             class="photography__carousel__image"
           />
         </transition-group>
-        <div @click="showPrevious()" class="photography__carousel__previous">
+        <button @click="showPrevious()" class="photography__carousel__previous">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -64,8 +64,8 @@
               stroke-width="1.23554981"
             />
           </svg>
-        </div>
-        <div @click="showNext()" class="photography__carousel__next">
+        </button>
+        <button @click="showNext()" class="photography__carousel__next">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -79,8 +79,8 @@
               stroke-width="1.23554981"
             />
           </svg>
-        </div>
-        <div @click="closeCarousel()" class="photography__carousel__close">
+        </button>
+        <button @click="closeCarousel()" class="photography__carousel__close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -93,7 +93,7 @@
               />
             </g>
           </svg>
-        </div>
+        </button>
       </article>
     </transition>
   </main>
@@ -292,7 +292,8 @@ export default {
         padding-top: 100%;
         position: relative;
         width: 100%;
-        & > img {
+        & button,
+        & img {
           height: 100%;
           left: 0;
           object-fit: cover;
@@ -301,6 +302,27 @@ export default {
           width: 100%;
           &:hover {
             cursor: pointer;
+          }
+        }
+        & button {
+          &::before {
+            background: var(--clr-1);
+            content: "";
+            display: inline-block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: opacity 0.25s ease-in-out;
+            width: 100%;
+            z-index: 2;
+          }
+          &:focus,
+          &:hover {
+            &::before {
+              opacity: 0.65;
+            }
           }
         }
       }
