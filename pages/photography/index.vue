@@ -304,24 +304,16 @@ export default {
             cursor: pointer;
           }
         }
+        & img {
+          transform-origin: center;
+          transition: transform 0.35s ease-in-out;
+        }
         & button {
-          &::before {
-            background: var(--clr-1);
-            content: "";
-            display: inline-block;
-            height: 100%;
-            left: 0;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            transition: opacity 0.25s ease-in-out;
-            width: 100%;
-            z-index: 2;
-          }
+          overflow: hidden;
           &:focus,
           &:hover {
-            &::before {
-              opacity: 0.65;
+            & img {
+              transform: scale(1.25);
             }
           }
         }
