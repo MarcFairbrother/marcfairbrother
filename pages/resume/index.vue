@@ -78,8 +78,11 @@
             <p>
               Une application doit être conçue en pensant, en premier lieu, à
               l'utilisateur final. Le design se doit de répondre, sur les plans
-              technique, ergonomique et esthétique, à quelle sera l'expéricence
-              de l'utilisateur. La
+              technique, ergonomique et esthétique, à la question de savoir
+              quelle est l'expéricence utilisateur souhaitée.
+            </p>
+            <p>
+              La
               <strong
                 >simplicité d'utilisation, de conception et de maintenance du
                 code</strong
@@ -88,9 +91,11 @@
             </p>
             <p>
               C'est en suivant ces principes que je travaille sur des
-              <strong>maquettes graphiques ou fonctionnelles</strong>, des
-              wireframes, des prototypes ou une direction artistique. J'adhère à
-              une approche par composante qui garantit une cohérence d'ensemble.
+              wireframes, des prototypes, des
+              <strong
+                >maquettes graphiques et fonctionnelles ou sur une direction
+                artistique</strong
+              >.
             </p>
           </li>
           <li>
