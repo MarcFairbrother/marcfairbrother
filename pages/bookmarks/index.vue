@@ -22,13 +22,14 @@
           <p>
             <em>{{ bookmark.description }}</em>
           </p>
-          <p>Langue&nbsp;: {{bookmark.lang}}</p>
+          <p>Langue&nbsp;: {{ bookmark.lang }}</p>
           <ul class="bookmarked__content__sublist">
             <li
               v-for="keyword in bookmark.keywords"
               :key="keyword[i]"
               class="bookmarked__content__sublist__item"
-            >{{ keyword }}</li>
+              v-html="keyword"
+            ></li>
           </ul>
         </li>
       </ul>
@@ -56,42 +57,6 @@ export default {
       bookmarks: [
         {
           id: 1,
-          title: "Shop Talk Show",
-          url: "https://shoptalkshow.com/",
-          description:
-            "Un podcast animé par Chris Coyer (CSS-Tricks, Code Pen) et Dave Ruppert (Paravel) axé sur le développement front-end avec de nombreux invités.",
-          keywords: ["webdev", "podcasts", "front-end"],
-          lang: "anglais"
-        },
-        {
-          id: 2,
-          title: "SVGOMG",
-          url: "https://jakearchibald.github.io/svgomg/",
-          src: "Jake Archibald (GitHub)",
-          keywords: ["webdev", "design", "tools"],
-          description: "Outil d'optimisation de fichiers SVG",
-          lang: "anglais"
-        },
-        {
-          id: 3,
-          title: "Syntax",
-          url: "https://syntax.fm/",
-          description:
-            "Un podcast animé par les développeurs full-stack et auteurs de tutoriels Wes Bos et Scott Tolinski, axé sur le développement JavaScript, notamment React.",
-          keywords: ["webdev", "podcasts", "front-end"],
-          lang: "anglais"
-        },
-        {
-          id: 4,
-          title: "Front End Happy Hour",
-          url: "https://frontendhappyhour.com/",
-          description:
-            "Un podcast animé par des ingérieurs front-end travaillant dans des entreprises majeures de la Silicon Valley (Netflix, Twitch, Atlassian) et abordant des thèmes allant du développement à la vie d'entreprise.",
-          keywords: ["webdev", "podcasts", "front-end"],
-          lang: "anglais"
-        },
-        {
-          id: 5,
           title: "From URL to Interactive",
           url: "https://alistapart.com/article/from-url-to-interactive/",
           src: "A List Apart",
@@ -101,11 +66,66 @@ export default {
           lang: "anglais"
         },
         {
+          id: 2,
+          title: "Shop Talk Show",
+          url: "https://shoptalkshow.com/",
+          description:
+            "Un podcast animé par Chris Coyer (CSS-Tricks, Code Pen) et Dave Rupert (Paravel) axé sur le développement front-end avec de nombreux invités et beaucoup d'humour.",
+          keywords: ["webdev", "podcasts", "front-end"],
+          lang: "anglais"
+        },
+        {
+          id: 3,
+          title: "Syntax",
+          url: "https://syntax.fm/",
+          description:
+            "Animé par les développeurs full-stack et auteurs de tutoriels Wes Bos et Scott Tolinski, Syntax est un podcast axé sur le développement JavaScript, notamment React.",
+          keywords: ["webdev", "podcasts", "front-end"],
+          lang: "anglais"
+        },
+        {
+          id: 4,
+          title: "Front End Happy Hour",
+          url: "https://frontendhappyhour.com/",
+          description:
+            "Des ingénieurs front-end travaillant dans des entreprises majeures de la Silicon Valley (Netflix, Twitch, Atlassian) abordent des thèmes allant du développement à la vie d'entreprise.",
+          keywords: ["webdev", "podcasts", "front-end"],
+          lang: "anglais"
+        },
+        {
+          id: 5,
+          title: "Netflix UI Engineering (YouTube)",
+          url: "https://www.youtube.com/channel/UCGGRRqAjPm6sL3-WGBDnKJA",
+          keywords: ["webdev", "UI", "conferences"],
+          description:
+            "Les conférences Netflix abordent des thèmes aussi variés que le streaming, la performance ou des problématiques concernant des frameworks spécifiques.",
+          lang: "anglais"
+        },
+        {
           id: 6,
           title: "uiGradients",
           url: "https://uigradients.com/",
           keywords: ["webdev", "design", "tools"],
           description: "Collection et outil de création de dégradés CSS.",
+          lang: "anglais"
+        },
+        {
+          id: 7,
+          title: "The Great Divide",
+          url: "https://css-tricks.com/the-great-divide/",
+          src: "CSS-Tricks (Chris Coyier)",
+          keywords: ["webdev", "front-end", "musings"],
+          description:
+            "Une rélfexion sur le développement front-end actuel et sur son éclatement entre gestion des données, de la structure syntaxique et la présentation de l'interface.",
+          lang: "anglais"
+        },
+        {
+          id: 8,
+          title: "SVGOMG",
+          url: "https://jakearchibald.github.io/svgomg/",
+          src: "GitHub (Jake Archibald)",
+          keywords: ["webdev", "design", "tools"],
+          description: "Outil d'optimisation de fichiers SVG",
           lang: "anglais"
         }
       ]
@@ -162,16 +182,18 @@ export default {
       font-size: 1.5rem;
       padding: 0 var(--qtr-margin);
       @include breakpoint($desktop-width) {
-        display: grid;
-        grid-column-gap: var(--hlf-margin);
-        grid-template-columns: 1fr 1fr;
+        column-count: 2;
+        column-gap: var(--hlf-margin);
       }
       @include breakpoint($large-width) {
-        grid-column-gap: var(--fll-margin);
+        column-gap: var(--fll-margin);
         padding: 0;
       }
       &__item {
         padding-bottom: var(--hlf-margin);
+        @include breakpoint($desktop-width) {
+          padding-bottom: var(--fll-margin);
+        }
         & a {
           color: var(--dark);
           & h3 {
