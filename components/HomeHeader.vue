@@ -13,54 +13,77 @@
         <ul class="mainheader__identity__tagline__list">
           <li
             class="mainheader__identity__tagline__list__item mainheader__identity__tagline__list__item--shooter"
-          >Trouble Shooter</li>
+          >
+            Trouble Shooter
+          </li>
           <li
             class="mainheader__identity__tagline__list__item mainheader__identity__tagline__list__item--cowboy"
-          >Code Cowboy</li>
+          >
+            Code Cowboy
+          </li>
           <li
             class="mainheader__identity__tagline__list__item mainheader__identity__tagline__list__item--explorer"
-          >UX/plorer</li>
+          >
+            UX/plorer
+          </li>
         </ul>
       </div>
     </section>
     <nav class="mainheader__sitenav">
       <ul class="mainheader__sitenav__list">
-        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--readme">
+        <li
+          class="mainheader__sitenav__list__item mainheader__sitenav__list__item--readme"
+        >
           <nuxt-link to="/readme">Read.me</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--resume">
+        <li
+          class="mainheader__sitenav__list__item mainheader__sitenav__list__item--resume"
+        >
           <nuxt-link to="/resume">Git Log --cv</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--bookmarks">
+        <li
+          class="mainheader__sitenav__list__item mainheader__sitenav__list__item--bookmarks"
+        >
           <nuxt-link to="/bookmarks">BookMarc'd</nuxt-link>
         </li>
-        <li class="mainheader__sitenav__list__item mainheader__sitenav__list__item--photography">
+        <li
+          class="mainheader__sitenav__list__item mainheader__sitenav__list__item--photography"
+        >
           <nuxt-link to="/photography">Photography</nuxt-link>
         </li>
       </ul>
     </nav>
     <section class="mainheader__social">
       <ul class="mainheader__social__list">
-        <li class="mainheader__social__list__item mainheader__social__list__item--linkedin">
+        <li
+          class="mainheader__social__list__item mainheader__social__list__item--linkedin"
+        >
           <a
-            href="https://www.linkedin.com/in/marc-fairbrother-33a833147/"
+            href="https://www.linkedin.com/in/marcfairbrother"
             target="_blank"
             title="Marc's LinkedIn Profile"
-          >LinkedIn</a>
+            >LinkedIn</a
+          >
         </li>
-        <li class="mainheader__social__list__item mainheader__social__list__item--github">
+        <li
+          class="mainheader__social__list__item mainheader__social__list__item--github"
+        >
           <a
             href="https://github.com/MarcFairbrother"
             target="_blank"
             title="Marc's GitHub Profile"
-          >GitHub</a>
+            >GitHub</a
+          >
         </li>
-        <li class="mainheader__social__list__item mainheader__social__list__item--instagram">
+        <li
+          class="mainheader__social__list__item mainheader__social__list__item--instagram"
+        >
           <a
             href="https://www.instagram.com/marc__fairbrother/"
             target="_blank"
             title="Marc's Instagram"
-          >Instagram</a>
+            >Instagram</a
+          >
         </li>
       </ul>
     </section>
