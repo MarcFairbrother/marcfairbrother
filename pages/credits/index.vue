@@ -4,35 +4,37 @@
       <h2>Crédits</h2>
     </header>
     <article class="credits__content">
-      <p>🙏 For their guidance, encouragements, friendship, or just for being inspiring human beings, many thanks to Wes Bos, CapyCec, Chris Coyier, Richard Déloge, Sarah Drasner, the Lutz bros, Dave Ruppert, Scott Tolinski &amp; the SixRoz Gang!</p>
+      <p>
+        🙏 For their guidance, encouragements, friendship, or just for being
+        inspiring human beings, many thanks to Wes Bos, CapyCec, Chris Coyier,
+        Richard Déloge, Sarah Drasner, the Lutz bros, Dave Rupert, Scott
+        Tolinski &amp; the SixRoz Gang!
+      </p>
       <p>👷 Designed and developed by Marc Fairbrother</p>
       <p>
-        ❤️
-        Built with
-        <a href="https://nuxtjs.org/" target="_blank">Nuxt</a> &amp; Luv (not a JS framework)
+        ❤️ Built with
+        <a href="https://nuxtjs.org/" target="_blank">Nuxt</a> &amp; Luv (not a
+        JS framework)
       </p>
       <p>
         🖼️ All images are licensed under a
         <a
           href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
           target="_blank"
-        >CC BY-NC-ND 4.0 International license</a>
+          >CC BY-NC-ND 4.0 International license</a
+        >
       </p>
       <p>
-        🏠
-        Source code hosted on
+        🏠 Source code hosted on
         <a
           href="https://github.com/MarcFairbrother/marcfairbrother"
           target="_blank"
-        >GitHub</a>
+          >GitHub</a
+        >
       </p>
       <p>
-        🧙
-        Hosted and deployed with awesome
-        <a
-          href="https://www.netlify.com/"
-          target="_blank"
-        >Netlify</a> wizardry
+        🧙 Hosted and deployed with awesome
+        <a href="https://www.netlify.com/" target="_blank">Netlify</a> wizardry
       </p>
       <section class="credits__content__legal">
         <p>Netlify, Inc.</p>
