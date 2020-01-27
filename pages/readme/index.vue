@@ -4,18 +4,52 @@
     <article class="readme__content">
       <section class="readme__content__section readme__content__section--bio">
         <h3>En bref</h3>
-        <p>Né outre-Manche (nul n'est parfait) j'ai débarqué dans l'hexagone à l'age de 10 ans. Après des études de cinéma et un passage dans le commerce (à la Fnac puis en librairie indé), je me suis formé aux métiers du web, secteur dans lequel je travaille depuis 2014.</p>
-        <p>L'accessibilité et la performance sont parmi les questions actuelles du web qui me tiennent particulièrement à coeur, l'utilisateur devant tenir une place centrale dans l'élaboration de toute application afin d'en assurer la réussite.</p>
+        <p>
+          Né outre-Manche (nul n'est parfait) j'ai débarqué dans l'hexagone à
+          l'age de 10 ans. Après des études de cinéma et un passage dans le
+          commerce, à la Fnac puis en librairie indé, je me suis formé aux
+          métiers du web, secteur dans lequel je travaille depuis 2014.
+        </p>
+        <p>
+          L'accessibilité et la performance sont deux des questions actuelles du
+          web qui me tiennent à coeur et sur lesquelles je souhaite approfondir
+          mes connaissances afin d'élaborer de meilleures applications.
+        </p>
       </section>
-      <section class="readme__content__section readme__content__section--interests">
+      <section
+        class="readme__content__section readme__content__section--interests"
+      >
         <h3>Intérêts</h3>
-        <p>Passionné de cinéma, j'ai consacré de nombreuses heures à sa découverte avec une prédilection pour les classiques (hollywoodiens, européens et japonais), le cinéma d'exploitation sans copromis et les bizarreries qu'on ne trouve qu'au bout de fouilles acharnées.</p>
-        <p>Ancien libraire, la littérature m'intéresse également dans sa foisannante diversité, de ces indécrottables classiques qui ont tourmenté plus d'un lycéen aux mauvais genres qui auront su davantage titiller leur imaginaire.</p>
+        <p>
+          Passionné de cinéma, j'ai consacré de (trop&nbsp;?) nombreuses heures
+          à sa découverte avec une prédilection pour les classiques
+          hollywoodiens, européens et japonais, le cinéma d'exploitation sans
+          compromis et les bizarreries qu'on ne trouve qu'au bout de fouilles
+          acharnées.
+        </p>
+        <p>
+          Ancien libraire, la littérature m'intéresse également dans sa
+          foisannante diversité, de ces indécrottables classiques qui ont
+          tourmenté plus d'un lycéen aux mauvais genres qui auront su davantage
+          titiller leur imaginaire.
+        </p>
       </section>
-      <section class="readme__content__section readme__content__section--hobbies">
+      <section
+        class="readme__content__section readme__content__section--hobbies"
+      >
         <h3>Activités</h3>
-        <p>Ayant pratiqué l'argentique au début des années 2000, l'avénement du numérique avait quelque peu calmé mes ardeurs. Je redécouvre aujourd'hui la photographie à laquelle j'espère consacrer un temps plus important pour en apprendre les subtilités.</p>
-        <p>Le design et le graphisme représentent un autre exutoire, pour des projets personnels mais aussi sur le plan professionel avec notamment la réalisation d'affiches publicitaires et d'interfaces numériques, statiques ou interactives.</p>
+        <p>
+          Ayant pratiqué la photographie argentique au début des années 2000,
+          l'avénement du numérique avait quelque peu calmé mes ardeurs. Je
+          retrouve aujourd'hui de l'enthousiasme pour ce loisir auquel j'espère
+          consacrer un temps plus important afin d'en maîtriser les subtilités.
+        </p>
+        <p>
+          Le design et le graphisme représentent un autre exutoire, pour des
+          projets personnels mais aussi sur le plan professionel avec notamment
+          la réalisation d'affiches publicitaires et d'interfaces numériques,
+          statiques ou interactives.
+        </p>
       </section>
     </article>
   </main>
