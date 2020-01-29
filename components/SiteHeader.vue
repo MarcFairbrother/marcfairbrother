@@ -14,25 +14,41 @@
       <ul class="mainheader__sitenav__list">
         <li
           class="mainheader__sitenav__list__item mainheader__sitenav__list__item--readme"
-          :class="[$nuxt.$route.path === '/readme' ? 'mainheader__sitenav__list__item--active' : 'mainheader__sitenav__list__item--inactive']"
+          :class="[
+            $nuxt.$route.path === '/readme'
+              ? 'mainheader__sitenav__list__item--active'
+              : 'mainheader__sitenav__list__item--inactive'
+          ]"
         >
           <nuxt-link to="/readme">Read.me</nuxt-link>
         </li>
         <li
           class="mainheader__sitenav__list__item mainheader__sitenav__list__item--resume"
-          :class="[$nuxt.$route.path === '/resume' ? 'mainheader__sitenav__list__item--active' : 'mainheader__sitenav__list__item--inactive']"
+          :class="[
+            $nuxt.$route.path === '/resume'
+              ? 'mainheader__sitenav__list__item--active'
+              : 'mainheader__sitenav__list__item--inactive'
+          ]"
         >
           <nuxt-link to="/resume">Git Log --cv</nuxt-link>
         </li>
         <li
           class="mainheader__sitenav__list__item mainheader__sitenav__list__item--bookmarks"
-          :class="[$nuxt.$route.path === '/bookmarks' ? 'mainheader__sitenav__list__item--active' : 'mainheader__sitenav__list__item--inactive']"
+          :class="[
+            $nuxt.$route.path === '/bookmarks'
+              ? 'mainheader__sitenav__list__item--active'
+              : 'mainheader__sitenav__list__item--inactive'
+          ]"
         >
           <nuxt-link to="/bookmarks">BookMarc'd</nuxt-link>
         </li>
         <li
           class="mainheader__sitenav__list__item mainheader__sitenav__list__item--photography"
-          :class="[$nuxt.$route.path === '/photography' ? 'mainheader__sitenav__list__item--active' : 'mainheader__sitenav__list__item--inactive']"
+          :class="[
+            $nuxt.$route.path === '/photography'
+              ? 'mainheader__sitenav__list__item--active'
+              : 'mainheader__sitenav__list__item--inactive'
+          ]"
         >
           <nuxt-link to="/photography">Photography</nuxt-link>
         </li>
@@ -133,9 +149,12 @@ export default {
         & h1 {
           font-size: 0.8rem;
           @include breakpoint($desktop-width) {
-            font-size: 2rem;
+            font-size: 1.6rem;
           }
           @include breakpoint($large-width) {
+            font-size: 1.4rem;
+          }
+          @include breakpoint($very-large) {
             font-size: 1.8rem;
           }
         }
@@ -198,7 +217,7 @@ export default {
         @include breakpoint($desktop-width) {
           align-items: flex-start;
           border-radius: 5px;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           margin-bottom: var(--hlf-margin);
           margin-right: var(--hlf-margin);
           padding: var(--hlf-margin);
