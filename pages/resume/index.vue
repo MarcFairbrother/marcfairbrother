@@ -534,10 +534,12 @@ export default {
         height: 100%;
         justify-content: flex-end;
         &__item {
+          font-size: 1.5rem;
           line-height: 2;
           margin-right: var(--hlf-margin);
           position: relative;
           @include breakpoint($large-width) {
+            font-size: 1rem;
             margin-left: var(--hlf-margin);
             &:last-of-type {
               margin-right: var(--fll-margin);
