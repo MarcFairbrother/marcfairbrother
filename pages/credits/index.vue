@@ -1,7 +1,7 @@
 <template>
   <main class="credits">
     <header class="credits__header">
-      <h2>Crédits</h2>
+      <h2>Credits</h2>
     </header>
     <article class="credits__content">
       <p>
@@ -55,12 +55,25 @@
 export default {
   head() {
     return {
-      titleTemplate: "%s | Crédits",
+      titleTemplate: "%s | Credits",
+      htmlAttrs: {
+        lang: "en"
+      },
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "Remerciements et mentions légales"
+          content: "Shout outs and legal stuff"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Marc Fairbrother | Credits"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Shout outs and legal stuff"
         }
       ]
     };
@@ -96,7 +109,7 @@ export default {
       padding: var(--hlf-margin);
       text-transform: lowercase;
       &::before {
-        content: "\2605";
+        content: "\2605\0020";
       }
       @include breakpoint($desktop-width) {
         margin: 0 var(--hlf-margin);

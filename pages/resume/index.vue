@@ -397,7 +397,19 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Mon CV en ligne"
+          content:
+            "Merci de consulter mon CV en ligne et n'hésitez pas à me contacter via LinkedIn"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Marc Fairbrother | Git Log --cv"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "Merci de consulter mon CV en ligne et n'hésitez pas à me contacter via LinkedIn"
         }
       ]
     };

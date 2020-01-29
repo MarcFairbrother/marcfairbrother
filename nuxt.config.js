@@ -15,8 +15,22 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          "Après plusieurs années passées dans le commerce, je travaille dans le web depuis 2014 en tant que responsable technique sur des projets VOD. J'ai un grand intérêt pour la culture, notamment le cinéma, la littérature et la photographie."
+        content: 'Project Manager, Web Designer & Developer'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Marc Fairbrother | Portefolio et CV en ligne'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Project Manager, Web Designer & Developer'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://marcfairbrother.com/marcfairbrother_og.png'
       }
     ],
     link: [

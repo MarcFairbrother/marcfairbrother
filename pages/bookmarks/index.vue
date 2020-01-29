@@ -47,7 +47,18 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Une liste de ressources autour de la culture et de l'actualité du web"
+            "Des articles, podcasts et conférences autour de la culture et de l'actualité du web"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Marc Fairbrother | BookMarc'd"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "Des articles, podcasts et conférences autour de la culture et de l'actualité du web"
         }
       ]
     };

@@ -64,7 +64,19 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Je me présente en quelques mots"
+          content:
+            "Avant la France et en dehors du web, quelques mots pour présenter mon parcours"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Marc Fairbrother | Read.me"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "Avant la France et en dehors du web, quelques mots pour présenter mon parcours"
         }
       ]
     };

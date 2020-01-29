@@ -121,7 +121,19 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "Une sélection de mes photos les plus réussies"
+          content:
+            "Photographe amateur, j'ai un intérêt pour les lignes, les formes et les silhouettes solitaires"
+        },
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: "Marc Fairbrother | Photography"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content:
+            "Photographe amateur, j'ai un intérêt pour les lignes, les formes et les silhouettes solitaires"
         }
       ]
     };
