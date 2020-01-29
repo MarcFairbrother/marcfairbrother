@@ -35,9 +35,9 @@
         </p>
       </section>
       <section
-        class="readme__content__section readme__content__section--hobbies"
+        class="readme__content__section readme__content__section--creativity"
       >
-        <h3>Activités</h3>
+        <h3>Créativité</h3>
         <p>
           Ayant pratiqué la photographie argentique au début des années 2000,
           l'avénement du numérique avait quelque peu calmé mes ardeurs. Je
@@ -45,10 +45,10 @@
           consacrer un temps plus important afin d'en maîtriser les subtilités.
         </p>
         <p>
-          Le design et le graphisme représentent un autre exutoire, pour des
-          projets personnels mais aussi sur le plan professionel avec notamment
-          la réalisation d'affiches publicitaires et d'interfaces numériques,
-          statiques ou interactives.
+          Le design et le graphisme représentent un autre moyen d'expression,
+          pour des projets personnels mais aussi sur le plan professionel avec
+          notamment la réalisation d'affiches publicitaires et d'interfaces
+          numériques, statiques ou interactives.
         </p>
       </section>
     </article>
@@ -190,10 +190,10 @@ export default {
           }
         }
       }
-      &--hobbies {
+      &--creativity {
         & h3 {
           &::before {
-            background-image: var(--hobbies);
+            background-image: var(--creativity);
           }
         }
       }
