@@ -61,11 +61,7 @@ export default {
    ** Style Resources configuration
    */
   styleResources: {
-    scss: [
-      'assets/scss/_variables.scss',
-      'assets/scss/_breakpoints.scss',
-      'assets/scss/_mixins.scss'
-    ]
+    scss: ['assets/scss/_breakpoints.scss']
   },
   /*
    ** Build configuration
@@ -78,7 +74,6 @@ export default {
     extend(config, ctx) {}
   },
   dotenv: {
-    TEST_VARIABLE: process.env.TEST_VARIABLE,
     CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME
   }
 };
