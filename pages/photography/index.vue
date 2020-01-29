@@ -403,6 +403,7 @@ export default {
     &__previous {
       grid-column: 1/2;
       grid-row: 2;
+      justify-self: start;
       padding: var(--hlf-margin) 0;
       @include breakpoint($desktop-width) {
         align-self: center;
