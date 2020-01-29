@@ -443,10 +443,7 @@ export default {
       entries.forEach(entry => {
         // when new target enters the viewport
         if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
-          // scroll element to top of the viewport
-          // scrollIntoView currently not supported on Chrome:
-          // entry.target.scrollIntoView({ behavior: "smooth", block: "start" });
-          this.scrollIt(entry.target, 350, "easeOutCubic");
+          // update active nav entry
           this.updateNav(entry.target.dataset.target);
         }
       });
