@@ -31,10 +31,11 @@ footer {
       transition-delay: 0.65s;
     }
     &.footer-leave-to {
-      position: absolute;
-      left: 0;
       bottom: 0;
+      left: 0;
+      position: absolute;
       right: 0;
+      top: calc(100vh - 40px);
       z-index: 10;
     }
   }
