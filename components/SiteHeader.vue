@@ -149,7 +149,7 @@ export default {
         & h1 {
           font-size: 0.8rem;
           @include breakpoint($desktop-width) {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
           }
           @include breakpoint($large-width) {
             font-size: 1.4rem;
