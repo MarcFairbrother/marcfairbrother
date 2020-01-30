@@ -123,6 +123,7 @@ export default {
     grid-template-columns: 45vw 1fr;
     grid-template-rows: 1fr max-content;
     height: calc(100vh - 40px);
+    max-width: 100vw;
     &.header-leave-to {
       position: absolute;
       top: 0;
@@ -206,6 +207,12 @@ export default {
           @include breakpoint($tablet-width) {
             justify-content: center;
           }
+          @include breakpoint($desktop-width) {
+            font-size: 1.4rem;
+          }
+          @include breakpoint($large-width) {
+            font-size: 1.5rem;
+          }
           &::before {
             background-position: center;
             background-repeat: no-repeat;
@@ -261,6 +268,7 @@ export default {
           display: flex;
           font-size: 4.5rem;
           justify-content: center;
+          overflow: hidden;
           padding: var(--hlf-margin) var(--fll-margin) var(--fll-margin);
           .header-enter-active &,
           .header-leave-active & {
