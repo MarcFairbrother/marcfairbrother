@@ -168,11 +168,13 @@ export default {
           height: 34px;
           margin-right: var(--qtr-margin);
           width: 34px;
-          @include breakpoint($desktop-width) {
+          @include breakpoint($tablet-width) {
             background-size: 20px 20px;
             height: 50px;
-            margin-right: var(--hlf-margin);
             width: 50px;
+          }
+          @include breakpoint($desktop-width) {
+            margin-right: var(--hlf-margin);
           }
         }
       }

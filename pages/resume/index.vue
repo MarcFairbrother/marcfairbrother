@@ -624,6 +624,11 @@ export default {
           height: 34px;
           margin-right: var(--qtr-margin);
           width: 34px;
+          @include breakpoint($tablet-width) {
+            background-size: 20px 20px;
+            height: 50px;
+            width: 50px;
+          }
         }
         @include breakpoint($desktop-width) {
           display: none;
