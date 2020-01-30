@@ -152,7 +152,7 @@ export default {
             font-size: 1.7rem;
           }
           @include breakpoint($large-width) {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
           }
           @include breakpoint($very-large) {
             font-size: 1.8rem;
