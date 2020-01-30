@@ -193,11 +193,12 @@ export default {
       font-size: 1.5rem;
       padding: 0 var(--qtr-margin);
       @include breakpoint($desktop-width) {
-        column-count: 2;
-        column-gap: var(--hlf-margin);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: var(--hlf-margin);
       }
       @include breakpoint($large-width) {
-        column-gap: var(--fll-margin);
+        grid-column-gap: var(--fll-margin);
         padding: 0;
       }
       &__item {
