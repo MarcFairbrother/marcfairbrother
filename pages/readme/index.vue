@@ -89,11 +89,12 @@ export default {
   @include breakpoint($desktop-width) {
     align-items: start;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: min-content;
     padding: var(--hlf-margin) 0;
   }
   @include breakpoint($large-width) {
+    grid-template-columns: repeat(3, 1fr);
     padding: var(--fll-margin) 0;
   }
   @include mobile {
@@ -115,17 +116,18 @@ export default {
       content: "/";
     }
     @include breakpoint($desktop-width) {
-      grid-column: 1/4;
       margin: 0 var(--hlf-margin) var(--hlf-margin);
     }
     @include breakpoint($large-width) {
       font-size: 2rem;
+      grid-column: 1/4;
       line-height: calc(2 * var(--fll-margin));
       margin: 0 var(--fll-margin) var(--fll-margin);
     }
   }
   &__content {
-    @include breakpoint($desktop-width) {
+    width: 100%;
+    @include breakpoint($large-width) {
       display: grid;
       grid-column: 1/4;
       grid-template-columns: repeat(3, 1fr);
@@ -133,15 +135,15 @@ export default {
     &__section {
       padding: 0 var(--qtr-margin);
       @include breakpoint($desktop-width) {
+        padding: 0 var(--hlf-margin);
+      }
+      @include breakpoint($large-width) {
         border-right: solid 2px var(--clr-2);
         height: auto;
-        padding: 0 var(--hlf-margin);
+        padding: 0 var(--fll-margin);
         &:last-of-type {
           border-right: none;
         }
-      }
-      @include breakpoint($large-width) {
-        padding: 0 var(--fll-margin);
       }
       & h3 {
         align-items: center;
@@ -151,10 +153,8 @@ export default {
         font-size: 2rem;
         margin-bottom: var(--hlf-margin);
         padding: var(--hlf-margin) var(--qtr-margin);
-        @include breakpoint($desktop-width) {
-          padding: var(--hlf-margin);
-        }
         @include breakpoint($large-width) {
+          padding: var(--hlf-margin);
           font-size: 1.5rem;
         }
         &::before {
