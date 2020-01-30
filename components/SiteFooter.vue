@@ -18,6 +18,9 @@ footer {
   justify-content: space-between;
   margin: 0;
   padding: var(--hlf-margin) var(--hlf-margin);
+  @include breakpoint($tablet-width) {
+    padding: var(--hlf-margin) var(--hlf-margin) var(--fll-margin);
+  }
   @include breakpoint($desktop-width) {
     bottom: 0;
     font-size: 0.6rem;
