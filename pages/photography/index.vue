@@ -122,7 +122,7 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Photographe amateur, j'ai un intérêt pour les lignes, les formes et les silhouettes solitaires"
+            "Photographe amateur, je m'intéresse particulièrement aux lignes, aux formes et aux silhouettes"
         },
         {
           hid: "og:title",
@@ -133,7 +133,7 @@ export default {
           hid: "og:description",
           name: "og:description",
           content:
-            "Photographe amateur, j'ai un intérêt pour les lignes, les formes et les silhouettes solitaires"
+            "Photographe amateur, je m'intéresse particulièrement aux lignes, aux formes et aux silhouettes"
         }
       ]
     };

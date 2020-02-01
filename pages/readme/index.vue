@@ -45,10 +45,10 @@
           consacrer un temps plus important afin d'en maîtriser les subtilités.
         </p>
         <p>
-          Le design et le graphisme représentent un autre moyen d'expression,
-          pour des projets personnels mais aussi sur le plan professionel avec
-          notamment la réalisation d'affiches publicitaires et d'interfaces
-          numériques, statiques ou interactives.
+          J'affectionne aussi le design comme moyen d'expression, sur des
+          projets personnels mais également professionels avec notamment la
+          réalisation d'affiches publicitaires et d'interfaces numériques,
+          statiques ou interactives.
         </p>
       </section>
     </article>

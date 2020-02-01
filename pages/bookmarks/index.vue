@@ -127,7 +127,7 @@ export default {
           src: "CSS-Tricks (Chris Coyier)",
           keywords: ["webdev", "front-end", "musings"],
           description:
-            "Une rélfexion sur le développement front-end actuel et sur son éclatement entre gestion des données, de la structure syntaxique et la présentation de l'interface.",
+            "Une rélfexion sur le développement front-end actuel et sur son éclatement entre gestion des données, lisibilité du document et présentation de l'interface.",
           lang: "anglais"
         },
         {

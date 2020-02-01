@@ -5,7 +5,7 @@ export default {
    */
   head: {
     title: 'Marc Fairbrother',
-    titleTemplate: '%s | Portefolio et CV en ligne',
+    titleTemplate: '%s | 🔫 Trouble Shooter, 🤠 Code Cowboy & 🚀 UX-plorer',
     htmlAttrs: {
       lang: 'fr'
     },
@@ -15,17 +15,18 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Project Manager, Web Designer & Developer'
+        content: 'Project Management, Web Design & Development'
       },
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'Marc Fairbrother | Portefolio et CV en ligne'
+        content:
+          'Marc Fairbrother | 🔫 Trouble Shooter, 🤠 Code Cowboy & 🚀 UX-plorer'
       },
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Project Manager, Web Designer & Developer'
+        content: 'Project Management, Web Design & Development'
       },
       {
         hid: 'og:image',

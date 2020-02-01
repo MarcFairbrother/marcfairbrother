@@ -97,9 +97,9 @@
             <h4>Design et direction artistique</h4>
             <p>
               Une application doit être conçue en pensant, en premier lieu, à
-              l'utilisateur final. Le design se doit de répondre, sur les plans
-              technique, ergonomique et esthétique, à la question de savoir
-              quelle est l'expéricence utilisateur souhaitée.
+              l'utilisateur final. Le design se doit donc de proposer, sur les
+              plans technique, ergonomique et esthétique, la meilleure
+              expéricence utilisateur possible.
             </p>
             <p>
               La
@@ -183,7 +183,7 @@
               Migration d'un important catalogue vidéo vers un workflow
               fournissant les protocoles (HLS et MPEG-DASH) et DRM (PlayReady,
               FairPlay et Widevine) nécessaires à une compatibilité
-              <em>cross-platform</em>.
+              cross-platform.
             </p>
           </li>
           <li>

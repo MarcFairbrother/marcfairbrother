@@ -24,7 +24,7 @@
           <li
             class="mainheader__identity__tagline__list__item mainheader__identity__tagline__list__item--explorer"
           >
-            UX/plorer
+            UX-plorer
           </li>
         </ul>
       </div>
