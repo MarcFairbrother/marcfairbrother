@@ -313,19 +313,6 @@
             </p>
           </li>
           <li>
-            <h4>Photographie</h4>
-            <p>
-              Travail en argentique dans le cadre de stages universitaires
-              (prise de vue, développement noir &amp; blanc, tirage).
-            </p>
-            <p>
-              Je retrouve aujourd'hui de l'enthousiasme pour la photo numérique.
-              Débutant, je travaille pour l'instant avec un Sony RX100 III et le
-              logiciel open source RawTherapee dont j'ai une assez bonne
-              connaissance.
-            </p>
-          </li>
-          <li>
             <h4>Littérature</h4>
             <p>
               Je possède une excellente connaissance de la littérature classique
@@ -343,6 +330,15 @@
               <em>Mona Lisa s'éclate</em>), les nouvelles d'H.P. Lovecraft et le
               premier recueil de Nathan Ballingrud,
               <em>North American Lake Monsters</em>.
+            </p>
+          </li>
+          <li>
+            <h4>Photographie</h4>
+            <p>
+              Après avoir fait de la photo argentique dans le cadre de stages
+              universitaires (prise de vue, développement noir &amp; blanc,
+              tirage), je retrouve aujourd'hui de l'enthousiasme pour le
+              numérique.
             </p>
           </li>
         </ul>
@@ -385,18 +381,21 @@ export default {
   },
   methods: {
     navScroll: function(e) {
-      if (window.innerWidth >= 1400) {
+      if (window.innerWidth >= 1024) {
         // identify target from click event
         const content = document.querySelector(".resume__content");
         const targetSection = content.querySelector(
           `[data-target="${e.target.parentNode.dataset.target}"]`
+        );
+        const dynamicOffset = Number(
+          document.querySelector(".resume__header").offsetHeight
         );
         // kill intersection observer
         this.killObserver(this.sections, this.observer);
         // update active nav item
         this.updateNav(e.target.parentNode.dataset.target);
         // scroll to new active section
-        this.scrollIt(targetSection, 350, "easeOutCubic", () => {
+        this.scrollIt(targetSection, 350, dynamicOffset, "easeOutCubic", () => {
           // run observer once scroll animation is finished
           setTimeout(() => {
             this.startObserver(this.sections, this.observer);
@@ -435,7 +434,7 @@ export default {
     // create intersection observer
     const options = {
       root: null,
-      rootMargin: "-1px",
+      rootMargin: "-" + window.innerHeight / 5 + "px",
       threshold: 0.01
     };
     // handle intersection events
@@ -449,22 +448,22 @@ export default {
       });
     }, options);
     // run observer if on large screen
-    if (window.innerWidth >= 1400) {
+    if (window.innerWidth >= 1024) {
       this.startObserver(this.sections, this.observer);
       isObserving = true;
-    } else if (window.innerWidth < 1400) {
+    } else if (window.innerWidth < 1024) {
       isObserving = false;
     }
     // run or remove observer depending on screen width
     window.onresize = () => {
-      if (window.innerWidth >= 1400 && isObserving === false) {
+      if (window.innerWidth >= 1024 && isObserving === false) {
         // observer is not set and should be started
         this.startObserver(this.sections, this.observer);
         isObserving = true;
-      } else if (window.innerWidth >= 1400 && isObserving === true) {
+      } else if (window.innerWidth >= 1024 && isObserving === true) {
         // observer is set and should continue to run
         return;
-      } else if (window.innerWidth < 1400 && isObserving === true) {
+      } else if (window.innerWidth < 1024 && isObserving === true) {
         // observer should be unset
         this.killObserver(this.sections, this.observer);
         isObserving = false;
@@ -531,16 +530,11 @@ export default {
         height: 100%;
         justify-content: flex-end;
         &__item {
-          font-size: 1.5rem;
-          line-height: 2;
+          font-size: 1rem;
+          line-height: 1.75;
           margin-right: var(--hlf-margin);
           position: relative;
-          @include breakpoint($large-width) {
-            font-size: 1rem;
-            margin-left: var(--hlf-margin);
-            &:last-of-type {
-              margin-right: var(--fll-margin);
-            }
+          @include breakpoint($desktop-width) {
             &::before {
               background-color: var(--light);
               bottom: -3px;
@@ -560,9 +554,16 @@ export default {
               }
             }
           }
+          @include breakpoint($large-width) {
+            line-height: 2;
+            margin-left: var(--hlf-margin);
+            &:last-of-type {
+              margin-right: var(--fll-margin);
+            }
+          }
           &--button {
             display: none;
-            @include breakpoint($large-width) {
+            @include breakpoint($desktop-width) {
               display: initial;
             }
           }
@@ -592,18 +593,19 @@ export default {
   &__content {
     @include breakpoint($large-width) {
       grid-column: 1;
-      grid-row: 1;
+      grid-row: 2;
     }
     &__section {
       padding: 0 var(--qtr-margin);
       @include breakpoint($desktop-width) {
         padding: 0 var(--hlf-margin);
+        min-height: 75vh;
       }
       @include breakpoint($large-width) {
         align-items: center;
         display: flex;
-        min-height: 100vh;
-        padding: calc(var(--fll-margin) * 6.5) var(--fll-margin) 0;
+        min-height: calc(100vh - (var(--fll-margin) * 5));
+        padding: 0 var(--fll-margin);
       }
       & h3 {
         align-items: center;
@@ -726,6 +728,7 @@ export default {
       }
       &--studies {
         @include breakpoint($large-width) {
+          align-items: center;
           display: flex;
           justify-content: center;
         }
@@ -738,11 +741,12 @@ export default {
           }
           @include breakpoint($desktop-width) {
             border-bottom: solid 2px var(--clr-3);
+            min-height: calc(75vh - var(--fll-margin));
             margin-bottom: var(--fll-margin);
-            padding-bottom: var(--hlf-margin);
           }
           @include breakpoint($large-width) {
             border-bottom: none;
+            min-height: auto;
             & li {
               display: grid;
               grid-column-gap: var(--hlf-margin);
@@ -781,20 +785,26 @@ export default {
         }
       }
       &--hobbies {
+        @include breakpoint($large-width) {
+          display: flex;
+          align-items: center;
+          min-height: 100vh;
+          padding-bottom: calc(var(--fll-margin) * 5);
+        }
         & ul {
           @include breakpoint($desktop-width) {
-            border-bottom: solid 2px var(--clr-3);
-            margin-bottom: var(--fll-margin);
             padding-bottom: var(--hlf-margin);
+            min-height: 100vh;
           }
           @include breakpoint($large-width) {
-            border-bottom: none;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: max-content auto;
             grid-column-gap: var(--fll-margin);
             grid-row-gap: var(--hlf-margin);
+            min-height: auto;
             & li {
-              &:first-of-type {
+              &:nth-of-type(1) {
                 grid-column: 1;
                 grid-row: 1/3;
               }
