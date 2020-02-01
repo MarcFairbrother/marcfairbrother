@@ -2,7 +2,14 @@ import Vue from 'vue';
 Vue.mixin({
   methods: {
     // from https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
-    scrollIt(destination, duration = 200, easing = 'linear', callback) {
+    // added dynamic offset to scroll to bottom of fixed nav
+    scrollIt(
+      destination,
+      duration = 200,
+      dynamicOffset = 0,
+      easing = 'linear',
+      callback
+    ) {
       const easings = {
         linear(t) {
           return t;
@@ -68,8 +75,8 @@ Vue.mixin({
         typeof destination === 'number' ? destination : destination.offsetTop;
       const destinationOffsetToScroll = Math.round(
         documentHeight - destinationOffset < windowHeight
-          ? documentHeight - windowHeight
-          : destinationOffset
+          ? documentHeight - windowHeight - dynamicOffset
+          : destinationOffset - dynamicOffset
       );
 
       if ('requestAnimationFrame' in window === false) {
