@@ -100,19 +100,6 @@
 </template>
 
 <script>
-import cloudinary from "cloudinary-core";
-import axios from "axios";
-
-const cloudinaryCore = new cloudinary.Cloudinary({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  secure: true
-});
-
-const photosRequest = cloudinaryCore.url("marc", {
-  format: "json",
-  type: "list"
-});
-
 export default {
   head() {
     return {
@@ -140,27 +127,270 @@ export default {
   },
   data() {
     return {
-      photos: [],
+      photosInfo: [
+        {
+          public_id: "marcfairbrother/24_portrait_madagascar_mhdell",
+          version: 1579716272,
+          format: "jpg",
+          width: 1080,
+          height: 1350,
+          type: "upload",
+          created_at: "2020-01-22T18:04:32Z",
+          context: {
+            custom: {
+              alt: "Madagascar, Morning Light",
+              caption: "Madagascar, Morning Light"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/24_portrait_madagascar_mhdell",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/24_portrait_madagascar_mhdell",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/24_portrait_madagascar_mhdell",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/24_portrait_madagascar_mhdell"
+        },
+        {
+          public_id: "marcfairbrother/mona-web_qqvbzu",
+          version: 1579716234,
+          format: "jpg",
+          width: 1620,
+          height: 1080,
+          type: "upload",
+          created_at: "2020-01-22T18:03:54Z",
+          context: {
+            custom: {
+              alt: "Lost Time || The Mona Lisa of Williamsburg",
+              caption: "Lost Time || The Mona Lisa of Williamsburg"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/mona-web_qqvbzu",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/mona-web_qqvbzu",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/mona-web_qqvbzu",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/mona-web_qqvbzu"
+        },
+        {
+          public_id: "marcfairbrother/20_portrait_ripples_mspc2x",
+          version: 1579716208,
+          format: "jpg",
+          width: 1080,
+          height: 1350,
+          type: "upload",
+          created_at: "2020-01-22T18:03:28Z",
+          context: {
+            custom: {
+              alt: "Ripples and Shadows",
+              caption: "Ripples and Shadows"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/20_portrait_ripples_mspc2x",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/20_portrait_ripples_mspc2x",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/20_portrait_ripples_mspc2x",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/20_portrait_ripples_mspc2x"
+        },
+        {
+          public_id: "marcfairbrother/lazarus_b4tcmp",
+          version: 1579716153,
+          format: "jpg",
+          width: 1080,
+          height: 810,
+          type: "upload",
+          created_at: "2020-01-22T18:02:33Z",
+          context: {
+            custom: {
+              alt: "Saint Lazare Subway Station, Paris",
+              caption: "Saint Lazare Subway Station, Paris"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/lazarus_b4tcmp",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/lazarus_b4tcmp",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/lazarus_b4tcmp",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/lazarus_b4tcmp"
+        },
+        {
+          public_id: "marcfairbrother/23_portrait_guggenheim_mtdoer",
+          version: 1579716125,
+          format: "jpg",
+          width: 1080,
+          height: 1350,
+          type: "upload",
+          created_at: "2020-01-22T18:02:05Z",
+          context: {
+            custom: {
+              alt: "Guggenheim NYC, Looking Up",
+              caption: "Guggenheim NYC, Looking Up"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/23_portrait_guggenheim_mtdoer",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/23_portrait_guggenheim_mtdoer",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/23_portrait_guggenheim_mtdoer",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/23_portrait_guggenheim_mtdoer"
+        },
+        {
+          public_id: "marcfairbrother/guggenheim-down-web_otg3lk",
+          version: 1579716079,
+          format: "jpg",
+          width: 1618,
+          height: 1080,
+          type: "upload",
+          created_at: "2020-01-22T18:01:19Z",
+          context: {
+            custom: {
+              alt: "Guggenheim NYC, Looking Down",
+              caption: "Guggenheim NYC, Looking Down"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/guggenheim-down-web_otg3lk",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/guggenheim-down-web_otg3lk",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/guggenheim-down-web_otg3lk",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/guggenheim-down-web_otg3lk"
+        },
+        {
+          public_id: "marcfairbrother/library-1_jqg4sg",
+          version: 1579716023,
+          format: "jpg",
+          width: 1080,
+          height: 810,
+          type: "upload",
+          created_at: "2020-01-22T18:00:23Z",
+          context: { custom: { alt: "BNF Paris", caption: "BNF Paris" } },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/library-1_jqg4sg",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/library-1_jqg4sg",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/library-1_jqg4sg",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/library-1_jqg4sg"
+        },
+        {
+          public_id: "marcfairbrother/21_portrait_sleep_kkx4gy",
+          version: 1579715980,
+          format: "jpg",
+          width: 1080,
+          height: 1350,
+          type: "upload",
+          created_at: "2020-01-22T17:59:40Z",
+          context: {
+            custom: {
+              alt: "No Sleep Till Brooklyn",
+              caption: "No Sleep Till Brooklyn"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/21_portrait_sleep_kkx4gy",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/21_portrait_sleep_kkx4gy",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/21_portrait_sleep_kkx4gy",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/21_portrait_sleep_kkx4gy"
+        },
+        {
+          public_id: "marcfairbrother/broken_window-1-1_g7owit",
+          version: 1579715948,
+          format: "jpg",
+          width: 1080,
+          height: 1080,
+          type: "upload",
+          created_at: "2020-01-22T17:59:08Z",
+          context: { custom: { alt: "Broken Glass", caption: "Broken Glass" } },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/broken_window-1-1_g7owit",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/broken_window-1-1_g7owit",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/broken_window-1-1_g7owit",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/broken_window-1-1_g7owit"
+        },
+        {
+          public_id: "marcfairbrother/under-arrest-web_sv0j9a",
+          version: 1579715645,
+          format: "jpg",
+          width: 864,
+          height: 1080,
+          type: "upload",
+          created_at: "2020-01-22T17:54:05Z",
+          context: { custom: { alt: "Under Arrest", caption: "Under Arrest" } },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/under-arrest-web_sv0j9a",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/under-arrest-web_sv0j9a",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/under-arrest-web_sv0j9a",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/under-arrest-web_sv0j9a"
+        },
+        {
+          public_id: "marcfairbrother/coney-island-web_o6k5vm",
+          version: 1579715634,
+          format: "jpg",
+          width: 1620,
+          height: 1080,
+          type: "upload",
+          created_at: "2020-01-22T17:53:54Z",
+          context: {
+            custom: { alt: "From Coney Island", caption: "From Coney Island" }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/coney-island-web_o6k5vm",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/coney-island-web_o6k5vm",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/coney-island-web_o6k5vm",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/coney-island-web_o6k5vm"
+        },
+        {
+          public_id: "marcfairbrother/branches_river_lb51wv",
+          version: 1579715624,
+          format: "jpg",
+          width: 1080,
+          height: 1350,
+          type: "upload",
+          created_at: "2020-01-22T17:53:44Z",
+          context: {
+            custom: {
+              alt: "Branches over the river",
+              caption: "Branches over the river"
+            }
+          },
+          locationSrc:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/v1/marcfairbrother/branches_river_lb51wv",
+          locationSmall:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_250/v1/marcfairbrother/branches_river_lb51wv",
+          locationMedium:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_700/v1/marcfairbrother/branches_river_lb51wv",
+          locationNormal:
+            "https://res.cloudinary.com/dawy9njy7/image/upload/c_scale,w_1000/v1/marcfairbrother/branches_river_lb51wv"
+        }
+      ],
       carouselIsVisible: false,
       currentImgPublic: "",
       currentImgId: ""
     };
-  },
-  computed: {
-    photosInfo() {
-      return this.photos.map(photo => {
-        let photoUrl = this.cloudinarySrc(photo.public_id);
-        return {
-          ...photo,
-          locationSrc: photoUrl,
-          // cloudinary api transform options not working as expected on url method
-          // transform requests built on the fly instead
-          locationSmall: this.cloudinaryTransform(photoUrl, 250),
-          locationMedium: this.cloudinaryTransform(photoUrl, 700),
-          locationNormal: this.cloudinaryTransform(photoUrl, 1000)
-        };
-      });
-    }
   },
   methods: {
     cloudinarySrc: function(publicId) {
@@ -232,10 +462,6 @@ export default {
     }
   },
   mounted() {
-    // fetch images from cloudinary api
-    axios.get(photosRequest).then(response => {
-      this.photos = response.data.resources;
-    });
     // listen for keydown event
     document.onkeydown = this.checkKey;
   }
