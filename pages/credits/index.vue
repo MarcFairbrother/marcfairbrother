@@ -74,12 +74,12 @@ export default {
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: "Marc Fairbrother | Credits"
         },
         {
           hid: "og:description",
-          name: "og:description",
+          property: "og:description",
           content: "Shout outs and legal stuff"
         }
       ]

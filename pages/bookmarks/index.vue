@@ -52,12 +52,12 @@ export default {
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: "Marc Fairbrother | BookMarc'd"
         },
         {
           hid: "og:description",
-          name: "og:description",
+          property: "og:description",
           content:
             "Des articles, podcasts et conférences autour de la culture et de l'actualité du web"
         }

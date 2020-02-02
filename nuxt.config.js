@@ -19,18 +19,18 @@ export default {
       },
       {
         hid: 'og:title',
-        name: 'og:title',
+        property: 'og:title',
         content:
           'Marc Fairbrother | 🔫 Trouble Shooter, 🤠 Code Cowboy & 🚀 UX-plorer'
       },
       {
         hid: 'og:description',
-        name: 'og:description',
+        property: 'og:description',
         content: 'Project Management, Web Design & Development'
       },
       {
         hid: 'og:image',
-        name: 'og:image',
+        property: 'og:image',
         content: 'https://marcfairbrother.com/marcfairbrother_og.png'
       }
     ],

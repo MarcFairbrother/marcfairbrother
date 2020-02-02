@@ -69,12 +69,12 @@ export default {
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: "Marc Fairbrother | Read.me"
         },
         {
           hid: "og:description",
-          name: "og:description",
+          property: "og:description",
           content:
             "Avant la France et en dehors du web, quelques mots pour présenter mon parcours"
         }

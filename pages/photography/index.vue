@@ -113,12 +113,12 @@ export default {
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: "Marc Fairbrother | Photography"
         },
         {
           hid: "og:description",
-          name: "og:description",
+          property: "og:description",
           content:
             "Photographe amateur, je m'intéresse particulièrement aux lignes, aux formes et aux silhouettes"
         }
