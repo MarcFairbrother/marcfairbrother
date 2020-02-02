@@ -31,7 +31,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://marcfairbrother.com/marcfairbrother_og.png'
+        content: 'https://marcfairbrother.com/img/marcfairbrother_og.png'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
