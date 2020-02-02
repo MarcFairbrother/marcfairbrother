@@ -13,14 +13,15 @@
       <p>👷 Designed and developed by Marc Fairbrother</p>
       <p>
         ❤️ Built with
-        <a href="https://nuxtjs.org/" target="_blank">Nuxt</a> &amp; Luv (not a
-        JS framework)
+        <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt</a>
+        &amp; Luv (not a JS framework)
       </p>
       <p>
         🖼️ All images are licensed under a
         <a
           href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
           target="_blank"
+          rel="noopener"
           >CC BY-NC-ND 4.0 International license</a
         >
       </p>
@@ -29,12 +30,16 @@
         <a
           href="https://github.com/MarcFairbrother/marcfairbrother"
           target="_blank"
+          rel="noopener"
           >GitHub</a
         >
       </p>
       <p>
         🧙 Hosted and deployed with awesome
-        <a href="https://www.netlify.com/" target="_blank">Netlify</a> wizardry
+        <a href="https://www.netlify.com/" target="_blank" rel="noopener"
+          >Netlify</a
+        >
+        wizardry
       </p>
       <section class="credits__content__legal">
         <p>Netlify, Inc.</p>
@@ -43,7 +48,9 @@
           <a href="mailto:privacy@netlify.com">privacy@netlify.com</a>
         </p>
         <p>
-          <a href="https://www.netlify.com/" target="_blank">www.netlify.com</a>
+          <a href="https://www.netlify.com/" target="_blank" rel="noopener"
+            >www.netlify.com</a
+          >
         </p>
         <p>+1 844-899-7312</p>
       </section>

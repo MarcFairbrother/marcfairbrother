@@ -13,6 +13,7 @@
           <a
             :href="bookmark.url"
             target="_blank"
+            rel="noopener"
             class="bookmarked__content__link"
             title="bookmark.title"
           >

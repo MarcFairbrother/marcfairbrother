@@ -61,6 +61,7 @@
           <a
             href="https://www.linkedin.com/in/marcfairbrother"
             target="_blank"
+            rel="noopener"
             title="Marc's LinkedIn Profile"
             >LinkedIn</a
           >
@@ -71,6 +72,7 @@
           <a
             href="https://github.com/MarcFairbrother"
             target="_blank"
+            rel="noopener"
             title="Marc's GitHub Profile"
             >GitHub</a
           >
@@ -81,6 +83,7 @@
           <a
             href="https://www.instagram.com/marc__fairbrother/"
             target="_blank"
+            rel="noopener"
             title="Marc's Instagram"
             >Instagram</a
           >
