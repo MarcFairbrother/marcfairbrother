@@ -568,21 +568,24 @@ export default {
             }
           }
           &--link {
+            border: solid 2px var(--light);
+            border-radius: 5px;
+            transition: all 0.15s ease-in;
+            &:hover {
+              transform: scale(1.1);
+            }
             & a {
-              align-items: center;
-              border-bottom: solid 2px var(--light);
-              color: var(--light);
-              display: flex;
-              &::before {
-                background-image: var(--linkedin-white);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 15px;
-                content: "";
-                height: 20px;
-                margin-right: var(--qtr-margin);
-                margin-top: -2px;
-                width: 20px;
+              background-image: var(--linkedin-white);
+              background-size: 20px 20px;
+              background-repeat: no-repeat;
+              background-position: center;
+              display: block;
+              font-size: 0;
+              height: 40px;
+              width: 40px;
+              @include breakpoint($tablet-width) {
+                height: 42px;
+                width: 42px;
               }
             }
           }
