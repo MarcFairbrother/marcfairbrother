@@ -381,27 +381,18 @@ export default {
   },
   methods: {
     navScroll: function(e) {
-      if (window.innerWidth >= 1024) {
-        // identify target from click event
-        const content = document.querySelector(".resume__content");
-        const targetSection = content.querySelector(
-          `[data-target="${e.target.parentNode.dataset.target}"]`
-        );
-        const dynamicOffset = Number(
-          document.querySelector(".resume__header").offsetHeight
-        );
-        // kill intersection observer
-        this.killObserver(this.sections, this.observer);
-        // update active nav item
-        this.updateNav(e.target.parentNode.dataset.target);
-        // scroll to new active section
-        this.scrollIt(targetSection, 350, dynamicOffset, "easeOutCubic", () => {
-          // run observer once scroll animation is finished
-          setTimeout(() => {
-            this.startObserver(this.sections, this.observer);
-          }, 350);
-        });
-      }
+      const content = document.querySelector(".resume__content");
+      const targetSection = content
+        .querySelector(`[data-target="${e.target.parentNode.dataset.target}"]`)
+        .getBoundingClientRect();
+      const headerHeight = Number(
+        document.querySelector(".resume__header").offsetHeight
+      );
+      const currentScroll = window.scrollY;
+      const targetPosition = Math.ceil(
+        currentScroll + targetSection.top - headerHeight
+      );
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
     },
     updateNav: function(newActive) {
       const resumeNav = document.querySelector(".resume__menu");
@@ -431,10 +422,13 @@ export default {
   mounted() {
     this.sections = document.querySelectorAll(".resume__content__section");
     let isObserving;
+    const headerHeight = Number(
+      document.querySelector(".resume__header").offsetHeight
+    );
     // create intersection observer
     const options = {
       root: null,
-      rootMargin: "-" + window.innerHeight / 5 + "px",
+      rootMargin: "-" + window.innerHeight / 3.4 + "px",
       threshold: 0.01
     };
     // handle intersection events
