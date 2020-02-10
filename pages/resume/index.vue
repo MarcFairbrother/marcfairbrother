@@ -58,7 +58,7 @@
               service.
             </p>
             <p>
-              Capable d'anlayser rapidement une situation et d'en cerner les
+              Capable d'analyser rapidement une situation et d'en cerner les
               principales difficultés, mon
               <strong>sens des priorités et de l'initiative</strong> me permet
               de faire avancer un projet dans la bonne direction.
@@ -83,7 +83,7 @@
               <strong>connaissances avancées en HTML et CSS</strong>, acquises
               sur des projets personnels, m'ont permis de participer à
               l'intégration de maquettes et d'apporter des corrections sur des
-              applications professionnelles ainsi qu'à créer des gabarits
+              applications professionnelles ainsi que de créer des gabarits
               e-mails responsives.
             </p>
             <p>
@@ -121,7 +121,7 @@
           <li>
             <h4>Les petits plus</h4>
             <p>
-              Né en angleterre, mais ayant vécu plus de 25 années en France, je
+              Né en Angleterre, mais ayant vécu plus de 25 années en France, je
               suis
               <strong>parfaitement bilingue</strong>, maîtrisant l'anglais et le
               français à l'écrit comme à l'oral.
@@ -176,8 +176,11 @@
               différents services.
             </p>
             <p>
-              <strong>Intégration et corrections de bugs front-end</strong> pour
-              pallier au manque de ressources techniques.
+              <strong
+                >Intégration de maquettes et corrections de bugs
+                front-end</strong
+              >
+              pour pallier le manque de ressources techniques.
             </p>
             <p>
               Migration d'un important catalogue vidéo vers un workflow
@@ -233,7 +236,7 @@
             class="resume__content__section__list__item resume__content__section__list__item--internet"
           >
             <h4>
-              License professionnelle&nbsp;: Création et Développement
+              Licence professionnelle&nbsp;: Création et Développement
               Numériques en Ligne
             </h4>
             <p>
@@ -253,7 +256,7 @@
           <li
             class="resume__content__section__list__item resume__content__section__list__item--film"
           >
-            <h4>License&nbsp;: Arts du spectacle</h4>
+            <h4>Licence&nbsp;: Arts du spectacle</h4>
             <p>
               <strong>Université Paris X - Nanterre</strong>
               <br />2004-2007
@@ -300,7 +303,7 @@
               alimenter ce site en contenus depuis quelques années.
             </p>
             <p>
-              <strong>Rédacion d'articles et de critiques</strong> de films
+              <strong>Rédaction d'articles et de critiques</strong> de films
               et/ou d'éditions vidéo parus dans la revue <em>Metaluna</em> entre
               avril et juin 2013.
             </p>
@@ -324,7 +327,7 @@
               mes romans préférés.
             </p>
             <p>
-              J'aime énormément la littérature de genre aussi, particulièrement
+              J'aime aussi énormément la littérature de genre, particulièrement
               les premiers récits de William Gibson (<em>Gravé sur Chrome</em>,
               <em>Neuromancien</em>, <em>Comte Zéro</em> et
               <em>Mona Lisa s'éclate</em>), les nouvelles d'H.P. Lovecraft et le

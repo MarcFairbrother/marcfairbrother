@@ -5,8 +5,8 @@
       <section class="readme__content__section readme__content__section--bio">
         <h3>En bref</h3>
         <p>
-          Né outre-Manche (nul n'est parfait) j'ai débarqué dans l'hexagone à
-          l'age de 10 ans. Après des études de cinéma et un passage dans le
+          Né outre-Manche (nul n'est parfait) j'ai débarqué dans l'Hexagone à
+          l'âge de 10 ans. Après des études de cinéma et un passage dans le
           commerce, à la Fnac puis en librairie indé, je me suis formé aux
           métiers du web, secteur dans lequel je travaille depuis 2014.
         </p>
@@ -24,7 +24,7 @@
           Passionné de cinéma, j'ai consacré de (trop&nbsp;?) nombreuses heures
           à sa découverte avec une prédilection pour les classiques
           hollywoodiens, européens et japonais, le cinéma d'exploitation sans
-          compromis et les bizarreries qu'on ne trouve qu'au bout de fouilles
+          compromis et les bizarreries qu'on ne trouve qu'après des fouilles
           acharnées.
         </p>
         <p>
@@ -40,13 +40,13 @@
         <h3>Créativité</h3>
         <p>
           Ayant pratiqué la photographie argentique au début des années 2000,
-          l'avénement du numérique avait quelque peu calmé mes ardeurs. Je
+          l'avènement du numérique avait quelque peu calmé mes ardeurs. Je
           retrouve aujourd'hui de l'enthousiasme pour ce loisir auquel j'espère
           consacrer un temps plus important afin d'en maîtriser les subtilités.
         </p>
         <p>
           J'affectionne aussi le design comme moyen d'expression, sur des
-          projets personnels mais également professionels avec notamment la
+          projets personnels mais également professionnels avec notamment la
           réalisation d'affiches publicitaires et d'interfaces numériques,
           statiques ou interactives.
         </p>
