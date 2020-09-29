@@ -4,24 +4,6 @@
       <Logo />
       <h1 class="title">marcfairbrother</h1>
       <p>{{ $t('test.welcome') }}</p>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
   </div>
 </template>
@@ -46,10 +28,9 @@ export default {};
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
   letter-spacing: 1px;
   @include breakpoint($desktop-width) {
-    color: red;
+    //color: red;
   }
 }
 

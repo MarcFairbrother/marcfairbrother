@@ -1,6 +1,18 @@
-body {
-  background: cadetblue;
-  @include breakpoint($desktop-width) {
-    background: whitesmoke;
+:root {
+  --blue: #0A2E57;
+  --green: #39FFE7;
+  --pink: #FF00A8;
+  --primary: var(--green);
+  --secondary: var(--blue);
+  --accent: var(--pink);
+  @media (prefers-color-scheme: dark) {
+    --primary: var(--blue);
+    --secondary: var(--green);
   }
+}
+
+
+body {
+  background: var(--primary);
+  color: var(--secondary);
 }
