@@ -3,6 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">marcfairbrother</h1>
+      <p>{{ $t('test.welcome') }}</p>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
