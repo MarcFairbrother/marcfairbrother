@@ -1,4 +1,0 @@
-# this is the robots.txt file for marcfairbrother.com
-
-User-agent: *
-Disallow:
