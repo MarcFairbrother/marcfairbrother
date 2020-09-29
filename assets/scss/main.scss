@@ -1,0 +1,6 @@
+body {
+  background: cadetblue;
+  @include breakpoint($desktop-width) {
+    background: whitesmoke;
+  }
+}
