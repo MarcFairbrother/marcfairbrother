@@ -22,6 +22,7 @@
         </li>
       </ul>
     </nav>
+    <LanguageSwitcher />
     <Nuxt />
   </div>
 </template>
