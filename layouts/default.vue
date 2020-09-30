@@ -1,20 +1,35 @@
 <template>
   <div>
+    <nav>
+      <ul>
+        <li>
+          <nuxt-link :to="localePath('/')">Home</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath(`/${$t('about.meta.slug')}`)"
+            >About</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link :to="localePath(`/${$t('projects.meta.slug')}`)"
+            >Projects</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link :to="localePath(`/${$t('contact.meta.slug')}`)"
+            >Contact</nuxt-link
+          >
+        </li>
+      </ul>
+    </nav>
     <Nuxt />
   </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
