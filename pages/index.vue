@@ -9,7 +9,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  async asyncData({ store }) {
+    // update current route in state when navigating to page
+    await store.dispatch('i18n/setRouteParams', {
+      en: { slug: '' },
+      fr: { slug: '' },
+    });
+  },
+};
 </script>
 
 <style lang="scss">
