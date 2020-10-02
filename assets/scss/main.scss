@@ -1,7 +1,7 @@
 :root {
-  --blue: #0A2E57;
-  --green: #39FFE7;
-  --pink: #FF00A8;
+  --blue: #0a2e57;
+  --green: #39ffe7;
+  --pink: #ff00a8;
   --primary: var(--green);
   --secondary: var(--blue);
   --accent: var(--pink);
@@ -11,6 +11,16 @@
   }
 }
 
+html {
+  &[data-theme='light'] {
+    --primary: var(--green);
+    --secondary: var(--blue);
+  }
+  &[data-theme='dark'] {
+    --primary: var(--blue);
+    --secondary: var(--green);
+  }
+}
 
 body {
   background: var(--primary);

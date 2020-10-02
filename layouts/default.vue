@@ -23,6 +23,7 @@
       </ul>
     </nav>
     <LanguageSwitcher />
+    <ThemeSwitcher />
     <Nuxt />
   </div>
 </template>
