@@ -1,10 +1,7 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">marcfairbrother</h1>
-      <p>{{ $t('test.welcome') }}</p>
-    </div>
-  </div>
+  <main class="home">
+    <h2>marcfairbrother</h2>
+  </main>
 </template>
 
 <script>

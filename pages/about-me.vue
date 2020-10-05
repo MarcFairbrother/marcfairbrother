@@ -1,5 +1,7 @@
 <template>
-  <h2>{{ $t('about.heading.title') }}</h2>
+  <main class="about">
+    <h2>{{ $t('about.heading.title') }}</h2>
+  </main>
 </template>
 
 <script>
