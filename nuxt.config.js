@@ -21,7 +21,7 @@ export default {
 
   // Style resources to load in components
   styleResources: {
-    scss: ['~/assets/scss/utils/*.scss']
+    scss: ['~/assets/scss/utils/_breakpoints.scss']
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
