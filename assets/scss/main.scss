@@ -1,32 +1,109 @@
 @import 'utils/breakpoints', 'utils/resets';
 
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/roboto/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('/fonts/roboto/roboto-v20-latin-500.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/roboto/roboto-v20-latin-500.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/roboto/roboto-v20-latin-500.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/roboto/roboto-v20-latin-500.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/roboto/roboto-v20-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-900 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/roboto/roboto-v20-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Black'), local('Roboto-Black'),
+    url('/fonts/roboto/roboto-v20-latin-900.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/roboto/roboto-v20-latin-900.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/roboto/roboto-v20-latin-900.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/roboto/roboto-v20-latin-900.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/roboto/roboto-v20-latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* catamaran-900 - latin */
+@font-face {
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/catamaran/catamaran-v7-latin-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/catamaran/catamaran-v7-latin-900.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/catamaran/catamaran-v7-latin-900.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/fonts/catamaran/catamaran-v7-latin-900.woff') format('woff'),
+    /* Modern Browsers */ url('/fonts/catamaran/catamaran-v7-latin-900.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/catamaran/catamaran-v7-latin-900.svg#Catamaran') format('svg'); /* Legacy iOS */
+}
+
 :root {
+  --black: #0f0f1e;
   --blue: #0a2e57;
   --green: #39ffe7;
-  --pink: #ff00a8;
-  --primary: var(--green);
-  --secondary: var(--blue);
-  --accent: var(--pink);
+  --pink: #f500a3;
+  --altBg: var(--blue);
+  --mainBg: var(--green);
+  --mainTextColor: var(--blue);
+  --altTextColor: var(--green);
+  --accentColor: var(--pink);
   @media (prefers-color-scheme: dark) {
-    --primary: var(--blue);
-    --secondary: var(--green);
+    --altBg: var(--blue);
+    --mainBg: var(--black);
+    --mainTextColor: var(--green);
+    --altTextColor: var(--green);
   }
 }
 
+/*
+*
+* Override prefers-color-scheme media query if user toggles preferences on site
+**
+*/
 html {
   &[data-theme='light'] {
-    --primary: var(--green);
-    --secondary: var(--blue);
+    --altBg: var(--blue);
+    --mainBg: var(--green);
+    --mainTextColor: var(--blue);
+    --altTextColor: var(--green);
   }
   &[data-theme='dark'] {
-    --primary: var(--blue);
-    --secondary: var(--green);
+    --altBg: var(--blue);
+    --mainBg: var(--black);
+    --mainTextColor: var(--green);
+    --altTextColor: var(--green);
   }
 }
 
 body {
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--mainBg);
+  color: var(--mainTextColor);
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Catamaran';
 }
 
 main {
