@@ -58,10 +58,15 @@ export default {
   bottom: 0;
   width: 100%;
   z-index: 10;
+  @include breakpoint($tablet-width) {
+    font-size: 0.75rem;
+    height: 105px;
+    padding: 15px 30px;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1 0px;
+    grid-gap: 10px;
     justify-items: center;
   }
   &__item {
@@ -73,6 +78,9 @@ export default {
       padding: 10px 10px;
       justify-content: space-between;
       transition: opacity 0.25s;
+      @include breakpoint($tablet-width) {
+        height: 75px;
+      }
       .header--opensettings & {
         opacity: 0.5;
       }
@@ -81,6 +89,9 @@ export default {
         height: 25px;
         overflow: visible;
         transition: fill 0.25s;
+        @include breakpoint($tablet-width) {
+          height: 30px;
+        }
       }
       &:focus {
         outline: solid 1px var(--altTextColor);

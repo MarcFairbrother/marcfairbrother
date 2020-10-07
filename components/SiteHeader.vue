@@ -37,6 +37,10 @@ export default {
     height: 25px;
     margin: 15px 0 0 15px;
     transition: opacity 0.25s;
+    @include breakpoint($tablet-width) {
+      height: 30px;
+      margin: 30px 0 0 30px;
+    }
   }
   &__settings {
     bottom: 0;
@@ -51,6 +55,9 @@ export default {
     transition: transform 0.5s ease-in;
     width: 100%;
     z-index: 5;
+    @include breakpoint($tablet-width) {
+      padding-bottom: 135px;
+    }
   }
   &--opensettings {
     .header__settings {

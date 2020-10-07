@@ -35,14 +35,26 @@
   display: flex;
   margin-top: 15px;
   transition: opacity 0.25s;
+  @include breakpoint($tablet-width) {
+    margin-top: 30px;
+  }
   &__item {
     margin-right: 25px;
+    @include breakpoint($tablet-width) {
+      margin-right: 30px;
+    }
     &:last-of-type {
       margin-right: 15px;
+      @include breakpoint($tablet-width) {
+        margin-right: 30px;
+      }
     }
     & svg {
       height: 25px;
       fill: var(--mainTextColor);
+      @include breakpoint($tablet-width) {
+        height: 30px;
+      }
     }
   }
   .header--opensettings & {
