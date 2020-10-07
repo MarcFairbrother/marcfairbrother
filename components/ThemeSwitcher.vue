@@ -1,7 +1,11 @@
 <template>
-  <div class="jsToggleTheme">
-    <button data-theme="light" v-if="userPrefersDarkTheme">Light</button>
-    <button data-theme="dark" v-else>Dark</button>
+  <div class="jsToggleTheme themes">
+    <button data-theme="light" key="light" v-if="userPrefersDarkTheme">
+      <span class="sr-only">{{ $t('theme.toLight') }}</span>
+    </button>
+    <button data-theme="dark" key="dark" v-else>
+      <span class="sr-only">{{ $t('theme.toDark') }}</span>
+    </button>
   </div>
 </template>
 
@@ -53,3 +57,34 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.themes {
+  border: solid 1px var(--mainTextColor);
+  border-radius: 0 15px 15px 0;
+  border-left: none;
+  padding: 5px 15px;
+  & > button {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    &[data-theme='light'] {
+      background-image: var(--light-theme);
+    }
+    &[data-theme='dark'] {
+      background-image: var(--dark-theme);
+    }
+  }
+}
+.rise-enter-active,
+.rise-leave-active {
+  transition: all 0.5s;
+}
+.rise-enter,
+.rise-leave-to {
+  background-position: 50% 50px;
+}
+</style>
