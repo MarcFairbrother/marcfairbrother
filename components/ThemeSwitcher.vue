@@ -60,17 +60,10 @@ export default {
 
 <style lang="scss" scoped>
 .themes {
-  border: solid 1px var(--mainTextColor);
-  border-radius: 0 15px 15px 0;
-  border-left: none;
-  padding: 5px 15px;
   & > button {
     display: block;
-    height: 25px;
-    width: 25px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 20px;
     &[data-theme='light'] {
       background-image: var(--light-theme);
     }
@@ -78,13 +71,23 @@ export default {
       background-image: var(--dark-theme);
     }
   }
-}
-.rise-enter-active,
-.rise-leave-active {
-  transition: all 0.5s;
-}
-.rise-enter,
-.rise-leave-to {
-  background-position: 50% 50px;
+  @include maxBreakpoint(1023px) {
+    border: solid 1px var(--mainTextColor);
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+    padding: 5px 15px;
+    & > button {
+      background-size: 20px;
+      height: 25px;
+      width: 25px;
+    }
+  }
+  @include breakpoint($desktop-width) {
+    & > button {
+      background-size: 16px;
+      height: 16px;
+      width: 16px;
+    }
+  }
 }
 </style>

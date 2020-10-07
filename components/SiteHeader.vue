@@ -30,42 +30,61 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  display: flex;
-  justify-content: space-between;
   &__logo {
     fill: var(--mainTextColor);
-    height: 25px;
-    margin: 15px 0 0 15px;
-    transition: opacity 0.25s;
-    @include breakpoint($tablet-width) {
-      height: 30px;
-      margin: 30px 0 0 30px;
-    }
   }
-  &__settings {
-    bottom: 0;
-    color: var(--mainTextColor);
+  @include maxBreakpoint(1023px) {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 105px;
-    position: fixed;
-    top: 0;
-    transform: translateY(50vh);
-    transition: transform 0.5s ease-in;
-    width: 100%;
-    z-index: 5;
-    @include breakpoint($tablet-width) {
-      padding-bottom: 135px;
+    justify-content: space-between;
+    &__logo {
+      height: 25px;
+      margin: 15px 0 0 15px;
+      transition: opacity 0.25s;
+      @include breakpoint($tablet-width) {
+        height: 30px;
+        margin: 30px 0 0 30px;
+      }
+    }
+    &__settings {
+      bottom: 0;
+      color: var(--mainTextColor);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 105px;
+      position: fixed;
+      top: 0;
+      transform: translateY(50vh);
+      transition: transform 0.5s ease-in;
+      width: 100%;
+      z-index: 5;
+      @include breakpoint($tablet-width) {
+        padding-bottom: 135px;
+      }
+    }
+    &--opensettings {
+      .header__settings {
+        transform: translateY(0);
+        transition: transform 0.5s ease-out;
+      }
+      .header__logo {
+        opacity: 0.5;
+      }
     }
   }
-  &--opensettings {
-    .header__settings {
-      transform: translateY(0);
-      transition: transform 0.5s ease-out;
+  @include breakpoint($desktop-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content;
+    width: 100%;
+    & > * {
+      align-items: center;
+      display: flex;
     }
-    .header__logo {
-      opacity: 0.5;
+    &__logo {
+      height: 30px;
+    }
+    &__settings {
+      grid-column: 4;
     }
   }
 }

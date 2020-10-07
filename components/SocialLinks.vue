@@ -33,32 +33,45 @@
 <style lang="scss" scoped>
 .socials {
   display: flex;
-  margin-top: 15px;
-  transition: opacity 0.25s;
-  @include breakpoint($tablet-width) {
-    margin-top: 30px;
-  }
-  &__item {
-    margin-right: 25px;
+  @include maxBreakpoint(1023px) {
+    margin-top: 15px;
+    transition: opacity 0.25s;
     @include breakpoint($tablet-width) {
-      margin-right: 30px;
+      margin-top: 30px;
     }
-    &:last-of-type {
-      margin-right: 15px;
+    &__item {
+      margin-right: 25px;
       @include breakpoint($tablet-width) {
         margin-right: 30px;
       }
-    }
-    & svg {
-      height: 25px;
-      fill: var(--mainTextColor);
-      @include breakpoint($tablet-width) {
-        height: 30px;
+      &:last-of-type {
+        margin-right: 15px;
+        @include breakpoint($tablet-width) {
+          margin-right: 30px;
+        }
+      }
+      & svg {
+        height: 25px;
+        fill: var(--mainTextColor);
+        @include breakpoint($tablet-width) {
+          height: 30px;
+        }
       }
     }
+    .header--opensettings & {
+      opacity: 0.5;
+    }
   }
-  .header--opensettings & {
-    opacity: 0.5;
+  @include breakpoint($desktop-width) {
+    grid-column: 3;
+    grid-row: 1;
+    &__item {
+      margin-left: 15px;
+      & svg {
+        fill: var(--mainTextColor);
+        height: 18px;
+      }
+    }
   }
 }
 </style>

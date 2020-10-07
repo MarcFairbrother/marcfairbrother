@@ -44,23 +44,35 @@ export default {
 <style lang="scss" scoped>
 .languages {
   display: flex;
-  border: solid 1px var(--mainTextColor);
-  border-radius: 15px 0 0 15px;
-  font-size: 1.25rem;
   &__item {
-    padding: 5px 15px;
     &:first-of-type {
       border-right: solid 1px var(--mainTextColor);
     }
     & > * {
       align-items: center;
       display: flex;
-      min-height: 25px;
-      min-width: 25px;
-      justify-content: center;
     }
     & > span {
       font-weight: 900;
+    }
+  }
+  @include maxBreakpoint(1023px) {
+    border: solid 1px var(--mainTextColor);
+    border-radius: 15px 0 0 15px;
+    font-size: 1.25rem;
+    &__item {
+      padding: 5px 15px;
+      & > * {
+        min-height: 25px;
+        min-width: 25px;
+        justify-content: center;
+      }
+    }
+  }
+  @include breakpoint($desktop-width) {
+    margin: 0 15px;
+    & > * {
+      padding: 0 15px;
     }
   }
 }
