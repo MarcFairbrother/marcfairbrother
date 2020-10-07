@@ -2,6 +2,17 @@ export default {
   test: {
     welcome: 'Welcome'
   },
+  nav: {
+    home: 'Home',
+    about: 'About',
+    projects: 'Projects',
+    contact: 'Contact',
+    settings: 'Settings'
+  },
+  theme: {
+    toLight: 'Switch to light theme',
+    toDark: 'Switch to dark theme'
+  },
   about: {
     meta: {
       slug: 'about-me'

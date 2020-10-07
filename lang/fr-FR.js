@@ -2,6 +2,17 @@ export default {
   test: {
     welcome: 'Bienvenue'
   },
+  nav: {
+    home: 'Accueil',
+    about: 'Parcours',
+    projects: 'Projets',
+    contact: 'Contact',
+    settings: 'Options'
+  },
+  theme: {
+    toLight: 'Activer le mode jour',
+    toDark: 'Activer le mode nuit'
+  },
   about: {
     meta: {
       slug: 'presentation'
