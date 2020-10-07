@@ -9,6 +9,11 @@ export default {
     contact: 'Contact',
     settings: 'Options'
   },
+  socials: {
+    linkedin: 'Mon profil LinkedIn',
+    github: 'Mon profil GitHub',
+    codepen: 'Mon profil CodePen'
+  },
   theme: {
     toLight: 'Activer le mode jour',
     toDark: 'Activer le mode nuit'
