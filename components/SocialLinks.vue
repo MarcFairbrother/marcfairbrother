@@ -67,9 +67,15 @@
     grid-row: 1;
     &__item {
       margin-left: 15px;
+      @include breakpoint($very-large) {
+        margin-left: 20px;
+      }
       & svg {
         fill: var(--mainTextColor);
         height: 18px;
+        @include breakpoint($very-large) {
+          height: 20px;
+        }
       }
     }
   }

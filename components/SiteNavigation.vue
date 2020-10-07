@@ -124,12 +124,14 @@ export default {
   @include breakpoint($desktop-width) {
     &__list {
       display: flex;
-      margin-left: 30px;
       height: 38px;
     }
     &__item {
-      margin-right: 30px;
+      margin-left: 30px;
       line-height: 38px;
+      @include breakpoint($large-width) {
+        margin-left: 60px;
+      }
       & > a {
         align-items: center;
         border-bottom: solid 4px var(--mainBg);

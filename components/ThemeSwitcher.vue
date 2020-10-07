@@ -87,6 +87,11 @@ export default {
       background-size: 16px;
       height: 16px;
       width: 16px;
+      @include breakpoint($very-large) {
+        background-size: 18px;
+        height: 18px;
+        width: 18px;
+      }
     }
   }
 }
