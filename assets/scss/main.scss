@@ -1,4 +1,4 @@
-@import 'utils/breakpoints', 'utils/resets';
+@import 'utils/breakpoints', 'utils/resets', 'utils/figures';
 
 /* roboto-500 - latin */
 @font-face {
@@ -100,6 +100,12 @@ body {
   color: var(--mainTextColor);
   font-family: 'Roboto';
   font-weight: 500;
+  @include breakpoint($desktop-width) {
+    padding: 15px 30px 0;
+    @include breakpoint($large-width) {
+      padding-top: 30px;
+    }
+  }
 }
 
 h1 {
@@ -111,4 +117,21 @@ main {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+}
+
+/*
+* 
+* Utility class to hide content visually while keeping it screen reader-accessible.
+* Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
+*
+*/
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
