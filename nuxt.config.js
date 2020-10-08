@@ -34,6 +34,10 @@ export default {
       {
         path: '~/components/svg/',
         prefix: 'Svg'
+      },
+      {
+        path: '~/components/cta/',
+        prefix: 'Cta'
       }
     ]
   },
