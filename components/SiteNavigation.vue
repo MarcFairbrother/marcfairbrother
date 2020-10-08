@@ -134,7 +134,7 @@ export default {
       }
       & > a {
         align-items: center;
-        border-bottom: solid 4px var(--mainBg);
+        border-bottom: solid 4px transparent;
         display: flex;
         height: 100%;
       }

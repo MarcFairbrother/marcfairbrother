@@ -1,11 +1,13 @@
 <template>
-  <div class="jsToggleTheme themes">
-    <button data-theme="light" key="light" v-if="userPrefersDarkTheme">
-      <span class="sr-only">{{ $t('theme.toLight') }}</span>
-    </button>
-    <button data-theme="dark" key="dark" v-else>
-      <span class="sr-only">{{ $t('theme.toDark') }}</span>
-    </button>
+  <div class="jsToggleTheme themes" mode="out-in">
+    <transition name="fade">
+      <button data-theme="light" key="light" v-if="userPrefersDarkTheme">
+        <span class="sr-only">{{ $t('theme.toLight') }}</span>
+      </button>
+      <button data-theme="dark" key="dark" v-else>
+        <span class="sr-only">{{ $t('theme.toDark') }}</span>
+      </button>
+    </transition>
   </div>
 </template>
 
@@ -60,10 +62,31 @@ export default {
 
 <style lang="scss" scoped>
 .themes {
+  position: relative;
   & > button {
     display: block;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    &.fade-enter-active,
+    &.fade-leave-active {
+      transition: all 0.65s;
+    }
+    &.fade-enter,
+    &.fade-leave-to {
+      background-position: 50% 100%;
+    }
+    &.fade-enter {
+      opacity: 0;
+    }
+    &.fade-enter-active {
+      transition-delay: 0.25s;
+    }
     &[data-theme='light'] {
       background-image: var(--light-theme);
     }
@@ -75,22 +98,23 @@ export default {
     border: solid 1px var(--mainTextColor);
     border-radius: 0 15px 15px 0;
     border-left: none;
-    padding: 5px 15px;
+    height: 37px;
+    width: 56px;
     & > button {
       background-size: 20px;
-      height: 25px;
-      width: 25px;
     }
   }
   @include breakpoint($desktop-width) {
+    height: 38px;
+    width: 18px;
     & > button {
       background-size: 16px;
-      height: 16px;
-      width: 16px;
+      bottom: 6px;
+      top: 6px;
       @include breakpoint($very-large) {
         background-size: 18px;
-        height: 18px;
-        width: 18px;
+        bottom: 5px;
+        top: 5px;
       }
     }
   }
