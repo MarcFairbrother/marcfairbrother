@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .languages {
+  background: var(--mainBg);
   display: flex;
   &__item {
     &:first-of-type {

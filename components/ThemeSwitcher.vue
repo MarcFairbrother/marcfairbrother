@@ -62,6 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .themes {
+  background-color: var(--mainBg);
   position: relative;
   & > button {
     display: block;
