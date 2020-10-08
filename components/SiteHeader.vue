@@ -54,7 +54,7 @@ export default {
       padding-bottom: 105px;
       position: fixed;
       top: 0;
-      transform: translateY(50vh);
+      transform: translateY(100vh);
       transition: transform 0.5s ease-in;
       width: 100%;
       z-index: 5;

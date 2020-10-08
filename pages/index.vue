@@ -3,8 +3,16 @@
     <header class="home__header">
       <h2 v-html="heading.title"></h2>
       <p>{{ heading.description }}</p>
+      <section class="home__cta">
+        <CtaLink
+          destination="#skillset"
+          :text="heading.cta"
+          class-modifier="positive"
+        />
+        <SvgShape />
+      </section>
     </header>
-    <HomeSkillset :content="skillset" />
+    <HomeSkillset :content="skillset" id="skillset" />
     <HomeBio :content="bio" />
   </main>
 </template>
@@ -31,19 +39,20 @@ export default {
 <style lang="scss">
 .home {
   &__header {
-    padding: 90px 15px;
+    padding: 120px 15px 90px;
     & h2 {
       border-bottom: solid 8px var(--accentColor);
       display: inline-block;
       font-size: 2.5rem;
       margin-bottom: 30px;
+      padding-bottom: 10px;
       & > span {
         display: inline-block;
         font-family: 'Roboto';
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.25;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
     }
     & p {
@@ -52,8 +61,23 @@ export default {
       margin-right: 30px;
     }
   }
-  &__bio {
-    padding: 30px 15px;
+  &__cta {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    margin-top: 60px;
+    width: 100%;
+    & > .cta {
+      grid-column: 1/4;
+      grid-row: 2;
+      margin-bottom: 60px;
+    }
+    & > svg {
+      stroke: var(--mainTextColor);
+      grid-column: 3/6;
+      grid-row: 1/3;
+      transition: stroke 0.25s ease-in-out;
+    }
   }
 }
 </style>

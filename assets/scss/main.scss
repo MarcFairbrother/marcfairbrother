@@ -59,6 +59,7 @@
 
 :root {
   --black: #0f0f1e;
+  --blue: #0f2237;
   --blue: #0a2e57;
   --green: #39ffe7;
   --pink: #f500a3;
@@ -109,11 +110,14 @@ body {
   }
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: 'Catamaran';
+  font-weight: 900;
 }
 
-main {
+main:not(.home) {
   align-items: center;
   display: flex;
   justify-content: center;

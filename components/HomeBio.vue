@@ -4,6 +4,11 @@
       <h3>{{ bio.title }}</h3>
     </header>
     <p v-for="(p, i) in bio.text" :key="i" class="bio__text">{{ p }}</p>
+    <CtaLink
+      :destination="localePath(`/${$t('projects.meta.slug')}`)"
+      :text="bio.cta"
+      class-modifier="positive"
+    />
   </article>
 </template>
 
@@ -37,6 +42,9 @@ export default {
     line-height: 1.25;
     margin-right: 15px;
     margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 45px;
+    }
   }
 }
 </style>

@@ -15,6 +15,11 @@
         </section>
       </li>
     </ul>
+    <CtaLink
+      :destination="localePath(`/${$t('about.meta.slug')}`)"
+      :text="skillset.cta"
+      class-modifier="negative"
+    />
   </article>
 </template>
 
