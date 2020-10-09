@@ -26,7 +26,7 @@ export default {
       cta: 'En Bref'
     },
     skillset: {
-      title: 'In a Nutshell',
+      title: "L'Essentiel",
       categories: {
         design: {
           title: 'Design',
