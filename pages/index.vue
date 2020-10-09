@@ -2,17 +2,20 @@
   <main class="home">
     <header class="home__header">
       <h2 v-html="heading.title"></h2>
-      <p>{{ heading.description }}</p>
+      <p>
+        {{ heading.description }}
+      </p>
       <section class="home__cta">
-        <CtaLink
-          destination="#skillset"
-          :text="heading.cta"
+        <CtaButton
+          button-type="button"
           class-modifier="positive"
+          @click.native="scrollToElement('.skillset')"
+          :text="heading.cta"
         />
         <SvgShape />
       </section>
     </header>
-    <HomeSkillset :content="skillset" id="skillset" />
+    <HomeSkillset :content="skillset" />
     <HomeBio :content="bio" />
   </main>
 </template>
@@ -32,6 +35,15 @@ export default {
       skillset: this.$t('index.skillset'),
       bio: this.$t('index.bio'),
     };
+  },
+  methods: {
+    scrollToElement(element) {
+      const target = document.querySelector(element);
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth',
+      });
+    },
   },
 };
 </script>
@@ -68,14 +80,15 @@ export default {
     margin-top: 60px;
     width: 100%;
     & > .cta {
-      grid-column: 1/4;
+      grid-column: 2/4;
       grid-row: 2;
       margin-bottom: 60px;
     }
     & > svg {
-      stroke: var(--mainTextColor);
       grid-column: 3/6;
       grid-row: 1/3;
+      stroke: var(--mainTextColor);
+      stroke-width: 2px;
       transition: stroke 0.25s ease-in-out;
     }
   }
