@@ -26,6 +26,10 @@ export default {
     text-align: center;
     width: 100%;
     z-index: 5;
+    @include breakpoint($desktop-width) {
+      font-size: 1rem;
+      padding: 15px 30px;
+    }
   }
   &::after {
     border-radius: 4px;
