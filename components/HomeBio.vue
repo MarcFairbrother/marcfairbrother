@@ -28,6 +28,14 @@ export default {
   padding: 60px 15px;
   @include breakpoint($tablet-width) {
     padding: 60px 30px;
+    @include breakpoint($desktop-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include breakpoint($large-width) {
+        padding: 90px 30px;
+      }
+    }
   }
   &__header {
     margin-bottom: 45px;
@@ -40,6 +48,13 @@ export default {
         1px 1px 0 var(--mainTextColor);
       @include breakpoint($tablet-width) {
         font-size: 3rem;
+        @include breakpoint($desktop-width) {
+          font-size: 2.5rem;
+          text-align: center;
+          @include breakpoint($large-width) {
+            font-size: 3rem;
+          }
+        }
       }
     }
   }
@@ -52,9 +67,25 @@ export default {
       font-size: 1.4rem;
       line-height: 1.5;
       margin-bottom: 30px;
+      @include breakpoint($desktop-width) {
+        font-size: 1.2rem;
+        margin: 0 auto 15px;
+        max-width: 500px;
+        text-align: center;
+        @include breakpoint($large-width) {
+          font-size: 1.4rem;
+          max-width: 600px;
+          margin-bottom: 30px;
+        }
+      }
     }
     &:last-of-type {
       margin-bottom: 45px;
+    }
+  }
+  @include breakpoint($desktop-width) {
+    & > .cta {
+      align-self: center;
     }
   }
 }

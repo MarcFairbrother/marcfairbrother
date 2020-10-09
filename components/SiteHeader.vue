@@ -77,6 +77,7 @@ export default {
     grid-template-columns: max-content 1fr max-content max-content;
     margin: 0 auto;
     max-width: 1280px;
+    padding: 0 30px;
     width: 100%;
     @include breakpoint($very-large) {
       font-size: 1.15rem;

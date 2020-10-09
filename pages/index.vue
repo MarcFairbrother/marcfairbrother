@@ -13,6 +13,7 @@
           :text="heading.cta"
         />
         <SvgShape />
+        <SvgArrow />
       </section>
     </header>
     <HomeSkillset :content="skillset" />
@@ -56,6 +57,15 @@ export default {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       padding: 180px 30px 90px;
+      @include breakpoint($desktop-width) {
+        grid-template-columns: min-content 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: calc(100vh - 53px);
+        padding: 60px 30px 60px;
+        width: 100%;
+      }
     }
     & h2 {
       border-bottom: solid 8px var(--accentColor);
@@ -70,6 +80,17 @@ export default {
         grid-column: 1/3;
         margin-bottom: 45px;
         width: max-content;
+        @include breakpoint($desktop-width) {
+          align-self: end;
+          font-size: 2.5rem;
+          grid-column: 1;
+          grid-row: 1;
+          margin-bottom: 30px;
+        }
+        @include breakpoint($large-width) {
+          font-size: 3rem;
+          margin-bottom: 45px;
+        }
       }
       & > span {
         display: inline-block;
@@ -83,6 +104,14 @@ export default {
           display: flex;
           font-size: 1.4rem;
           margin-bottom: 30px;
+          @include breakpoint($desktop-width) {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            @include breakpoint($large-width) {
+              font-size: 1.4rem;
+              margin-bottom: 30px;
+            }
+          }
           &::before {
             background: var(--accentColor);
             border-radius: 50%;
@@ -106,11 +135,22 @@ export default {
       line-height: 1.25;
       margin-right: 30px;
       @include breakpoint($tablet-width) {
-        grid-column: 1/3;
-        margin-right: 0;
         align-items: flex-start;
         display: flex;
+        grid-column: 1/3;
         font-size: 1.4rem;
+        line-height: 1.45;
+        margin-right: 0;
+        @include breakpoint($desktop-width) {
+          font-size: 1.2rem;
+          grid-column: 1;
+          grid-row: 2;
+          line-height: 1.25;
+          @include breakpoint($large-width) {
+            font-size: 1.4rem;
+            line-height: 1.45;
+          }
+        }
         &::before {
           background: var(--accentColor);
           border-radius: 50%;
@@ -121,6 +161,9 @@ export default {
           margin-right: 7px;
           margin-top: 0.7rem;
           width: 8px;
+          @include breakpoint($large-width) {
+            margin-top: 0.75rem;
+          }
         }
       }
     }
@@ -133,11 +176,24 @@ export default {
     width: 100%;
     @include breakpoint($tablet-width) {
       grid-column: 2/5;
+      @include breakpoint($desktop-width) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-column: 3;
+        grid-row: 1/3;
+        justify-content: center;
+        padding-left: 45px;
+      }
     }
     & > .cta {
       grid-column: 2/4;
       grid-row: 2;
       margin-bottom: 60px;
+      @include breakpoint($desktop-width) {
+        order: 2;
+        margin-bottom: 45px;
+      }
     }
     & > svg {
       grid-column: 3/6;
@@ -145,6 +201,14 @@ export default {
       stroke: var(--mainTextColor);
       stroke-width: 2px;
       transition: stroke 0.25s ease-in-out;
+      @include breakpoint($desktop-width) {
+        margin-bottom: 15px;
+        order: 1;
+        @include breakpoint($large-width) {
+          margin-bottom: 30px;
+          stroke-width: 3px;
+        }
+      }
     }
   }
 }
