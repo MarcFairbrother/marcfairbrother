@@ -59,7 +59,7 @@ export default {
       title: 'Web Worker',
       text: [
         'In 2014, after working as webmaster and bookseller for an English-language bookshop in Paris, I joined a startup which runs multiple VOD services.',
-        'With the help of the development team I managed technological decisions, made sure that projects were moving in the right direction, and helped witth design and development work while overseeing the launch of several new applications and services.',
+        'With the help of the development team I managed technological decisions, made sure that projects were moving in the right direction, and helped with design and development work while overseeing the launch of several new applications and services.',
         'In my free time I enjoy firing up personal projects to learn new tools and concepts, and for the fun of writing code.'
       ],
       cta: 'Check Out My Projects'
