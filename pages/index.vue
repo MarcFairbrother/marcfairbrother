@@ -52,12 +52,25 @@ export default {
 .home {
   &__header {
     padding: 120px 15px 90px;
+    @include breakpoint($tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 180px 30px 90px;
+    }
     & h2 {
       border-bottom: solid 8px var(--accentColor);
       display: inline-block;
       font-size: 2.5rem;
       margin-bottom: 30px;
       padding-bottom: 10px;
+      @include breakpoint($tablet-width) {
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        grid-column: 1/3;
+        margin-bottom: 45px;
+        width: max-content;
+      }
       & > span {
         display: inline-block;
         font-family: 'Roboto';
@@ -65,12 +78,51 @@ export default {
         font-weight: 500;
         line-height: 1.25;
         margin-bottom: 15px;
+        @include breakpoint($tablet-width) {
+          align-items: center;
+          display: flex;
+          font-size: 1.4rem;
+          margin-bottom: 30px;
+          &::before {
+            background: var(--accentColor);
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            flex-shrink: 0;
+            height: 8px;
+            margin-right: 7px;
+            width: 8px;
+          }
+        }
+      }
+      @include breakpoint($tablet-width) {
+        & > br {
+          display: none;
+        }
       }
     }
     & p {
       font-size: 1.2rem;
       line-height: 1.25;
       margin-right: 30px;
+      @include breakpoint($tablet-width) {
+        grid-column: 1/3;
+        margin-right: 0;
+        align-items: flex-start;
+        display: flex;
+        font-size: 1.4rem;
+        &::before {
+          background: var(--accentColor);
+          border-radius: 50%;
+          content: '';
+          display: inline-block;
+          flex-shrink: 0;
+          height: 8px;
+          margin-right: 7px;
+          margin-top: 0.7rem;
+          width: 8px;
+        }
+      }
     }
   }
   &__cta {
@@ -79,6 +131,9 @@ export default {
     grid-template-rows: auto auto;
     margin-top: 60px;
     width: 100%;
+    @include breakpoint($tablet-width) {
+      grid-column: 2/5;
+    }
     & > .cta {
       grid-column: 2/4;
       grid-row: 2;

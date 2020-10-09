@@ -39,6 +39,9 @@ export default {
   background: var(--altBg);
   color: var(--altTextColor);
   padding: 60px 15px;
+  @include breakpoint($tablet-width) {
+    padding: 60px 30px;
+  }
   &__header {
     margin-bottom: 45px;
     & > h3 {
@@ -48,6 +51,9 @@ export default {
       text-shadow: -1px -1px 0 var(--altTextColor),
         1px -1px 0 var(--altTextColor), -1px 1px 0 var(--altTextColor),
         1px 1px 0 var(--altTextColor);
+      @include breakpoint($tablet-width) {
+        font-size: 3rem;
+      }
     }
   }
   &__categories {
@@ -62,6 +68,9 @@ export default {
       font-size: 1.5rem;
       margin-bottom: 30px;
       padding-bottom: 15px;
+      @include breakpoint($tablet-width) {
+        font-size: 2rem;
+      }
     }
   }
   &__bullets {
@@ -70,6 +79,9 @@ export default {
       display: flex;
       font-size: 1.2rem;
       margin-bottom: 15px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.4rem;
+      }
       &::before {
         background: var(--accentColor);
         border-radius: 50%;

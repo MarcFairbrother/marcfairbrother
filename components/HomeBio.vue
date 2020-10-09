@@ -26,6 +26,9 @@ export default {
 <style lang="scss" scoped>
 .bio {
   padding: 60px 15px;
+  @include breakpoint($tablet-width) {
+    padding: 60px 30px;
+  }
   &__header {
     margin-bottom: 45px;
     & > h3 {
@@ -35,6 +38,9 @@ export default {
       text-shadow: -1px -1px 0 var(--mainTextColor),
         1px -1px 0 var(--mainTextColor), -1px 1px 0 var(--mainTextColor),
         1px 1px 0 var(--mainTextColor);
+      @include breakpoint($tablet-width) {
+        font-size: 3rem;
+      }
     }
   }
   &__text {
@@ -42,6 +48,11 @@ export default {
     line-height: 1.25;
     margin-right: 15px;
     margin-bottom: 15px;
+    @include breakpoint($tablet-width) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
     &:last-of-type {
       margin-bottom: 45px;
     }

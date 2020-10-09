@@ -12,11 +12,10 @@ export default {
 
 <style lang="scss" scoped>
 .cta {
-  border: solid 2px;
-  border-radius: 4px;
   display: inline-block;
   position: relative;
   &__label {
+    border: solid 2px;
     border-radius: 4px;
     display: inline-block;
     font-weight: 900;
@@ -47,6 +46,7 @@ export default {
     }
     &::after {
       background: var(--mainTextColor);
+      box-shadow: 0 0 3px var(--mainBg);
     }
   }
   &--negative {
@@ -57,6 +57,7 @@ export default {
     }
     &::after {
       background: var(--altTextColor);
+      box-shadow: 0 0 3px var(--altBg);
     }
   }
 }
