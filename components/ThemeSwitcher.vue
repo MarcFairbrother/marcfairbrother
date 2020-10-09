@@ -106,6 +106,7 @@ export default {
     }
   }
   @include breakpoint($desktop-width) {
+    background: none;
     height: 38px;
     width: 18px;
     & > button {
