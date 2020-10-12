@@ -2,12 +2,6 @@
   <div>
     <SiteHeader />
     <Nuxt />
-    <footer></footer>
+    <SiteFooter />
   </div>
 </template>
-
-<style>
-footer {
-  margin-bottom: 100px;
-}
-</style>
