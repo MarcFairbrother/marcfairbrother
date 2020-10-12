@@ -91,5 +91,8 @@ export default {
       title: 'Discutons!',
       description: 'Du texte'
     }
+  },
+  footer: {
+    credits: 'Crédits'
   }
 };

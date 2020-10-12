@@ -91,5 +91,8 @@ export default {
       title: "Let's talk!",
       description: 'Some text'
     }
+  },
+  footer: {
+    credits: 'Credits'
   }
 };
