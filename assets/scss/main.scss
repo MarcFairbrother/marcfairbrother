@@ -58,21 +58,17 @@
 }
 
 :root {
-  --black: #0f0f1e;
-  --blue: #0f2237;
-  --blue: #0a2e57;
-  --green: #39ffe7;
-  --pink: #f500a3;
-  --altBg: var(--blue);
-  --mainBg: var(--green);
-  --mainTextColor: var(--blue);
-  --altTextColor: var(--green);
-  --accentColor: var(--pink);
+  --altBg: #0f2237;
+  --mainBg: #39ffe7;
+  --mainTextColor: #0f2237;
+  --altTextColor: #39ffe7;
+  --accentColor: #f500a3;
   @media (prefers-color-scheme: dark) {
-    --altBg: var(--blue);
-    --mainBg: var(--black);
-    --mainTextColor: var(--green);
-    --altTextColor: var(--green);
+    --altBg: #0a0a0f;
+    --mainBg: #071728;
+    --mainTextColor: #0fd3d3;
+    --altTextColor: #0fd3d3;
+    --accentColor: #ed14b0;
   }
 }
 
@@ -83,16 +79,18 @@
 */
 html {
   &[data-theme='light'] {
-    --altBg: var(--blue);
-    --mainBg: var(--green);
-    --mainTextColor: var(--blue);
-    --altTextColor: var(--green);
+    --altBg: #0f2237;
+    --mainBg: #39ffe7;
+    --mainTextColor: #0f2237;
+    --altTextColor: #39ffe7;
+    --accentColor: #f500a3;
   }
   &[data-theme='dark'] {
-    --altBg: var(--blue);
-    --mainBg: var(--black);
-    --mainTextColor: var(--green);
-    --altTextColor: var(--green);
+    --altBg: #0a0a0f;
+    --mainBg: #071728;
+    --mainTextColor: #0fd3d3;
+    --altTextColor: #0fd3d3;
+    --accentColor: #ed14b0;
   }
 }
 
