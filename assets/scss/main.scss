@@ -64,7 +64,7 @@
   --altTextColor: #39ffe7;
   --accentColor: #f500a3;
   @media (prefers-color-scheme: dark) {
-    --altBg: #0a0a0f;
+    --altBg: #0c0c14;
     --mainBg: #071728;
     --mainTextColor: #0fd3d3;
     --altTextColor: #0fd3d3;
@@ -86,7 +86,7 @@ html {
     --accentColor: #f500a3;
   }
   &[data-theme='dark'] {
-    --altBg: #0a0a0f;
+    --altBg: #0c0c14;
     --mainBg: #071728;
     --mainTextColor: #0fd3d3;
     --altTextColor: #0fd3d3;
