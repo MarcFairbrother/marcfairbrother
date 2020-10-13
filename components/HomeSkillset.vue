@@ -29,9 +29,9 @@ export default {
   props: ['content'],
   data() {
     return {
-      skillset: this.content,
+      skillset: this.content
     };
-  },
+  }
 };
 </script>
 
@@ -82,16 +82,16 @@ export default {
         line-height: 1.5;
         margin-right: 0;
         max-width: 66%;
-      @include breakpoint($desktop-width) {
-        font-size: 1.2rem;
-        margin: 0 auto 15px;
-        max-width: 500px;
-        text-align: center;
-        @include breakpoint($large-width) {
-          font-size: 1.4rem;
-          max-width: 600px;
+        @include breakpoint($desktop-width) {
+          font-size: 1.2rem;
+          margin: 0 auto 15px;
+          max-width: 500px;
+          text-align: center;
+          @include breakpoint($large-width) {
+            font-size: 1.4rem;
+            max-width: 600px;
+          }
         }
-      }
       }
     }
   }
