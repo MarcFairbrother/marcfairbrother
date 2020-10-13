@@ -183,7 +183,6 @@ export default {
         grid-column: 3;
         grid-row: 1/3;
         justify-content: center;
-        padding-left: 45px;
       }
     }
     & > .cta {

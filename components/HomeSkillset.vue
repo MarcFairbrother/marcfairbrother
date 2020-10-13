@@ -2,6 +2,7 @@
   <article class="skillset">
     <header class="skillset__header">
       <h3>{{ skillset.title }}</h3>
+      <p>{{ skillset.description }}</p>
     </header>
     <ul class="skillset__categories">
       <li v-for="(category, i) in skillset.categories" :key="i">
@@ -57,6 +58,7 @@ export default {
       color: var(--altBg);
       font-size: 2.5rem;
       letter-spacing: 1.5px;
+      margin-bottom: 30px;
       text-shadow: -1px -1px 0 var(--altTextColor),
         1px -1px 0 var(--altTextColor), -1px 1px 0 var(--altTextColor),
         1px 1px 0 var(--altTextColor);
@@ -69,6 +71,27 @@ export default {
         @include breakpoint($large-width) {
           font-size: 3rem;
         }
+      }
+    }
+    & > p {
+      font-size: 1.2rem;
+      line-height: 1.25;
+      margin-right: 30px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        margin-right: 0;
+        max-width: 66%;
+      @include breakpoint($desktop-width) {
+        font-size: 1.2rem;
+        margin: 0 auto 15px;
+        max-width: 500px;
+        text-align: center;
+        @include breakpoint($large-width) {
+          font-size: 1.4rem;
+          max-width: 600px;
+        }
+      }
       }
     }
   }

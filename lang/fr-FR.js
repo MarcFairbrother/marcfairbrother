@@ -23,10 +23,11 @@ export default {
       title: "<span>Je m'appelle</span> <br>Marc Fairbrother",
       description:
         "Je conçois et développe des expériences numériques centrées sur l'expérience utilisateur.",
-      cta: 'En Bref'
+      cta: 'UX-plore'
     },
     skillset: {
       title: "L'Essentiel",
+      description: "Je suis un web designer et développeur front end avec de l'expérience en gestion d'équipe et de projet.",
       categories: {
         design: {
           title: 'Design',
