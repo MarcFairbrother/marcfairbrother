@@ -22,7 +22,7 @@ export default {
     heading: {
       title: "<span>Je m'appelle</span> <br>Marc Fairbrother",
       description:
-        "Je conçois et développe des expériences numériques centrées sur l'expérience utilisateur.",
+        "Je conçois et développe des applications numériques centrées sur l'expérience utilisateur.",
       cta: 'UX-plore'
     },
     skillset: {
