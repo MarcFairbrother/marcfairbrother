@@ -115,7 +115,7 @@ h3 {
   font-weight: 900;
 }
 
-main:not(.home) {
+main:not(.home):not(.about) {
   align-items: center;
   display: flex;
   justify-content: center;
