@@ -1,6 +1,6 @@
 <template>
   <main class="about">
-    <PageHeading :heading-text="heading" />
+    <PageHeading :heading-text="heading" class="about__header" />
     <ul class="about__content">
       <li v-for="(block, i) in contentBlocks" :key="i">
         <h3>
@@ -60,23 +60,82 @@ export default {
 
 <style lang="scss" scoped>
 .about {
+  &__header {
+    width: 75%;
+  }
   &__content {
     margin: 0 15px 45px;
+    @include breakpoint($tablet-width) {
+      margin: 0 30px 45px;
+      position: relative;
+      &::before {
+        border-bottom: dotted 2px var(--mainTextColor);
+        border-left: dotted 2px var(--mainTextColor);
+        border-radius: 5px;
+        bottom: -92px;
+        content: '';
+        position: absolute;
+        left: 22.5px;
+        top: 0;
+        width: 37.5px;
+        z-index: -5;
+      }
+    }
     & h3 {
       border-bottom: solid 4px var(--accentColor);
       display: inline-block;
       font-size: 1.5rem;
       margin-bottom: 45px;
       padding-bottom: 5px;
+      @include breakpoint($tablet-width) {
+        font-size: 2rem;
+        margin-bottom: 60px;
+      }
+    }
+    @include breakpoint($tablet-width) {
+      & > li {
+        &::before {
+          background: var(--mainTextColor);
+          border-radius: 50%;
+          content: '';
+          float: left;
+          margin-right: 15px;
+          margin-top: -5px;
+          height: 45px;
+          width: 45px;
+        }
+      }
     }
   }
   &__block {
     margin-bottom: 45px;
+    @include breakpoint($tablet-width) {
+      margin-bottom: 60px;
+    }
     & h4 {
       font-family: 'Roboto';
       font-size: 1rem;
       line-height: 1.45;
       margin-bottom: 15px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.2rem;
+      }
+    }
+    @include breakpoint($tablet-width) {
+      & > li {
+        &::before {
+          background: var(--mainBg);
+          border: solid 2px var(--mainTextColor);
+          border-radius: 50%;
+          content: '';
+          float: left;
+          margin-left: 7.5px;
+          margin-right: 22.5px;
+          margin-top: -2px;
+          height: 30px;
+          width: 30px;
+        }
+      }
     }
   }
   &__bullets {
@@ -85,6 +144,13 @@ export default {
       line-height: 1.45;
       margin: 0 15px 15px;
       position: relative;
+      @include breakpoint($tablet-width) {
+        font-size: 1.2rem;
+        margin-left: 75px;
+        &:last-of-type {
+          margin-bottom: 30px;
+        }
+      }
       &::before {
         background: var(--accentColor);
         border-radius: 50%;
@@ -95,6 +161,9 @@ export default {
         position: absolute;
         top: 7px;
         width: 8px;
+        @include breakpoint($tablet-width) {
+          top: 10px;
+        }
       }
     }
   }
@@ -102,10 +171,18 @@ export default {
     font-size: 1rem;
     line-height: 1.45;
     margin-bottom: 15px;
+    @include breakpoint($tablet-width) {
+      font-size: 1.2rem;
+      margin-left: 60px;
+      margin-bottom: 30px;
+    }
   }
   & > .cta {
     margin-left: 15px;
     margin-bottom: 45px;
+    @include breakpoint($tablet-width) {
+      margin-left: 90px;
+    }
   }
 }
 </style>
