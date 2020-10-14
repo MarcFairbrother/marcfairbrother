@@ -21,13 +21,13 @@ export default {
   index: {
     heading: {
       title: '<span>My name is</span> <br>Marc Fairbrother',
-      description:
-        "I design and develop user-centric digital experiences.",
-      cta: "UX-plore"
+      description: 'I design and develop user-centric digital experiences.',
+      cta: 'UX-plore'
     },
     skillset: {
       title: 'In a Nutshell',
-      description: "I'm a web designer and front end developer with experience in project and team management.",
+      description:
+        "I'm a web designer and front end developer with experience in project and team management.",
       categories: {
         design: {
           title: 'Web Design',
@@ -71,9 +71,84 @@ export default {
       slug: 'about-me'
     },
     heading: {
-      title: 'About Me',
-      description: 'Some text'
-    }
+      title: 'My name is Marc Fairbrother',
+      description: [
+        "I'm a web designer and front end developer with a background in project management and retail.",
+        'I believe in building accessible, inclusive, and enticing digital experiences.'
+      ]
+    },
+    content: {
+      pro: {
+        heading: 'Professional Experience',
+        entries: {
+          movingScope: {
+            heading: '2014-2020: Technical Manager at Moving Scope',
+            bullets: [
+              'Managed the VOD projects <a href="https://festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, and <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, from writing specifications to release, maintenance, and further upgrades.',
+              'Designed and developed web interfaces and responsive newsletters, and corrected front-end issues.',
+              'Researched and supervised the implementation of solutions to improve the video workflow and streaming quality.'
+            ]
+          },
+          villageVoice: {
+            heading:
+              '2010-2012: Webmaster and Bookseller at The Village Voice Bookshop',
+            bullets: [
+              'Updated the website and created various communication materials (bookmarks, posters, e-mail campaigns, signage).',
+              'Redesigned and supervised the development of a new CMS-based website.',
+              'Advised customers, managed stock and handled the cash register.'
+            ]
+          },
+          fnac: {
+            heading:
+              '2007-2009: Shop Assistant in the Video Department at Fnac',
+            bullets: [
+              'Helped customers and supervised a team in charge of special offers.'
+            ]
+          }
+        }
+      },
+      education: {
+        heading: 'Education',
+        entries: {
+          cdnl: {
+            heading: 'BSC Degree in Digital Product Design and Development',
+            details: '2013-2014 | <em>Université Paris 8</em>'
+          },
+          livre: {
+            heading: "Associate's Degree in Bookselling",
+            details: '2009-2010 | <em>Université Paris X</em>'
+          },
+          cinema: {
+            heading: 'BA Degree in Film Studies',
+            details: '2004-2007 | <em>Université Paris X</em>'
+          },
+          bac: {
+            heading: 'French Baccalaureate (International Option)',
+            details: "2003 | <em>Lycée d'État de Sèvres</em>"
+          }
+        }
+      },
+      hobbies: {
+        heading: 'Hobbies',
+        entries: {
+          film: {
+            heading: 'Film',
+            bullets: [
+              'Created the <a href="https://cinesthesies.fr" target="_blank" rel="noopener" style="text-decoration: underline;">Cinésthésies</a> blog in 2012 using WordPress and a custom theme developed from scratch, and wrote film reviews for <em>Métaluna</em> magazine in 2013.',
+              "Passionate about repertory films, with a keen interest in American, French, and British classics, post war new wave movements in Europe and Japan, and 60's to late 80's exploitation cinema.",
+              'Worked as an extra on professional shoots from 2003 to 2006.'
+            ]
+          },
+          photography: {
+            heading: 'Photography',
+            bullets: [
+              'I practiced film photography in the early 2000\'s and have recently gotten back into the hobby in its digital form. Feel free to check out my work on <a href="https://instagram.com/marc__fairbrother/" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>.'
+            ]
+          }
+        }
+      }
+    },
+    cta: "Let's Talk!"
   },
   projects: {
     meta: {
