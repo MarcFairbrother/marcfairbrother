@@ -27,14 +27,14 @@ export default {
     // update current route in state when navigating to page
     await store.dispatch('i18n/setRouteParams', {
       en: { slug: '' },
-      fr: { slug: '' },
+      fr: { slug: '' }
     });
   },
   data() {
     return {
       heading: this.$t('index.heading'),
       skillset: this.$t('index.skillset'),
-      bio: this.$t('index.bio'),
+      bio: this.$t('index.bio')
     };
   },
   methods: {
@@ -42,17 +42,17 @@ export default {
       const target = document.querySelector(element);
       window.scrollTo({
         top: target.offsetTop,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
 .home {
   &__header {
-    padding: 120px 15px 90px;
+    padding: 105px 15px 90px;
     @include breakpoint($tablet-width) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
