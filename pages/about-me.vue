@@ -2,7 +2,13 @@
   <main class="about">
     <PageHeading :heading-text="heading" class="about__header" />
     <ul class="about__content">
-      <li v-for="(block, i) in contentBlocks" :key="i">
+      <li
+        v-for="(block, i) in contentBlocks"
+        :key="i"
+        :style="
+          `--icon-light: ${block.icon.light}; --icon-dark: ${block.icon.dark};`
+        "
+      >
         <h3>
           {{ block.heading }}
         </h3>
@@ -95,7 +101,11 @@ export default {
     @include breakpoint($tablet-width) {
       & > li {
         &::before {
-          background: var(--mainTextColor);
+          background-color: var(--mainTextColor);
+          background-image: var(--icon-light);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto 25px;
           border-radius: 50%;
           content: '';
           float: left;
@@ -103,6 +113,18 @@ export default {
           margin-top: -5px;
           height: 45px;
           width: 45px;
+          @media (prefers-color-scheme: light) {
+            background-image: var(--icon-light);
+          }
+          html[data-theme='light'] & {
+            background-image: var(--icon-light);
+          }
+          @media (prefers-color-scheme: dark) {
+            background-image: var(--icon-dark);
+          }
+          html[data-theme='dark'] & {
+            background-image: var(--icon-dark);
+          }
         }
       }
     }

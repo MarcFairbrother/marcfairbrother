@@ -80,6 +80,10 @@ export default {
     content: {
       pro: {
         heading: 'Professional Experience',
+        icon: {
+          dark: 'var(--pro-dark)',
+          light: 'var(--pro-light)'
+        },
         entries: {
           movingScope: {
             heading: '2014-2020: Technical Manager at Moving Scope',
@@ -109,6 +113,10 @@ export default {
       },
       education: {
         heading: 'Education',
+        icon: {
+          dark: 'var(--education-dark)',
+          light: 'var(--education-light)'
+        },
         entries: {
           cdnl: {
             heading: 'BSC Degree in Digital Product Design and Development',
@@ -130,6 +138,10 @@ export default {
       },
       hobbies: {
         heading: 'Hobbies',
+        icon: {
+          dark: 'var(--hobbies-dark)',
+          light: 'var(--hobbies-light)'
+        },
         entries: {
           film: {
             heading: 'Film',

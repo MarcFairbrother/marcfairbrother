@@ -81,6 +81,10 @@ export default {
     content: {
       pro: {
         heading: 'Expérience professionnelle',
+        icon: {
+          dark: 'var(--pro-dark)',
+          light: 'var(--pro-light)'
+        },
         entries: {
           movingScope: {
             heading: '2014-2020: Responsable technique chez Moving Scope',
@@ -109,6 +113,10 @@ export default {
       },
       education: {
         heading: 'Formations',
+        icon: {
+          dark: 'var(--education-dark)',
+          light: 'var(--education-light)'
+        },
         entries: {
           cdnl: {
             heading:
@@ -131,6 +139,10 @@ export default {
       },
       hobbies: {
         heading: 'Loisirs',
+        icon: {
+          dark: 'var(--hobbies-dark)',
+          light: 'var(--hobbies-light)'
+        },
         entries: {
           film: {
             heading: 'Cinéma',
