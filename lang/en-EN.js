@@ -75,7 +75,11 @@ export default {
       description: [
         "I'm a web designer and front end developer with a background in project management and retail.",
         'I believe in building accessible, inclusive, and enticing digital experiences.'
-      ]
+      ],
+      resume: {
+        label: 'Download my resume',
+        url: '#'
+      }
     },
     content: {
       pro: {

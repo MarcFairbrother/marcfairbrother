@@ -76,7 +76,11 @@ export default {
       description: [
         "Je suis un web designer et développeur front end avec de l'expérience en gestion de projet et dans le commerce.",
         "J'aime créer des applications numériques accessibles, inclusives et originales."
-      ]
+      ],
+      resume: {
+        label: 'Téléchargez mon CV',
+        url: '#'
+      }
     },
     content: {
       pro: {
