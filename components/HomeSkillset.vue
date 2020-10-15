@@ -29,8 +29,36 @@ export default {
   props: ['content'],
   data() {
     return {
-      skillset: this.content
+      skillset: this.content,
+      observer: null
     };
+  },
+  methods: {
+    onElementObserved(entries) {
+      entries.forEach(entry => {
+        entry.isIntersecting
+          ? entry.target.firstElementChild.classList.remove(
+              'skillset__category--hidden'
+            )
+          : entry.target.firstElementChild.classList.add(
+              'skillset__category--hidden'
+            );
+      });
+    }
+  },
+  mounted() {
+    const observedElements = document.querySelectorAll(
+      '.skillset__categories > li'
+    );
+    this.observer = new IntersectionObserver(this.onElementObserved, {
+      threshold: 0.1
+    });
+    observedElements.forEach(element => {
+      this.observer.observe(element);
+    });
+  },
+  beforeDestroy() {
+    this.observer.disconnect();
   }
 };
 </script>
@@ -112,6 +140,28 @@ export default {
     }
   }
   &__category {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease-in 0.2s,
+      transform 0.45s cubic-bezier(0.26, 0.61, 0.42, 1.15);
+    @include breakpoint($desktop-width) {
+      li:nth-of-type(2) & {
+        transition: opacity 0.25s ease-in 0.4s,
+          transform 0.45s cubic-bezier(0.26, 0.61, 0.42, 1.15) 0.2s;
+      }
+      li:nth-of-type(3) & {
+        transition: opacity 0.25s ease-in 0.6s,
+          transform 0.45s cubic-bezier(0.26, 0.61, 0.42, 1.15) 0.4s;
+      }
+    }
+    &--hidden {
+      opacity: 0;
+      transform: translate(-100vw, 0);
+      transition: opacity 0s !important;
+      @include breakpoint($desktop-width) {
+        transform: translate(0, 100vh);
+      }
+    }
     & > h4 {
       border-bottom: solid 4px var(--accentColor);
       display: inline-block;
