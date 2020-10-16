@@ -68,7 +68,7 @@ export default {
   },
   about: {
     meta: {
-      slug: 'about-me'
+      slug: 'about'
     },
     heading: {
       title: 'My name is Marc Fairbrother',
@@ -168,7 +168,7 @@ export default {
   },
   projects: {
     meta: {
-      slug: 'my-projects'
+      slug: 'projects'
     },
     heading: {
       title: 'My Projects',
@@ -177,7 +177,7 @@ export default {
   },
   contact: {
     meta: {
-      slug: 'contact-me'
+      slug: 'contact'
     },
     heading: {
       title: "Let's talk!",

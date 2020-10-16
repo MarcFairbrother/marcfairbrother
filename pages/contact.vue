@@ -9,15 +9,15 @@ export default {
   async asyncData({ store }) {
     // update current route in state when navigating to page
     await store.dispatch('i18n/setRouteParams', {
-      en: { slug: 'contact-me' },
-      fr: { slug: 'contactez-moi' },
+      en: { slug: 'contact' },
+      fr: { slug: 'contact' }
     });
   },
   nuxtI18n: {
     paths: {
-      en: '/contact-me',
-      fr: '/contactez-moi',
-    },
-  },
+      en: '/contact',
+      fr: '/contact'
+    }
+  }
 };
 </script>
