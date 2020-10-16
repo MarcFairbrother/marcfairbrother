@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  margin: 120px 15px 45px;
+  margin: 120px 15px 60px;
   @include breakpoint($tablet-width) {
     margin: 180px 30px 90px;
     @include breakpoint($desktop-width) {

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  props: ['buttonType', 'classModifier', 'text', 'clickMethod'],
+  props: ['buttonType', 'classModifier', 'text', 'clickMethod']
 };
 </script>
 
@@ -19,7 +19,7 @@ export default {
     border-radius: 4px;
     display: inline-block;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.25;
     padding: 15px;
     position: relative;
@@ -27,7 +27,6 @@ export default {
     width: 100%;
     z-index: 5;
     @include breakpoint($desktop-width) {
-      font-size: 1rem;
       padding: 15px 30px;
     }
   }

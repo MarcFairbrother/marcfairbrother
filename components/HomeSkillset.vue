@@ -205,7 +205,6 @@ export default {
       }
     }
   }
-
   @include breakpoint($desktop-width) {
     & > .cta {
       align-self: center;

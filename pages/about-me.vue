@@ -195,6 +195,7 @@ export default {
     }
   }
   &__bullets {
+    margin-bottom: 30px;
     @include breakpoint($desktop-width) {
       max-width: 75%;
       @include breakpoint($large-width) {
@@ -238,7 +239,7 @@ export default {
   &__details {
     font-size: 1rem;
     line-height: 1.45;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     @include breakpoint($tablet-width) {
       font-size: 1.2rem;
       margin-left: 60px;
