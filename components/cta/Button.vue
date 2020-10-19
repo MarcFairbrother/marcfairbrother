@@ -20,8 +20,8 @@ export default {
     display: inline-block;
     font-weight: 900;
     font-size: 1rem;
-    line-height: 1.25;
-    padding: 15px;
+    line-height: 1.45;
+    padding: 15px 30px;
     position: relative;
     text-align: center;
     width: 100%;

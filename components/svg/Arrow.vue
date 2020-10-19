@@ -11,12 +11,12 @@
 
 <style lang="scss" scoped>
 .arrow {
-  order: 3;
+  stroke: var(--mainTextColor);
   stroke-width: 8px;
   transition: transform 0.25s;
-  width: 45px;
-  @include maxBreakpoint(1023px) {
-    display: none;
+  width: 30px;
+  @include breakpoint($large-width) {
+    width: 45px;
   }
   .home__cta .cta:hover ~ & {
     transform: translateY(10px) scale(1.2);

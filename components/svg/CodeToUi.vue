@@ -301,7 +301,7 @@
           attributeName="fill-opacity"
           dur="15s"
           values="1; 1; 0; 0; 1; 1"
-          keyTimes="0; 0.0375; 0.1; 0.8125; 0.875; 1"
+          keyTimes="0; 0.0275; 0.09; 0.8125; 0.875; 1"
           repeatCount="indefinite"
         />
       </path>
@@ -317,7 +317,7 @@
           attributeName="fill-opacity"
           dur="15s"
           values="1; 1; 0; 0; 1; 1"
-          keyTimes="0; 0.0375; 0.1; 0.8125; 0.875; 1"
+          keyTimes="0; 0.0275; 0.09; 0.8125; 0.875; 1"
           repeatCount="indefinite"
         />
       </path>
