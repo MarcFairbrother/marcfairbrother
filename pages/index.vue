@@ -12,7 +12,7 @@
           @click.native="scrollToElement('.skillset')"
           :text="heading.cta"
         />
-        <SvgShape />
+        <SvgCodeToUi />
         <SvgArrow />
       </section>
     </header>
