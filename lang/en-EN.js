@@ -171,8 +171,76 @@ export default {
       slug: 'projects'
     },
     heading: {
-      title: 'My Projects',
-      description: 'Some text'
+      title: 'Selected Projects',
+      description: [
+        "A collection of professional and side projects I've worked on as designer, developer, and/or project manager."
+      ]
+    },
+    content: {
+      fspro: {
+        title: 'Festival Scope Pro',
+        roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
+        presentation: [
+          'Festival Scope Pro is a VOD service used by over 10,000 film professionals.',
+          'Selected titles in search of visibility and distribution opportunities are made available for online screening in partnership with over 100 international film festivals and organizations.'
+        ],
+        tasks: [
+          'I took over management of the legacy application in 2014 and supervised the implementation of new features.',
+          "I supervised a rewrite of the code-base to enable synergies with the company's other projects starting in 2016.",
+          'I coordinated a team of designers and developers to launch new versions of the web and iOS applications in 2019.',
+          'I designed and developed parts of the new user interface and a responsive newsletter template.',
+          'I handled bug reporting, triage, and quality assurance while fixing front-end issues.',
+          'I researched and supervised the implementation of services to improve the streaming quality and the video workflow.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Figma',
+            'Twig',
+            'SCSS',
+            'JavaScript',
+            'Git',
+            'GitLab',
+            'Trello',
+            'Email Ocotopus'
+          ]
+        },
+        website: {
+          url: 'https://pro.festivalscope.com',
+          label: 'Visit Website'
+        }
+      },
+      artekino: {
+        title: 'ArteKino Festival',
+        roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
+        presentation: [
+          'Launched in 2016 by Arte France Cinéma and Festival Scope, the ArteKino Festival is a yearly online film festival showcasing ten recent feature films, available to watch for people living in the European Union.',
+          "At the end of each of the festival's editions, one film receives an audience award based on votes submitted online by audience members."
+        ],
+        tasks: [
+          'I worked with the principal stakeholders to write the specifications of the first version of the application and additional features.',
+          'I supervised the design and development teams in charge of creating the web, iOS, and Android applications.',
+          'I designed and developed parts of the user interface and created functionnal prototypes to test user journeys and experience.',
+          'I handled bug reporting, triage, and quality assurance.',
+          'I trained junior project managers to supervise the project from the 2019 edition onwards.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Figma',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'GitLab',
+            'Trello',
+            'Mailchimp'
+          ]
+        },
+        website: {
+          url: 'https://artekinofestival.com',
+          label: 'Visit Website'
+        }
+      }
     }
   },
   contact: {

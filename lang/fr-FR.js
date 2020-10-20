@@ -174,7 +174,75 @@ export default {
     },
     heading: {
       title: 'Mes Projets',
-      description: 'Du texte'
+      description: [
+        'Une sélection de projets professionnels et personnels sur lesquels je suis intervenu en tant que designer, développeur ou chef de projet.'
+      ]
+    },
+    content: {
+      fspro: {
+        title: 'Festival Scope Pro',
+        roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
+        presentation: [
+          "Festival Scope Pro est un service de VOD utilisé par plus de 10&nbsp;000 professionnels travaillant dans l'industrie du cinéma.",
+          "Une sélection de titres à la recherche d'opportunités de diffusion et de visibilité supplémentaire sont rendus disponibles en ligne en partenariat avec plus de 100 festivals de cinéma et d'institutions du monde entier."
+        ],
+        tasks: [
+          "J'ai pris en charge la gestion d'une application legacy à partir de 2014 et j'ai suivi l'implémentation de nouvelles fonctionnalités.",
+          "J'ai supervisé la réécriture du code-base à partir de 2016 afin de permettre des synergies avec les autres projets de la société.",
+          "J'ai coordonné une équipe de designers et de développeurs pour lancer de nouvelles versions des applications web et iOS en 2019.",
+          "J'ai conçu et développé des parties de l'interface utilisateur et un gabarit de newsletter responsive.",
+          "J'ai géré le suivi des bugs, le triage et le recettage tout en corrigeant des problèmes front-end.",
+          "J'ai mené une recherche et supervisé l'implémentation de services permettant l'amélioration de la qualité de streaming et l'optimisation du workflow vidéo."
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Figma',
+            'Twig',
+            'SCSS',
+            'JavaScript',
+            'Git',
+            'GitLab',
+            'Trello',
+            'Email Ocotopus'
+          ]
+        },
+        website: {
+          url: 'https://artekinofestival.com',
+          label: 'Visiter le site'
+        }
+      },
+      artekino: {
+        title: 'ArteKino Festival',
+        roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
+        presentation: [
+          "Lancé par Arte France Cinéma et Festival Scope en 2016, ArteKino Festival est un festival de cinéma en ligne réunissant chaque année dix long-métrages récents disponibles au visionnage pour les spectateurs de l'Union Européenne",
+          "À la fin de chaque édition du festival, un film est récompensé d'un prix du public discerné selon les votes effectués en ligne par les spectateurs."
+        ],
+        tasks: [
+          "J'ai travaillé avec les principaux porteurs du projet pour établir un cahier des charges initial et définir de nouvelles fonctionnalités à chaque nouvelle édition.",
+          "J'ai assuré la gestion des équipes de design et de développement pour la création des applications web, iOS et Android.",
+          "J'ai conçu et développé des parties de l'interface utilisateur et j'ai créé des protoypes fonctionnels permettant de valider les parcours et l'expérience utilisateur.",
+          "J'ai effectué le suivi de bugs, le triage et le recettage",
+          "J'ai formé des chefs de projet junior pour prendre en mains le service à partir de l'édition 2019 du festival"
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Figma',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'GitLab',
+            'Trello',
+            'Mailchimp'
+          ]
+        },
+        website: {
+          url: 'https://artekinofestival.com',
+          label: 'Visiter le site'
+        }
+      }
     }
   },
   contact: {

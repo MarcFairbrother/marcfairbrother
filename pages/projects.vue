@@ -1,6 +1,11 @@
 <template>
   <main class="projects">
-    <h2>{{ $t('projects.heading.title') }}</h2>
+    <PageHeading :heading-text="heading" class="projects__header" />
+    <ProjectCard
+      v-for="(project, i) in content"
+      :key="i"
+      :project-content="project"
+    />
   </main>
 </template>
 
@@ -13,6 +18,12 @@ export default {
       fr: { slug: 'projets' }
     });
   },
+  data() {
+    return {
+      heading: this.$t('projects.heading'),
+      content: this.$t('projects.content')
+    };
+  },
   nuxtI18n: {
     paths: {
       en: '/projects',
@@ -21,3 +32,13 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.projects {
+  &__header {
+    @include breakpoint($tablet-width) {
+      width: 75%;
+    }
+  }
+}
+</style>
