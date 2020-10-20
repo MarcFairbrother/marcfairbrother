@@ -6,7 +6,7 @@
       :key="i"
       v-html="paragraph"
     ></p>
-    <p v-show="headingText.resume">
+    <p v-if="headingText.resume">
       <a :href="headingText.resume.url" target="_blank">
         {{ headingText.resume.label }}
       </a>
