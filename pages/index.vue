@@ -177,10 +177,11 @@ export default {
   }
   &__cta {
     align-items: center;
+    align-self: center;
     display: flex;
     flex-direction: column;
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3/5;
     justify-content: center;
     justify-self: start;
     z-index: 5;
@@ -190,18 +191,22 @@ export default {
       @include breakpoint($desktop-width) {
         align-self: start;
         grid-column: 1/3;
+        grid-row: 4;
         justify-self: start;
         margin-left: 15px;
       }
     }
     & > .cta {
-      margin-bottom: 30px;
+      margin: 30px 0;
+      @include breakpoint($desktop-width) {
+        margin-top: 0;
+      }
     }
   }
   &__animation {
     grid-column: 1/3;
     grid-row: 3/5;
-    opacity: 0.3;
+    opacity: 0.5;
     width: 75%;
     @include breakpoint($tablet-width) {
       grid-row: 3/5;
@@ -210,7 +215,7 @@ export default {
         align-self: start;
         grid-column: 4;
         grid-row: 2/5;
-        transition: opacity 0.25s;
+        transition: opacity 0.35s ease-in-out;
         &:hover {
           opacity: 1;
         }
