@@ -351,7 +351,7 @@ export default {
         }
       },
       francoverse: {
-        title: 'Into the Francoverse',
+        title: 'Into the FrancoVerse',
         screenshot: {
           src: '/img/francoverse_1280.jpg'
         },
