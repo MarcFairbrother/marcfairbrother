@@ -68,6 +68,16 @@ export default {
 
 <style lang="scss" scoped>
 .about {
+  padding: 0 15px;
+  @include breakpoint($tablet-width) {
+    padding: 0 30px;
+    @include breakpoint($desktop-width) {
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
   &__header {
     @include breakpoint($tablet-width) {
       width: 75%;
@@ -80,15 +90,12 @@ export default {
     }
   }
   &__content {
-    margin: 0 15px 45px;
+    margin: 0 0 45px;
     @include breakpoint($tablet-width) {
-      margin: 0 30px 45px;
+      margin: 0 0 45px;
       position: relative;
       @include breakpoint($desktop-width) {
-        margin: 0px auto 45px;
-        max-width: 1280px;
-        padding: 0 30px;
-        width: 100%;
+        margin: 0 0 45px;
       }
       &::before {
         border-bottom: dotted 2px var(--mainTextColor);
@@ -102,7 +109,7 @@ export default {
         width: 37.5px;
         z-index: -5;
         @include breakpoint($desktop-width) {
-          left: 52.5px;
+          left: 22.5px;
           @include breakpoint($large-width) {
             bottom: -120px;
           }
@@ -254,22 +261,10 @@ export default {
     }
   }
   &__footer {
-    margin-left: 15px;
     margin-bottom: 45px;
     @include breakpoint($tablet-width) {
-      margin-left: 90px;
+      margin-left: 60px;
       margin-bottom: 90px;
-      @include breakpoint($desktop-width) {
-        margin: 0 auto 90px;
-        max-width: 1280px;
-        padding: 0 30px;
-        width: 100%;
-      }
-    }
-    & > .cta {
-      @include breakpoint($desktop-width) {
-        margin-left: 60px;
-      }
     }
   }
 }
