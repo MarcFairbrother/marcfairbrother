@@ -181,9 +181,12 @@ export default {
     content: {
       fspro: {
         title: 'Festival Scope Pro',
+        screenshot: {
+          src: '/img/fspro_1280.jpg'
+        },
         roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
         presentation: [
-          "Festival Scope Pro est un service de VOD utilisé par plus de 10&nbsp;000 professionnels travaillant dans l'industrie du cinéma.",
+          "Festival Scope Pro est un service de VOD utilisé par plus de 10&nbsp;000 professionnels travaillant dans l'industrie du cinéma chaque année.",
           "Une sélection de titres à la recherche d'opportunités de diffusion et de visibilité supplémentaire sont rendus disponibles en ligne en partenariat avec plus de 100 festivals de cinéma et d'institutions du monde entier."
         ],
         tasks: [
@@ -214,9 +217,12 @@ export default {
       },
       artekino: {
         title: 'ArteKino Festival',
+        screenshot: {
+          src: '/img/akf_1280.jpg'
+        },
         roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
         presentation: [
-          "Lancé par Arte France Cinéma et Festival Scope en 2016, ArteKino Festival est un festival de cinéma en ligne réunissant chaque année dix long-métrages récents disponibles au visionnage pour les spectateurs de l'Union Européenne",
+          "Lancé par Arte France Cinéma et Festival Scope en 2016, ArteKino Festival est un festival de cinéma en ligne réunissant chaque année dix long-métrages récents disponibles au visionnage pour 50&nbsp;000 spectateurs de l'Union Européenne",
           "À la fin de chaque édition du festival, un film est récompensé d'un prix du public discerné selon les votes effectués en ligne par les spectateurs."
         ],
         tasks: [
@@ -241,6 +247,79 @@ export default {
         website: {
           url: 'https://artekinofestival.com',
           label: 'Visiter le site'
+        }
+      },
+      fspub: {
+        title: 'Festival Scope',
+        screenshot: {
+          src: '/img/fspub_1280.jpg'
+        },
+        roles: ['Chef de projet', 'Designer UX & UI'],
+        presentation: [
+          'Festival Scope est un service de VOD diffusant des films sélectionnés dans des festivals de cinéma internationaux, permettant aux spectateurs du monde entier de participer virtuellement aux événements et offrant une visibilité supplémentaire à des films aux opportunités de distribution limitées.'
+        ],
+        tasks: [
+          "J'ai travaillé avec les porteurs du projet pour rédiger un cahier des charges.",
+          "J'ai supervisé une équipe de designers et de développeurs pour livrer une première version de l'application en 2016 et de nouvelles versions au fil des mois.",
+          "J'ai créé des wireframes et des maquettes pour une application mobile et j'ai suivi son développement",
+          "J'ai collaboré avec le lead développeur pour identifier des synergies possibles entre les différentes applications de la société utilisant un même code-base.",
+          "J'ai conçu et développé des gabarits de newsletters responsives et formé le personnel chargé de leur envoi.",
+          "J'ai effectué le suivi de bugs, le triage et le recettage"
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Gimp',
+            'Inkscape',
+            'HTML',
+            'CSS',
+            'GitLab',
+            'Trello',
+            'Mailchimp'
+          ]
+        },
+        message:
+          'Ce projet a été migré vers une nouvelle solution technique depuis ma dernière participation en 2020.'
+      },
+      memory: {
+        title: 'Memory Vanilla JS',
+        screenshot: {
+          src: '/img/memory.jpg'
+        },
+        roles: ['Développeur', 'Designer UX & UI'],
+        presentation: [
+          'Un jeu de Memory traditionnel dans lequel un joueur humain et un joueur ordinateur essaient tour par tour de retrouver le plus grand nombre de paires.',
+          'Si un joueur découvre une paire, il joue de nouveau. La partie se termine une fois que toutes les paires ont été découvertes.'
+        ],
+        tasks: [
+          "J'ai implémenté un système par tour pour permettre à l'humain ou à l'ordinateur de jouer",
+          "J'ai créé une base de connaissances pour permettre à l'ordinateur de savoir quelles cartes ont été révélées et quelles cartes sont hors jeu car la paire a été découverte.",
+          "J'ai scripté une stratégie pour l'ordinateur qui commence son tour en cherchant une paire parmi les cartes révélées. Si une paire existe, l'ordinateur retourne ces cartes, sinon il retourne une carte inconnue et vérifie de nouveau si une carte correspondante a déjà été révélée.",
+          "J'ai développé des animations JS et CSS pour accompagner les interactions de retournement de carte et de mélange en début de partie.",
+          "J'ai utilisé des modules ES et du SCSS pour organiser le code de l'application en des fichier plus concis et faciles à gérer",
+          "J'aimerai ajouter des tests au projet et éventuellement développer une version pour deux joueurs en ligne"
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Figma',
+            'HTML',
+            'SCSS',
+            'JavaScript',
+            'ES Modules',
+            'Parcel',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://memory.marcfairbrother.com/',
+          label: 'Visiter le site'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/memory',
+          label: 'Voir le code'
         }
       }
     }

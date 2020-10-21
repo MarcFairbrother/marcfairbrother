@@ -179,9 +179,12 @@ export default {
     content: {
       fspro: {
         title: 'Festival Scope Pro',
+        screenshot: {
+          src: '/img/fspro_1280.jpg'
+        },
         roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
         presentation: [
-          'Festival Scope Pro is a VOD service used by over 10,000 film professionals.',
+          'Festival Scope Pro is a VOD service used by over 10,000 film professionals yearly.',
           'Selected titles in search of visibility and distribution opportunities are made available for online screening in partnership with over 100 international film festivals and organizations.'
         ],
         tasks: [
@@ -212,9 +215,12 @@ export default {
       },
       artekino: {
         title: 'ArteKino Festival',
+        screenshot: {
+          src: '/img/akf_1280.jpg'
+        },
         roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
         presentation: [
-          'Launched in 2016 by Arte France Cinéma and Festival Scope, the ArteKino Festival is a yearly online film festival showcasing ten recent feature films, available to watch for people living in the European Union.',
+          'Launched in 2016 by Arte France Cinéma and Festival Scope, the ArteKino Festival is a yearly online film festival showcasing ten recent feature films, available to watch for 50,000 viewers living in the European Union.',
           "At the end of each of the festival's editions, one film receives an audience award based on votes submitted online by audience members."
         ],
         tasks: [
@@ -239,6 +245,79 @@ export default {
         website: {
           url: 'https://artekinofestival.com',
           label: 'Visit Website'
+        }
+      },
+      fspub: {
+        title: 'Festival Scope',
+        screenshot: {
+          src: '/img/fspub_1280.jpg'
+        },
+        roles: ['Project Manager', 'UX & UI Designer'],
+        presentation: [
+          'Festival Scope is a VOD platform showing selected titles from international film festivals, giving a worldwide audience the chance to attend these events virtually and affording extra visibility to films with limited distribution opportunities.'
+        ],
+        tasks: [
+          'I worked with the product owners to establish and write specifications for the platform.',
+          'I supervised a team of designers and developers to deliver a first version of the web application in 2016 and to work on further iterations.',
+          'I created wireframes and mock ups for a mobile application and supervised its development.',
+          "I collaborated with the lead developer to research possible synergies with the company's other applications built on the same code-base.",
+          'I designed and developed responsive newsletter templates and trained the staff members in charge of sending them.',
+          'I handled bug reporting, triage, and quality assurance.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Gimp',
+            'Inkscape',
+            'HTML',
+            'CSS',
+            'GitLab',
+            'Trello',
+            'Mailchimp'
+          ]
+        },
+        message:
+          'This project has been moved to a new technical solution since I last worked on it in 2020.'
+      },
+      memory: {
+        title: 'Vanilla JS Memory',
+        screenshot: {
+          src: '/img/memory.jpg'
+        },
+        roles: ['Developer', 'UX & UI Designer'],
+        presentation: [
+          'A classic game of Memory in which a human and a computer player take turns to discover the highest number of pairs.',
+          'If either player discovers a pair, they get to play another turn. The game ends when all the pairs have been discovered.'
+        ],
+        tasks: [
+          'I implemented a turn based system to let either the human or computer play.',
+          'I created a knowledge base so that the computer player could keep track of which cards had been revealed and which cards had been removed from play after a pair had been discovered.',
+          'I scripted a strategy for the computer player which would check revealed cards for matching pairs at the beginning of each turn and either flip those if a match was found or flip an unknown card and check again for a matching revealed card.',
+          'I developed JS and CSS animations when flipping cards and when shuffling the cards for a new game.',
+          'I used ES modules and SCSS to organize the code in smaller, more manageable files.',
+          'I would like to add tests to the project, and possibly develop a version for two remote human players.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Figma',
+            'HTML',
+            'SCSS',
+            'JavaScript',
+            'ES Modules',
+            'Parcel',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://memory.marcfairbrother.com/',
+          label: 'Visit Website'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/memory',
+          label: 'View Code'
         }
       }
     }
