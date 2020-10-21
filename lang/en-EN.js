@@ -319,6 +319,73 @@ export default {
           url: 'https://github.com/MarcFairbrother/memory',
           label: 'View Code'
         }
+      },
+      metronome: {
+        title: 'Vanilla JS Metronome',
+        screenshot: {
+          src: '/img/metronome.png'
+        },
+        roles: ['Developer', 'UX & UI Designer'],
+        presentation: [
+          'A JavaScript metronome with accessible controls for the tempo, number of beats and to toggle the offbeat on or off.',
+          'The Web Audio API is used to produce metronome clicks at different frequencies to mark the first beat of a cycle, normal beats and offbeats.'
+        ],
+        tasks: [
+          'I used asynchronous functions and recursion to build the basic metronome logic, allowing the tempo to be updated without clearing an interval or restarting the metronome.',
+          'I used JS prototypes to create oscillators with different frequencies which can be played and muted by using methods.',
+          'I built UI animations and accessible custom form inputs.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Netlify']
+        },
+        website: {
+          url: 'https://metronome.marcfairbrother.com/',
+          label: 'Visit Website'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/metronome',
+          label: 'View Code'
+        }
+      },
+      francoverse: {
+        title: 'Into the Francoverse',
+        screenshot: {
+          src: '/img/francoverse_1280.jpg'
+        },
+        roles: ['Developer', 'UX & UI Designer'],
+        presentation: [
+          "A Vue.js data visualisation project exploring Jess Franco's colossal filmography.",
+          'My goal was to learn the basics of the Vue.js framework and SVG animation.'
+        ],
+        tasks: [
+          "I was inspired by lobby card layout, and vintage book jackets and poster graphic design elements to capture the feel of Franco's best known films.",
+          'I built a chart using SVG and JavaScript animations with data stored as a JavaScript object.',
+          'I developed a filter system which updates the chart when new filter options are selected.',
+          'Available options for each filter are updated depending on previously selected options to avoid returning no results.',
+          'I would like to revisit and optimise the code now that I have a better understanding of JavaScript.',
+          'I would like to improve the design for the list of films and add a map to chart recurring shooting locations, and possibly move the data to a server using GraphQL to laod it on the client.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Vue.js',
+            'SCSS',
+            'JavaScript',
+            'HTML',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://intothefrancoverse.marcfairbrother.com/',
+          label: 'Visit Website'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/into-the-francoverse',
+          label: 'View Code'
+        }
       }
     }
   },

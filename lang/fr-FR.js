@@ -321,6 +321,73 @@ export default {
           url: 'https://github.com/MarcFairbrother/memory',
           label: 'Voir le code'
         }
+      },
+      metronome: {
+        title: 'Metronome Vanilla JS',
+        screenshot: {
+          src: '/img/metronome.png'
+        },
+        roles: ['Développeur', 'Designer UX & UI'],
+        presentation: [
+          'Un métronome JavaScript avec contrôles accessibles pour modifier le tempo, le nombre de pulsations et pour activer ou désactiver les contre-temps.',
+          "L'API Web Audio a été utilisée pour générer les clics du métronome avec différentes fréquences pour marquer la première pulsation d'un cycle, les pulsations normales et les contre-temps."
+        ],
+        tasks: [
+          "J'ai utilisé des fonctions asynchrones et une récursion pour construire la logique basique du métronome et permettre la modification du tempo sans devoir annuler une intervale ou redémarrer le métronome.",
+          "J'ai utilisé un prototype JS pour créer des oscillateurs à différentes fréquences et pouvant être démarrées ou éteintes via des méthodes.",
+          "J'ai développé des animations et des contrôles de formulaire accessibles"
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Netlify']
+        },
+        website: {
+          url: 'https://metronome.marcfairbrother.com/',
+          label: 'Visiter le site'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/metronome',
+          label: 'Voir le code'
+        }
+      },
+      francoverse: {
+        title: 'Into the Francoverse',
+        screenshot: {
+          src: '/img/francoverse_1280.jpg'
+        },
+        roles: ['Développeur', 'Designer UX & UI'],
+        presentation: [
+          'Un projet de data visualisation explorant la filmographie colossale de Jess Franco.',
+          "Mon objectif était d'apprendre les bases du framework Vue.js et à animer des SVG."
+        ],
+        tasks: [
+          "Je me suis inspiré de la mise en page de vieux \"lobby cards\" et d'éléments graphiques d'affiches et livres vintage pour retrouver l'ambiance des films les plus connus de Franco.",
+          "J'ai développé un graphique en utilisant un SVG et des animations JavaScript avec des données conservées dans un object JavaScript.",
+          "J'ai développé un système de filtres qui met à jour le graphique selon les options sélectionnées.",
+          'Les options disponibles pour chaque filtre sont mises à jour selon les autres options sélectionnées pour éviter de retourner aucun résultat.',
+          "J'aimerai revoir et optimiser le code comme j'ai une meilleure compréhension de la programmation.",
+          "J'aimerai revoir le design de la liste de films et ajouter une carte pour visualiser les lieux de tournage récurrents, ainsi que héberger les données sur un serveur et utiliser GraphQl pour charger les données nécessaires sur le client."
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Vue.js',
+            'SCSS',
+            'JavaScript',
+            'HTML',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://intothefrancoverse.marcfairbrother.com/',
+          label: 'Voir le site'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/into-the-francoverse',
+          label: 'Voir le code'
+        }
       }
     }
   },
