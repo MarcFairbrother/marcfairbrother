@@ -5,27 +5,37 @@
       :img-url="projectContent.screenshot.src"
       :img-alt="projectContent.title"
     />
-    <h3 class="project__title">{{ projectContent.title }}</h3>
-    <ul class="project__roles">
-      <li v-for="(role, i) in projectContent.roles" :key="i" v-html="role"></li>
-    </ul>
-    <p
-      v-for="(paragraph, i) in projectContent.presentation"
-      :key="i"
-      v-html="paragraph"
-      class="project__presentation"
-    ></p>
-    <ul class="project__tasks">
-      <li v-for="(task, i) in projectContent.tasks" :key="i" v-html="task"></li>
-    </ul>
-    <ul class="project__tools">
-      <li v-html="projectContent.tools.title"></li>
-      <li
-        v-for="(tool, i) in projectContent.tools.items"
+    <section class="project__details">
+      <h3 class="project__title">{{ projectContent.title }}</h3>
+      <ul class="project__roles">
+        <li
+          v-for="(role, i) in projectContent.roles"
+          :key="i"
+          v-html="role"
+        ></li>
+      </ul>
+      <p
+        v-for="(paragraph, i) in projectContent.presentation"
         :key="i"
-        v-html="tool"
-      ></li>
-    </ul>
+        v-html="paragraph"
+        class="project__presentation"
+      ></p>
+      <ul class="project__tasks">
+        <li
+          v-for="(task, i) in projectContent.tasks"
+          :key="i"
+          v-html="task"
+        ></li>
+      </ul>
+      <ul class="project__tools">
+        <li v-html="projectContent.tools.title"></li>
+        <li
+          v-for="(tool, i) in projectContent.tools.items"
+          :key="i"
+          v-html="tool"
+        ></li>
+      </ul>
+    </section>
     <section class="project__links">
       <a
         :href="projectContent.website.url"
@@ -63,6 +73,10 @@ export default {
   padding: 0 15px 30px;
   &:last-of-type {
     margin-bottom: 60px;
+  }
+  @include breakpoint($tablet-width) {
+    margin: 0 30px 75px;
+    padding: 30px;
   }
   &__title {
     border-bottom: solid 4px var(--accentColor);
@@ -115,6 +129,9 @@ export default {
         position: absolute;
         top: 6px;
         width: 8px;
+      }
+      @include breakpoint($tablet-width) {
+        clear: left;
       }
     }
   }

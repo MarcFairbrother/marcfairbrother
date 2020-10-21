@@ -16,5 +16,10 @@ export default {
   height: auto;
   margin: -30px 0 30px;
   width: 100%;
+  @include breakpoint($tablet-width) {
+    float: left;
+    margin: -60px 30px 40px 0;
+    width: 45%;
+  }
 }
 </style>
