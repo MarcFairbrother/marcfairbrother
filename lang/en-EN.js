@@ -27,7 +27,7 @@ export default {
     skillset: {
       title: 'In a Nutshell',
       description:
-        "I'm a web designer and front end developer with experience in project and team management.",
+        "I'm a web designer and front-end developer with experience in project and team management.",
       categories: {
         design: {
           title: 'Web Design',
@@ -73,8 +73,8 @@ export default {
     heading: {
       title: 'My name is Marc Fairbrother',
       description: [
-        "I'm a web designer and front end developer with a background in project management and retail.",
-        'I believe in building accessible, inclusive, and enticing digital experiences.'
+        "I'm a web designer and front-end developer with a background in project management and retail.",
+        'I believe in building accessible, inclusive, and stand-out digital experiences.'
       ],
       resume: {
         label: 'Download my resume',

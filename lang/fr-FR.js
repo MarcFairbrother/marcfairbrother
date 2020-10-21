@@ -28,10 +28,10 @@ export default {
     skillset: {
       title: "L'Essentiel",
       description:
-        "Je suis un web designer et développeur front end avec de l'expérience en gestion d'équipe et de projet.",
+        "Je suis un web designer et développeur front-end avec de l'expérience en gestion d'équipe et de projet.",
       categories: {
         design: {
-          title: 'Design',
+          title: 'Web Design',
           bullets: {
             ux: 'Ergonomie web & mobile',
             visual: 'Conception visuelle',
@@ -74,7 +74,7 @@ export default {
     heading: {
       title: "Je m'appelle Marc Fairbrother",
       description: [
-        "Je suis un web designer et développeur front end avec de l'expérience en gestion de projet et dans le commerce.",
+        "Je suis un web designer et développeur front-end avec de l'expérience en gestion de projet et dans le commerce.",
         "J'aime créer des applications numériques accessibles, inclusives et originales."
       ],
       resume: {
@@ -94,7 +94,7 @@ export default {
             heading: '2014-2020: Responsable technique chez Moving Scope',
             bullets: [
               'Gestion des projets de VOD <a href="https://festivalscope.com" target="_blank" rel="noopener"  style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, et <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, de la rédaction de cahiers des charges au lancement des services, leur maintenance, and l\'implémentation de nouvelles fonctionnalités.',
-              "Conception et développement d'interfaces web, de newsletters responsives et correction de bugs front end.",
+              "Conception et développement d'interfaces web, de newsletters responsives et correction de bugs front-end.",
               'Recherche de solutions visant à améliorer le workflow vidéo et la qualité de streaming et gestion de leur implémentation.'
             ]
           },
