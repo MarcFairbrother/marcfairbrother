@@ -35,9 +35,21 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
+  padding: 0 15px;
+  @include breakpoint($tablet-width) {
+    padding: 0 30px;
+    @include breakpoint($desktop-width) {
+      margin: 0 auto;
+      max-width: 1280px;
+      width: 100%;
+    }
+  }
   &__header {
     @include breakpoint($tablet-width) {
       width: 75%;
+      @include breakpoint($desktop-width) {
+        width: 50%;
+      }
     }
   }
 }

@@ -69,14 +69,40 @@ export default {
   background: var(--altBg);
   border-radius: 4px;
   color: var(--altTextColor);
-  margin: 0 15px 75px;
+  margin-bottom: 120px;
   padding: 0 15px 30px;
   &:last-of-type {
     margin-bottom: 60px;
   }
   @include breakpoint($tablet-width) {
-    margin: 0 30px 75px;
     padding: 30px;
+    @include breakpoint($desktop-width) {
+      display: grid;
+      grid-template-rows: min-content 1fr;
+      grid-gap: 30px;
+      &:nth-child(even) {
+        grid-template-columns: 1fr 1.25fr;
+      }
+      &:nth-child(odd) {
+        grid-template-columns: 1.25fr 1fr;
+      }
+      @include breakpoint($large-width) {
+        grid-gap: 45px;
+        padding: 45px;
+        margin-bottom: 180px;
+      }
+    }
+  }
+  @include breakpoint($desktop-width) {
+    &__details {
+      grid-row: 1/3;
+    }
+    &:nth-child(even) &__details {
+      grid-column: 2;
+    }
+    &:nth-child(odd) &__details {
+      grid-column: 1;
+    }
   }
   &__title {
     border-bottom: solid 4px var(--accentColor);
@@ -84,11 +110,17 @@ export default {
     font-size: 1.5rem;
     margin-bottom: 30px;
     padding-bottom: 15px;
+    @include breakpoint($large-width) {
+      font-size: 2rem;
+    }
   }
   &__roles {
     font-size: 1rem;
     line-height: 1.45;
     margin-bottom: 30px;
+    @include breakpoint($large-width) {
+      font-size: 1.2rem;
+    }
     & > li {
       display: inline;
       &::after {
@@ -108,6 +140,9 @@ export default {
     &:last-of-type {
       margin-bottom: 30px;
     }
+    @include breakpoint($large-width) {
+      font-size: 1rem;
+    }
   }
   &__tasks {
     margin-left: 15px;
@@ -116,6 +151,9 @@ export default {
       line-height: 1.45;
       margin-bottom: 15px;
       position: relative;
+      @include breakpoint($large-width) {
+        font-size: 1rem;
+      }
       &:last-of-type {
         margin-bottom: 30px;
       }
@@ -129,6 +167,9 @@ export default {
         position: absolute;
         top: 6px;
         width: 8px;
+        @include breakpoint($large-width) {
+          top: 8px;
+        }
       }
       @include breakpoint($tablet-width) {
         clear: left;
@@ -141,6 +182,9 @@ export default {
       display: inline;
       font-size: 0.9rem;
       line-height: 1.45;
+      @include breakpoint($large-width) {
+        font-size: 1rem;
+      }
       &::after {
         content: ', ';
       }
@@ -157,9 +201,20 @@ export default {
   }
   &__links {
     display: flex;
+    @include breakpoint($desktop-width) {
+      align-self: start;
+      justify-content: center;
+    }
     & > p {
       font-size: 0.75rem;
       line-height: 1.5;
+      @include breakpoint($desktop-width) {
+        text-align: center;
+        margin: 0 45px;
+        @include breakpoint($large-width) {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
   &__link {
@@ -174,6 +229,10 @@ export default {
     &:last-of-type {
       margin-right: 0;
     }
+    @include breakpoint($large-width) {
+      font-size: 1rem;
+      margin-right: 30px;
+    }
     &::before {
       background-position: center;
       background-repeat: no-repeat;
@@ -183,6 +242,12 @@ export default {
       height: 15px;
       margin-right: 10px;
       width: 15px;
+      @include breakpoint($large-width) {
+        background-size: 18px;
+        height: 18px;
+        margin-right: 15px;
+        width: 18px;
+      }
     }
     &--website {
       &::before {
