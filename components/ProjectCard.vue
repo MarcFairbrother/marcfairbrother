@@ -1,5 +1,10 @@
 <template>
   <article class="project">
+    <ProjectImage
+      v-if="projectContent.screenshot"
+      :img-url="projectContent.screenshot.src"
+      :img-alt="projectContent.title"
+    />
     <h3 class="project__title">{{ projectContent.title }}</h3>
     <ul class="project__roles">
       <li v-for="(role, i) in projectContent.roles" :key="i" v-html="role"></li>
@@ -26,8 +31,19 @@
         :href="projectContent.website.url"
         v-if="projectContent.website"
         v-html="projectContent.website.label"
+        target="_blank"
+        rel="noopener"
         class="project__link project__link--website"
       ></a>
+      <a
+        :href="projectContent.srcCode.url"
+        v-if="projectContent.srcCode"
+        v-html="projectContent.srcCode.label"
+        target="_blank"
+        rel="noopener"
+        class="project__link project__link--code"
+      ></a>
+      <p v-if="projectContent.message" v-html="projectContent.message"></p>
     </section>
   </article>
 </template>
@@ -43,8 +59,11 @@ export default {
   background: var(--altBg);
   border-radius: 4px;
   color: var(--altTextColor);
-  margin: 0 15px 45px;
-  padding: 30px 15px;
+  margin: 0 15px 75px;
+  padding: 0 15px 30px;
+  &:last-of-type {
+    margin-bottom: 60px;
+  }
   &__title {
     border-bottom: solid 4px var(--accentColor);
     display: inline-block;
@@ -121,6 +140,10 @@ export default {
   }
   &__links {
     display: flex;
+    & > p {
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
   }
   &__link {
     align-items: center;
@@ -129,7 +152,11 @@ export default {
     display: flex;
     font-size: 0.9rem;
     line-height: 1.45;
+    margin-right: 15px;
     padding: 15px;
+    &:last-of-type {
+      margin-right: 0;
+    }
     &::before {
       background-position: center;
       background-repeat: no-repeat;
@@ -154,6 +181,23 @@ export default {
         }
         html[data-theme='dark'] & {
           background-image: var(--link-dark);
+        }
+      }
+    }
+    &--code {
+      &::before {
+        background-image: var(--srcCode-light);
+        @media (prefers-color-scheme: light) {
+          background-image: var(--srcCode-light);
+        }
+        html[data-theme='light'] & {
+          background-image: var(--srcCode-light);
+        }
+        @media (prefers-color-scheme: dark) {
+          background-image: var(--srcCode-dark);
+        }
+        html[data-theme='dark'] & {
+          background-image: var(--srcCode-dark);
         }
       }
     }
