@@ -180,7 +180,9 @@ export default {
       fspro: {
         title: 'Festival Scope Pro',
         screenshot: {
-          src: '/img/fspro_1280.jpg'
+          mobile: '/img/fspro-mobile.png',
+          tablet: '/img/fspro-tablet.png',
+          large: '/img/fspro-large.png'
         },
         roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
         presentation: [
@@ -216,7 +218,9 @@ export default {
       artekino: {
         title: 'ArteKino Festival',
         screenshot: {
-          src: '/img/akf_1280.jpg'
+          mobile: '/img/akf-mobile.png',
+          tablet: '/img/akf-tablet.png',
+          large: '/img/akf-large.png'
         },
         roles: ['Project Manager', 'UX & UI Designer', 'Front-End Developer'],
         presentation: [
@@ -250,7 +254,9 @@ export default {
       fspub: {
         title: 'Festival Scope',
         screenshot: {
-          src: '/img/fspub_1280.jpg'
+          mobile: '/img/fspub-mobile.png',
+          tablet: '/img/fspub-tablet.png',
+          large: '/img/fspub-large.png'
         },
         roles: ['Project Manager', 'UX & UI Designer'],
         presentation: [
@@ -282,7 +288,9 @@ export default {
       memory: {
         title: 'Vanilla JS Memory',
         screenshot: {
-          src: '/img/memory.jpg'
+          mobile: '/img/memory-mobile.png',
+          tablet: '/img/memory-tablet.png',
+          large: '/img/memory-large.png'
         },
         roles: ['Developer', 'UX & UI Designer'],
         presentation: [
@@ -323,7 +331,9 @@ export default {
       metronome: {
         title: 'Vanilla JS Metronome',
         screenshot: {
-          src: '/img/metronome.png'
+          mobile: '/img/metronome-mobile.png',
+          tablet: '/img/metronome-tablet.png',
+          large: '/img/metronome-large.png'
         },
         roles: ['Developer', 'UX & UI Designer'],
         presentation: [
@@ -351,7 +361,9 @@ export default {
       francoverse: {
         title: 'Into the FrancoVerse',
         screenshot: {
-          src: '/img/francoverse_1280.jpg'
+          mobile: '/img/francoverse-mobile.png',
+          tablet: '/img/francoverse-tablet.png',
+          large: '/img/francoverse-large.png'
         },
         roles: ['Developer', 'UX & UI Designer'],
         presentation: [
