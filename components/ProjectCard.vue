@@ -2,7 +2,7 @@
   <article class="project">
     <ProjectImage
       v-if="projectContent.screenshot"
-      :img-url="projectContent.screenshot.src"
+      :img-url="projectContent.screenshot"
       :img-alt="projectContent.title"
     />
     <section class="project__details">

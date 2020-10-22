@@ -1,5 +1,10 @@
 <template>
-  <img :src="imgUrl" :alt="imgAlt" class="screenshot" />
+  <picture>
+    <source media="(max-width: 767px)" :srcset="imgUrl.mobile" />
+    <source media="(min-width: 768px)" :srcset="imgUrl.tablet" />
+    <source media="(min-width: 1200px)" :srcset="imgUrl.large" />
+    <img :src="imgUrl.large" :alt="imgAlt" class="screenshot" loading="lazy" />
+  </picture>
 </template>
 
 <script>
