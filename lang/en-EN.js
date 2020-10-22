@@ -176,9 +176,20 @@ export default {
         "A collection of professional and side projects I've worked on as designer, developer, and/or project manager."
       ]
     },
-    content: {
-      fspro: {
+    noProjects: 'There are no projects corresponding to the selected filters.',
+    filters: {
+      labels: {
+        pro: 'Professional',
+        perso: 'Personal',
+        dev: 'Development',
+        design: 'Design'
+      },
+      buttonLabel: 'Filters'
+    },
+    content: [
+      {
         title: 'Festival Scope Pro',
+        categories: ['pro', 'dev', 'design'],
         screenshot: {
           mobile: '/img/fspro-mobile.png',
           tablet: '/img/fspro-tablet.png',
@@ -215,8 +226,9 @@ export default {
           label: 'Visit Website'
         }
       },
-      artekino: {
+      {
         title: 'ArteKino Festival',
+        categories: ['pro', 'dev', 'design'],
         screenshot: {
           mobile: '/img/akf-mobile.png',
           tablet: '/img/akf-tablet.png',
@@ -251,8 +263,9 @@ export default {
           label: 'Visit Website'
         }
       },
-      fspub: {
+      {
         title: 'Festival Scope',
+        categories: ['pro', 'design'],
         screenshot: {
           mobile: '/img/fspub-mobile.png',
           tablet: '/img/fspub-tablet.png',
@@ -285,8 +298,9 @@ export default {
         message:
           'This project has been moved to a new technical solution since I last worked on it in 2020.'
       },
-      memory: {
+      {
         title: 'Vanilla JS Memory',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/memory-mobile.png',
           tablet: '/img/memory-tablet.png',
@@ -328,8 +342,9 @@ export default {
           label: 'View Code'
         }
       },
-      metronome: {
+      {
         title: 'Vanilla JS Metronome',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/metronome-mobile.png',
           tablet: '/img/metronome-tablet.png',
@@ -358,8 +373,9 @@ export default {
           label: 'View Code'
         }
       },
-      francoverse: {
+      {
         title: 'Into the FrancoVerse',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/francoverse-mobile.png',
           tablet: '/img/francoverse-tablet.png',
@@ -399,7 +415,7 @@ export default {
           label: 'View Code'
         }
       }
-    }
+    ]
   },
   contact: {
     meta: {

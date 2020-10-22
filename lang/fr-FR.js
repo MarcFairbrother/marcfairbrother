@@ -178,9 +178,21 @@ export default {
         'Une sélection de projets professionnels et personnels sur lesquels je suis intervenu en tant que designer, développeur ou chef de projet.'
       ]
     },
-    content: {
-      fspro: {
+    noProjects:
+      "Il n'y a pas de projets correspondant aux filtres sélectionnés.",
+    filters: {
+      labels: {
+        pro: 'Professionnel',
+        perso: 'Personnel',
+        dev: 'Développement',
+        design: 'Design'
+      },
+      buttonLabel: 'Filtrer'
+    },
+    content: [
+      {
         title: 'Festival Scope Pro',
+        categories: ['pro', 'dev', 'design'],
         screenshot: {
           mobile: '/img/fspro-mobile.png',
           tablet: '/img/fspro-tablet.png',
@@ -217,8 +229,9 @@ export default {
           label: 'Visiter le site'
         }
       },
-      artekino: {
+      {
         title: 'ArteKino Festival',
+        categories: ['pro', 'dev', 'design'],
         screenshot: {
           mobile: '/img/akf-mobile.png',
           tablet: '/img/akf-tablet.png',
@@ -253,8 +266,9 @@ export default {
           label: 'Visiter le site'
         }
       },
-      fspub: {
+      {
         title: 'Festival Scope',
+        categories: ['pro', 'design'],
         screenshot: {
           mobile: '/img/fspub-mobile.png',
           tablet: '/img/fspub-tablet.png',
@@ -287,8 +301,9 @@ export default {
         message:
           'Ce projet a été migré vers une nouvelle solution technique depuis ma dernière participation en 2020.'
       },
-      memory: {
+      {
         title: 'Memory Vanilla JS',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/memory-mobile.png',
           tablet: '/img/memory-tablet.png',
@@ -330,8 +345,9 @@ export default {
           label: 'Voir le code'
         }
       },
-      metronome: {
+      {
         title: 'Metronome Vanilla JS',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/metronome-mobile.png',
           tablet: '/img/metronome-tablet.png',
@@ -360,8 +376,9 @@ export default {
           label: 'Voir le code'
         }
       },
-      francoverse: {
+      {
         title: 'Into the FrancoVerse',
+        categories: ['perso', 'dev', 'design'],
         screenshot: {
           mobile: '/img/francoverse-mobile.png',
           tablet: '/img/francoverse-tablet.png',
@@ -401,7 +418,7 @@ export default {
           label: 'Voir le code'
         }
       }
-    }
+    ]
   },
   contact: {
     meta: {
