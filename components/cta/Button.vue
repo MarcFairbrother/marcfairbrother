@@ -15,9 +15,10 @@ export default {
   display: inline-block;
   position: relative;
   &__label {
+    align-items: center;
     border: solid 2px;
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
     font-weight: 900;
     font-size: 1rem;
     line-height: 1.45;
@@ -61,6 +62,48 @@ export default {
     &::after {
       background: var(--altTextColor);
       box-shadow: 0 0 3px var(--altBg);
+    }
+  }
+  .projects & {
+    &__label::before {
+      background: var(--filters-light);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      content: '';
+      display: inline-block;
+      height: 20px;
+      margin-right: 15px;
+      width: 20px;
+      @media (prefers-color-scheme: light) {
+        background-image: var(--filters-light);
+      }
+      html[data-theme='light'] & {
+        background-image: var(--filters-light);
+      }
+      @media (prefers-color-scheme: dark) {
+        background-image: var(--filters-dark);
+      }
+      html[data-theme='dark'] & {
+        background-image: var(--filters-dark);
+      }
+    }
+    &--close {
+      & .cta__label::before {
+        background: var(--close-light);
+        @media (prefers-color-scheme: light) {
+          background-image: var(--close-light);
+        }
+        html[data-theme='light'] & {
+          background-image: var(--close-light);
+        }
+        @media (prefers-color-scheme: dark) {
+          background-image: var(--close-dark);
+        }
+        html[data-theme='dark'] & {
+          background-image: var(--close-dark);
+        }
+      }
     }
   }
 }

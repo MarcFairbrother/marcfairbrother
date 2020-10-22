@@ -15,9 +15,10 @@ export default {
   display: inline-block;
   position: relative;
   &__label {
+    align-items: center;
     border: solid 2px;
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
     font-weight: 900;
     font-size: 1rem;
     line-height: 1.45;
