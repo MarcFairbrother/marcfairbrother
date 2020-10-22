@@ -90,12 +90,12 @@ export default {
     }
   }
   &__content {
-    margin: 0 0 45px;
+    margin: 90px 0 45px;
     @include breakpoint($tablet-width) {
-      margin: 0 0 45px;
+      margin: 120px 0 45px;
       position: relative;
       @include breakpoint($desktop-width) {
-        margin: 0 0 45px;
+        margin: 150px 0 45px;
       }
       &::before {
         border-bottom: dotted 2px var(--mainTextColor);
