@@ -1,6 +1,6 @@
 export default {
-  test: {
-    welcome: 'Welcome'
+  meta: {
+    ogImg: 'https://marcfairbrother.com/img/marc_fairbrother_og-en.png'
   },
   nav: {
     home: 'Home',
@@ -19,6 +19,10 @@ export default {
     toDark: 'Switch to dark theme'
   },
   index: {
+    meta: {
+      title: 'UX-plorer',
+      description: 'I design and develop user-centric digital experiences.'
+    },
     heading: {
       title: '<span>My name is</span> <br>Marc Fairbrother',
       description: 'I design and develop user-centric digital experiences.',
@@ -68,7 +72,10 @@ export default {
   },
   about: {
     meta: {
-      slug: 'about'
+      slug: 'about',
+      title: 'About Me',
+      description:
+        "I'm a web designer and front-end developer with a strong belief in building accessible, inclusive, and stand-out digital experiences."
     },
     heading: {
       title: 'My name is Marc Fairbrother',
@@ -168,7 +175,10 @@ export default {
   },
   projects: {
     meta: {
-      slug: 'projects'
+      slug: 'projects',
+      title: 'My Projects',
+      description:
+        "A collection of professional and side projects I've worked on as designer, developer, and/or project manager."
     },
     heading: {
       title: 'Selected Projects',
@@ -419,7 +429,9 @@ export default {
   },
   contact: {
     meta: {
-      slug: 'contact'
+      slug: 'contact',
+      title: 'Contact Me',
+      description: 'Please feel free to send me a message!'
     },
     heading: {
       title: "Let's talk!",

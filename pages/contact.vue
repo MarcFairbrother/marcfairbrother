@@ -6,6 +6,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('contact.meta.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('contact.meta.description')
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `Marc Fairbrother | ${this.$t('contact.meta.title')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.$t('contact.meta.description')
+        }
+      ]
+    };
+  },
   async asyncData({ store }) {
     // update current route in state when navigating to page
     await store.dispatch('i18n/setRouteParams', {

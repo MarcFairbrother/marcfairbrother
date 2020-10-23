@@ -1,6 +1,6 @@
 export default {
-  test: {
-    welcome: 'Bienvenue'
+  meta: {
+    ogImg: 'https://marcfairbrother.com/img/marc_fairbrother_og-fr.png'
   },
   nav: {
     home: 'Accueil',
@@ -19,6 +19,11 @@ export default {
     toDark: 'Activer le mode nuit'
   },
   index: {
+    meta: {
+      title: 'UX-plorer',
+      description:
+        "Je conçois et développe des applications numériques centrées sur l'expérience utilisateur."
+    },
     heading: {
       title: "<span>Je m'appelle</span> <br>Marc Fairbrother",
       description:
@@ -69,7 +74,10 @@ export default {
   },
   about: {
     meta: {
-      slug: 'parcours'
+      slug: 'parcours',
+      title: 'Mon Parcours',
+      description:
+        "Je suis un web designer et développeur front-end passionné par la création d'applications numériques accessibles, inclusives et originales."
     },
     heading: {
       title: "Je m'appelle Marc Fairbrother",
@@ -170,7 +178,10 @@ export default {
   },
   projects: {
     meta: {
-      slug: 'projets'
+      slug: 'projets',
+      title: 'Mes Projets',
+      description:
+        'Une sélection de projets professionnels et personnels sur lesquels je suis intervenu en tant que designer, développeur ou chef de projet.'
     },
     heading: {
       title: 'Mes Projets',
@@ -422,7 +433,10 @@ export default {
   },
   contact: {
     meta: {
-      slug: 'contact'
+      slug: 'contact',
+      title: 'Contactez moi',
+      description:
+        "N'hésitez pas à m'envoyer un message si vous avez des questions."
     },
     heading: {
       title: 'Discutons!',

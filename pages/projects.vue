@@ -59,6 +59,28 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.$t('projects.meta.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('projects.meta.description')
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `Marc Fairbrother | ${this.$t('projects.meta.title')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.$t('projects.meta.description')
+        }
+      ]
+    };
+  },
   async asyncData({ store }) {
     // update current route in state when navigating to page
     await store.dispatch('i18n/setRouteParams', {
