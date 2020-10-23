@@ -1,9 +1,41 @@
 <template>
   <picture>
-    <source media="(max-width: 767px)" :srcset="imgUrl.mobile" />
-    <source media="(min-width: 768px)" :srcset="imgUrl.tablet" />
-    <source media="(min-width: 1200px)" :srcset="imgUrl.large" />
-    <img :src="imgUrl.large" :alt="imgAlt" class="screenshot" loading="lazy" />
+    <source
+      type="image/webp"
+      media="(max-width: 767px)"
+      :srcset="`/img/projects/webp/${imgUrl.mobile}.webp`"
+    />
+    <source
+      type="image/png"
+      media="(max-width: 767px)"
+      :srcset="`/img/projects/png/${imgUrl.mobile}.png`"
+    />
+    <source
+      type="image/webp"
+      media="(min-width: 768px)"
+      :srcset="`/img/projects/webp/${imgUrl.tablet}.webp`"
+    />
+    <source
+      type="image/png"
+      media="(min-width: 768px)"
+      :srcset="`/img/projects/png/${imgUrl.tablet}.png`"
+    />
+    <source
+      type="image/webp"
+      media="(min-width: 1200px)"
+      :srcset="`/img/projects/webp/${imgUrl.large}.webp`"
+    />
+    <source
+      type="image/png"
+      media="(min-width: 1200px)"
+      :srcset="`/img/projects/png/${imgUrl.large}.png`"
+    />
+    <img
+      :src="`/img/projects/png/${imgUrl.large}.png`"
+      :alt="imgAlt"
+      class="screenshot"
+      loading="lazy"
+    />
   </picture>
 </template>
 

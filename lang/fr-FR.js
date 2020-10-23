@@ -205,9 +205,9 @@ export default {
         title: 'Festival Scope Pro',
         categories: ['pro', 'dev', 'design'],
         screenshot: {
-          mobile: '/img/fspro-mobile.png',
-          tablet: '/img/fspro-tablet.png',
-          large: '/img/fspro-large.png'
+          mobile: 'fspro-mobile',
+          tablet: 'fspro-tablet',
+          large: 'fspro-large'
         },
         roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
         presentation: [
@@ -244,9 +244,9 @@ export default {
         title: 'ArteKino Festival',
         categories: ['pro', 'dev', 'design'],
         screenshot: {
-          mobile: '/img/akf-mobile.png',
-          tablet: '/img/akf-tablet.png',
-          large: '/img/akf-large.png'
+          mobile: 'akf-mobile',
+          tablet: 'akf-tablet',
+          large: 'akf-large'
         },
         roles: ['Chef de projet', 'Designer UX & UI', 'Développeur front-end'],
         presentation: [
@@ -281,9 +281,9 @@ export default {
         title: 'Festival Scope',
         categories: ['pro', 'design'],
         screenshot: {
-          mobile: '/img/fspub-mobile.png',
-          tablet: '/img/fspub-tablet.png',
-          large: '/img/fspub-large.png'
+          mobile: 'fspub-mobile',
+          tablet: 'fspub-tablet',
+          large: 'fspub-large'
         },
         roles: ['Chef de projet', 'Designer UX & UI'],
         presentation: [
@@ -316,9 +316,9 @@ export default {
         title: 'Memory Vanilla JS',
         categories: ['perso', 'dev', 'design'],
         screenshot: {
-          mobile: '/img/memory-mobile.png',
-          tablet: '/img/memory-tablet.png',
-          large: '/img/memory-large.png'
+          mobile: 'memory-mobile',
+          tablet: 'memory-tablet',
+          large: 'memory-large'
         },
         roles: ['Développeur', 'Designer UX & UI'],
         presentation: [
@@ -360,9 +360,9 @@ export default {
         title: 'Metronome Vanilla JS',
         categories: ['perso', 'dev', 'design'],
         screenshot: {
-          mobile: '/img/metronome-mobile.png',
-          tablet: '/img/metronome-tablet.png',
-          large: '/img/metronome-large.png'
+          mobile: 'metronome-mobile',
+          tablet: 'metronome-tablet',
+          large: 'metronome-large'
         },
         roles: ['Développeur', 'Designer UX & UI'],
         presentation: [
@@ -391,9 +391,9 @@ export default {
         title: 'Into the FrancoVerse',
         categories: ['perso', 'dev', 'design'],
         screenshot: {
-          mobile: '/img/francoverse-mobile.png',
-          tablet: '/img/francoverse-tablet.png',
-          large: '/img/francoverse-large.png'
+          mobile: 'francoverse-mobile',
+          tablet: 'francoverse-tablet',
+          large: 'francoverse-large'
         },
         roles: ['Développeur', 'Designer UX & UI'],
         presentation: [
