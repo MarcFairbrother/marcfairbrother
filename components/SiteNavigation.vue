@@ -41,8 +41,8 @@ export default {
     toggleSettings() {
       const header = document.querySelector('.header');
       header.classList.toggle('header--opensettings');
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -52,7 +52,6 @@ export default {
     background: var(--altBg);
     border-top: solid 1px var(--altTextColor);
     color: var(--altTextColor);
-    font-size: 0.625rem;
     height: 75px;
     padding: 5px;
     position: fixed;
@@ -60,7 +59,6 @@ export default {
     width: 100%;
     z-index: 10;
     @include breakpoint($tablet-width) {
-      font-size: 0.75rem;
       height: 105px;
       padding: 15px 30px;
     }
@@ -71,6 +69,10 @@ export default {
       justify-items: center;
     }
     &__item {
+      font-size: 0.625rem;
+      @include breakpoint($tablet-width) {
+        font-size: 0.75rem;
+      }
       & > * {
         align-items: center;
         display: flex;

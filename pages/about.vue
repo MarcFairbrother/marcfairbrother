@@ -141,11 +141,9 @@ export default {
     & h3 {
       border-bottom: solid 4px var(--accentColor);
       display: inline-block;
-      font-size: 1.5rem;
       margin-bottom: 45px;
       padding-bottom: 5px;
       @include breakpoint($tablet-width) {
-        font-size: 2rem;
         margin-bottom: 60px;
         @include breakpoint($large-width) {
           margin-bottom: 90px;
@@ -193,15 +191,7 @@ export default {
     }
     & h4 {
       font-family: 'Roboto';
-      font-size: 1rem;
-      line-height: 1.45;
       margin-bottom: 15px;
-      @include breakpoint($tablet-width) {
-        font-size: 1.2rem;
-        @include breakpoint($large-width) {
-          font-size: 1.4rem;
-        }
-      }
     }
     @include breakpoint($tablet-width) {
       & > li {
@@ -232,18 +222,12 @@ export default {
       }
     }
     & li {
-      font-size: 1rem;
-      line-height: 1.45;
       margin: 0 15px 15px;
       position: relative;
       @include breakpoint($tablet-width) {
-        font-size: 1.2rem;
         margin-left: 75px;
         &:last-of-type {
           margin-bottom: 30px;
-        }
-        @include breakpoint($large-width) {
-          font-size: 1.4rem;
         }
       }
       &::before {
@@ -266,17 +250,13 @@ export default {
     }
   }
   &__details {
-    font-size: 1rem;
-    line-height: 1.45;
     margin-bottom: 30px;
     @include breakpoint($tablet-width) {
-      font-size: 1.2rem;
       margin-left: 60px;
       margin-bottom: 30px;
       @include breakpoint($desktop-width) {
         max-width: 75%;
         @include breakpoint($large-width) {
-          font-size: 1.4rem;
           margin-bottom: 60px;
         }
       }

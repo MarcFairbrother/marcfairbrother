@@ -107,20 +107,11 @@ export default {
   &__title {
     border-bottom: solid 4px var(--accentColor);
     display: inline-block;
-    font-size: 1.5rem;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    @include breakpoint($large-width) {
-      font-size: 2rem;
-    }
   }
   &__roles {
-    font-size: 1rem;
-    line-height: 1.45;
     margin-bottom: 30px;
-    @include breakpoint($large-width) {
-      font-size: 1.2rem;
-    }
     & > li {
       display: inline;
       &::after {
@@ -134,26 +125,16 @@ export default {
     }
   }
   &__presentation {
-    font-size: 0.9rem;
-    line-height: 1.45;
     margin-bottom: 15px;
     &:last-of-type {
       margin-bottom: 30px;
-    }
-    @include breakpoint($large-width) {
-      font-size: 1rem;
     }
   }
   &__tasks {
     margin-left: 15px;
     & > li {
-      font-size: 0.9rem;
-      line-height: 1.45;
       margin-bottom: 15px;
       position: relative;
-      @include breakpoint($large-width) {
-        font-size: 1rem;
-      }
       &:last-of-type {
         margin-bottom: 30px;
       }
@@ -180,11 +161,6 @@ export default {
     margin-bottom: 30px;
     & > li {
       display: inline;
-      font-size: 0.9rem;
-      line-height: 1.45;
-      @include breakpoint($large-width) {
-        font-size: 1rem;
-      }
       &::after {
         content: ', ';
       }
@@ -222,15 +198,12 @@ export default {
     border: solid 1px var(--altTextColor);
     border-radius: 4px;
     display: flex;
-    font-size: 0.9rem;
-    line-height: 1.45;
     margin-right: 15px;
     padding: 15px;
     &:last-of-type {
       margin-right: 0;
     }
     @include breakpoint($large-width) {
-      font-size: 1rem;
       margin-right: 30px;
     }
     &::before {

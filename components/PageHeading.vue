@@ -30,26 +30,13 @@ export default {
     }
   }
   & > h2 {
-    font-size: 1.5rem;
     margin-bottom: 15px;
     @include breakpoint($tablet-width) {
-      font-size: 2rem;
       margin-bottom: 30px;
     }
   }
   & > p {
-    font-size: 1rem;
-    line-height: 1.45;
     margin-bottom: 15px;
-    @include breakpoint($tablet-width) {
-      font-size: 1.4rem;
-      @include breakpoint($desktop-width) {
-        font-size: 1.2rem;
-        @include breakpoint($large-width) {
-          font-size: 1.4rem;
-        }
-      }
-    }
   }
   &.about__header > p:last-of-type {
     margin-top: 30px;
