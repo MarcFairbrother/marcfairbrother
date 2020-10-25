@@ -114,6 +114,10 @@ export default {
     margin-bottom: 30px;
     & > li {
       display: inline;
+      font-weight: 700;
+      @include breakpoint($tablet-width) {
+        font-size: 1rem;
+      }
       &::after {
         content: ', ';
       }
@@ -129,12 +133,19 @@ export default {
     &:last-of-type {
       margin-bottom: 30px;
     }
+    @include breakpoint($tablet-width) {
+      font-size: 1rem;
+    }
   }
   &__tasks {
     margin-left: 15px;
     & > li {
       margin-bottom: 15px;
       position: relative;
+      @include breakpoint($tablet-width) {
+        clear: left;
+        font-size: 1rem;
+      }
       &:last-of-type {
         margin-bottom: 30px;
       }
@@ -152,15 +163,15 @@ export default {
           top: 8px;
         }
       }
-      @include breakpoint($tablet-width) {
-        clear: left;
-      }
     }
   }
   &__tools {
     margin-bottom: 30px;
     & > li {
       display: inline;
+      @include breakpoint($desktop-width) {
+        font-size: 1rem;
+      }
       &::after {
         content: ', ';
       }
@@ -177,6 +188,9 @@ export default {
   }
   &__links {
     display: flex;
+    @include breakpoint($tablet-width) {
+      font-size: 1rem;
+    }
     @include breakpoint($desktop-width) {
       align-self: start;
       justify-content: center;

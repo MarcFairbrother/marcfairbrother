@@ -128,7 +128,7 @@ export default {
         position: absolute;
         left: 22.5px;
         top: 0;
-        width: 37.5px;
+        width: 40px;
         z-index: -5;
         @include breakpoint($desktop-width) {
           left: 22.5px;
@@ -242,9 +242,6 @@ export default {
         width: 8px;
         @include breakpoint($tablet-width) {
           top: 10px;
-          @include breakpoint($large-width) {
-            top: 13px;
-          }
         }
       }
     }

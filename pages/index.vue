@@ -97,6 +97,7 @@ export default {
       font-size: 2.5rem;
       grid-column: 1/3;
       grid-row: 1;
+      justify-self: start;
       margin-bottom: 30px;
       padding-bottom: 10px;
       @include breakpoint($tablet-width) {
@@ -190,6 +191,9 @@ export default {
           margin-right: 7px;
           margin-top: 0.7rem;
           width: 8px;
+          @include breakpoint($desktop-width) {
+            margin-top: 0.5rem;
+          }
           @include breakpoint($large-width) {
             margin-top: 0.75rem;
           }
