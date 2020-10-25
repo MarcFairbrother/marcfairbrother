@@ -70,15 +70,15 @@ export default {
   padding: 60px 15px;
   @include breakpoint($tablet-width) {
     padding: 60px 30px;
-    @include breakpoint($desktop-width) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 100vh;
-      @include breakpoint($large-width) {
-        padding: 90px 30px;
-      }
-    }
+  }
+  @include breakpoint($desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  @include breakpoint($large-width) {
+    padding: 90px 30px;
   }
   &__header {
     margin-bottom: 45px;
@@ -96,9 +96,9 @@ export default {
       @include breakpoint($desktop-width) {
         font-size: 2.5rem;
         text-align: center;
-        @include breakpoint($large-width) {
-          font-size: 3rem;
-        }
+      }
+      @include breakpoint($large-width) {
+        font-size: 3rem;
       }
     }
     & > p {
@@ -110,16 +110,16 @@ export default {
         line-height: 1.5;
         margin-right: 0;
         max-width: 66%;
-        @include breakpoint($desktop-width) {
-          font-size: 1.2rem;
-          margin: 0 auto 15px;
-          max-width: 500px;
-          text-align: center;
-          @include breakpoint($large-width) {
-            font-size: 1.4rem;
-            max-width: 600px;
-          }
-        }
+      }
+      @include breakpoint($desktop-width) {
+        font-size: 1.2rem;
+        margin: 0 auto 15px;
+        max-width: 500px;
+        text-align: center;
+      }
+      @include breakpoint($large-width) {
+        font-size: 1.4rem;
+        max-width: 600px;
       }
     }
   }
@@ -170,12 +170,12 @@ export default {
       padding-bottom: 15px;
       @include breakpoint($tablet-width) {
         font-size: 2rem;
-        @include breakpoint($desktop-width) {
-          font-size: 1.5rem;
-          @include breakpoint($large-width) {
-            font-size: 2rem;
-          }
-        }
+      }
+      @include breakpoint($desktop-width) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint($large-width) {
+        font-size: 2rem;
       }
     }
   }
@@ -187,12 +187,12 @@ export default {
       margin-bottom: 15px;
       @include breakpoint($tablet-width) {
         font-size: 1.4rem;
-        @include breakpoint($desktop-width) {
-          font-size: 1.2rem;
-          @include breakpoint($large-width) {
-            font-size: 1.4rem;
-          }
-        }
+      }
+      @include breakpoint($desktop-width) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint($large-width) {
+        font-size: 1.4rem;
       }
       &::before {
         background: var(--accentColor);

@@ -139,12 +139,12 @@ export default {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 0 30px;
-    @include breakpoint($desktop-width) {
-      grid-template-columns: 1fr 1fr;
-      margin: 0 auto;
-      max-width: 1280px;
-      width: 100%;
-    }
+  }
+  @include breakpoint($desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
   }
   &__header {
     @include breakpoint($tablet-width) {
@@ -167,9 +167,9 @@ export default {
       justify-content: space-evenly;
       margin: 75px 0 0;
       grid-column: 1/3;
-      @include breakpoint($large-width) {
-        margin: 105px 0 0;
-      }
+    }
+    @include breakpoint($large-width) {
+      margin: 105px 0 0;
     }
     & > div {
       align-items: center;

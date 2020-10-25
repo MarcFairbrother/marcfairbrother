@@ -83,14 +83,14 @@ export default {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       padding: 180px 30px 90px;
-      @include breakpoint($desktop-width) {
-        grid-template-rows: 1fr min-content min-content min-content 1fr;
-        margin: 0 auto;
-        max-width: 1280px;
-        min-height: calc(100vh - 53px);
-        padding: 60px 30px 60px;
-        width: 100%;
-      }
+    }
+    @include breakpoint($desktop-width) {
+      grid-template-rows: 1fr min-content min-content min-content 1fr;
+      margin: 0 auto;
+      max-width: 1280px;
+      min-height: calc(100vh - 53px);
+      padding: 60px 30px 60px;
+      width: 100%;
     }
     & h2 {
       border-bottom: solid 8px var(--accentColor);
@@ -108,17 +108,17 @@ export default {
         grid-column: 1/4;
         margin-bottom: 45px;
         width: max-content;
-        @include breakpoint($desktop-width) {
-          align-self: end;
-          font-size: 2.5rem;
-          grid-column: 1/3;
-          grid-row: 2;
-          margin-bottom: 30px;
-        }
-        @include breakpoint($large-width) {
-          font-size: 3rem;
-          margin-bottom: 45px;
-        }
+      }
+      @include breakpoint($desktop-width) {
+        align-self: end;
+        font-size: 2.5rem;
+        grid-column: 1/3;
+        grid-row: 2;
+        margin-bottom: 30px;
+      }
+      @include breakpoint($large-width) {
+        font-size: 3rem;
+        margin-bottom: 45px;
       }
       & > span {
         display: inline-block;
@@ -132,14 +132,6 @@ export default {
           display: flex;
           font-size: 1.4rem;
           margin-bottom: 30px;
-          @include breakpoint($desktop-width) {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            @include breakpoint($large-width) {
-              font-size: 1.4rem;
-              margin-bottom: 30px;
-            }
-          }
           &::before {
             background: var(--accentColor);
             border-radius: 50%;
@@ -150,6 +142,14 @@ export default {
             margin-right: 7px;
             width: 8px;
           }
+        }
+        @include breakpoint($desktop-width) {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+        }
+        @include breakpoint($large-width) {
+          font-size: 1.4rem;
+          margin-bottom: 30px;
         }
       }
       @include breakpoint($tablet-width) {
@@ -172,16 +172,6 @@ export default {
         font-size: 1.4rem;
         line-height: 1.45;
         margin-right: 0;
-        @include breakpoint($desktop-width) {
-          font-size: 1.2rem;
-          grid-column: 1/3;
-          grid-row: 3;
-          line-height: 1.25;
-          @include breakpoint($large-width) {
-            font-size: 1.4rem;
-            line-height: 1.45;
-          }
-        }
         &::before {
           background: var(--accentColor);
           border-radius: 50%;
@@ -200,6 +190,16 @@ export default {
           }
         }
       }
+      @include breakpoint($desktop-width) {
+        font-size: 1.2rem;
+        grid-column: 1/3;
+        grid-row: 3;
+        line-height: 1.25;
+      }
+      @include breakpoint($large-width) {
+        font-size: 1.4rem;
+        line-height: 1.45;
+      }
     }
   }
   &__cta {
@@ -215,13 +215,13 @@ export default {
     @include breakpoint($tablet-width) {
       grid-column: 2/4;
       justify-self: center;
-      @include breakpoint($desktop-width) {
-        align-self: start;
-        grid-column: 1/3;
-        grid-row: 4;
-        justify-self: start;
-        margin-left: 15px;
-      }
+    }
+    @include breakpoint($desktop-width) {
+      align-self: start;
+      grid-column: 1/3;
+      grid-row: 4;
+      justify-self: start;
+      margin-left: 15px;
     }
     & > .cta {
       margin: 30px 0;
@@ -238,14 +238,14 @@ export default {
     @include breakpoint($tablet-width) {
       grid-row: 3/5;
       width: 100%;
-      @include breakpoint($desktop-width) {
-        align-self: start;
-        grid-column: 4;
-        grid-row: 2/5;
-        transition: opacity 0.35s ease-in-out;
-        &:hover {
-          opacity: 1;
-        }
+    }
+    @include breakpoint($desktop-width) {
+      align-self: start;
+      grid-column: 4;
+      grid-row: 2/5;
+      transition: opacity 0.35s ease-in-out;
+      &:hover {
+        opacity: 1;
       }
     }
   }

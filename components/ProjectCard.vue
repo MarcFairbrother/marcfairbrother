@@ -76,24 +76,17 @@ export default {
   }
   @include breakpoint($tablet-width) {
     padding: 30px;
-    @include breakpoint($desktop-width) {
-      display: grid;
-      grid-template-rows: min-content 1fr;
-      grid-gap: 30px;
-      &:nth-child(even) {
-        grid-template-columns: 1fr 1.25fr;
-      }
-      &:nth-child(odd) {
-        grid-template-columns: 1.25fr 1fr;
-      }
-      @include breakpoint($large-width) {
-        grid-gap: 45px;
-        padding: 45px;
-        margin-bottom: 180px;
-      }
-    }
   }
   @include breakpoint($desktop-width) {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-gap: 30px;
+    &:nth-child(even) {
+      grid-template-columns: 1fr 1.25fr;
+    }
+    &:nth-child(odd) {
+      grid-template-columns: 1.25fr 1fr;
+    }
     &__details {
       grid-row: 1/3;
     }
@@ -103,6 +96,11 @@ export default {
     &:nth-child(odd) &__details {
       grid-column: 1;
     }
+  }
+  @include breakpoint($large-width) {
+    grid-gap: 45px;
+    padding: 45px;
+    margin-bottom: 180px;
   }
   &__title {
     border-bottom: solid 4px var(--accentColor);
@@ -201,9 +199,9 @@ export default {
       @include breakpoint($desktop-width) {
         text-align: center;
         margin: 0 45px;
-        @include breakpoint($large-width) {
-          font-size: 0.9rem;
-        }
+      }
+      @include breakpoint($large-width) {
+        font-size: 0.9rem;
       }
     }
   }

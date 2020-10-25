@@ -93,22 +93,22 @@ export default {
   padding: 0 15px;
   @include breakpoint($tablet-width) {
     padding: 0 30px;
-    @include breakpoint($desktop-width) {
-      margin: 0 auto;
-      max-width: 1280px;
-      padding: 0 30px;
-      width: 100%;
-    }
+  }
+  @include breakpoint($desktop-width) {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 30px;
+    width: 100%;
   }
   &__header {
     @include breakpoint($tablet-width) {
       width: 75%;
-      @include breakpoint($desktop-width) {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-auto-rows: max-content;
-        width: 100%;
-      }
+    }
+    @include breakpoint($desktop-width) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-auto-rows: max-content;
+      width: 100%;
     }
   }
   &__content {
@@ -116,9 +116,6 @@ export default {
     @include breakpoint($tablet-width) {
       margin: 120px 0 45px;
       position: relative;
-      @include breakpoint($desktop-width) {
-        margin: 150px 0 45px;
-      }
       &::before {
         border-bottom: dotted 2px var(--mainTextColor);
         border-left: dotted 2px var(--mainTextColor);
@@ -130,12 +127,17 @@ export default {
         top: 0;
         width: 40px;
         z-index: -5;
-        @include breakpoint($desktop-width) {
-          left: 22.5px;
-          @include breakpoint($large-width) {
-            bottom: -120px;
-          }
-        }
+      }
+    }
+    @include breakpoint($desktop-width) {
+      margin: 150px 0 45px;
+      &::before {
+        left: 22.5px;
+      }
+    }
+    @include breakpoint($large-width) {
+      &::before {
+        bottom: -120px;
       }
     }
     & h3 {
@@ -145,9 +147,9 @@ export default {
       padding-bottom: 5px;
       @include breakpoint($tablet-width) {
         margin-bottom: 60px;
-        @include breakpoint($large-width) {
-          margin-bottom: 90px;
-        }
+      }
+      @include breakpoint($large-width) {
+        margin-bottom: 90px;
       }
     }
     @include breakpoint($tablet-width) {
@@ -185,9 +187,9 @@ export default {
     margin-bottom: 45px;
     @include breakpoint($tablet-width) {
       margin-bottom: 60px;
-      @include breakpoint($large-width) {
-        margin-bottom: 90px;
-      }
+    }
+    @include breakpoint($large-width) {
+      margin-bottom: 90px;
     }
     & h4 {
       font-family: 'Roboto';
@@ -206,9 +208,9 @@ export default {
           margin-top: -2px;
           height: 30px;
           width: 30px;
-          @include breakpoint($large-width) {
-            margin-top: 0;
-          }
+        }
+        @include breakpoint($large-width) {
+          margin-top: 0;
         }
       }
     }
@@ -217,9 +219,9 @@ export default {
     margin-bottom: 30px;
     @include breakpoint($desktop-width) {
       max-width: 75%;
-      @include breakpoint($large-width) {
-        margin-bottom: 60px;
-      }
+    }
+    @include breakpoint($large-width) {
+      margin-bottom: 60px;
     }
     & li {
       margin: 0 15px 15px;
@@ -251,12 +253,12 @@ export default {
     @include breakpoint($tablet-width) {
       margin-left: 60px;
       margin-bottom: 30px;
-      @include breakpoint($desktop-width) {
-        max-width: 75%;
-        @include breakpoint($large-width) {
-          margin-bottom: 60px;
-        }
-      }
+    }
+    @include breakpoint($desktop-width) {
+      max-width: 75%;
+    }
+    @include breakpoint($large-width) {
+      margin-bottom: 60px;
     }
   }
   &__footer {

@@ -18,13 +18,13 @@
 export default {
   mounted() {
     const settings = document.querySelector('.header__settings');
-    settings.addEventListener('click', (e) => {
+    settings.addEventListener('click', e => {
       if (e.target === e.currentTarget) {
         const header = document.querySelector('.header');
         header.classList.remove('header--opensettings');
       }
     });
-  },
+  }
 };
 </script>
 
@@ -79,9 +79,6 @@ export default {
     max-width: 1280px;
     padding: 0 30px;
     width: 100%;
-    @include breakpoint($very-large) {
-      font-size: 1.15rem;
-    }
     & > * {
       align-items: center;
       display: flex;
