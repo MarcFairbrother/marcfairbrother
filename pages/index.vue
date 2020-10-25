@@ -77,7 +77,8 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
-    padding: 105px 15px 180px;
+    padding: 105px 15px 105px;
+    min-height: calc(100vh - 45px);
     @include breakpoint($tablet-width) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
