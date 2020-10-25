@@ -10,7 +10,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#0f2237' },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { name: 'theme-color', content: '#0f2237' }
+      { name: 'theme-color', content: '#061524' }
     ],
     link: [
       {
