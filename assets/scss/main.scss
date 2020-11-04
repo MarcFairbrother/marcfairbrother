@@ -82,13 +82,6 @@ li {
   }
 }
 
-main:not(.home):not(.about):not(.projects) {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-}
-
 /*
 * 
 * Utility class to hide content visually while keeping it screen reader-accessible.
