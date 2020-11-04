@@ -99,9 +99,10 @@ export default {
         },
         entries: {
           movingScope: {
-            heading: '2014-2020: Responsable technique chez Moving Scope',
+            heading:
+              '2014-2020: Responsable développement et design numériques chez Moving Scope',
             bullets: [
-              'Gestion des projets de VOD <a href="https://festivalscope.com" target="_blank" rel="noopener"  style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, et <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, de la rédaction de cahiers des charges au lancement des services, leur maintenance, and l\'implémentation de nouvelles fonctionnalités.',
+              'Gestion des projets de VOD <a href="https://festivalscope.com" target="_blank" rel="noopener"  style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, et <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, de la rédaction de cahiers des charges au lancement des services, leur maintenance, et l\'implémentation de nouvelles fonctionnalités.',
               "Conception et développement d'interfaces web, de newsletters responsives et correction de bugs front-end.",
               'Recherche de solutions visant à améliorer le workflow vidéo et la qualité de streaming et gestion de leur implémentation.'
             ]
@@ -439,8 +440,28 @@ export default {
         "N'hésitez pas à m'envoyer un message si vous avez des questions."
     },
     heading: {
-      title: 'Discutons!',
-      description: 'Du texte'
+      title: 'Contactez moi!',
+      description: [
+        "Je suis actuellement à la recherche d'un emploi en design UX et UI ou en développement front-end. N'hésitez pas à me contacter."
+      ]
+    },
+    formTexts: {
+      name: {
+        label: 'Nom',
+        error: 'Veuillez entrer votre nom'
+      },
+      email: {
+        label: 'E-mail',
+        error: 'Veuillez entrer une adresse e-mail valide'
+      },
+      subject: {
+        label: 'Sujet',
+        error: 'Veuillez entrer un sujet'
+      },
+      message: {
+        label: 'Message',
+        error: 'Veuillez entrer un message'
+      }
     }
   },
   footer: {

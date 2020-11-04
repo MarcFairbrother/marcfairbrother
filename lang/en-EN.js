@@ -97,7 +97,8 @@ export default {
         },
         entries: {
           movingScope: {
-            heading: '2014-2020: Technical Manager at Moving Scope',
+            heading:
+              '2014-2020: Director of Development and Design at Moving Scope',
             bullets: [
               'Managed the VOD projects <a href="https://festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, and <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, from writing specifications to release, maintenance, and further upgrades.',
               'Designed and developed web interfaces and responsive newsletters, and corrected front-end issues.',
@@ -435,7 +436,27 @@ export default {
     },
     heading: {
       title: "Let's talk!",
-      description: 'Some text'
+      description: [
+        "I'm currently looking for a position in UX and UI design or front-end development, so please feel free to get in touch."
+      ]
+    },
+    formTexts: {
+      name: {
+        label: 'Name',
+        error: 'Please enter your name'
+      },
+      email: {
+        label: 'E-mail',
+        error: 'Please enter a valid e-mail address'
+      },
+      subject: {
+        label: 'Subject',
+        error: 'Please enter a subject'
+      },
+      message: {
+        label: 'Message',
+        error: 'Please enter a message'
+      }
     }
   },
   footer: {
