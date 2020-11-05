@@ -1,7 +1,12 @@
 <template>
   <main class="contact">
     <PageHeading :heading-text="heading" class="contact__header" />
-    <form class="contact__form" @submit.prevent="submitForm">
+    <form
+      class="contact__form"
+      @submit.prevent="submitForm"
+      data-netlify="true"
+      action="/contact"
+    >
       <div class="contact__field">
         <label for="name">{{ formTexts.name.label }}</label>
         <input
@@ -134,17 +139,36 @@ export default {
   },
   methods: {
     submitForm() {
-      if (!this.$v.form.$invalid) {
-        const clean = {
-          name: sanitize(this.form.name),
-          email: sanitize(this.form.email),
-          subject: sanitize(this.form.subject),
-          message: sanitize(this.form.message)
-        };
-        console.log(clean);
-      } else {
-        console.log('The form is invalid');
-      }
+      const contactForm = document.querySelector('.contact__form');
+      // sanitize form input
+      const sanitizedData = {
+        name: sanitize(this.form.name),
+        email: sanitize(this.form.email),
+        subject: sanitize(this.form.subject),
+        message: sanitize(this.form.message)
+      };
+      // post url encoded data
+      fetch(contactForm.getAttribute('action'), {
+        method: 'POST',
+        headers: {
+          Accept: 'application/x-www-form-urlencoded;charset=UTF-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(sanitizedData).toString()
+      })
+        .then(() => {
+          // display confirmation modal
+          this.displayModal(this.formTexts.confirmation);
+        })
+        .catch(() => {
+          // display error modal
+          this.displayModal(this.formTexts.error);
+        });
+    },
+    displayModal(textContent) {
+      console.log(textContent);
+      // update modal text content
+      // display modal
     }
   }
 };
