@@ -64,6 +64,12 @@
         :text="formTexts.send"
       />
     </form>
+    <transition name="fade">
+      <ConfirmationModal
+        v-if="modalIsVisible"
+        :text-content="modalText"
+        @clickOutside="closeModal"
+    /></transition>
   </main>
 </template>
 
@@ -112,6 +118,8 @@ export default {
     return {
       heading: this.$t('contact.heading'),
       formTexts: this.$t('contact.formTexts'),
+      modalText: '',
+      modalIsVisible: false,
       form: {
         name: null,
         email: null,
@@ -166,10 +174,25 @@ export default {
         });
     },
     displayModal(textContent) {
-      console.log(textContent);
       // update modal text content
+      this.modalText = textContent;
       // display modal
+      this.modalIsVisible = true;
+    },
+    closeModal() {
+      this.modalIsVisible = false;
     }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: transform 0.25s;
+}
+.fade-enter,
+.fade-leave-to {
+  transform: translateY(-100vh);
+}
+</style>
