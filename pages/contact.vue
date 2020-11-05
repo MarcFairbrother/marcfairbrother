@@ -36,6 +36,7 @@
 <script>
 import { validationMixin } from 'vuelidate';
 import { required, email } from 'vuelidate/lib/validators';
+import { sanitize } from 'dompurify';
 
 export default {
   head() {
@@ -105,7 +106,13 @@ export default {
   methods: {
     submitForm() {
       if (!this.$v.form.$invalid) {
-        console.log(this.form);
+        const clean = {
+          name: sanitize(this.form.name),
+          email: sanitize(this.form.email),
+          subject: sanitize(this.form.subject),
+          message: sanitize(this.form.message)
+        };
+        console.log(clean);
       } else {
         console.log('The form is invalid');
       }

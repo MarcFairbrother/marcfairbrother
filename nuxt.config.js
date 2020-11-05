@@ -123,7 +123,9 @@ export default {
   modules: ['nuxt-i18n'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    vendor: ['dompurify']
+  },
 
   // nuxt-i18n options
   i18n: {
