@@ -456,7 +456,11 @@ export default {
       message: {
         label: 'Message',
         error: 'Please enter a message'
-      }
+      },
+      send: 'Send',
+      confirmation: "Thanks for contacting me! I'll get back to you soon.",
+      error:
+        'It looks like there was a problem. Please try again later or contact me on <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/marcfairbrother/">LinkedIn</a>.'
     }
   },
   footer: {
