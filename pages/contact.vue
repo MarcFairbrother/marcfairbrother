@@ -167,11 +167,20 @@ export default {
         .then(() => {
           // display confirmation modal
           this.displayModal(this.formTexts.confirmation);
+          // reset form
+          this.resetForm();
         })
         .catch(() => {
           // display error modal
           this.displayModal(this.formTexts.error);
         });
+    },
+    resetForm() {
+      this.form.name = null;
+      this.form.email = null;
+      this.form.subject = null;
+      this.form.message = null;
+      this.$v.form.$reset();
     },
     displayModal(textContent) {
       // update modal text content
