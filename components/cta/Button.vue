@@ -106,5 +106,11 @@ export default {
       }
     }
   }
+  .contact & {
+    margin-bottom: 60px;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
 }
 </style>

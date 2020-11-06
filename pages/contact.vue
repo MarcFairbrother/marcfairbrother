@@ -8,43 +8,43 @@
       action="/contact"
     >
       <div class="contact__field">
-        <label for="name">{{ formTexts.name.label }}</label>
+        <label for="name" v-html="formTexts.name.label"></label>
         <input
           v-model="form.name"
           @blur="$v.form.name.$touch()"
           type="text"
           id="name"
         />
-        <p v-if="$v.form.name.$error">
+        <p class="contact__error" v-if="$v.form.name.$error">
           {{ formTexts.name.error }}
         </p>
       </div>
       <div class="contact__field">
-        <label for="email">{{ formTexts.email.label }}</label>
+        <label for="email" v-html="formTexts.email.label"></label>
         <input
           v-model="form.email"
           @blur="$v.form.email.$touch()"
           type="email"
           id="email"
         />
-        <p v-if="$v.form.email.$error">
+        <p class="contact__error" v-if="$v.form.email.$error">
           {{ formTexts.email.error }}
         </p>
       </div>
       <div class="contact__field">
-        <label for="subject">{{ formTexts.subject.label }}</label>
+        <label for="subject" v-html="formTexts.subject.label"></label>
         <input
           v-model="form.subject"
           @blur="$v.form.subject.$touch()"
           type="text"
           id="subject"
         />
-        <p v-if="$v.form.subject.$error">
+        <p class="contact__error" v-if="$v.form.subject.$error">
           {{ formTexts.subject.error }}
         </p>
       </div>
       <div class="contact__field">
-        <label for="message">{{ formTexts.message.label }}</label>
+        <label for="message" v-html="formTexts.message.label"></label>
         <textarea
           v-model="form.message"
           @blur="$v.form.message.$touch()"
@@ -53,7 +53,7 @@
           cols="30"
           rows="10"
         ></textarea>
-        <p v-if="$v.form.message.$error">
+        <p class="contact__error" v-if="$v.form.message.$error">
           {{ formTexts.message.error }}
         </p>
       </div>
@@ -196,6 +196,63 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+.contact {
+  padding: 0 15px;
+  &__form {
+    margin-top: 30px;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    & > label {
+      font-size: 1rem;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+    & > input {
+      background: var(--mainBg);
+      border: solid 1px var(--mainTextColor);
+      border-radius: 4px;
+      font-size: 1rem;
+      line-height: 1.45;
+      padding: 5px;
+    }
+    & > textarea {
+      background: var(--mainBg);
+      border: solid 1px var(--mainTextColor);
+      border-radius: 4px;
+      font-size: 1rem;
+      line-height: 1.45;
+      padding: 5px 5px 10px;
+    }
+    &:last-of-type {
+      position: relative;
+      &::after {
+        background: var(--mainBg);
+        border-radius: 0 0 4px 0;
+        bottom: 1px;
+        content: '';
+        display: inline-block;
+        height: 10px;
+        pointer-events: none;
+        position: absolute;
+        right: 1px;
+        width: 10px;
+      }
+    }
+  }
+  &__error {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: transform 0.25s;
