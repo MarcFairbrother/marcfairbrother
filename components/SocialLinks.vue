@@ -70,6 +70,9 @@
       @include breakpoint($very-large) {
         margin-left: 20px;
       }
+      & a {
+        display: flex;
+      }
       & svg {
         fill: var(--mainTextColor);
         height: 18px;
