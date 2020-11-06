@@ -68,7 +68,7 @@
       <ConfirmationModal
         v-if="modalIsVisible"
         :text-content="modalText"
-        @clickOutside="closeModal"
+        @click-outside="closeModal"
     /></transition>
   </main>
 </template>
@@ -255,10 +255,11 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: transform 0.25s;
+  transition: opacity 0.25s ease-in-out 0.1s;
 }
 .fade-enter,
 .fade-leave-to {
   transform: translateY(-100vh);
+  opacity: 0;
 }
 </style>
