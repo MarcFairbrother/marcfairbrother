@@ -442,19 +442,19 @@ export default {
     },
     formTexts: {
       name: {
-        label: 'Name',
+        label: 'Name:',
         error: 'Please enter your name'
       },
       email: {
-        label: 'E-mail',
+        label: 'E-mail:',
         error: 'Please enter a valid e-mail address'
       },
       subject: {
-        label: 'Subject',
+        label: 'Subject:',
         error: 'Please enter a subject'
       },
       message: {
-        label: 'Message',
+        label: 'Message:',
         error: 'Please enter a message'
       },
       send: 'Send',

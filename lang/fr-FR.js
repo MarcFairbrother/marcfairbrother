@@ -447,19 +447,19 @@ export default {
     },
     formTexts: {
       name: {
-        label: 'Nom',
+        label: 'Nom&nbsp;:',
         error: 'Veuillez entrer votre nom'
       },
       email: {
-        label: 'E-mail',
+        label: 'E-mail&nbsp;:',
         error: 'Veuillez entrer une adresse e-mail valide'
       },
       subject: {
-        label: 'Sujet',
+        label: 'Sujet&nbsp;:',
         error: 'Veuillez entrer un sujet'
       },
       message: {
-        label: 'Message',
+        label: 'Message&nbsp;:',
         error: 'Veuillez entrer un message'
       },
       send: 'Envoyer',
