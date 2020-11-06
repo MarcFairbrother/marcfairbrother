@@ -238,7 +238,7 @@ export default {
       z-index: 0;
     }
     &::after {
-      background: var(--mainTextColor);
+      background: var(--altBg);
       border-radius: 4px;
       content: '';
       grid-column: 4/8;
@@ -261,7 +261,7 @@ export default {
   &__form {
     margin-top: 30px;
     @include breakpoint($desktop-width) {
-      border: solid 2px var(--mainTextColor);
+      border: solid 2px var(--altBg);
       border-radius: 4px;
       display: grid;
       grid-column: 1/9;
@@ -280,14 +280,14 @@ export default {
       grid-template-columns: repeat(5, 1fr);
       position: relative;
       &::before {
-        background: var(--mainBg);
+        background: var(--altTextColor);
         border-radius: 50%;
         content: '';
         display: inline-block;
         height: 10px;
         position: absolute;
         right: -25px;
-        bottom: 16px;
+        bottom: 20px;
         width: 10px;
       }
       &:last-of-type {

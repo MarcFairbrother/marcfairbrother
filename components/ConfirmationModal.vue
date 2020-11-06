@@ -59,6 +59,18 @@ export default {
     right: 15px;
     top: 15px;
     width: 20px;
+    @media (prefers-color-scheme: light) {
+      background-image: var(--close-light);
+    }
+    html[data-theme='light'] & {
+      background-image: var(--close-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--close-dark);
+    }
+    html[data-theme='dark'] & {
+      background-image: var(--close-dark);
+    }
     @include breakpoint($tablet-width) {
       background-size: 30px;
       height: 30px;
