@@ -471,5 +471,19 @@ export default {
   },
   footer: {
     credits: 'Crédits'
+  },
+  credits: {
+    meta: {
+      slug: 'credits',
+      title: 'Crédits'
+    },
+    heading: 'Crédits',
+    content: [
+      '🙏 Un grand merci à mes amis et la communauté du développement web pour leurs encouragements et leurs conseils',
+      '👷 Conçu et développé par Marc Fairbrother',
+      '❤️ Développé avec <a href="https://https://nuxtjs.org/" target="_blank" rel="noopener" style="text-decoration: underline;">Nuxt</a> & Amour (pas un nouveau framework JS)',
+      '🏠 Code source hébergé sur <a href="https://github.com/MarcFairbrother/marcfairbrother" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub</a>',
+      '🧙 Hébergé et déployé par la magie <a href="https://netlify.com" target="_blank" rel="noopener" style="text-decoration: underline;">Netlify</a>'
+    ]
   }
 };

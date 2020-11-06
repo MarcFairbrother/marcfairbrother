@@ -2,7 +2,9 @@
   <footer class="footer">
     <section class="footer__links">
       <p>
-        <nuxt-link to="/">{{ $t('footer.credits') }}</nuxt-link>
+        <nuxt-link :to="localePath(`/${$t('credits.meta.slug')}`)">{{
+          $t('footer.credits')
+        }}</nuxt-link>
       </p>
       <p>MarcFairbrother<span class="copyleft">©</span>2020</p>
     </section>
