@@ -225,7 +225,7 @@ export default {
     grid-template-rows: auto auto 30px;
     margin: 0 auto 60px;
     max-width: 1280px;
-    padding: 0 30px;
+    padding: 0 60px;
     width: 100%;
     &::before {
       border-bottom: solid 2px var(--accentColor);

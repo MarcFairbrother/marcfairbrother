@@ -89,7 +89,7 @@ export default {
       margin: 0 auto;
       max-width: 1280px;
       min-height: calc(100vh - 53px);
-      padding: 60px 30px 60px;
+      padding: 60px;
       width: 100%;
     }
     & h2 {

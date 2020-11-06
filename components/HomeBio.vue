@@ -33,9 +33,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 60px;
   }
   @include breakpoint($large-width) {
-    padding: 90px 30px;
+    padding: 90px 60px;
   }
   &__header {
     margin-bottom: 45px;

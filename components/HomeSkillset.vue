@@ -76,6 +76,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    padding: 60px;
   }
   @include breakpoint($large-width) {
     padding: 90px 30px;

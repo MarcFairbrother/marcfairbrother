@@ -77,7 +77,7 @@ export default {
     grid-template-columns: max-content 1fr max-content max-content;
     margin: 0 auto;
     max-width: 1280px;
-    padding: 0 30px;
+    padding: 0 60px;
     width: 100%;
     & > * {
       align-items: center;

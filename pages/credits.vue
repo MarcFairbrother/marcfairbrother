@@ -63,7 +63,7 @@ export default {
   @include breakpoint($desktop-width) {
     margin: 0 auto;
     max-width: 1280px;
-    padding: 0 30px;
+    padding: 0 60px;
     width: 100%;
   }
   &__header {
