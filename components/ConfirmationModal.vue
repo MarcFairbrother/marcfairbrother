@@ -32,8 +32,10 @@ export default {
   display: flex;
   height: 100vh;
   justify-content: center;
-  margin: 0 -15px;
-  position: sticky;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   z-index: 10;
 }
 .modal {
@@ -44,16 +46,26 @@ export default {
   padding: 60px 50px 45px;
   text-align: center;
   position: relative;
+  @include breakpoint($tablet-width) {
+    padding: 90px 90px 75px;
+  }
   &__close {
     background-image: var(--close-light);
-    background-position: 0% 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
-    height: 35px;
+    height: 20px;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 35px;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    @include breakpoint($tablet-width) {
+      background-size: 30px;
+      height: 30px;
+      right: 30px;
+      top: 30px;
+      width: 30px;
+    }
   }
 }
 </style>
