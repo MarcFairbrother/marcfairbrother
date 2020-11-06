@@ -223,6 +223,10 @@ export default {
       font-size: 1rem;
       line-height: 1.45;
       padding: 5px;
+      &:focus {
+        border-color: var(--accentColor);
+        outline: none;
+      }
     }
     & > textarea {
       background: var(--mainBg);
@@ -231,6 +235,10 @@ export default {
       font-size: 1rem;
       line-height: 1.45;
       padding: 5px 5px 10px;
+      &:focus {
+        border-color: var(--accentColor);
+        outline: none;
+      }
     }
     &:last-of-type {
       position: relative;
@@ -245,6 +253,7 @@ export default {
         position: absolute;
         right: 1px;
         width: 10px;
+        z-index: 10;
       }
     }
   }
