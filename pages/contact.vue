@@ -7,7 +7,10 @@
       data-netlify="true"
       action="/contact"
     >
-      <div class="contact__field">
+      <div
+        class="contact__field"
+        :class="{ 'contact__field--invalid': $v.form.name.$invalid }"
+      >
         <label for="name" v-html="formTexts.name.label"></label>
         <input
           v-model="form.name"
@@ -19,7 +22,10 @@
           {{ formTexts.name.error }}
         </p>
       </div>
-      <div class="contact__field">
+      <div
+        class="contact__field"
+        :class="{ 'contact__field--invalid': $v.form.email.$invalid }"
+      >
         <label for="email" v-html="formTexts.email.label"></label>
         <input
           v-model="form.email"
@@ -31,7 +37,10 @@
           {{ formTexts.email.error }}
         </p>
       </div>
-      <div class="contact__field">
+      <div
+        class="contact__field"
+        :class="{ 'contact__field--invalid': $v.form.subject.$invalid }"
+      >
         <label for="subject" v-html="formTexts.subject.label"></label>
         <input
           v-model="form.subject"
@@ -43,7 +52,10 @@
           {{ formTexts.subject.error }}
         </p>
       </div>
-      <div class="contact__field">
+      <div
+        class="contact__field"
+        :class="{ 'contact__field--invalid': $v.form.message.$invalid }"
+      >
         <label for="message" v-html="formTexts.message.label"></label>
         <textarea
           v-model="form.message"
@@ -204,17 +216,102 @@ export default {
 }
 .contact {
   padding: 0 15px;
+  @include breakpoint($tablet-width) {
+    padding: 0 30px;
+  }
+  @include breakpoint($desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto auto 30px;
+    margin: 0 auto 60px;
+    max-width: 1280px;
+    padding: 0 30px;
+    width: 100%;
+    &::before {
+      border-bottom: solid 2px var(--accentColor);
+      border-top: solid 2px var(--accentColor);
+      content: '';
+      grid-column: 4/8;
+      grid-row: 2;
+      margin: 30px 30px 0 90px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    &::after {
+      background: var(--mainTextColor);
+      border-radius: 4px;
+      content: '';
+      grid-column: 4/8;
+      grid-row: 1/4;
+      margin-left: 60px;
+      margin-top: 180px;
+      z-index: -10;
+    }
+  }
+  &__header {
+    @include breakpoint($tablet-width) {
+      width: 75%;
+    }
+    @include breakpoint($desktop-width) {
+      grid-column: 1/4;
+      grid-row: 1;
+      width: 100%;
+    }
+  }
   &__form {
     margin-top: 30px;
+    @include breakpoint($desktop-width) {
+      border: solid 2px var(--mainTextColor);
+      border-radius: 4px;
+      display: grid;
+      grid-column: 1/9;
+      grid-row: 2;
+      grid-template-columns: repeat(8, 1fr);
+      padding-top: 60px;
+    }
   }
   &__field {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    @include breakpoint($desktop-width) {
+      display: grid;
+      grid-column: 2/7;
+      grid-template-columns: repeat(5, 1fr);
+      position: relative;
+      &::before {
+        background: var(--mainBg);
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: 10px;
+        position: absolute;
+        right: -25px;
+        bottom: 16px;
+        width: 10px;
+      }
+      &:last-of-type {
+        &::before {
+          bottom: 150px;
+        }
+      }
+      &--invalid {
+        &::before {
+          background: var(--accentColor);
+        }
+      }
+    }
     & > label {
       font-size: 1rem;
       line-height: 1.45;
       margin-bottom: 10px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint($desktop-width) {
+        grid-column: 1/3;
+        grid-row: 1;
+      }
     }
     & > input {
       background: var(--mainBg);
@@ -223,6 +320,14 @@ export default {
       font-size: 1rem;
       line-height: 1.45;
       padding: 5px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint($desktop-width) {
+        grid-column: 1/6;
+        grid-row: 2;
+        padding: 10px;
+      }
       &:focus {
         border-color: var(--accentColor);
         outline: none;
@@ -235,6 +340,14 @@ export default {
       font-size: 1rem;
       line-height: 1.45;
       padding: 5px 5px 10px;
+      @include breakpoint($tablet-width) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint($desktop-width) {
+        grid-column: 1/6;
+        grid-row: 2;
+        padding: 10px;
+      }
       &:focus {
         border-color: var(--accentColor);
         outline: none;
@@ -242,6 +355,9 @@ export default {
     }
     &:last-of-type {
       position: relative;
+      @include breakpoint($tablet-width) {
+        margin-bottom: 45px;
+      }
       &::after {
         background: var(--mainBg);
         border-radius: 0 0 4px 0;
@@ -260,6 +376,19 @@ export default {
   &__error {
     font-size: 0.8rem;
     margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--accentColor);
+    text-decoration-thickness: 2px;
+    @include breakpoint($tablet-width) {
+      margin-top: 15px;
+    }
+    @include breakpoint($desktop-width) {
+      color: var(--altTextColor);
+      grid-column: 3/6;
+      grid-row: 1;
+      margin-left: 90px;
+      margin-top: 8px;
+    }
   }
 }
 .fade-enter-active,

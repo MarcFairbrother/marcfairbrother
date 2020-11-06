@@ -108,6 +108,11 @@ export default {
   }
   .contact & {
     margin-bottom: 60px;
+    @include breakpoint($desktop-width) {
+      align-self: start;
+      grid-column: 2;
+      justify-self: start;
+    }
     &:disabled {
       opacity: 0.5;
     }
