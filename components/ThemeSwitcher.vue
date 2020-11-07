@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       userPrefersDarkTheme: null,
-      overrideDevicePreferences: false,
+      overrideDevicePreferences: false
     };
   },
   methods: {
@@ -37,14 +37,14 @@ export default {
     },
     saveThemePreferences(theme) {
       localStorage.setItem('theme', theme);
-    },
+    }
   },
   mounted() {
     // check if user has previously saved theme preferences
     this.checkUserSavedThemePreferences();
     // listen for clicks on preference buttons
     const toggleButtons = document.querySelector('.jsToggleTheme');
-    toggleButtons.addEventListener('click', (e) => {
+    toggleButtons.addEventListener('click', e => {
       this.toggleTheme(e.target.dataset.theme);
     });
     // if user doesn't have previously saved theme preferences
@@ -52,11 +52,11 @@ export default {
       // set device's theme preference on mounted
       this.checkDeviceThemePreferences();
       // listen for changes on device settings for theme preference
-      matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+      matchMedia('(prefers-color-scheme: dark)').addListener(e => {
         this.userPrefersDarkTheme = e.matches;
       });
     }
-  },
+  }
 };
 </script>
 
@@ -101,6 +101,10 @@ export default {
     border-left: none;
     height: 37px;
     width: 56px;
+    .header__settings--error & {
+      border-left: solid 1px var(--mainTextColor);
+      border-radius: 15px;
+    }
     & > button {
       background-size: 20px;
     }
@@ -109,6 +113,9 @@ export default {
     background: none;
     height: 38px;
     width: 18px;
+    .header__settings--error & {
+      margin-left: 30px;
+    }
     & > button {
       background-size: 16px;
       bottom: 6px;

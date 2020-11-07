@@ -485,5 +485,11 @@ export default {
       '🏠 Code source hébergé sur <a href="https://github.com/MarcFairbrother/marcfairbrother" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub</a>',
       '🧙 Hébergé et déployé par la magie <a href="https://netlify.com" target="_blank" rel="noopener" style="text-decoration: underline;">Netlify</a>'
     ]
+  },
+  error: {
+    notFound: "Désolé, il semble que j'ai égaré cette page&nbsp;!",
+    other: "Désolé, une erreur semble s'être produite&nbsp;!",
+    cta:
+      'N\'hésitez pas à <a href="/fr/contact" style="text-decoration: underline;" >me contacter</a> pour me signaler un problème'
   }
 };

@@ -479,5 +479,11 @@ export default {
       '🏠 Source code hosted on <a href="https://github.com/MarcFairbrother/marcfairbrother" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub</a>',
       '🧙 Hosted and deployed with awesome <a href="https://netlify.com" target="_blank" rel="noopener" style="text-decoration: underline;">Netlify</a> wizardry'
     ]
+  },
+  error: {
+    notFound: 'Sorry, I must have misplaced this page!',
+    other: 'Sorry, looks like there was an error!',
+    cta:
+      'Feel free to <a href="/contact" style="text-decoration: underline;" >get in touch</a> if you think there\'s a problem!'
   }
 };
