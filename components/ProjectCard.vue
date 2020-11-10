@@ -215,6 +215,10 @@ export default {
     &:last-of-type {
       margin-right: 0;
     }
+    &:focus {
+      border: solid 1px var(--accentColor);
+      outline: none;
+    }
     @include breakpoint($large-width) {
       margin-right: 30px;
     }

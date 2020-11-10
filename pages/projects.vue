@@ -215,9 +215,8 @@ export default {
     input[type='checkbox']:checked + label::after {
       opacity: 1;
     }
-    input[type='checkbox']:focus + label {
-      outline: var(--mainTextColor) solid 1px;
-      outline-offset: 3px;
+    input[type='checkbox']:focus + label::before {
+      border: 1px solid var(--accentColor);
     }
   }
   &__contents {
