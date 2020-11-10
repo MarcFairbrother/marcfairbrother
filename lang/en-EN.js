@@ -85,7 +85,7 @@ export default {
       ],
       resume: {
         label: 'Download my resume',
-        url: '#'
+        url: '/docs/marc_fairbrother_resume.pdf'
       }
     },
     content: {

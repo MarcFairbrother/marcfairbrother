@@ -87,7 +87,7 @@ export default {
       ],
       resume: {
         label: 'Téléchargez mon CV',
-        url: '#'
+        url: '/docs/marc_fairbrother_cv.pdf'
       }
     },
     content: {
