@@ -4,10 +4,11 @@
     <form
       class="contact__form"
       @submit.prevent="submitForm"
-      data-netlify="true"
       action="/"
-      method="POST"
+      method="post"
+      name="contact"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div
         class="contact__field"
         :class="{ 'contact__field--invalid': $v.form.name.$invalid }"
