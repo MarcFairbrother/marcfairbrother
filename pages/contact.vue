@@ -1,12 +1,7 @@
 <template>
   <main class="contact">
     <PageHeading :heading-text="heading" class="contact__header" />
-    <form
-      class="contact__form"
-      @submit.prevent="submitForm"
-      action="/"
-      name="contact"
-    >
+    <form class="contact__form" method="post" action="/" name="contact">
       <input type="hidden" name="form-name" value="contact" />
       <div
         class="contact__field"
