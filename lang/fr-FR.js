@@ -28,7 +28,7 @@ export default {
       title: "<span>Je m'appelle</span> <br>Marc Fairbrother",
       description:
         "Je conçois et développe des applications numériques centrées sur l'expérience utilisateur.",
-      cta: 'UX-plore'
+      cta: 'Découvrir'
     },
     skillset: {
       title: "L'Essentiel",
@@ -100,7 +100,7 @@ export default {
         entries: {
           movingScope: {
             heading:
-              '2014-2020: Responsable développement et design numériques chez Moving Scope',
+              '2014-2020: Responsable du développement et du design numériques chez Moving Scope',
             bullets: [
               'Gestion des projets de VOD <a href="https://festivalscope.com" target="_blank" rel="noopener"  style="text-decoration: underline;">Festival Scope</a>, <a href="https://pro.festivalscope.com" target="_blank" rel="noopener" style="text-decoration: underline;">Festival Scope Pro</a>, et <a href="https://artekinofestival.com" target="_blank" rel="noopener" style="text-decoration: underline;">ArteKino Festival</a>, de la rédaction de cahiers des charges au lancement des services, leur maintenance, et l\'implémentation de nouvelles fonctionnalités.',
               "Conception et développement d'interfaces web, de newsletters responsives et correction de bugs front-end.",
@@ -119,7 +119,7 @@ export default {
           fnac: {
             heading: '2007-2009: Conseiller de vente au rayon vidéo de la Fnac',
             bullets: [
-              "Accueil des clients et gestion d'une équipe chargé des offres promotionnelles."
+              "Accueil des clients et gestion d'une équipe chargée des offres promotionnelles."
             ]
           }
         }
@@ -133,15 +133,15 @@ export default {
         entries: {
           cdnl: {
             heading:
-              'Licence Pro: Création et développement numériques en ligne',
+              'Licence Pro : Création et développement numériques en ligne',
             details: '2013-2014 | <em>Université Paris 8</em>'
           },
           livre: {
-            heading: 'DUT: Métiers du livre (section librairie)',
+            heading: 'DUT : Métiers du livre (section librairie)',
             details: '2009-2010 | <em>Université Paris X</em>'
           },
           cinema: {
-            heading: 'Licence: Arts du spectacle (section cinéma)',
+            heading: 'Licence : Arts du spectacle (section cinéma)',
             details: '2004-2007 | <em>Université Paris X</em>'
           },
           bac: {
@@ -161,7 +161,7 @@ export default {
             heading: 'Cinéma',
             bullets: [
               'Création du blog <a href="https://cinesthesies.fr" target="_blank" rel="noopener" style="text-decoration: underline;">Cinésthésies</a> en 2012 avec WordPress et un thème que j\'ai développé.',
-              'Rédaction de critiques de films pour la revue <em>Métaluna</em> en 2013.',
+              'Rédaction de critiques de films pour la revue <em>Metaluna</em> en 2013.',
               "Passionné par le cinéma, avec un intérêt particulier pour les classiques américains, français et britanniques, pour les nouvelles vagues européennes et japonaises d'après-guerre, et pour le cinéma d'exploitation des années 60 aux années 80.",
               "Figuration sur plusieurs tournages pour le cinéma : <em>L'Ex-femme de ma vie</em> (Josiane Balasko, 2004), <em>Le Temps qui reste</em> (François Ozon, 2005), <em>Jean-Philippe</em> (Laurent Tuel, 2006), <em>Mon meilleur ami</em> (Patrice Leconte, 2006), et pour la télévision : <em>PJ</em> (diffusion sur France 2 de 1997 à 2009)."
             ]
@@ -233,7 +233,7 @@ export default {
             'Git',
             'GitLab',
             'Trello',
-            'Email Ocotopus'
+            'Email Octopus'
           ]
         },
         website: {
@@ -482,7 +482,7 @@ export default {
     content: [
       '🙏 Un grand merci à mes amis et la communauté du développement web pour leurs encouragements et leurs conseils',
       '👷 Conçu et développé par Marc Fairbrother',
-      '❤️ Développé avec <a href="https://https://nuxtjs.org/" target="_blank" rel="noopener" style="text-decoration: underline;">Nuxt</a> & Amour (pas un nouveau framework JS)',
+      '❤️ Développé avec <a href="https://https://nuxtjs.org/" target="_blank" rel="noopener" style="text-decoration: underline;">Nuxt</a> & Amour (ce n\'est pas un framework JS)',
       '🏠 Code source hébergé sur <a href="https://github.com/MarcFairbrother/marcfairbrother" target="_blank" rel="noopener" style="text-decoration: underline;">GitHub</a>',
       '🧙 Hébergé et déployé par la magie <a href="https://netlify.com" target="_blank" rel="noopener" style="text-decoration: underline;">Netlify</a>'
     ]

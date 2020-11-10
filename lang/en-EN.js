@@ -158,7 +158,7 @@ export default {
           film: {
             heading: 'Film',
             bullets: [
-              'Created the <a href="https://cinesthesies.fr" target="_blank" rel="noopener" style="text-decoration: underline;">Cinésthésies</a> blog in 2012 using WordPress and a custom theme developed from scratch, and wrote film reviews for <em>Métaluna</em> magazine in 2013.',
+              'Created the <a href="https://cinesthesies.fr" target="_blank" rel="noopener" style="text-decoration: underline;">Cinésthésies</a> blog in 2012 using WordPress and a custom theme developed from scratch, and wrote film reviews for <em>Metaluna</em> magazine in 2013.',
               "Passionate about repertory films, with a keen interest in American, French, and British classics, post war new wave movements in Europe and Japan, and 60's to late 80's exploitation cinema.",
               'Worked as an extra on professional shoots from 2003 to 2006.'
             ]
@@ -229,7 +229,7 @@ export default {
             'Git',
             'GitLab',
             'Trello',
-            'Email Ocotopus'
+            'Email Octopus'
           ]
         },
         website: {
@@ -368,7 +368,7 @@ export default {
         ],
         tasks: [
           'I used asynchronous functions and recursion to build the basic metronome logic, allowing the tempo to be updated without clearing an interval or restarting the metronome.',
-          'I used JS prototypes to create oscillators with different frequencies which can be played and muted by using methods.',
+          'I used JS prototypes to create oscillators with different frequencies which can be played and muted by using built-in methods.',
           'I built UI animations and accessible custom form inputs.'
         ],
         tools: {
@@ -403,7 +403,7 @@ export default {
           'I developed a filter system which updates the chart when new filter options are selected.',
           'Available options for each filter are updated depending on previously selected options to avoid returning no results.',
           'I would like to revisit and optimise the code now that I have a better understanding of JavaScript.',
-          'I would like to improve the design for the list of films and add a map to chart recurring shooting locations, and possibly move the data to a server using GraphQL to laod it on the client.'
+          'I would like to improve the design for the list of films and add a map to chart recurring shooting locations, and possibly move the data to a server using GraphQL to load it on the client.'
         ],
         tools: {
           title: 'Tools & Tech:',
