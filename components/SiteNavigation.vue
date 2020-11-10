@@ -139,6 +139,10 @@ export default {
         border-bottom: solid 4px transparent;
         display: flex;
         height: 100%;
+        &:focus {
+          outline: solid 1px var(--accentColor);
+          outline-offset: 5px;
+        }
       }
       & > .nuxt-link-exact-active {
         border-bottom: solid 4px var(--accentColor);

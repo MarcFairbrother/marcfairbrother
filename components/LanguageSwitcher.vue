@@ -25,7 +25,6 @@
   </ul>
 </template>
 
-
 <script>
 export default {
   computed: {
@@ -36,8 +35,8 @@ export default {
     // get the current locale code from nuxt-i18n
     currentLocale() {
       return this.$i18n.locale;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -52,6 +51,10 @@ export default {
     & > * {
       align-items: center;
       display: flex;
+      &:focus {
+        outline: solid 1px var(--accentColor);
+        outline-offset: 5px;
+      }
     }
     & > span {
       font-weight: 900;

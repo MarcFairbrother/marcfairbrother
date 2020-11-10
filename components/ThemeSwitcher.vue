@@ -74,6 +74,10 @@ export default {
     right: 0;
     top: 0;
     width: 100%;
+    &:focus {
+      outline: solid 1px var(--accentColor);
+      outline-offset: 5px;
+    }
     &.fade-enter-active,
     &.fade-leave-active {
       transition: all 0.65s;

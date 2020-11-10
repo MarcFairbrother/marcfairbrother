@@ -33,6 +33,10 @@ export default {
   &__logo {
     fill: var(--mainTextColor);
   }
+  & a:focus {
+    outline: solid 1px var(--accentColor);
+    outline-offset: 5px;
+  }
   @include maxBreakpoint(1023px) {
     display: flex;
     justify-content: space-between;

@@ -33,6 +33,10 @@
 <style lang="scss" scoped>
 .socials {
   display: flex;
+  & a:focus {
+    outline: solid 1px var(--accentColor);
+    outline-offset: 5px;
+  }
   @include maxBreakpoint(1023px) {
     margin-top: 15px;
     transition: opacity 0.25s;
