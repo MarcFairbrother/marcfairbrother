@@ -14,6 +14,9 @@ export default {
 .cta {
   display: inline-block;
   position: relative;
+  &:focus {
+    outline: none;
+  }
   &__label {
     align-items: center;
     border: solid 2px;
@@ -52,6 +55,14 @@ export default {
       background: var(--mainTextColor);
       box-shadow: 0 0 3px var(--mainBg);
     }
+    &:focus {
+      & .cta__label {
+        border-color: var(--accentColor);
+      }
+      &::after {
+        background: var(--accentColor);
+      }
+    }
   }
   &--negative {
     & .cta__label {
@@ -62,6 +73,14 @@ export default {
     &::after {
       background: var(--altTextColor);
       box-shadow: 0 0 3px var(--altBg);
+    }
+    &:focus {
+      & .cta__label {
+        border-color: var(--accentColor);
+      }
+      &::after {
+        background: var(--accentColor);
+      }
     }
   }
   .projects & {
