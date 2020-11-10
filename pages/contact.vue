@@ -87,6 +87,7 @@
       <ConfirmationModal
         v-if="modalIsVisible"
         :text-content="modalText"
+        :btn-label="btnLabel"
         @click-outside="closeModal"
     /></transition>
   </main>
@@ -138,6 +139,7 @@ export default {
       heading: this.$t('contact.heading'),
       formTexts: this.$t('contact.formTexts'),
       modalText: '',
+      btnLabel: this.$t('contact.btnLabel'),
       modalIsVisible: false,
       form: {
         name: null,

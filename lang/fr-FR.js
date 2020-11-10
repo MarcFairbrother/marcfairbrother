@@ -467,7 +467,8 @@ export default {
         'Merci de votre message! Je reviendrai rapidement vers vous.',
       error:
         'Il semble qu\'il y a eu un problème. Merci de réessayer ou de me contacter sur <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/marcfairbrother/">LinkedIn</a>.'
-    }
+    },
+    btnLabel: 'Fermer'
   },
   footer: {
     credits: 'Crédits'

@@ -1,7 +1,9 @@
 <template>
   <section class="container">
     <article class="modal">
-      <button class="modal__close" @click="$emit('click-outside')"></button>
+      <button class="modal__close" @click="$emit('click-outside')">
+        <span class="sr-only">{{ btnLabel }}</span>
+      </button>
       <p v-html="textContent"></p>
     </article>
   </section>
@@ -9,7 +11,7 @@
 
 <script>
 export default {
-  props: ['textContent'],
+  props: ['textContent', 'btnLabel'],
   methods: {
     closeModal(e) {
       if (e.target === e.currentTarget) {

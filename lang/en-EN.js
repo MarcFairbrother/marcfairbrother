@@ -461,7 +461,8 @@ export default {
       confirmation: "Thanks for contacting me! I'll get back to you soon.",
       error:
         'It looks like there was a problem. Please try again later or contact me on <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/marcfairbrother/">LinkedIn</a>.'
-    }
+    },
+    btnLabel: 'Close'
   },
   footer: {
     credits: 'Credits'
