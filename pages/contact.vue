@@ -4,8 +4,7 @@
     <form
       class="contact__form"
       @submit.prevent="submitForm"
-      action="/form/success"
-      method="post"
+      action="/"
       name="contact"
     >
       <input type="hidden" name="form-name" value="contact" />
@@ -172,10 +171,9 @@ export default {
         message: sanitize(this.form.message)
       };
       // post url encoded data
-      fetch(contactForm.getAttribute('action'), {
+      fetch('/', {
         method: 'POST',
         headers: {
-          Accept: 'application/x-www-form-urlencoded;charset=UTF-8',
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
         },
         body: new URLSearchParams(sanitizedData).toString()
