@@ -6,7 +6,12 @@
     <title>Contact Form</title>
   </head>
   <body>
-    <form name="contact" action="/" netlify>
+    <form name="contact" action="/" netlify-honeypot="bot-field" netlify>
+      <div hidden aria-hidden="true">
+        <label
+          >Don’t fill this out if you're human: <input name="bot-field"
+        /></label>
+      </div>
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" />

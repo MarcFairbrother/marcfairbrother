@@ -1,8 +1,19 @@
 <template>
   <main class="contact">
     <PageHeading :heading-text="heading" class="contact__header" />
-    <form class="contact__form" method="post" action="/contact" name="contact">
+    <form
+      class="contact__form"
+      method="post"
+      action="/contact"
+      netlify-honeypot="bot-field"
+      name="contact"
+    >
       <input type="hidden" name="form-name" value="contact" />
+      <div hidden aria-hidden="true">
+        <label
+          >Don’t fill this out if you're human: <input name="bot-field"
+        /></label>
+      </div>
       <div
         class="contact__field"
         :class="{ 'contact__field--invalid': $v.form.name.$invalid }"
