@@ -4,7 +4,7 @@
     <form
       class="contact__form"
       @submit.prevent="submitForm"
-      action="/"
+      action="/form/success"
       method="post"
       name="contact"
     >
