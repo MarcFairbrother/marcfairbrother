@@ -7,13 +7,8 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/contact"
+      method="POST"
     >
-      <div hidden aria-hidden="true">
-        <label>
-          Don’t fill this out if you're human:
-          <input name="bot-field" />
-        </label>
-      </div>
       <div
         class="contact__field"
         :class="{ 'contact__field--invalid': $v.form.name.$invalid }"
