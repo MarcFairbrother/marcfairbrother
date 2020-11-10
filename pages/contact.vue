@@ -5,8 +5,7 @@
       class="contact__form"
       @submit.prevent="submitForm"
       data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/contact"
+      action="/"
       method="POST"
     >
       <div
