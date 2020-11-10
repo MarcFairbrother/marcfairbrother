@@ -13,6 +13,7 @@
           @blur="$v.form.name.$touch()"
           type="text"
           id="name"
+          name="name"
         />
         <p class="contact__error" v-if="$v.form.name.$error">
           {{ formTexts.name.error }}
@@ -28,6 +29,7 @@
           @blur="$v.form.email.$touch()"
           type="email"
           id="email"
+          name="email"
         />
         <p class="contact__error" v-if="$v.form.email.$error">
           {{ formTexts.email.error }}
@@ -43,6 +45,7 @@
           @blur="$v.form.subject.$touch()"
           type="text"
           id="subject"
+          name="subject"
         />
         <p class="contact__error" v-if="$v.form.subject.$error">
           {{ formTexts.subject.error }}
