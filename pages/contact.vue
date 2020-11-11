@@ -178,8 +178,6 @@ export default {
   mounted() {
     if (this.$route.query['message-sent']) {
       this.modalIsVisible = true;
-    } else {
-      console.log('Nothing');
     }
   }
 };
