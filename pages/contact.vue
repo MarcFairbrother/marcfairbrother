@@ -4,7 +4,7 @@
     <form
       class="contact__form"
       method="post"
-      action="/contact"
+      :action="localePath(`/${$t('contact.meta.slug')}?message-sent=true`)"
       netlify-honeypot="bot-field"
       name="contact"
     >
@@ -89,7 +89,7 @@
     <transition name="fade">
       <ConfirmationModal
         v-if="modalIsVisible"
-        :text-content="modalText"
+        :text-content="formTexts.confirmation"
         :btn-label="btnLabel"
         @click-outside="closeModal"
     /></transition>
@@ -170,49 +170,16 @@ export default {
     }
   },
   methods: {
-    submitForm() {
-      const contactForm = document.querySelector('.contact__form');
-      // sanitize form input
-      const sanitizedData = {
-        name: sanitize(this.form.name),
-        email: sanitize(this.form.email),
-        subject: sanitize(this.form.subject),
-        message: sanitize(this.form.message)
-      };
-      // post url encoded data
-      fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams(sanitizedData).toString()
-      })
-        .then(() => {
-          // display confirmation modal
-          this.displayModal(this.formTexts.confirmation);
-          // reset form
-          this.resetForm();
-        })
-        .catch(() => {
-          // display error modal
-          this.displayModal(this.formTexts.error);
-        });
-    },
-    resetForm() {
-      this.form.name = null;
-      this.form.email = null;
-      this.form.subject = null;
-      this.form.message = null;
-      this.$v.form.$reset();
-    },
-    displayModal(textContent) {
-      // update modal text content
-      this.modalText = textContent;
-      // display modal
-      this.modalIsVisible = true;
-    },
     closeModal() {
       this.modalIsVisible = false;
+      this.$router.replace({ query: null });
+    }
+  },
+  mounted() {
+    if (this.$route.query['message-sent']) {
+      this.modalIsVisible = true;
+    } else {
+      console.log('Nothing');
     }
   }
 };
