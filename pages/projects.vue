@@ -128,6 +128,9 @@ export default {
         project.categories.includes(filter)
       );
     }
+  },
+  mounted() {
+    document.activeElement.blur();
   }
 };
 </script>

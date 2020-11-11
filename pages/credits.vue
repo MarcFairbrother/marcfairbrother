@@ -50,6 +50,9 @@ export default {
       heading: this.$t('credits.heading'),
       content: this.$t('credits.content')
     };
+  },
+  mounted() {
+    document.activeElement.blur();
   }
 };
 </script>

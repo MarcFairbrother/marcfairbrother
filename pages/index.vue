@@ -67,6 +67,9 @@ export default {
         behavior: 'smooth'
       });
     }
+  },
+  mounted() {
+    document.activeElement.blur();
   }
 };
 </script>

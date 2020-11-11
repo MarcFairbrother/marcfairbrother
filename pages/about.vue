@@ -84,6 +84,9 @@ export default {
       en: '/about',
       fr: '/parcours'
     }
+  },
+  mounted() {
+    document.activeElement.blur();
   }
 };
 </script>

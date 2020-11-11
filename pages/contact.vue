@@ -176,6 +176,7 @@ export default {
     }
   },
   mounted() {
+    document.activeElement.blur();
     if (this.$route.query['message-sent']) {
       this.modalIsVisible = true;
     }
