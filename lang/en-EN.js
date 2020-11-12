@@ -166,7 +166,7 @@ export default {
           photography: {
             heading: 'Photography',
             bullets: [
-              'I practiced film photography in the early 2000\'s and have recently gotten back into the hobby in its digital form. Feel free to check out my work on <a href="https://instagram.com/marc__fairbrother/" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>.'
+              'I practiced film photography in the early 2000\'s and have recently got back into the hobby in its digital form. Feel free to check out my work on <a href="https://instagram.com/marc__fairbrother/" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>.'
             ]
           }
         }
@@ -212,12 +212,12 @@ export default {
           'Selected titles in search of visibility and distribution opportunities are made available for online screening in partnership with over 100 international film festivals and organizations.'
         ],
         tasks: [
-          'I took over management of the legacy application in 2014 and supervised the implementation of new features.',
-          "I supervised a rewrite of the code-base to enable synergies with the company's other projects starting in 2016.",
-          'I coordinated a team of designers and developers to launch new versions of the web and iOS applications in 2019.',
-          'I designed and developed parts of the new user interface and a responsive newsletter template.',
-          'I handled bug reporting, triage, and quality assurance while fixing front-end issues.',
-          'I researched and supervised the implementation of services to improve the streaming quality and the video workflow.'
+          'Took over management of the legacy application in 2014 and supervised the implementation of new features.',
+          "Supervised a rewrite of the code-base to enable synergies with the company's other projects starting in 2016.",
+          'Coordinated a team of designers and developers to launch new versions of the web and iOS applications in 2019.',
+          'Designed and developed parts of the new user interface and a responsive newsletter template.',
+          'Handled bug reporting, triage, and quality assurance while fixing front-end issues.',
+          'Researched and supervised the implementation of services to improve the streaming quality and the video workflow.'
         ],
         tools: {
           title: 'Tools & Tech:',
@@ -251,11 +251,11 @@ export default {
           "At the end of each of the festival's editions, one film receives an audience award based on votes submitted online by audience members."
         ],
         tasks: [
-          'I worked with the principal stakeholders to write the specifications of the first version of the application and additional features.',
-          'I supervised the design and development teams in charge of creating the web, iOS, and Android applications.',
-          'I designed and developed parts of the user interface and created functionnal prototypes to test user journeys and experience.',
-          'I handled bug reporting, triage, and quality assurance.',
-          'I trained junior project managers to supervise the project from the 2019 edition onwards.'
+          'Worked with the principal stakeholders to write the specifications of the first version of the application and additional features.',
+          'Supervised the design and development teams in charge of creating the web, iOS, and Android applications.',
+          'Designed and developed parts of the user interface and created functionnal prototypes to test user journeys and experience.',
+          'Handled bug reporting, triage, and quality assurance.',
+          'Trained junior project managers to supervise the project from the 2019 edition onwards.'
         ],
         tools: {
           title: 'Tools & Tech:',
@@ -287,12 +287,12 @@ export default {
           'Festival Scope is a VOD platform showing selected titles from international film festivals, giving a worldwide audience the chance to attend these events virtually and affording extra visibility to films with limited distribution opportunities.'
         ],
         tasks: [
-          'I worked with the product owners to establish and write specifications for the platform.',
-          'I supervised a team of designers and developers to deliver a first version of the web application in 2016 and to work on further iterations.',
-          'I created wireframes and mock ups for a mobile application and supervised its development.',
-          "I collaborated with the lead developer to research possible synergies with the company's other applications built on the same code-base.",
-          'I designed and developed responsive newsletter templates and trained the staff members in charge of sending them.',
-          'I handled bug reporting, triage, and quality assurance.'
+          'Worked with the product owners to establish and write specifications for the platform.',
+          'Supervised a team of designers and developers to deliver a first version of the web application in 2016 and to work on further iterations.',
+          'Created wireframes and mock ups for a mobile application and supervised its development.',
+          "Collaborated with the lead developer to research possible synergies with the company's other applications built on the same code-base.",
+          'Designed and developed responsive newsletter templates and trained the staff members in charge of sending them.',
+          'Handled bug reporting, triage, and quality assurance.'
         ],
         tools: {
           title: 'Tools & Tech:',
@@ -323,12 +323,12 @@ export default {
           'If either player discovers a pair, they get to play another turn. The game ends when all the pairs have been discovered.'
         ],
         tasks: [
-          'I implemented a turn based system to let either the human or computer play.',
-          'I created a knowledge base so that the computer player could keep track of which cards had been revealed and which cards had been removed from play after a pair had been discovered.',
-          'I scripted a strategy for the computer player which would check revealed cards for matching pairs at the beginning of each turn and either flip those if a match was found or flip an unknown card and check again for a matching revealed card.',
-          'I developed JS and CSS animations when flipping cards and when shuffling the cards for a new game.',
-          'I used ES modules and SCSS to organize the code in smaller, more manageable files.',
-          'I would like to add tests to the project, and possibly develop a version for two remote human players.'
+          'Implemented a turn based system to let either the human or computer play.',
+          'Created a knowledge base so that the computer player could keep track of which cards had been revealed and which cards had been removed from play after a pair is discovered.',
+          'Scripted a strategy for the computer player which would check revealed cards for matching pairs at the beginning of each turn and either flip those if a match was found or flip an unknown card and check again for a matching revealed card.',
+          'Developed JS and CSS animations when flipping cards and when shuffling the cards for a new game.',
+          'Used ES modules and SCSS to organize the code in smaller, more manageable files.',
+          'Plan to add tests to the project, and possibly develop a version for two remote human players.'
         ],
         tools: {
           title: 'Tools & Tech:',
@@ -367,9 +367,9 @@ export default {
           'The Web Audio API is used to produce metronome clicks at different frequencies to mark the first beat of a cycle, normal beats and offbeats.'
         ],
         tasks: [
-          'I used asynchronous functions and recursion to build the basic metronome logic, allowing the tempo to be updated without clearing an interval or restarting the metronome.',
-          'I used JS prototypes to create oscillators with different frequencies which can be played and muted by using built-in methods.',
-          'I built UI animations and accessible custom form inputs.'
+          'Used asynchronous functions and recursion to build the basic metronome logic, allowing the tempo to be updated without clearing an interval or restarting the metronome.',
+          'Used JS prototypes to create oscillators with different frequencies which can be played and muted by using built-in methods.',
+          'Built UI animations and accessible custom form inputs.'
         ],
         tools: {
           title: 'Tools & Tech:',
@@ -398,12 +398,12 @@ export default {
           'My goal was to learn the basics of the Vue.js framework and SVG animation.'
         ],
         tasks: [
-          "I was inspired by lobby card layout, and vintage book jackets and poster graphic design elements to capture the feel of Franco's best known films.",
-          'I built a chart using SVG and JavaScript animations with data stored as a JavaScript object.',
-          'I developed a filter system which updates the chart when new filter options are selected.',
+          "Inspired by lobby card layout, and vintage book jackets and poster graphic design elements to capture the feel of Franco's best known films.",
+          'Built a chart using SVG and JavaScript animations with data stored as a JavaScript object.',
+          'Developed a filter system which updates the chart when new filter options are selected.',
           'Available options for each filter are updated depending on previously selected options to avoid returning no results.',
-          'I would like to revisit and optimise the code now that I have a better understanding of JavaScript.',
-          'I would like to improve the design for the list of films and add a map to chart recurring shooting locations, and possibly move the data to a server using GraphQL to load it on the client.'
+          'Plan to revisit and optimise the code now that I have a better understanding of JavaScript.',
+          'Plan to improve the design for the list of films and add a map to chart recurring shooting locations, and possibly move the data to a server using GraphQL to load it on the client.'
         ],
         tools: {
           title: 'Tools & Tech:',

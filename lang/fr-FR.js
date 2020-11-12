@@ -216,12 +216,12 @@ export default {
           "Une sélection de titres à la recherche d'opportunités de diffusion et de visibilité supplémentaire sont rendus disponibles en ligne en partenariat avec plus de 100 festivals de cinéma et d'institutions du monde entier."
         ],
         tasks: [
-          "J'ai pris en charge la gestion d'une application legacy à partir de 2014 et j'ai suivi l'implémentation de nouvelles fonctionnalités.",
-          "J'ai supervisé la réécriture du code-base à partir de 2016 afin de permettre des synergies avec les autres projets de la société.",
-          "J'ai coordonné une équipe de designers et de développeurs pour lancer de nouvelles versions des applications web et iOS en 2019.",
-          "J'ai conçu et développé des parties de l'interface utilisateur et un gabarit de newsletter responsive.",
-          "J'ai géré le suivi des bugs, le triage et le recettage tout en corrigeant des problèmes front-end.",
-          "J'ai mené une recherche et supervisé l'implémentation de services permettant l'amélioration de la qualité de streaming et l'optimisation du workflow vidéo."
+          "Prise en charge de la gestion d'une application legacy à partir de 2014 et suivi de l'implémentation de nouvelles fonctionnalités.",
+          'Supervision de la réécriture du code-base à partir de 2016 afin de permettre des synergies avec les autres projets de la société.',
+          "Coordination d'une équipe de designers et de développeurs pour lancer de nouvelles versions des applications web et iOS en 2019.",
+          "Conception et développement de parties de l'interface utilisateur et d'un gabarit de newsletter responsive.",
+          'Suivi des bugs, triage et recettage, et correction de problèmes front-end.',
+          "Recherche et supervision de l'implémentation de services permettant l'amélioration de la qualité de streaming et l'optimisation du workflow vidéo."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -255,11 +255,11 @@ export default {
           "À la fin de chaque édition du festival, un film est récompensé d'un prix du public discerné selon les votes effectués en ligne par les spectateurs."
         ],
         tasks: [
-          "J'ai travaillé avec les principaux porteurs du projet pour établir un cahier des charges initial et définir de nouvelles fonctionnalités à chaque nouvelle édition.",
-          "J'ai assuré la gestion des équipes de design et de développement pour la création des applications web, iOS et Android.",
-          "J'ai conçu et développé des parties de l'interface utilisateur et j'ai créé des protoypes fonctionnels permettant de valider les parcours et l'expérience utilisateur.",
-          "J'ai effectué le suivi de bugs, le triage et le recettage",
-          "J'ai formé des chefs de projet junior pour prendre en mains le service à partir de l'édition 2019 du festival"
+          'Collaboration avec les principaux porteurs du projet pour établir un cahier des charges initial et définir de nouvelles fonctionnalités à chaque nouvelle édition.',
+          'Gestion des équipes de design et de développement chargées de la création des applications web, iOS et Android.',
+          "Conception et développement de parties de l'interface et création de protoypes fonctionnels permettant de valider les parcours et l'expérience utilisateur.",
+          'Suivi de bugs, triage et recettage.',
+          "Formation de chefs de projet junior pour leur déléguer la gestion du service à partir de l'édition 2019 du festival."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -291,12 +291,12 @@ export default {
           'Festival Scope est un service de VOD diffusant des films sélectionnés dans des festivals de cinéma internationaux, permettant aux spectateurs du monde entier de participer virtuellement aux événements et offrant une visibilité supplémentaire à des films aux opportunités de distribution limitées.'
         ],
         tasks: [
-          "J'ai travaillé avec les porteurs du projet pour rédiger un cahier des charges.",
-          "J'ai supervisé une équipe de designers et de développeurs pour livrer une première version de l'application en 2016 et de nouvelles versions au fil des mois.",
-          "J'ai créé des wireframes et des maquettes pour une application mobile et j'ai suivi son développement",
-          "J'ai collaboré avec le lead développeur pour identifier des synergies possibles entre les différentes applications de la société utilisant un même code-base.",
-          "J'ai conçu et développé des gabarits de newsletters responsives et formé le personnel chargé de leur envoi.",
-          "J'ai effectué le suivi de bugs, le triage et le recettage"
+          'Collaboration avec les porteurs du projet pour rédiger un cahier des charges.',
+          "Supervision d'une équipe de designers et de développeurs pour livraison d'une première version de l'application en 2016 et de nouvelles versions au fil des mois.",
+          'Création de wireframes et de maquettes pour une application mobile et suivi de son développement.',
+          'Recherche de synergies possibles entre les différentes applications de la société utilisant un même code-base.',
+          'Conception et développement de gabarits de newsletters responsives et formation du personnel chargé de leur envoi.',
+          'Suivi de bugs, triage et recettage.'
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -327,12 +327,12 @@ export default {
           'Si un joueur découvre une paire, il joue de nouveau. La partie se termine une fois que toutes les paires ont été découvertes.'
         ],
         tasks: [
-          "J'ai implémenté un système par tour pour permettre à l'humain ou à l'ordinateur de jouer",
-          "J'ai créé une base de connaissances pour permettre à l'ordinateur de savoir quelles cartes ont été révélées et quelles cartes sont hors jeu car la paire a été découverte.",
-          "J'ai scripté une stratégie pour l'ordinateur qui commence son tour en cherchant une paire parmi les cartes révélées. Si une paire existe, l'ordinateur retourne ces cartes, sinon il retourne une carte inconnue et vérifie de nouveau si une carte correspondante a déjà été révélée.",
-          "J'ai développé des animations JS et CSS pour accompagner les interactions de retournement de carte et de mélange en début de partie.",
-          "J'ai utilisé des modules ES et du SCSS pour organiser le code de l'application en des fichier plus concis et faciles à gérer",
-          "J'aimerai ajouter des tests au projet et éventuellement développer une version pour deux joueurs en ligne"
+          "Implémentation d'un système par tour pour permettre à l'humain ou à l'ordinateur de jouer.",
+          "Création d'une base de connaissances pour permettre à l'ordinateur de savoir quelles cartes ont été révélées et quelles cartes sont hors jeu car la paire a été découverte.",
+          "Implémentation d'une stratégie pour l'ordinateur qui commence son tour en cherchant une paire parmi les cartes révélées. Si une paire existe, l'ordinateur retourne ces cartes, sinon il retourne une carte inconnue et vérifie de nouveau si une carte correspondante a déjà été révélée.",
+          "Développement d'animations JS et CSS pour accompagner les interactions de retournement de carte et de mélange en début de partie.",
+          "Utilisation de modules ES et de SCSS pour organiser le code de l'application en des fichiers plus concis et faciles à gérer.",
+          "L'ajout de tests au projet et le développement d'une version pour deux joueurs en ligne sont prévus."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -371,9 +371,9 @@ export default {
           "L'API Web Audio a été utilisée pour générer les clics du métronome avec différentes fréquences pour marquer la première pulsation d'un cycle, les pulsations normales et les contre-temps."
         ],
         tasks: [
-          "J'ai utilisé des fonctions asynchrones et une récursion pour construire la logique basique du métronome et permettre la modification du tempo sans devoir annuler une intervale ou redémarrer le métronome.",
-          "J'ai utilisé un prototype JS pour créer des oscillateurs à différentes fréquences et pouvant être démarrées ou éteintes via des méthodes.",
-          "J'ai développé des animations et des contrôles de formulaire accessibles"
+          'Utilisation de fonctions asynchrones et de récursion pour construire la logique basique du métronome et permettre la modification du tempo sans devoir annuler un intervalle ou redémarrer le métronome.',
+          'Utilisation de prototypes JS pour créer des oscillateurs à différentes fréquences et pouvant être démarrées ou éteintes via des méthodes attachées.',
+          "Développement d'animations et de contrôles de formulaire accessibles."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -402,12 +402,12 @@ export default {
           "Mon objectif était d'apprendre les bases du framework Vue.js et à animer des SVG."
         ],
         tasks: [
-          "Je me suis inspiré de la mise en page de vieux \"lobby cards\" et d'éléments graphiques d'affiches et livres vintage pour retrouver l'ambiance des films les plus connus de Franco.",
-          "J'ai développé un graphique en utilisant un SVG et des animations JavaScript avec des données conservées dans un object JavaScript.",
-          "J'ai développé un système de filtres qui met à jour le graphique selon les options sélectionnées.",
+          "Design inspiré de la mise en page de vieux <em>lobby cards</em> et d'éléments graphiques d'affiches et livres vintage pour retrouver l'ambiance des films les plus connus de Franco.",
+          "Développement d'un graphique en utilisant un SVG et des animations JavaScript avec des données conservées dans un object JavaScript.",
+          "Développement d'un système de filtres pour mettre à jour le graphique selon les options sélectionnées.",
           'Les options disponibles pour chaque filtre sont mises à jour selon les autres options sélectionnées pour éviter de retourner aucun résultat.',
-          "J'aimerai revoir et optimiser le code comme j'ai une meilleure compréhension de la programmation.",
-          "J'aimerai revoir le design de la liste de films et ajouter une carte pour visualiser les lieux de tournage récurrents, ainsi que héberger les données sur un serveur et utiliser GraphQl pour charger les données nécessaires sur le client."
+          "Il est prévu de revoir et optimiser le code avec l'expérience acquise en programmation.",
+          'Il est prévu de revoir le design de la liste de films et ajouter une carte pour visualiser les lieux de tournage récurrents, ainsi que héberger les données sur un serveur et utiliser GraphQl pour charger les données nécessaires sur le client.'
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
