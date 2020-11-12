@@ -212,9 +212,11 @@ export default {
     display: flex;
     margin-right: 15px;
     padding: 15px;
+    transition: border 0.25s ease-in-out;
     &:last-of-type {
       margin-right: 0;
     }
+    &:hover,
     &:focus {
       border: solid 1px var(--accentColor);
       outline: none;
