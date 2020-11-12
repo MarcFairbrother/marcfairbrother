@@ -29,6 +29,7 @@ export default {
     position: relative;
     text-align: center;
     width: 100%;
+    transition: border 0.25s ease-in-out;
     z-index: 5;
     @include breakpoint($desktop-width) {
       padding: 15px 30px;
@@ -43,6 +44,7 @@ export default {
     position: absolute;
     right: -4px;
     top: 4px;
+    transition: background-color 0.25s ease-in-out;
     z-index: 0;
   }
   &--positive {
@@ -55,6 +57,7 @@ export default {
       background: var(--mainTextColor);
       box-shadow: 0 0 3px var(--mainBg);
     }
+    &:hover,
     &:focus {
       & .cta__label {
         border-color: var(--accentColor);
@@ -74,6 +77,7 @@ export default {
       background: var(--altTextColor);
       box-shadow: 0 0 3px var(--altBg);
     }
+    &:hover,
     &:focus {
       & .cta__label {
         border-color: var(--accentColor);
