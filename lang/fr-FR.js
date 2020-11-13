@@ -40,7 +40,7 @@ export default {
           bullets: {
             ux: 'Ergonomie web & mobile',
             visual: 'Conception visuelle',
-            a11y: "Passionné d'accessibilité"
+            a11y: 'Orienté accessibilité'
           }
         },
         development: {
@@ -407,7 +407,7 @@ export default {
           "Développement d'un système de filtres pour mettre à jour le graphique selon les options sélectionnées.",
           'Les options disponibles pour chaque filtre sont mises à jour selon les autres options sélectionnées pour éviter de retourner aucun résultat.',
           "Il est prévu de revoir et optimiser le code avec l'expérience acquise en programmation.",
-          'Il est prévu de revoir le design de la liste de films et ajouter une carte pour visualiser les lieux de tournage récurrents, ainsi que héberger les données sur un serveur et utiliser GraphQl pour charger les données nécessaires sur le client.'
+          "Il est prévu de revoir le design de la liste de films et ajouter une carte pour visualiser les lieux de tournage récurrents, ainsi que d'héberger les données sur un serveur et utiliser GraphQl pour charger les données nécessaires sur le client."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
@@ -442,7 +442,7 @@ export default {
     heading: {
       title: 'Contactez moi!',
       description: [
-        "Je suis actuellement à la recherche d'un emploi en design UX et UI ou en développement front-end. N'hésitez pas à me contacter."
+        "Je suis actuellement à la recherche d'un poste en design UX et UI ou en développement front-end. N'hésitez pas à me contacter."
       ]
     },
     formTexts: {
