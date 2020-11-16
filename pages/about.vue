@@ -195,7 +195,7 @@ export default {
       margin-bottom: 90px;
     }
     & h4 {
-      font-family: 'Roboto';
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
       margin-bottom: 15px;
     }
     @include breakpoint($tablet-width) {

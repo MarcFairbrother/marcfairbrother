@@ -72,7 +72,7 @@ export default {
       padding: 0 0 30px;
     }
     & > p {
-      font-family: 'Catamaran';
+      font-family: 'Catamaran', 'Arial Black', Arial, Helvetica, sans-serif;
       margin-bottom: 15px;
       @include maxBreakpoint(1023px) {
         &:last-of-type {
@@ -91,7 +91,7 @@ export default {
         display: inline-block;
         transform: rotateY(180deg);
         @include breakpoint($desktop-width) {
-          font-family: 'Roboto';
+          font-family: 'Roboto', Arial, Helvetica, sans-serif;
         }
       }
     }

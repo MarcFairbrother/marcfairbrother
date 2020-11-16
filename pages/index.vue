@@ -125,7 +125,7 @@ export default {
       }
       & > span {
         display: inline-block;
-        font-family: 'Roboto';
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.25;
