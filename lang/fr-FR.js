@@ -423,7 +423,7 @@ export default {
         },
         website: {
           url: 'https://intothefrancoverse.marcfairbrother.com/',
-          label: 'Voir le site'
+          label: 'Visiter le site'
         },
         srcCode: {
           url: 'https://github.com/MarcFairbrother/into-the-francoverse',
