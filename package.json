@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.1",
     "dompurify": "^2.2.2",
     "nuxt": "^2.14.5",
     "nuxt-i18n": "^6.15.1",
