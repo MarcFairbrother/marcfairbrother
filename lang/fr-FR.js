@@ -237,7 +237,7 @@ export default {
           ]
         },
         website: {
-          url: 'https://artekinofestival.com',
+          url: 'https://pro.festivalscope.com',
           label: 'Visiter le site'
         }
       },
