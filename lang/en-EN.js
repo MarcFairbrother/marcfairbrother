@@ -310,6 +310,52 @@ export default {
           'This project has been moved to a new technical solution since I last worked on it in 2020.'
       },
       {
+        title: 'Vue JS Kanban',
+        categories: ['perso', 'dev', 'design'],
+        screenshot: {
+          mobile: 'kanban-mobile',
+          tablet: 'kanban-tablet',
+          large: 'kanban-large'
+        },
+        roles: ['Developer', 'UX & UI Designer'],
+        presentation: [
+          'A Trello-like Kanban board application with a drag & drop UI to sort lists and cards.',
+          'Developed following the test-driven development (TDD) process.'
+        ],
+        tasks: [
+          'Built a CRUD application to create, display, modify, and delete lists and cards.',
+          'Used Vuex to manage state across the application and the Web Storage API to store the data.',
+          'Wrote unit tests with the Jest testing suite following the TDD process.',
+          'Set up client-side form validation and sanitization.',
+          'Implemented a drag & drop UI using vanilla JS and the <em>drag</em>, <em>dragover</em>, and <em>dragend</em> events.'
+        ],
+        tools: {
+          title: 'Tools & Tech:',
+          items: [
+            'Figma',
+            'HTML',
+            'SCSS',
+            'JavaScript',
+            'Vue.js',
+            'Vuex',
+            'Vuelidate',
+            'DOMPurify',
+            'Jest',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://kanban.marcfairbrother.com/',
+          label: 'Visit Website'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/kanban',
+          label: 'View Code'
+        }
+      },
+      {
         title: 'Vanilla JS Memory',
         categories: ['perso', 'dev', 'design'],
         screenshot: {
@@ -327,8 +373,7 @@ export default {
           'Created a knowledge base so that the computer player could keep track of which cards had been revealed and which cards had been removed from play after a pair is discovered.',
           'Scripted a strategy for the computer player which would check revealed cards for matching pairs at the beginning of each turn and either flip those if a match was found or flip an unknown card and check again for a matching revealed card.',
           'Developed JS and CSS animations when flipping cards and when shuffling the cards for a new game.',
-          'Used ES modules and SCSS to organize the code in smaller, more manageable files.',
-          'Plan to add tests to the project, and possibly develop a version for two remote human players.'
+          'Used ES modules and SCSS to organize the code in smaller, more manageable files.'
         ],
         tools: {
           title: 'Tools & Tech:',

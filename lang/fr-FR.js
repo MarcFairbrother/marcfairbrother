@@ -314,6 +314,52 @@ export default {
           'Ce projet a été migré vers une nouvelle solution technique depuis ma dernière participation en 2020.'
       },
       {
+        title: 'Kanban Vue JS',
+        categories: ['perso', 'dev', 'design'],
+        screenshot: {
+          mobile: 'kanban-mobile',
+          tablet: 'kanban-tablet',
+          large: 'kanban-large'
+        },
+        roles: ['Développeur', 'Designer UX & UI'],
+        presentation: [
+          'Un tableau de type Kanban inspiré par Trello avec une interface permettant de glisser et déposer les listes et tickets.',
+          'Développé en suivant la méthodologie <em>test-driven development</em> (TDD).'
+        ],
+        tasks: [
+          `Développement d'une application CRUD permettant de créer, afficher, modifier et supprimer les listes et les tickets.`,
+          `Utilisation de Vuex pour gérer l'état de l'application et de l'API Web Storage pour enregistrer les données.`,
+          `Écriture de tests unitaires avec la suite de test Jest en suivant la méthodologie TDD.`,
+          `Mise en place de la validation et du nettoyage des données des formulaires côté client.`,
+          `Implémentation d'une interface permettant le glisser-déposer avec les événements <em>drag</em>, <em>dragover</em> et <em>dragend</em>.`
+        ],
+        tools: {
+          title: 'Outils & technos&nbsp;:',
+          items: [
+            'Figma',
+            'HTML',
+            'SCSS',
+            'JavaScript',
+            'Vue.js',
+            'Vuex',
+            'Vuelidate',
+            'DOMPurify',
+            'Jest',
+            'Git',
+            'GitHub',
+            'Netlify'
+          ]
+        },
+        website: {
+          url: 'https://kanban.marcfairbrother.com/',
+          label: 'Visiter le site'
+        },
+        srcCode: {
+          url: 'https://github.com/MarcFairbrother/kanban',
+          label: 'Voir le code'
+        }
+      },
+      {
         title: 'Memory Vanilla JS',
         categories: ['perso', 'dev', 'design'],
         screenshot: {
