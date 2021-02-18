@@ -46,9 +46,9 @@ export default {
         development: {
           title: 'Développement',
           bullets: {
-            html: 'HTML & CSS avancé',
-            js: 'JS intermédiaire',
-            tools: 'Usage basique de Git'
+            html: 'HTML, CSS, JavaScript',
+            tools: 'Git, Docker, NPM',
+            method: 'Test-driven development'
           }
         },
         management: {

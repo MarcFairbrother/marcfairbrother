@@ -38,15 +38,15 @@ export default {
           bullets: {
             ux: 'Web & Mobile UX',
             visual: 'Visual Design',
-            a11y: 'Accessibility Driven'
+            a11y: 'Accessibility-Oriented'
           }
         },
         development: {
           title: 'Development',
           bullets: {
-            html: 'Advanced HTML & CSS',
-            js: 'Strong JS Fundamentals',
-            tools: 'Git Basics'
+            html: 'HTML, CSS, JavaScript',
+            tools: 'Git, Docker, NPM',
+            method: 'Test-Driven Development'
           }
         },
         management: {
