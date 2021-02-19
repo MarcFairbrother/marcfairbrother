@@ -377,8 +377,7 @@ export default {
           "Création d'une base de connaissances pour permettre à l'ordinateur de savoir quelles cartes ont été révélées et quelles cartes sont hors jeu car la paire a été découverte.",
           "Implémentation d'une stratégie pour l'ordinateur qui commence son tour en cherchant une paire parmi les cartes révélées. Si une paire existe, l'ordinateur retourne ces cartes, sinon il retourne une carte inconnue et vérifie de nouveau si une carte correspondante a déjà été révélée.",
           "Développement d'animations JS et CSS pour accompagner les interactions de retournement de carte et de mélange en début de partie.",
-          "Utilisation de modules ES et de SCSS pour organiser le code de l'application en des fichiers plus concis et faciles à gérer.",
-          "L'ajout de tests au projet et le développement d'une version pour deux joueurs en ligne sont prévus."
+          "Utilisation de modules ES et de SCSS pour organiser le code de l'application en des fichiers plus concis et faciles à gérer."
         ],
         tools: {
           title: 'Outils & technos&nbsp;:',
